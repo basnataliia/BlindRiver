@@ -1,0 +1,32 @@
+﻿@*@model IEnumerable<BlindRiver.Models.Gallery>*@
+@model IEnumerable<BlindRiver.Models.sliderimage>
+
+@{
+    ViewBag.Title = "Slider";
+}
+
+<script>
+    $(document).ready(function () {
+        $('#ulSlider').bxSlider(function () {
+            autoStart: true
+        });
+        $('.bx-wrapper').width('100%'),
+        $('.bx-wrapper').height('100%')
+        ;
+    });
+</script>
+
+<div>
+    <ul id="ulSlider">
+        @foreach (var image in Model)
+        {
+            <li>
+
+                @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
+                <img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" />
+
+            </li>
+        }
+    </ul>
+</div>
+

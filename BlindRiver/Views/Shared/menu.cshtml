@@ -1,0 +1,27 @@
+﻿@*@model IEnumerable<BlindRiver.Models.mainmenulink>*@
+
+    <div class="wrapper">
+        <ul>
+            @{
+                var menuItems = (IEnumerable<BlindRiver.Models.mainmenulink>)ViewData["MenuItems"];
+
+                foreach (var x in menuItems)
+                {
+                    <li>@Html.ActionLink(x.link_name, x.link_url, new { Id = x.id })</li>
+                }
+
+            }
+
+        </ul>
+
+        @*<ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>About us</a></li>
+                <li><a href='#'>Patients</a></li>
+                <li><a href='#'>Healthcare services</a></li>
+                <li><a href='#'>Careers & Volunteers</a></li>
+                <li><a href='#'>Visitors</a></li>
+                <li><a href='#'>Contact us</a></li>
+                <li><a href='#'>FAQ</a></li>
+            </ul>*@
+    </div>

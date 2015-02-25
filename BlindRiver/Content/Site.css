@@ -1,0 +1,385 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body {
+    font-size: .85em;
+    /*font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;*/
+    font: normal 14px Tahoma, Geneva, sans-serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+h1 {
+	font-size: 26px;
+	margin: 0 0 15px;
+}
+h2 {
+	font-size: 20px;
+	margin: 10px 0 15px;
+}
+h3 {
+	font-size: 18px;
+	margin: 10px 0 15px;
+}
+
+
+header, footer, nav, section {
+    display: block;
+}
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+
+.br-container{
+    min-height:100%;
+ position:relative;
+}
+
+.content-body{
+    overflow:hidden;
+    /*padding:20px;*/
+   padding-bottom:154px;  
+}
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*Styles for header*/
+.wrapper {
+/*border: 1px dashed red;*/
+margin:0 auto; 
+width:1170px;
+overflow:hidden;
+} 
+
+header .contact-info{
+    float:right;
+    margin-top:30px;
+}
+
+header .c-contact {
+    float:right;
+    font-weight:600;
+    padding-bottom:15px;
+  
+}
+
+header .cnt-img{
+    float:right;
+    height:20px;
+    margin:0 0 0 5px;
+    width:20px;
+}
+
+/*END Styles for header*/
+
+/*Styles for header admin*/
+#header-admin{
+    color: #ebebeb;
+    background-color: #ebebeb;
+    width: 100%;
+    text-shadow: 1px 1px 1px #000;
+}
+#header-admin img {
+    width:200px;
+}
+
+#header-admin .contact-info{
+    margin:18px 0;
+}
+#cms-logout{
+    border:1px solid #ADADAD;
+    color:#232323;
+    font-size:12px;
+    margin-bottom:10px;
+    padding:8px 16px;
+    text-decoration:none;
+}
+
+#cms-logout:hover{
+    background-color:#D4D4D4;
+    -webkit-transition: background-color 400ms ease-in;
+    -moz-transition: background-color 400ms ease-in;
+    -o-transition: background-color 400ms ease-in;
+    -ms-transition: background-color 400ms ease-in;
+    transition: background-color 400ms ease-in;
+}
+/*END Styles for header admin*/
+
+
+
+/*Styles for navigation*/
+#nav{
+    background-color:#0378a3;
+}
+
+#nav ul{
+    height:46px;
+}
+
+#nav ul li{
+    display:inline;
+}
+
+#nav ul li a{
+    color:#fff;
+    float:left;
+    padding:15px 32px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+
+#nav ul li a:hover{
+    background:#08b3ce;
+    color:#fff;
+}
+/*END Styles for navigation*/
+
+
+/*menu navigation admin page*/
+#nav-admin{
+    background-color:#ebebeb;
+    float:left;
+    width:190px;
+}
+#nav-admin p{
+    background-color:#266176;
+    font-size:20px;
+padding: 8px 11px;
+}
+
+#nav-admin ul li:first-child{
+     border-top:1px solid #ADADAD;
+}
+
+#nav-admin ul li{
+     border-bottom:1px solid #ADADAD;
+}
+
+#nav-admin ul li a{
+    color:#232323;
+    display: block;
+    padding: 8px 11px;
+    text-decoration:none;
+}
+
+#nav-admin ul li a i{
+    display:inline-block;
+    margin-right:10px;
+}
+#nav-admin .fa-wrench{
+    margin-right:10px;
+}
+
+ #nav-admin ul li a:hover { 
+      background-color:#D4D4D4;
+     -webkit-transition: background-color 400ms ease-in;
+    -moz-transition: background-color 400ms ease-in;
+    -o-transition: background-color 400ms ease-in;
+    -ms-transition: background-color 400ms ease-in;
+    transition: background-color 400ms ease-in;       
+    }
+
+/*END menu navigation admin page*/
+
+/* Styles for Home page*/
+.clear{
+    clear:both;
+}
+
+#content {
+	float: left;
+	width: 600px;
+}
+#right-col {
+	float: right;
+	width: 290px;
+}
+/* END Styles for Home page*/
+
+/* Styles for Footer*/
+footer{
+     background:#266176;
+     bottom:0;
+     height:124px; 
+     margin-top:50px;    
+     position:absolute; 
+     width:100%;
+}
+
+.f-left{
+    float:left;
+}
+
+
+footer .f-menu{
+    height:46px;
+}
+
+.f-menu li{
+    display:inline;
+}
+
+.f-menu li a{
+    color:#c1bcbc;
+    float:left;
+    padding:15px 20px;
+    text-transform:uppercase;
+    text-decoration:none;
+}
+
+.f-menu li a:hover{
+    color:#fff;
+}
+
+.copy{
+    margin-left:20px;
+}
+/* END Styles for Footer*/
+
+/*Styles for image gallery - admin side*/
+.img-gallery-admin{
+    height:200px;
+    overflow:hidden;
+}
+
+.img-gallery-admin .img-g-d img
+{
+ 
+    margin:20px 20px 20px 0;
+    width:700px;
+
+}
+
+.img-gallery-admin .img-g-d{
+    float:left;
+}
+
+.img-gallery-admin .link-g-d{
+    float:left;
+    /*margin-right: 300px;*/
+    margin-top: 80px;
+}
+
+ /*.img-gallery-admin .link-g-d p{
+     padding-bottom:20px;
+    }*/
+
+/* END Styles for image gallery - admin side*/
+
+.wrapper-admin{
+    float:left;
+    padding:30px;
+    width:1090px;
+}

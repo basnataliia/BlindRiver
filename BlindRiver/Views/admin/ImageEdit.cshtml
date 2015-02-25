@@ -1,0 +1,13 @@
+﻿@*@model IEnumerable<BlindRiver.Models.sliderimage>*@
+@model BlindRiver.Models.sliderimage
+
+@{
+    ViewBag.Title = "ImageEdit";
+}
+
+<h2>ImageEdit</h2>
+
+<h3>@Html.DisplayFor(x=>x.ImagePath)</h3>
+<p>
+    @Html.ActionLink("Back", "sliderAdmin", "admin")
+</p>

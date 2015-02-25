@@ -1,0 +1,40 @@
+﻿@*@model IEnumerable<BlindRiver.Models.Gallery>*@
+@*@model BlindRiver.Models.sliderimage*@
+@model IEnumerable<BlindRiver.Models.sliderimage>
+
+    @{
+        ViewBag.Title = "sliderAdmin";
+    }
+
+    <h2>Image Gallery </h2>
+
+    @using (Html.BeginForm("sliderAdmin", "admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <input id="Id" type="hidden" name="Id" />
+        <input type="file" name="ImagePath" />
+        <input type="submit" name="OK" />
+    }
+
+    <div>
+        @foreach (var image in Model)
+        {
+            <div class="img-gallery-admin">
+                <div class="img-g-d">
+                    @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
+                    <img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" />
+                </div>
+                <div class="link-g-d">
+                    @*<p>Update</p>*@
+                    @*<p>Delete</p>*@
+                    <ul>
+                        <li>@Html.ActionLink(image.ImagePath, "ImageEdit", new { Id = image.Id })</li>
+                        <li>@Html.ActionLink("Delete", "DeleteImage", new { Id = image.Id })</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+
+
