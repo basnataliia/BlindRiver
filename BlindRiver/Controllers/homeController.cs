@@ -33,7 +33,7 @@ namespace BlindRiver.Controllers
 
         //Test  view - will be deleted
         public ActionResult testview()
-        {  
+        {
             return View();
         }
 

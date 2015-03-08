@@ -14,11 +14,7 @@ namespace BlindRiver.Controllers
     {
         Models.ImageSlider dbproduct = new Models.ImageSlider();
 
-        //public ActionResult sliderAdmin()
-        //{
-        //    return View();
-        //}
-
+        //[Authorize(Users="username[, Natalie]")]
         public ActionResult test()
         {
             return View();

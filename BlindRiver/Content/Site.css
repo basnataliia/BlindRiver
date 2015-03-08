@@ -198,7 +198,7 @@ header .cnt-img{
 #header-admin .contact-info{
     margin:18px 0;
 }
-#cms-logout{
+.cms-button, #registr-form a {
     border:1px solid #ADADAD;
     color:#232323;
     font-size:12px;
@@ -207,13 +207,30 @@ header .cnt-img{
     text-decoration:none;
 }
 
-#cms-logout:hover{
+
+.cms-button:hover, #registr-form a:hover{
     background-color:#D4D4D4;
     -webkit-transition: background-color 400ms ease-in;
     -moz-transition: background-color 400ms ease-in;
     -o-transition: background-color 400ms ease-in;
     -ms-transition: background-color 400ms ease-in;
     transition: background-color 400ms ease-in;
+}
+
+#hellouser{
+    color:black;
+    font-size:14px;
+    float:left;
+    padding-right:10px;
+}
+
+#login {
+    width: 200px;
+}
+
+#registr-form li{
+    display:inline;
+    padding-right:10px;
 }
 /*END Styles for header admin*/
 

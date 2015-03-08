@@ -1,14 +1,14 @@
-﻿@*@model IEnumerable<BlindRiver.Models.brMenu>*@
-@*@model IEnumerable<BlindRiver.Models.Gallery>*@
+﻿
 
-@model IEnumerable<BlindRiver.Models.sliderimage>
+
+
+@*@model IEnumerable<BlindRiver.Models.sliderimage>*@
 @{
     ViewBag.Title = "Index";
 }
 <div class="wrapper">
     <div class="img-slider">
-        @*<img src="~/Content/Images/slider-2.jpg" alt="hospital" />*@
-        @*@Html.Partial("Slider")*@
+
 
         @Html.Action("Slider", "Home");
 

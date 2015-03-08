@@ -28,6 +28,7 @@
 
 </head>
 <body>
+    
     <div class="br-container">
         <header id="header-admin">
             <div class="wrapper">
@@ -37,7 +38,10 @@
                 <a href="@Url.Action("Index", "Index", "BlindRiver")"><img src="@Url.Content("~/Content/Images/Logo.png")" /></a>
 
                 <div class="contact-info">
-                    <a id="cms-logout" href="#">Logout</a>
+                    @*<a id="cms-logout" href="#">Logout</a>*@
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
                 </div>
                 <div class="clear">
                 </div>
