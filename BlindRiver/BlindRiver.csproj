@@ -188,12 +188,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\adminController.cs" />
+    <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\bookappLinq.cs" />
+    <Compile Include="Models\bookApps.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookApps.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bookValidation.cs" />
     <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
@@ -299,6 +307,11 @@
       <LastGenOutput>menulinks.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Models\bookApps.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>bookApps.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
@@ -370,6 +383,8 @@
     <Content Include="Views\admin\test.cshtml" />
     <Content Include="Views\admin\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_adminLayout.cshtml" />
+    <Content Include="Views\BookApp\Insert.cshtml" />
+    <Content Include="Views\BookApp\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -379,6 +394,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\bookApps.dbml.layout">
+      <DependentUpon>bookApps.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

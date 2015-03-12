@@ -1,0 +1,44 @@
+﻿@model BlindRiver.Models.bookAppValidation
+
+@{
+    ViewBag.Title = "Book An Appointment";
+}
+
+<h2>Book An Appointment</h2>
+<h4>Request 2 days in advance </h4>
+
+@using (Html.BeginForm()) { 
+    
+    @Html.ValidationSummary()
+        
+        @Html.LabelFor(model => model.name)
+        @Html.TextBoxFor(model => model.name)
+        @Html.ValidationMessageFor(model => model.name, "*")
+    <br /><br />
+        
+        @Html.LabelFor(model => model.phone)
+        @Html.TextBoxFor(model => model.phone)
+        @Html.ValidationMessageFor(model => model.phone, "*")
+    <br /><br />
+    
+        @Html.LabelFor(model => model.email)
+        @Html.TextBoxFor(model => model.email)
+        @Html.ValidationMessageFor(model => model.email, "*")
+    <br /><br />
+    
+        @Html.LabelFor(model => model.doa)
+        @Html.TextBoxFor(model => model.doa)
+        @Html.ValidationMessageFor(model => model.doa, "*")
+    <br /><br />
+    
+        @Html.LabelFor(model => model.purpose)
+        @Html.TextAreaFor(model => model.purpose)
+        @Html.ValidationMessageFor(model => model.purpose, "*")
+    <br /><br />
+    <input type="submit" value="Insert" />
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    }
