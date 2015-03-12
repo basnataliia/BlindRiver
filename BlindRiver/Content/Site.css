@@ -160,7 +160,7 @@ textarea {
 /*border: 1px dashed red;*/
 margin:0 auto; 
 width:1170px;
-overflow:hidden;
+/*overflow:hidden;*/
 } 
 
 header .contact-info{
@@ -243,24 +243,55 @@ header .cnt-img{
 
 #nav ul{
     height:46px;
+    text-transform: uppercase;
 }
 
-#nav ul li{
-    display:inline;
+#nav ul > li{
+    display:inline-block;
+    position:relative;
 }
 
 #nav ul li a{
     color:#fff;
     float:left;
     padding:15px 32px;
-    text-transform:uppercase;
     text-decoration:none;
 }
 
-#nav ul li a:hover{
+#nav ul li:hover > a{
     background:#08b3ce;
     color:#fff;
 }
+
+#nav ul ul {
+    
+    display:none;
+    left:0;
+    margin-top: -1px;
+    position:absolute;
+    top:100%;
+    text-transform: none;
+    z-index:10;
+    white-space: nowrap;
+    width: 223px;
+}
+
+#nav ul ul li {
+    background:#0378a3;
+    display: block;
+}
+
+#nav ul ul a{
+float:none;
+display: block;
+}
+
+#nav ul > li:hover ul {
+    display:block;
+    
+}
+
+
 /*END Styles for navigation*/
 
 
@@ -307,6 +338,8 @@ padding: 8px 11px;
     -ms-transition: background-color 400ms ease-in;
     transition: background-color 400ms ease-in;       
     }
+
+
 
 /*END menu navigation admin page*/
 

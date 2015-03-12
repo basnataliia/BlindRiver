@@ -8,7 +8,24 @@
 
                 foreach (var x in menuItems)
                 {
-                    <li>@Html.ActionLink(x.link_name, x.link_url, new { Id = x.id })</li>
+                    if(x.parent_id == null)
+                    { 
+                    <li>
+                        @Html.ActionLink(x.link_name, x.link_url, new { Id = x.id })
+                        <ul>
+                            @foreach(var submenuItem in menuItems)
+                            {
+                                if(submenuItem.parent_id == x.id)
+                                {
+                                    <li>@Html.ActionLink(submenuItem.link_name, submenuItem.link_url, new { Id = submenuItem.id })</li>
+                                  
+                                }
+                           }
+                        </ul>
+                    </li>
+                
+            }
+                    
                 }
 
             }
