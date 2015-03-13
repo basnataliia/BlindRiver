@@ -50,14 +50,20 @@ table {
 
 
 
-body {
+/*body {
     font-size: .85em;
-    /*font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;*/
     font: normal 14px Tahoma, Geneva, sans-serif;
     color: #232323;
     background-color: #fff;
-}
+}*/
 
+ body {
+	background-color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
 
 h1, 
 h2, 
@@ -254,7 +260,7 @@ header .cnt-img{
 #nav ul li a{
     color:#fff;
     float:left;
-    padding:15px 32px;
+    padding:13px 32px;
     text-decoration:none;
 }
 
@@ -273,7 +279,7 @@ header .cnt-img{
     text-transform: none;
     z-index:10;
     white-space: nowrap;
-    width: 223px;
+    width: 241px;
 }
 
 #nav ul ul li {
@@ -290,8 +296,6 @@ display: block;
     display:block;
     
 }
-
-
 /*END Styles for navigation*/
 
 
@@ -339,8 +343,6 @@ padding: 8px 11px;
     transition: background-color 400ms ease-in;       
     }
 
-
-
 /*END menu navigation admin page*/
 
 /* Styles for Home page*/
@@ -356,6 +358,88 @@ padding: 8px 11px;
 	float: right;
 	width: 290px;
 }
+
+
+
+#HomepageModules{
+    padding:20px;
+    width:100%;
+}
+
+.hp-module{
+    float:left;
+    width:50%;
+}
+
+.wrapper-image{
+    float:left;
+    padding:20px;
+    width:250px;
+    height:159px;
+}
+
+.hp-module .module-img{
+    position:relative;
+    width:250px;
+    height:159px;
+}
+
+.hp-module .module-img img{
+    /*width:250px;*/
+     width:100%;
+    vertical-align:top;
+}
+
+
+.hp-module .module-img:after, .hp-module .module-img:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.hp-module .module-img:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+}
+.hp-module .module-img:before {
+    content: attr(data-content);
+    width:100%;
+    color:#fff;
+    font-family: Gill Sans / Gill Sans MT, sans-serif;
+    font-size:large;
+    z-index:1;
+    bottom:0;
+    padding:8px 10px;
+    text-align:center;
+    background:rgba(0,0,0,0.8);
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.hp-module .module-img:hover:after, .hp-module .module-img:hover:before {
+    opacity:1;
+}
+
+.hp-module .module-details{
+    padding:20px 0 20px ;
+}
+
+.hp-module .module-details  h3{
+    padding:0;
+    margin:0;
+}
+
+.hp-module .module-details a{
+    color:#337ab7;
+    text-decoration:none;
+}
+
+.hp-module .module-details a:hover{
+    color:#23527c;
+    text-decoration:underline;
+}
+
 /* END Styles for Home page*/
 
 /* Styles for Footer*/

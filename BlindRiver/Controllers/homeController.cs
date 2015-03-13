@@ -10,6 +10,7 @@ namespace BlindRiver.Controllers
 {
     public class homeController : Controller
     {
+        HomepageModule homeModuleObj = new HomepageModule();
 
         linksmenu menuObj = new linksmenu();
 
@@ -31,12 +32,6 @@ namespace BlindRiver.Controllers
         }
 
 
-        //Test  view - will be deleted
-        public ActionResult testview()
-        {
-            return View();
-        }
-
         //Main menu - partial view
         public ActionResult menu()
         {
@@ -51,6 +46,13 @@ namespace BlindRiver.Controllers
         {
             var img = objImage.getImages();
             return PartialView(img);
+        }
+
+        //Home Page Modules - partial view
+        public ActionResult HomepageModules()
+        {
+            var modules = homeModuleObj.getModules();
+            return PartialView(modules);
         }
 
     }

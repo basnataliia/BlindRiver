@@ -14,12 +14,13 @@ namespace BlindRiver.Controllers
     {
         Models.ImageSlider dbproduct = new Models.ImageSlider();
 
-        //[Authorize(Users="username[, Natalie]")]
+        [Authorize(Users = "Natalie")]
         public ActionResult test()
         {
             return View();
         }
 
+       
         public ActionResult sliderAdmin()
         {
             var img = dbproduct.getImages();
