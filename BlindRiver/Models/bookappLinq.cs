@@ -31,5 +31,30 @@ namespace BlindRiver.Models
             }
         }
     
+        //delete
+        public bool commitDelete(int _id)
+        {
+            using (bookObj) {
+                var bookDel = bookObj.bookApps.Single(x => x.id == _id);
+                bookObj.bookApps.DeleteOnSubmit(bookDel);
+                bookObj.SubmitChanges();
+                return true;
+            }
+        }
+        //update
+        public bool commitUpdate(int _id, string _name, string _phone, string _email, DateTime _doa, string _purpose)
+        {
+            using (bookObj)
+            {
+                var bookUpdate = bookObj.bookApps.Single(x => x.id == _id);
+
+                bookUpdate.name = _name;
+                bookUpdate.phone = _phone;
+                bookUpdate.email = _email;
+                bookUpdate.doa = _doa;
+                bookUpdate.purpose = _purpose;
+            }
+            return true;
+        }
     }
 }

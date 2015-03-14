@@ -385,6 +385,7 @@
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />
+    <Content Include="Views\BookApp\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
