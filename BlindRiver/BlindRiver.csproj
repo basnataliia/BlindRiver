@@ -386,6 +386,7 @@
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />
     <Content Include="Views\BookApp\Details.cshtml" />
+    <Content Include="Views\BookApp\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

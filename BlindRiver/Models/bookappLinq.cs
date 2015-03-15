@@ -53,8 +53,11 @@ namespace BlindRiver.Models
                 bookUpdate.email = _email;
                 bookUpdate.doa = _doa;
                 bookUpdate.purpose = _purpose;
+
+                bookObj.SubmitChanges();
+
+                return true;
             }
-            return true;
         }
     }
 }
