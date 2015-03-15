@@ -187,7 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\adminController.cs" />
+    <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -384,11 +384,11 @@
     </Content>
     <Content Include="Views\Home\Slider.cshtml" />
     <Content Include="Views\Shared\menu.cshtml" />
-    <Content Include="Views\admin\DeleteImage.cshtml" />
-    <Content Include="Views\admin\ImageEdit.cshtml" />
-    <Content Include="Views\admin\sliderAdmin.cshtml" />
-    <Content Include="Views\admin\test.cshtml" />
-    <Content Include="Views\admin\_ViewStart.cshtml" />
+    <Content Include="Views\SliderAdmin\DeleteImage.cshtml" />
+    <Content Include="Views\SliderAdmin\ImageEdit.cshtml" />
+    <Content Include="Views\SliderAdmin\Index.cshtml" />
+    <Content Include="Views\SliderAdmin\test.cshtml" />
+    <Content Include="Views\SliderAdmin\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />

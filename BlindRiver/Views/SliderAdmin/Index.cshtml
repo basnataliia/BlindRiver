@@ -1,20 +1,21 @@
-﻿@*@model IEnumerable<BlindRiver.Models.Gallery>*@
-@*@model BlindRiver.Models.sliderimage*@
+﻿@*@model BlindRiver.Models.sliderimage*@
 @model IEnumerable<BlindRiver.Models.sliderimage>
 
     @{
-        ViewBag.Title = "sliderAdmin";
+        ViewBag.Title = "Index";
     }
 
     <h2>Image Gallery </h2>
 
-    @using (Html.BeginForm("sliderAdmin", "admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
+    @*@using (Html.BeginForm("sliderAdmin", "admin", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+@using (Html.BeginForm("Index", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
 
         <input id="Id" type="hidden" name="Id" />
         <input type="file" name="ImagePath" />
         <input type="submit" name="OK" />
-    }
+}
 
     <div>
         @foreach (var image in Model)
