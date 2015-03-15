@@ -115,8 +115,9 @@ namespace BlindRiver.Controllers
                     catch {
                         return View("Not Found");
                     }
-                    return View();
+                    
                 }
             }
         }
     }
+
