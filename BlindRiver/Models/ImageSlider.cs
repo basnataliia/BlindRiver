@@ -40,5 +40,18 @@ namespace BlindRiver.Models
             var oneImage = objImage.sliderimages.SingleOrDefault(x => x.Id == _id);
             return oneImage;
         }
+
+        public bool commiUpdate( int _id, string _imagePath)
+        {
+            using(objImage)
+            {
+                var objUpImage = objImage.sliderimages.Single(x => x.Id == _id);
+                //setting table column to new value being passed
+                objUpImage.ImagePath = _imagePath;
+                //commit update against database
+                objImage.SubmitChanges();
+                return true;
+            }
+        }
     }
 }

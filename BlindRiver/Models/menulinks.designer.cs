@@ -30,6 +30,9 @@ namespace BlindRiver.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void Insertmainmenulink(mainmenulink instance);
+    partial void Updatemainmenulink(mainmenulink instance);
+    partial void Deletemainmenulink(mainmenulink instance);
     #endregion
 		
 		public menulinksDataContext() : 
@@ -72,8 +75,10 @@ namespace BlindRiver.Models
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.mainmenulinks")]
-	public partial class mainmenulink
+	public partial class mainmenulink : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
@@ -81,11 +86,28 @@ namespace BlindRiver.Models
 		
 		private string _link_url;
 		
+		private System.Nullable<int> _parent_id;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void Onlink_nameChanging(string value);
+    partial void Onlink_nameChanged();
+    partial void Onlink_urlChanging(string value);
+    partial void Onlink_urlChanged();
+    partial void Onparent_idChanging(System.Nullable<int> value);
+    partial void Onparent_idChanged();
+    #endregion
+		
 		public mainmenulink()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -96,7 +118,11 @@ namespace BlindRiver.Models
 			{
 				if ((this._id != value))
 				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
 					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
@@ -112,7 +138,11 @@ namespace BlindRiver.Models
 			{
 				if ((this._link_name != value))
 				{
+					this.Onlink_nameChanging(value);
+					this.SendPropertyChanging();
 					this._link_name = value;
+					this.SendPropertyChanged("link_name");
+					this.Onlink_nameChanged();
 				}
 			}
 		}
@@ -128,8 +158,52 @@ namespace BlindRiver.Models
 			{
 				if ((this._link_url != value))
 				{
+					this.Onlink_urlChanging(value);
+					this.SendPropertyChanging();
 					this._link_url = value;
+					this.SendPropertyChanged("link_url");
+					this.Onlink_urlChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_parent_id", DbType="Int")]
+		public System.Nullable<int> parent_id
+		{
+			get
+			{
+				return this._parent_id;
+			}
+			set
+			{
+				if ((this._parent_id != value))
+				{
+					this.Onparent_idChanging(value);
+					this.SendPropertyChanging();
+					this._parent_id = value;
+					this.SendPropertyChanged("parent_id");
+					this.Onparent_idChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

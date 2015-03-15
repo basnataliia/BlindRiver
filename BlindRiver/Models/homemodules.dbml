@@ -1,11 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9B4CDA_webdevelopment" Class="menulinksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9B4CDA_webdevelopment" Class="homemodulesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=SQL5007.Smarterasp.net;Initial Catalog=DB_9B4CDA_webdevelopment;User ID=DB_9B4CDA_webdevelopment_admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_9B4CDA_webdevelopmentConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.mainmenulinks" Member="mainmenulinks">
-    <Type Name="mainmenulink">
+  <Table Name="dbo.homemodules" Member="homemodules">
+    <Type Name="homemodule">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="link_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="image_path" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="link_url" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="link_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -10,24 +10,25 @@ using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
 {
-    public class adminController : Controller
+    public class SliderAdminController : Controller
     {
         Models.ImageSlider dbproduct = new Models.ImageSlider();
 
-        //[Authorize(Users="username[, Natalie]")]
+        [Authorize(Users = "Natalie")]
         public ActionResult test()
         {
             return View();
         }
 
-        public ActionResult sliderAdmin()
+       
+        public ActionResult Index()
         {
             var img = dbproduct.getImages();
             return View(img);
         }
 
         [HttpPost]
-        public ActionResult sliderAdmin(HttpPostedFileBase ImagePath)
+        public ActionResult Index(HttpPostedFileBase ImagePath)
         {
             if (ImagePath != null && ImagePath.ContentLength > 0)
             {
@@ -42,7 +43,9 @@ namespace BlindRiver.Controllers
                 dbproduct.commitInsert(NewProduct);
             }
 
-            return RedirectToAction("sliderAdmin");
+            //return RedirectToAction("sliderAdmin", "SliderAdmin");
+            var img = dbproduct.getImages();
+            return View(img);
         }
 
         public ActionResult ImageEdit(int Id)
@@ -78,7 +81,7 @@ namespace BlindRiver.Controllers
             try
             {
                 dbproduct.commitDelete(Id);
-                return RedirectToAction("sliderAdmin");
+                return RedirectToAction("Index");
             }
 
             catch

@@ -23,74 +23,72 @@ namespace BlindRiver.Models
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_9B4CDA_webdevelopment")]
-	public partial class bookAppsDataContext : System.Data.Linq.DataContext
+	public partial class homemodulesDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertbookApp(bookApp instance);
-    partial void UpdatebookApp(bookApp instance);
-    partial void DeletebookApp(bookApp instance);
+    partial void Inserthomemodule(homemodule instance);
+    partial void Updatehomemodule(homemodule instance);
+    partial void Deletehomemodule(homemodule instance);
     #endregion
 		
-		public bookAppsDataContext() : 
+		public homemodulesDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9B4CDA_webdevelopmentConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bookAppsDataContext(string connection) : 
+		public homemodulesDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bookAppsDataContext(System.Data.IDbConnection connection) : 
+		public homemodulesDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bookAppsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public homemodulesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bookAppsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public homemodulesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<bookApp> bookApps
+		public System.Data.Linq.Table<homemodule> homemodules
 		{
 			get
 			{
-				return this.GetTable<bookApp>();
+				return this.GetTable<homemodule>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.bookApps")]
-	public partial class bookApp : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.homemodules")]
+	public partial class homemodule : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private string _name;
+		private string _image_path;
 		
-		private string _phone;
+		private string _link_url;
 		
-		private string _email;
+		private string _description;
 		
-		private System.DateTime _doa;
-		
-		private string _purpose;
+		private string _link_name;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -98,19 +96,17 @@ namespace BlindRiver.Models
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnphoneChanging(string value);
-    partial void OnphoneChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
-    partial void OndoaChanging(System.DateTime value);
-    partial void OndoaChanged();
-    partial void OnpurposeChanging(string value);
-    partial void OnpurposeChanged();
+    partial void Onimage_pathChanging(string value);
+    partial void Onimage_pathChanged();
+    partial void Onlink_urlChanging(string value);
+    partial void Onlink_urlChanged();
+    partial void OndescriptionChanging(string value);
+    partial void OndescriptionChanged();
+    partial void Onlink_nameChanging(string value);
+    partial void Onlink_nameChanged();
     #endregion
 		
-		public bookApp()
+		public homemodule()
 		{
 			OnCreated();
 		}
@@ -135,102 +131,82 @@ namespace BlindRiver.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image_path", DbType="VarChar(50)")]
+		public string image_path
 		{
 			get
 			{
-				return this._name;
+				return this._image_path;
 			}
 			set
 			{
-				if ((this._name != value))
+				if ((this._image_path != value))
 				{
-					this.OnnameChanging(value);
+					this.Onimage_pathChanging(value);
 					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this._image_path = value;
+					this.SendPropertyChanged("image_path");
+					this.Onimage_pathChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
-		public string phone
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_link_url", DbType="VarChar(100)")]
+		public string link_url
 		{
 			get
 			{
-				return this._phone;
+				return this._link_url;
 			}
 			set
 			{
-				if ((this._phone != value))
+				if ((this._link_url != value))
 				{
-					this.OnphoneChanging(value);
+					this.Onlink_urlChanging(value);
 					this.SendPropertyChanging();
-					this._phone = value;
-					this.SendPropertyChanged("phone");
-					this.OnphoneChanged();
+					this._link_url = value;
+					this.SendPropertyChanged("link_url");
+					this.Onlink_urlChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(350)")]
+		public string description
 		{
 			get
 			{
-				return this._email;
+				return this._description;
 			}
 			set
 			{
-				if ((this._email != value))
+				if ((this._description != value))
 				{
-					this.OnemailChanging(value);
+					this.OndescriptionChanging(value);
 					this.SendPropertyChanging();
-					this._email = value;
-					this.SendPropertyChanged("email");
-					this.OnemailChanged();
+					this._description = value;
+					this.SendPropertyChanged("description");
+					this.OndescriptionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doa", DbType="DateTime NOT NULL")]
-		public System.DateTime doa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_link_name", DbType="VarChar(50)")]
+		public string link_name
 		{
 			get
 			{
-				return this._doa;
+				return this._link_name;
 			}
 			set
 			{
-				if ((this._doa != value))
+				if ((this._link_name != value))
 				{
-					this.OndoaChanging(value);
+					this.Onlink_nameChanging(value);
 					this.SendPropertyChanging();
-					this._doa = value;
-					this.SendPropertyChanged("doa");
-					this.OndoaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_purpose", DbType="VarChar(300) NOT NULL", CanBeNull=false)]
-		public string purpose
-		{
-			get
-			{
-				return this._purpose;
-			}
-			set
-			{
-				if ((this._purpose != value))
-				{
-					this.OnpurposeChanging(value);
-					this.SendPropertyChanging();
-					this._purpose = value;
-					this.SendPropertyChanged("purpose");
-					this.OnpurposeChanged();
+					this._link_name = value;
+					this.SendPropertyChanged("link_name");
+					this.Onlink_nameChanged();
 				}
 			}
 		}
