@@ -187,11 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\HomepageModuleController.cs" />
-=======
-    <Compile Include="Controllers\News_PostController.cs" />
->>>>>>> origin/blindriver
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -221,11 +217,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>menulinks.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\news_posts.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>news_posts.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
@@ -333,11 +324,6 @@
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
-    <Content Include="Models\news_posts.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>news_posts.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Models\slider.dbml.layout">
       <DependentUpon>slider.dbml</DependentUpon>
     </None>
@@ -408,22 +394,9 @@
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />
-
     <Content Include="Views\Home\HomepageModules.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\HomepageModule\Index.cshtml" />
     <Content Include="Views\HomepageModule\_ViewStart.cshtml" />
-=======
-
-    <Content Include="Views\BookApp\Details.cshtml" />
-<<<<<<< HEAD
-<<<<<<< HEAD
- parent of c92e880... BookApp-Update/Delete
->>>>>>> origin/blindriver
-=======
->>>>>>> parent of c92e880... BookApp-Update/Delete
-=======
->>>>>>> parent of c92e880... BookApp-Update/Delete
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -437,11 +410,6 @@
   <ItemGroup>
     <None Include="Models\bookApps.dbml.layout">
       <DependentUpon>bookApps.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Models\news_posts.dbml.layout">
-      <DependentUpon>news_posts.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

@@ -20,21 +20,6 @@ namespace BlindRiver.Controllers
             return View();
         }
 
-        //details
-        public ActionResult Details(int id)
-        {
-            var bookDetail = bookObj.getRequeststByID(id);
-            if (bookDetail == null)
-            {
-                return View("NotFound");
-            }
-            else
-            {
-                return View(bookDetail);
-            }
-        }
-
-        //insert
         public ActionResult Insert()
         {
             return View();
@@ -58,66 +43,5 @@ namespace BlindRiver.Controllers
             return View();
         }
 
-        //delete
-        public ActionResult Delete(int id)
-        {
-            var bookDel = bookObj.getRequeststByID(id);
-            if (bookDel == null)
-            {
-                return View("Not Found");
-            }
-            else
-            {
-                return View(bookDel);
-            }
-        }
-
-        [HttpPost]
-        public ActionResult Delete(int id, bookApp book)
-        {
-            try
-            {
-                bookObj.commitDelete(id);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        public ActionResult NotFound()
-        {
-            return View();
-        }
-
-            //update
-            public ActionResult Update(int id) {
-                var bookUpd = bookObj.getRequeststByID(id);
-                if (bookUpd == null)
-                {
-                    return View();
-                }
-                else {
-                    return View(bookUpd);
-                }
-            }
-
-            [HttpPost]
-            public ActionResult Update(int id, bookApp bookUpd)
-            {
-                if (ModelState.IsValid) {
-                    try
-                    {
-                        bookObj.commitUpdate(id, bookUpd.name, bookUpd.phone, bookUpd.email, bookUpd.doa, bookUpd.purpose);
-                        return RedirectToAction("Details/" + id);
-                    }
-                    catch {
-                        return View("Not Found");
-                    }
-                    
-                }
-            }
-        }
     }
-
+}
