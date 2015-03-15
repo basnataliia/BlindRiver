@@ -403,7 +403,11 @@
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\HomepageModules.cshtml" />
+=======
+    <Content Include="Views\BookApp\Details.cshtml" />
+>>>>>>> parent of c92e880... BookApp-Update/Delete
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
