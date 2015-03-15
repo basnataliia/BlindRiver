@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomepageModuleController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -208,6 +209,7 @@
       <DependentUpon>homemodules.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\HomepageModule.cs" />
+    <Compile Include="Models\HomepageModuleValidation.cs" />
     <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
@@ -393,6 +395,8 @@
     <Content Include="Views\BookApp\Insert.cshtml" />
     <Content Include="Views\BookApp\Index.cshtml" />
     <Content Include="Views\Home\HomepageModules.cshtml" />
+    <Content Include="Views\HomepageModule\Index.cshtml" />
+    <Content Include="Views\HomepageModule\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -7,7 +7,6 @@ namespace BlindRiver.Models
 {
     public class ImageSlider
     {
-
         sliderDataContext objImage = new sliderDataContext();
 
         public IEnumerable<sliderimage> getImages()

@@ -26,8 +26,6 @@
                     <img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" />
                 </div>
                 <div class="link-g-d">
-                    @*<p>Update</p>*@
-                    @*<p>Delete</p>*@
                     <ul>
                         <li>@Html.ActionLink(image.ImagePath, "ImageEdit", new { Id = image.Id })</li>
                         <li>@Html.ActionLink("Delete", "DeleteImage", new { Id = image.Id })</li>

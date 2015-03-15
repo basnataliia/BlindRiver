@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BlindRiver.Models.homemodule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home page modules</h2>
+
+@foreach (var module in Model)
+{
+    <div>
+
+                @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
+                <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
+
+        <div class="module-details">
+            <h3>
+                @Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })
+            </h3>
+            <div>
+                @module.description
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+<div class="clear"></div>
