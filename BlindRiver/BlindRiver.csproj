@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\News_PostController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -215,6 +216,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>menulinks.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\news_posts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>news_posts.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
@@ -322,6 +328,11 @@
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
+    <Content Include="Models\news_posts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>news_posts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\slider.dbml.layout">
       <DependentUpon>slider.dbml</DependentUpon>
     </None>
@@ -406,6 +417,11 @@
   <ItemGroup>
     <None Include="Models\bookApps.dbml.layout">
       <DependentUpon>bookApps.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\news_posts.dbml.layout">
+      <DependentUpon>news_posts.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>
