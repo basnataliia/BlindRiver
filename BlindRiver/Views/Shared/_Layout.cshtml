@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/slider")
+        @Scripts.Render("~/bundles/gallery")
+
+        @*Styles for image slider on Homepage*@
+        <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+        <style>
+            #linkAddImage {
+                background: none repeat scroll 0 0 green;
+                border-radius: 9px;
+                color: white;
+                padding: 4px 7px;
+            }
+        </style>
+    </head>
+    <body>
+                    @*<section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>*@
+        <div class="br-container">
+            <header>
+                <div class="wrapper">
+
+                    @*Source: "Action image MVC razor" http://stackoverflow.com/questions/4896439/action-image-mvc3-razor*@
+
+                    <a href="@Url.Action("Index")"><img src="@Url.Content("~/Content/Images/Logo.png")" /></a>
+
+                    <div class="contact-info">
+                        <a href="#"><img class="cnt-img" src="~/Content/Images/location1.png" alt="location" /></a><div class="c-contact">525 Causley St., Blind River, ON, P0R 1B0</div>
+                        <div class="clear"></div>
+                        <img class="cnt-img" src="~/Content/Images/mobile1.png" alt="phone" /><div class="c-contact">Phone: 705-356-2265</div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </header>
+            <nav id="nav">
+                @Html.Action("menu", "Home")
+            </nav>
+
+
+            <section>
+                <div class="content-body">
+                    @*<div class="wrapper">*@
+                    @RenderBody()
+                    @*</div>*@
+                </div>
+            </section>
+            <footer>
+                <div class="wrapper">
+                    <div class="f-left">
+                        <ul class="f-menu">
+                            <li><a href="#">Careers & Volunteers</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <div class="copy">Copyright &copy; 2015, Blind River District Health Centre </div>
+                    </div>
+                </div>
+            </footer>
+        </div> 
+        
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
