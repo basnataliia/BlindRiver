@@ -421,6 +421,8 @@
 >>>>>>> origin/blindriver
 =======
 >>>>>>> parent of c92e880... BookApp-Update/Delete
+=======
+>>>>>>> parent of c92e880... BookApp-Update/Delete
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
