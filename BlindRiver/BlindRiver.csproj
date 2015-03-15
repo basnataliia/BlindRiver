@@ -416,6 +416,7 @@
 =======
 
     <Content Include="Views\BookApp\Details.cshtml" />
+<<<<<<< HEAD
  parent of c92e880... BookApp-Update/Delete
 >>>>>>> origin/blindriver
 =======
