@@ -10,20 +10,19 @@ using System.Web.Mvc;
 namespace BlindRiver.Models
 {
     [MetadataType(typeof(HomepageModuleValidation))]
-    public partial class homemodules
+    public partial class homemodule
     {
     }
 
     [Bind(Exclude="id")]
     public class HomepageModuleValidation
     {
-        [DisplayName("Image Path")]
-        [Required]
-        public string imagePath { get; set; }
+        [DisplayName("Image Path")]    
+        public string image_path { get; set; }
 
         [DisplayName("Link URL")]
         [Required]
-        public string linkURL { get; set; }
+        public string link_url { get; set; }
 
         [DisplayName("Description")]
         [Required]
@@ -31,6 +30,6 @@ namespace BlindRiver.Models
 
         [DisplayName("Link Name")]
         [Required]
-        public string linkName { get; set; }
+        public string link_name { get; set; }
     }
 }

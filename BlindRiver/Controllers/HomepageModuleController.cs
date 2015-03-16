@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.IO;
 using BlindRiver.Models;
+
 
 namespace BlindRiver.Controllers
 {
@@ -32,8 +34,21 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(int id, homemodule module)
+        public ActionResult Update(int id, homemodule module, HttpPostedFileBase ImagePath)
         {
+
+            if (ImagePath != null && ImagePath.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(ImagePath.FileName);
+
+                var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
+                ImagePath.SaveAs(path);
+                module.image_path = fileName;
+            }
+            else
+            {
+                module.image_path = "test.jpg";
+            }
             if (ModelState.IsValid)
             {
                 try

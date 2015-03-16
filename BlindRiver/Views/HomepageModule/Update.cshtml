@@ -6,12 +6,15 @@
 
 <h2>Update</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Update", "HomepageModule", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @*@Html.HiddenFor(model => model.id)*@
+    @Html.HiddenFor(x => x.id)
    
-    @Html.LabelFor(x => x.image_path)
-    @Html.TextBoxFor(x => x.image_path)
+    @*@Html.LabelFor(x => x.image_path)*@
+
+    <input type="file" name="ImagePath" />
+    
+    @*@Html.TextBoxFor(x => x.image_path)*@
     <br />
     @Html.LabelFor(x => x.link_url)
     @Html.TextBoxFor(x => x.link_url)
