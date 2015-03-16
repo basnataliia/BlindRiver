@@ -1,0 +1,28 @@
+﻿@model BlindRiver.Models.homemodule
+
+@{
+    ViewBag.Title = "Update module";
+}
+
+<h2>Update</h2>
+
+@using (Html.BeginForm())
+{
+    @*@Html.HiddenFor(model => model.id)*@
+   
+    @Html.LabelFor(x => x.image_path)
+    @Html.TextBoxFor(x => x.image_path)
+    <br />
+    @Html.LabelFor(x => x.link_url)
+    @Html.TextBoxFor(x => x.link_url)
+    <br />
+    @Html.LabelFor(x => x.description)
+    @Html.TextBoxFor(x => x.description)
+    <br />
+    @Html.LabelFor(x => x.link_name)
+    @Html.TextBoxFor(x => x.link_name)
+    <br />
+    <input type="submit" value="Update"/>
+    <br/>
+    @Html.ActionLink("Back", "Index", "HomepageModule")
+}
