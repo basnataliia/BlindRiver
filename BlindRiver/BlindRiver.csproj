@@ -415,7 +415,14 @@
     <Content Include="Views\HomepageModule\_ViewStart.cshtml" />
     <Content Include="Views\FAQ\Index.cshtml" />
     <Content Include="Views\FAQ\Insert.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\HomepageModule\Update.cshtml" />
+=======
+    <Content Include="Views\FAQ\NotFound.cshtml" />
+    <Content Include="Views\FAQ\Details.cshtml" />
+    <Content Include="Views\FAQ\Update.cshtml" />
+    <Content Include="Views\FAQ\Delete.cshtml" />
+>>>>>>> origin/blindriver
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

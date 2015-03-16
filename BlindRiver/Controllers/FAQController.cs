@@ -41,6 +41,65 @@ namespace BlindRiver.Controllers
          }
          return View();
      }
+    
+    public ActionResult Update (int id)
+     {
+         var faq = objFAQ.getFAQByID(id);
+        if (faq == null)
+        {
+            return View("NotFound");
+        }
+        else
+        {
+            return View(faq);
+        }
+     }
+    [HttpPost]
+    public ActionResult Update (int id, FAQ faq)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                objFAQ.commitUpdate(id, faq.questions, faq.answers);
+                return RedirectToAction("Details/" + id);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        return View();
+    }
+    public ActionResult Delete (int id)
+    {
+        var faq = objFAQ.getFAQByID(id);
+        if (faq == null)
+        {
+            return View("NotFound");
+        }
+        else
+        {
+            return View(faq);
+        }
+    }
+    [HttpPost]
+    public ActionResult Delete (int id, FAQ faq)
+    {
+        try
+        {
+            objFAQ.commitDelete(id);
+            return RedirectToAction("Index");
+        }
+        catch
+        {
+            return View();
+        }
+    }
+    public ActionResult NotFound()
+    {
+        return View();
+    }
 
     }
 }

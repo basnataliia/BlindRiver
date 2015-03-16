@@ -1,0 +1,20 @@
+﻿@model BlindRiver.Models.bookAppValidation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@Html.HiddenFor(x => x.id)
+@Html.DisplayFor(x=>x.name)
+@Html.DisplayFor(x=>x.phone)
+@Html.DisplayFor(x=>x.email)
+@Html.DisplayFor(x=>x.doa)
+@Html.DisplayFor(x=>x.purpose)
+<p>
+    @Html.ActionLink("Back","Index")|
+      @Html.ActionLink("Update", "Update", new {  id=Model.id}) |
+      @Html.ActionLink("Delete","Delete",new {  id=Model.id})
+      @Html.ActionLink("Update", "Update", new {  id = Model.id}) |
+      @Html.ActionLink("Delete","Delete",new {  id = Model.id})
+</p>
