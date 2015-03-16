@@ -189,6 +189,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomepageModuleController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -226,6 +227,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>menulinks.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\NewsLinq.cs" />
+    <Compile Include="Models\NewsPosts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsPosts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewsValidation.cs" />
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -340,6 +348,11 @@
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
+    <Content Include="Models\NewsPosts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>NewsPosts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\slider.dbml.layout">
       <DependentUpon>slider.dbml</DependentUpon>
     </None>
@@ -432,6 +445,11 @@
   <ItemGroup>
     <None Include="Models\bookApps.dbml.layout">
       <DependentUpon>bookApps.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\NewsPosts.dbml.layout">
+      <DependentUpon>NewsPosts.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>
