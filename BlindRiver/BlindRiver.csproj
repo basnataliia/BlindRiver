@@ -187,10 +187,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomepageModuleController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\FAQ.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FAQ.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -203,6 +209,8 @@
       <DependentUpon>bookApps.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\bookValidation.cs" />
+    <Compile Include="Models\FAQLinq.cs" />
+    <Compile Include="Models\FAQvalidation.cs" />
     <Compile Include="Models\homemodules.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -318,6 +326,14 @@
       <LastGenOutput>homemodules.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Models\FAQ.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FAQ.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\FAQ.dbml.layout">
+      <DependentUpon>FAQ.dbml</DependentUpon>
+    </None>
     <None Include="Models\homemodules.dbml.layout">
       <DependentUpon>homemodules.dbml</DependentUpon>
     </None>
@@ -397,8 +413,8 @@
     <Content Include="Views\Home\HomepageModules.cshtml" />
     <Content Include="Views\HomepageModule\Index.cshtml" />
     <Content Include="Views\HomepageModule\_ViewStart.cshtml" />
-    <Content Include="Views\BookApp\Details.cshtml" />
-    <Content Include="Views\BookApp\Update.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
+    <Content Include="Views\FAQ\Insert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

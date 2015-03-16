@@ -1,0 +1,28 @@
+﻿@model BlindRiver.Models.FAQvalidation
+
+@{
+    ViewBag.Title = "Insert New FAQ";
+}
+
+<h2>Insert New FAQ</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    
+    @Html.LabelFor(model => model.questions)
+    @Html.TextBoxFor(model => model.questions)
+    @Html.ValidationMessageFor(model => model.questions, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.answers)
+    @Html.TextBoxFor(model => model.answers)
+    @Html.ValidationMessageFor(model => model.answers, "*")
+    <br /><br />
+    <input type="submit" value="Insert" />
+    
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
