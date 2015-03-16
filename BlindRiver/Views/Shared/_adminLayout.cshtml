@@ -53,7 +53,7 @@
                 <ul>
                     @*@Html.Action("menu", "Home")*@
                     <li><a href="#"><i class="fa fa-file-text"></i>Create New Page</a></li>
-                    <li><a href="#"><i class="fa fa-home"></i>Home Page Manager</a></li>
+                    <li><a href="@Url.Action("Index", "HomepageModule")"><i class="fa fa-home"></i>Home Page Manager</a></li>
                     <li><a href="@Url.Action("Index","SliderAdmin")"><i class="fa fa-picture-o"></i>Home Page Slider</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i>Contact Messages</a></li>
                     <li><a href="#"><i class="fa fa-user-md"></i>Doctor Manager</a></li>

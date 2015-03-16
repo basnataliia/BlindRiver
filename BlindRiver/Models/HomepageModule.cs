@@ -22,7 +22,7 @@ namespace BlindRiver.Models
             return oneModule;
         }
 
-        public bool commitUpdate(int _id, string _imagePath, string _linkUrl, string _description)
+        public bool commitUpdate(int _id, string _imagePath, string _linkUrl, string _description, string _linkName)
         {
             using(objModule)
             {
@@ -31,6 +31,7 @@ namespace BlindRiver.Models
                 objUpModule.image_path = _imagePath;
                 objUpModule.link_url = _linkUrl;
                 objUpModule.description = _description;
+                objUpModule.link_name = _linkName;
                 //commit update against database
                 objModule.SubmitChanges();
                 return true;

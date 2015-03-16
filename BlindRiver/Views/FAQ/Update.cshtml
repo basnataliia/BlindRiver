@@ -1,0 +1,32 @@
+﻿@model BlindRiver.Models.FAQvalidation
+
+@{
+    ViewBag.Title = "Update FAQ: " + @Model.questions;
+}
+
+<h2>Update:  @Model.questions</h2>
+
+@using (Html.BeginForm())
+{
+   @Html.HiddenFor(x =>x.id)
+
+    @Html.LabelFor(model => model.questions)
+    @Html.TextBoxFor(model => model.questions)
+    @Html.ValidationMessageFor(model => model.questions, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.answers)
+    @Html.TextBoxFor(model => model.answers)
+    @Html.ValidationMessageFor(model => model.answers, "*")
+    <br /><br />
+    <input type="submit" value="Update" />
+
+}
+
+<p>
+    @Html.ActionLink("Back", "Details", new { id = Model.id})
+</p>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
