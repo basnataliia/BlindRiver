@@ -188,12 +188,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomepageModuleController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\contact.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,6 +203,11 @@
     </Compile>
     <Compile Include="Models\contacts.cs" />
     <Compile Include="Models\contactsValidation.cs" />
+    <Compile Include="Models\doctors.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>doctors.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\FAQ.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -355,6 +362,11 @@
     <None Include="Models\contact.dbml.layout">
       <DependentUpon>contact.dbml</DependentUpon>
     </None>
+    <Content Include="Models\doctors.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>doctors.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\FAQ.dbml.layout">
       <DependentUpon>FAQ.dbml</DependentUpon>
     </None>
@@ -452,6 +464,7 @@
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\Thanks.cshtml" />
     <Content Include="Views\BookApp\Details.cshtml" />
+    <Content Include="Views\doctor\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -470,6 +483,11 @@
   <ItemGroup>
     <None Include="Models\NewsPosts.dbml.layout">
       <DependentUpon>NewsPosts.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\doctors.dbml.layout">
+      <DependentUpon>doctors.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

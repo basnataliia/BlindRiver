@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BlindRiver.Models.doctor>
+@{
+    ViewBag.Title = "docs";
+}
+
+<div id="doctorsContainer">
+    <h1>Blind River Doctors</h1>
+@foreach (var doctors in Model) {
+    <div id="doctorsContainer2">
+        <div class="doctorText">
+            <h3 class="doctorTitle">@doctors.firstName @doctors.lastName</h3>
+            <p>@doctors.department</p>
+            <p><a href="mailto:@doctors.email">@doctors.email</a></p>
+            <p>@doctors.title</p>
+            <p>@doctors.phone</p>
+        </div> 
+    <img src="@Url.Content(@"~/Content/Images/" + (doctors.image))" alt="" class="doctorThumb" />
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+}
+</div>
