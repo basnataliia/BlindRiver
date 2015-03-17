@@ -1,46 +1,5 @@
-﻿@model BlindRiver.Models.bookAppValidation
-
-@{
+﻿@{
     ViewBag.Title = "Update";
 }
 
 <h2>Update</h2>
-@using (Html.BeginForm()) { 
-    
-    @Html.HiddenFor(x => x.id)
-
-    @Html.LabelFor(x => x.name)
-    @Html.TextBoxFor(x => x.name)
-    @Html.ValidationMessageFor(x => x.name)
-    <br /><br />
-    
-    @Html.LabelFor(x => x.phone)
-    @Html.TextBoxFor(x => x.phone)
-    @Html.ValidationMessageFor(x => x.phone)
-    <br /><br />
-	
-	 @Html.LabelFor(x => x.email)
-    @Html.TextBoxFor(x => x.email)
-    @Html.ValidationMessageFor(x => x.email)
-    <br /><br />
-    
-    @Html.LabelFor(x => x.doa)
-    @Html.TextBoxFor(x => x.doa)
-    @Html.ValidationMessageFor(x => x.doa)
-    <br /><br />
-    
-    @Html.LabelFor(x => x.purpose)
-    @Html.TextAreaFor(x => x.purpose)
-    @Html.ValidationMessageFor(x => x.purpose)
-    <br /><br />
-    
-    <input type="submit" value="Update" />
-}
-
-<p>
-    @Html.ActionLink("Back", "Details", new { id = Model.id})
-</p>
-
-@section Script{
-    @Scripts.Render("~/bundles/jqueryval")
-    }
