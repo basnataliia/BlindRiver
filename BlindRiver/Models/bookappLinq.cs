@@ -59,8 +59,7 @@ namespace BlindRiver.Models
                 bookUpdate.purpose = _purpose;
                 bookObj.SubmitChanges();
                 return true;
-            }
-           
+            }          
         }
     }
 }

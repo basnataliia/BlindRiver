@@ -7,5 +7,6 @@ namespace BlindRiver.Models
 {
     public class NewsValidation
     {
+
     }
 }
