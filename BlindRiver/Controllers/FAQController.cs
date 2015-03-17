@@ -45,14 +45,14 @@ namespace BlindRiver.Controllers
     public ActionResult Update (int id)
      {
          var faq = objFAQ.getFAQByID(id);
-        if (faq == null)
-        {
-            return View("NotFound");
-        }
-        else
-        {
-            return View(faq);
-        }
+         if(faq == null)
+         {
+             return View("NotFound");
+         }
+         else
+         {
+             return View(faq);
+         }
      }
     [HttpPost]
     public ActionResult Update (int id, FAQ faq)
