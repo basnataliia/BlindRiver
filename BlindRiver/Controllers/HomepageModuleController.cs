@@ -45,10 +45,7 @@ namespace BlindRiver.Controllers
                 ImagePath.SaveAs(path);
                 module.image_path = fileName;
             }
-            else
-            {
-                module.image_path = "test.jpg";
-            }
+
             if (ModelState.IsValid)
             {
                 try

@@ -13,6 +13,7 @@
 @using (Html.BeginForm("ImageEdit", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.ImagePath)
 
     <input type="file" name="ImagePath" />
 

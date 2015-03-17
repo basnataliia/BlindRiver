@@ -26,14 +26,14 @@ namespace BlindRiver.Controllers
                 try
                 {
                     objContact.commitInsert(cont);
-                    return RedirectToAction("Thanks");
+                    return View();
                 }
                 catch
                 {
                     return View();
                 }
             }
-            return RedirectToAction("Thanks");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Thanks()
