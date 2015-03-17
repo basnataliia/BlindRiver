@@ -15,7 +15,8 @@
         </div>
         <div class="module-admin-details">
             <h3>
-                @Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })
+                @*@Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })*@
+                @Html.ActionLink(module.link_name, "Index", module.link_url)
             </h3>
             <div>
                 @module.description
