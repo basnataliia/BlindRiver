@@ -1,0 +1,22 @@
+﻿@model BlindRiver.Models.FAQvalidation
+
+@{
+    ViewBag.Title = "Delete FAQ: " + @Model.questions;
+}
+
+<h2>Are you sure you want to delete <em>@Model.questions?</em></h2>
+
+@using (Html.BeginForm())
+{
+   <div>
+       <input type="submit" value="Delete"/>
+       <br /><br />
+       @Html.ActionLink("Back", "Details", new { id=Model.id})
+   </div>
+
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

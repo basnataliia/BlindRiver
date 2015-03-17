@@ -27,7 +27,7 @@
                 </div>
                 <div class="link-g-d">
                     <ul>
-                        <li>@Html.ActionLink(image.ImagePath, "ImageEdit", new { Id = image.Id })</li>
+                        <li>@Html.ActionLink("Edit", "ImageEdit", new { Id = image.Id })</li>
                         <li>@Html.ActionLink("Delete", "DeleteImage", new { Id = image.Id })</li>
                     </ul>
                 </div>

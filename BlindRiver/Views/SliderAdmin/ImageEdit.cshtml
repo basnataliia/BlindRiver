@@ -8,6 +8,17 @@
 <h2>ImageEdit</h2>
 
 <h3>@Html.DisplayFor(x=>x.ImagePath)</h3>
-<p>
+
+
+@using (Html.BeginForm("ImageEdit", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(x => x.Id)
+
+    <input type="file" name="ImagePath" />
+
+    <br />
+    <input type="submit" value="Update" />
+    <br />
     @Html.ActionLink("Back", "Index", "SliderAdmin")
-</p>
+}
+

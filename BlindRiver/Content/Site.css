@@ -442,6 +442,25 @@ padding: 8px 11px;
 
 /* END Styles for Home page*/
 
+/* Styles for Home Page Admin*/
+.module-admin{
+    width:800px;
+}
+
+.module-image-admin{
+    float:left;
+    padding-right:30px;
+}
+.module-admin-details{
+  
+}
+.module-edit{
+    float:right;
+    margin-right:120px;
+    margin-top:-150px;
+}
+
+/* Styles for Home Page Admin*/
 /* Styles for Footer*/
 footer{
      background:#266176;
@@ -479,6 +498,10 @@ footer .f-menu{
 
 .copy{
     margin-left:20px;
+}
+
+.copyright{
+    color:#A8C0C8;
 }
 /* END Styles for Footer*/
 

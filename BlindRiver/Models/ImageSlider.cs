@@ -40,7 +40,7 @@ namespace BlindRiver.Models
             return oneImage;
         }
 
-        public bool commiUpdate( int _id, string _imagePath)
+        public bool commitUpdate( int _id, string _imagePath)
         {
             using(objImage)
             {

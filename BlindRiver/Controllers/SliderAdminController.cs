@@ -48,19 +48,52 @@ namespace BlindRiver.Controllers
             return View(img);
         }
 
-        public ActionResult ImageEdit(int Id)
+
+        public ActionResult ImageEdit(int id)
         {
-            var img = dbproduct.getImageById(Id);
-            if (img == null)
+            var image = dbproduct.getImageById(id);
+            if (image == null)
             {
                 return View("NotFound");
             }
             else
             {
-                return View(img);
+                return View(image);
             }
-
         }
+
+        [HttpPost]
+        public ActionResult ImageEdit(int id, sliderimage image, HttpPostedFileBase ImagePath)
+        {
+
+            if (ImagePath != null && ImagePath.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(ImagePath.FileName);
+
+                var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
+                ImagePath.SaveAs(path);
+                image.ImagePath = fileName;
+            }
+            else
+            {
+                image.ImagePath = "test.jpg";
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    dbproduct.commitUpdate(id, image.ImagePath);
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
+
+
 
         public ActionResult DeleteImage(int Id)
         {

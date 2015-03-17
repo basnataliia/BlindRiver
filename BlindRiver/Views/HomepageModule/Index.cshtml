@@ -8,22 +8,28 @@
 
 @foreach (var module in Model)
 {
-    <div class="hp-module">
-        <div class="wrapper-image">
-            <div data-content="Visit this section" class="module-img">
+    <div class="module-admin">
+        <div class="module-image-admin">
                 @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                 <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
-            </div>
         </div>
-        <div class="module-details">
+        <div class="module-admin-details">
             <h3>
-                @Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })
+                @*@Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })*@
+                @Html.ActionLink(module.link_name, "Index", module.link_url)
             </h3>
             <div>
                 @module.description
             </div>
         </div>
+       
+
         <div class="clear"></div>
+    </div>
+    <div class="module-edit">
+        <ul>
+            <li>@Html.ActionLink("Update", "Update", new { Id = module.id })</li>
+        </ul>
     </div>
 }
 <div class="clear"></div>

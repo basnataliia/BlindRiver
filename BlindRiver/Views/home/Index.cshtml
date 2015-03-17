@@ -2,13 +2,14 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="img-slider">
+
+
+    @Html.Action("Slider", "Home")
+
+</div>
 <div class="wrapper">
-    <div class="img-slider">
-
-
-        @Html.Action("Slider", "Home")
-
-    </div>
+    
     <div class="hp-main-module">
         @Html.Action("HomepageModules", "Home")
     </div>
