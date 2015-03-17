@@ -451,6 +451,7 @@
     <Content Include="Views\HomepageModule\Update.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\Thanks.cshtml" />
+    <Content Include="Views\BookApp\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
