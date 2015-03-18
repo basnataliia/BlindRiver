@@ -96,16 +96,18 @@ namespace BlindRiver.Controllers
             return View();
         }
     }
-    public ActionResult NotFound()
-    {
-        return View();
-    }
 
     public ActionResult Public()
     {
         var faq = objFAQ.getFAQs();
         return View(faq);
     }
+
+    public ActionResult NotFound()
+    {
+        return View();
+    }
+
 
     }
 }
