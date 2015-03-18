@@ -21,5 +21,15 @@ namespace BlindRiver.Models
             var singleDoc = objDoc.doctors.SingleOrDefault(x => x.Id == _id);
             return singleDoc;
         }
+
+        public bool insertDoctor(doctor doc) { 
+            using (objDoc)
+            {
+                objDoc.doctors.InsertOnSubmit(doc);
+                objDoc.SubmitChanges();
+                return true;
+            }
+
+        }
     }
 }

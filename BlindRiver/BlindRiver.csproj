@@ -261,11 +261,15 @@
     <Content Include="Content\Images\careers.jpg" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\doctor.jpg" />
+    <Content Include="Content\Images\gina.jpg" />
     <Content Include="Content\Images\hospital-img.jpg" />
     <Content Include="Content\Images\location1.png" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\mobile1.png" />
     <Content Include="Content\Images\news.jpg" />
+    <Content Include="Content\Images\poirier.jpg" />
+    <Content Include="Content\Images\ralph.jpg" />
+    <Content Include="Content\Images\ramirez.jpg" />
     <Content Include="Content\Images\services.jpg" />
     <Content Include="Content\Images\slider-2.jpg" />
     <Content Include="Content\Images\slider-3.jpg" />
@@ -465,6 +469,8 @@
     <Content Include="Views\Contacts\Thanks.cshtml" />
     <Content Include="Views\BookApp\Details.cshtml" />
     <Content Include="Views\doctor\index.cshtml" />
+    <Content Include="Views\doctor\Insert.cshtml" />
+    <Content Include="Views\doctorAdmin\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

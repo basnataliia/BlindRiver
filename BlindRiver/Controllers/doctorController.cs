@@ -19,5 +19,27 @@ namespace BlindRiver.Controllers
             return View(allDocs);
         }
 
+        public ActionResult Insert()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Insert(doctor doc) 
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objDoc.insertDoctor(doc);
+                    return RedirectToAction("Index");
+                }
+                catch {
+                    return View();
+                }
+            }
+            return View();
+        }
+
     }
 }

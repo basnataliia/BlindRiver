@@ -165,7 +165,7 @@ textarea {
 .wrapper {
 /*border: 1px dashed red;*/
 margin:0 auto; 
-width:1170px;
+max-width:1170px;
 /*overflow:hidden;*/
 } 
 
@@ -375,7 +375,7 @@ padding: 8px 11px;
     float:left;
     padding:20px;
     width:250px;
-    height:159px;
+    height:100%;
 }
 
 .hp-module .module-img{
@@ -539,4 +539,96 @@ footer .f-menu{
     float:left;
     padding:30px;
     width:1090px;
+}
+
+
+
+/*Find A Doctor Styles*/
+
+#doctorsContainer {
+    max-width:1100px;
+    margin: 0 auto;
+    height:auto;
+}
+
+#doctorsContainer2 {
+    height:100%;
+    width:100%;
+}
+
+.doctorText {
+    float:left;
+}
+
+.clearfix {
+    clear:both;
+}
+
+.doctorTitle {
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+
+.doctorThumb {
+    height: 250px;
+    width: 400px;
+    float: right;
+    margin: 30px;
+}
+
+/* Media Queries - Responsiveness*/
+
+@media screen and (max-width: 768px) {
+    .logo {
+        max-width:50%;
+    }
+    .contact-info {
+        max-width:50%;
+        margin-top:5px;
+    }
+    .wrapper {
+        max-width:768px;
+    }
+    .hp-module {
+        width:45%;
+    }
+    .module-img {
+        width:100%;
+    }
+    .module-details {
+        width:100%;
+        clear:both;
+        margin:0px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        max-width:100%;
+    }
+    .contact-info {
+        max-width:100%;
+        float:none;
+        text-align:center;
+    }
+    .c-contact {
+        max-width:100%;
+    }
+    .wrapper {
+       max-width:480px;
+    }
+    .hp-module {
+        width:100%;
+        clear:both;
+    }
+    .module-img {
+        width:100%;
+        clear:both;
+    }
+    .module-details {
+        width:100%;
+        clear:both;
+        margin:20px;
+        overflow:auto;
+    }
 }
