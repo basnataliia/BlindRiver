@@ -16,7 +16,7 @@ namespace BlindRiver.Models
     }
 
     [Bind(Exclude="id")]
-    public class FAQvalidation
+    public partial class FAQvalidation
     {
         [DisplayName ("Frequently Asked Question: ")]
         [Required]

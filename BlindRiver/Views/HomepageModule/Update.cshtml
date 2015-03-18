@@ -9,8 +9,8 @@
 @using (Html.BeginForm("Update", "HomepageModule", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.HiddenFor(x => x.id)
-   
-    @*@Html.LabelFor(x => x.image_path)*@
+   @Html.HiddenFor(x => x.image_path)
+
 
     <input type="file" name="ImagePath" />
     
