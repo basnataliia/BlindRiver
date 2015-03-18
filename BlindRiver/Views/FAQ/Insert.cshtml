@@ -15,7 +15,7 @@
     @Html.ValidationMessageFor(model => model.questions, "*")
     <br /><br />
     @Html.LabelFor(model => model.answers)
-    @Html.TextBoxFor(model => model.answers)
+    @Html.TextAreaFor(model => model.answers)
     @Html.ValidationMessageFor(model => model.answers, "*")
     <br /><br />
     <input type="submit" value="Insert" />
