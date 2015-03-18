@@ -101,5 +101,11 @@ namespace BlindRiver.Controllers
         return View();
     }
 
+    public ActionResult Public()
+    {
+        var faq = objFAQ.getFAQs();
+        return View(faq);
+    }
+
     }
 }

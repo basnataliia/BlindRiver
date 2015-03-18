@@ -1,0 +1,20 @@
+﻿@model IEnumerable<BlindRiver.Models.FAQ>
+@{
+    ViewBag.Title = "FAQ";
+}
+
+
+<div id="faqContainer">
+    <h1>Blind River FAQ</h1>
+
+    @foreach (var FAQ in Model)
+    {
+
+        <h3>@FAQ.questions</h3>
+        <br />
+        <p>@FAQ.answers</p>
+
+        <hr />
+    }
+</div>
+

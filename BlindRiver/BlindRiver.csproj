@@ -469,8 +469,13 @@
     <Content Include="Views\Contacts\Thanks.cshtml" />
     <Content Include="Views\BookApp\Details.cshtml" />
     <Content Include="Views\doctor\index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\doctor\Insert.cshtml" />
     <Content Include="Views\doctorAdmin\index.cshtml" />
+=======
+    <Content Include="Views\BookApp\Update.cshtml" />
+    <Content Include="Views\FAQ\Public.cshtml" />
+>>>>>>> d047c669a07d38b45fd30526aef72ac06929fea9
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
