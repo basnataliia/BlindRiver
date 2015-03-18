@@ -466,6 +466,7 @@
     <Content Include="Views\BookApp\Details.cshtml" />
     <Content Include="Views\doctor\index.cshtml" />
     <Content Include="Views\BookApp\Update.cshtml" />
+    <Content Include="Views\FAQ\Public.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
