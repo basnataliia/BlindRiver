@@ -1,0 +1,22 @@
+﻿@*RESPONSIVE NAV - INITIALLY HIDDEN THEN TRIGGERED TO DISPLAY HAMBURGER AT 1170PX OR LESS*@
+                    <div id="hamburger-container">
+                        <div class="hamburger-menu" id="burger"></div>
+                    </div>
+                    <ul id="responsive-nav">
+                     <li><a href='#'>Home</a></li>
+                     <li><a href='#'>About us</a></li>
+                     <li><a href='#'>Patients</a></li>
+                     <li><a href='#'>Healthcare services</a></li>
+                     <li><a href='#'>Careers & Volunteers</a></li>
+                     <li><a href='#'>Visitors</a></li>
+                     <li><a href='#'>Contact us</a></li>
+                     <li><a href='#'>FAQ</a></li>
+                    </ul>
+                     
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#hamburger-container").click(function () {
+            $("#responsive-nav").slideToggle();
+        });
+    });
+</script>

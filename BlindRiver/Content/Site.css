@@ -296,6 +296,69 @@ display: block;
     display:block;
     
 }
+
+#responsive-nav {
+        display:none;
+        background-color:#0378a3;
+        text-transform: uppercase;
+        height:400px;
+    }
+
+    #responsive-nav li {
+    padding:10px;
+    width:100%;
+    }
+
+    #responsive-nav li a {
+    padding: 0px;
+    float:none;
+    color:#fff;
+    padding:13px 30px;
+    }
+
+#hamburger-container {
+    display:none;
+    padding:20px 0px;
+    min-height:30px;
+    background-color:#0378a3;
+    width:100%;
+    cursor:pointer;
+}
+
+    #hamburger-container:active {
+    background:#08b3ce;
+    }
+
+.hamburger-menu
+{
+    width:30px;
+    height:5px;
+    background-color:#fff;
+    border-radius:5px;
+    position:relative;
+    margin:0px 20px;
+}
+
+.hamburger-menu:after, .hamburger-menu:before
+{
+    content: '';
+    width: 100%;
+    height:5px;
+    background-color:#fff;
+    position:absolute;
+    border-radius:5px;
+}
+
+.hamburger-menu:after
+{
+    top:10px;
+}
+
+.hamburger-menu:before
+{
+    top:20px;
+}
+
 /*END Styles for navigation*/
 
 
@@ -342,6 +405,10 @@ padding: 8px 11px;
     -ms-transition: background-color 400ms ease-in;
     transition: background-color 400ms ease-in;       
     }
+
+ 
+
+
 
 /*END menu navigation admin page*/
 
@@ -577,6 +644,17 @@ footer .f-menu{
 }
 
 /* Media Queries - Responsiveness*/
+@media screen and (max-width: 1170px) {
+    #hamburger-container {
+        display:block;
+    }
+    nav ul {
+        display: none;
+    }
+    #nav ul {
+        height: 300px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .logo {
@@ -600,6 +678,7 @@ footer .f-menu{
         clear:both;
         margin:0px 20px;
     }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -614,6 +693,7 @@ footer .f-menu{
     .c-contact {
         max-width:100%;
     }
+    
     .wrapper {
        max-width:480px;
     }

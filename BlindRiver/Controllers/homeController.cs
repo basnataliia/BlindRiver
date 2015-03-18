@@ -41,6 +41,12 @@ namespace BlindRiver.Controllers
 
         }
 
+        //responsive menu - partial view
+        public ActionResult responsiveMenu()
+        {
+            return PartialView();
+        }
+
         //Slider - partial view
         public ActionResult Slider()
         {

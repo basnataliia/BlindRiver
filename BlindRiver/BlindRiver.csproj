@@ -472,6 +472,7 @@
     <Content Include="Views\doctorAdmin\index.cshtml" />
     <Content Include="Views\BookApp\Update.cshtml" />
     <Content Include="Views\FAQ\Public.cshtml" />
+    <Content Include="Views\Shared\responsiveMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
