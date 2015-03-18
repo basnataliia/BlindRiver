@@ -1,17 +1,21 @@
-﻿@model BlindRiver.Models.FAQvalidation
+﻿@model BlindRiver.Models.FAQ
 
 @{
     ViewBag.Title = "Delete FAQ: " + @Model.questions;
 }
 
-<h2>Are you sure you want to delete <em>@Model.questions?</em></h2>
+<h2>Are you sure you want to delete the following question? </h2><br/> 
+  <p>FAQ:@Model.questions<br /><br/>
+    Answer: @Model.answers
+  </p> 
 
+<br /><br />
 @using (Html.BeginForm())
 {
    <div>
        <input type="submit" value="Delete"/>
        <br /><br />
-       @Html.ActionLink("Back", "Details", new { id=Model.id})
+       @Html.ActionLink("Back", "Details", new { id = Model.id})
    </div>
 
 }
