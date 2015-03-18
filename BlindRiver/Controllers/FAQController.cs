@@ -62,7 +62,8 @@ namespace BlindRiver.Controllers
             try
             {
                 objFAQ.commitUpdate(id, faq.questions, faq.answers);
-                return RedirectToAction("Details/" + id);
+               // return RedirectToAction("Details/" + id);
+                return RedirectToAction("Index");
             }
             catch
             {
