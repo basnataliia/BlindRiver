@@ -433,22 +433,28 @@ padding: 8px 11px;
     width:100%;
 }
 
+.hp-main-module {
+    width:100%;
+    border-top: 3px solid #0378a3;
+    border-bottom: 3px solid #0378a3;
+    padding:10px 0px;
+    text-align:center;
+}
+    
 .hp-module{
-    float:left;
-    width:50%;
+    max-width:23%;
+    margin:5px;
+    display:inline-block;
+    vertical-align:top;
 }
 
 .wrapper-image{
     float:left;
-    padding:20px;
-    width:250px;
-    height:100%;
+    width:100%;
 }
 
 .hp-module .module-img{
     position:relative;
-    width:250px;
-    height:159px;
 }
 
 .hp-module .module-img img{
@@ -489,7 +495,8 @@ padding: 8px 11px;
 }
 
 .hp-module .module-details{
-    padding:20px 0 20px ;
+    padding:20px 0 20px;
+    text-align:left;
 }
 
 .hp-module .module-details  h3{
@@ -654,6 +661,11 @@ footer .f-menu{
     #nav ul {
         height: 300px;
     }
+    
+}
+
+@media screen and (max-width: 1120px) {
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -668,16 +680,18 @@ footer .f-menu{
         max-width:768px;
     }
     .hp-module {
-        width:45%;
+        max-width:47%;   
     }
-    .module-img {
-        width:100%;
+    .f-menu ul li a {
+    display: block;
     }
-    .module-details {
-        width:100%;
+    .f-left {
+    width:100%;
+    }
+    .copy {
         clear:both;
-        margin:0px 20px;
     }
+
 
 }
 
@@ -698,17 +712,7 @@ footer .f-menu{
        max-width:480px;
     }
     .hp-module {
-        width:100%;
-        clear:both;
+        max-width:100%;
     }
-    .module-img {
-        width:100%;
-        clear:both;
-    }
-    .module-details {
-        width:100%;
-        clear:both;
-        margin:20px;
-        overflow:auto;
-    }
+    
 }

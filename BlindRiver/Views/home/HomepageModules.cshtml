@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "HomepageModule";
 }   
+<div class="hp-main-module">
         @foreach (var module in Model)
         {
             <div class="hp-module">
@@ -19,8 +20,10 @@
                         @module.description
                     
                 </div>
+                
                 <div class="clear"></div>
             </div>
         }  
+    </div>
 <div class="clear"></div>
 
