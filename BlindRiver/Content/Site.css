@@ -110,6 +110,7 @@ body {
     overflow:hidden;
     /*padding:20px;*/
    padding-bottom:154px;  
+   background:rgba(136,170,182, 0.1);
 }
 /* Styles for basic forms
 -----------------------------------------------------------*/
@@ -172,6 +173,16 @@ max-width:1170px;
 header .contact-info{
     float:right;
     margin-top:30px;
+}
+
+
+
+.contact-info {
+     background:rgba(255,255,255,0.5);
+     padding:15px 15px 0px 15px;
+     border-radius:10px;
+     margin-right:10px;
+     
 }
 
 header .c-contact {
@@ -243,6 +254,24 @@ header .cnt-img{
 
 
 /*Styles for navigation*/
+
+#main-header {
+    display: block;
+    position: relative;
+}
+
+#main-header::after {
+     content: "";
+    background-image:url('Images/blindriver-header.jpg');
+     opacity: 0.5;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;   
+}
+
 #nav{
     background-color:#0378a3;
 }
@@ -451,6 +480,7 @@ padding: 8px 11px;
 .wrapper-image{
     float:left;
     width:100%;
+    cursor:pointer;
 }
 
 .hp-module .module-img{
@@ -670,11 +700,12 @@ footer .f-menu{
 
 @media screen and (max-width: 768px) {
     .logo {
-        max-width:50%;
+        max-width:45%;
     }
     .contact-info {
         max-width:50%;
         margin-top:5px;
+        background:none;
     }
     .wrapper {
         max-width:768px;
@@ -691,19 +722,23 @@ footer .f-menu{
     .copy {
         clear:both;
     }
-
-
 }
 
-@media screen and (max-width: 480px) {
-    .logo {
+@media screen and (max-width: 530px) {
+        .logo {
         max-width:100%;
     }
-    .contact-info {
+        .contact-info {
         max-width:100%;
         float:none;
         text-align:center;
     }
+    header .contact-info {
+        margin-top:2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .c-contact {
         max-width:100%;
     }
@@ -713,6 +748,9 @@ footer .f-menu{
     }
     .hp-module {
         max-width:100%;
+    }
+    footer {
+        height:150px;
     }
     
 }

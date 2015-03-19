@@ -257,6 +257,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\blindriver-header.jpg" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\careers.jpg" />
     <Content Include="Content\Images\controls.png" />
