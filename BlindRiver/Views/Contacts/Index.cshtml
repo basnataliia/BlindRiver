@@ -1,39 +1,66 @@
 ﻿@model BlindRiver.Models.contact
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Contact us</h2>
+<script type="text/javascript">
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary()
-    
-    @Html.LabelFor(model => model.name)
-    @Html.TextBoxFor(model=>model.name)
-    @Html.ValidationMessageFor(model => model.name, "*")
-    <br />
-    @Html.LabelFor(model => model.email)
-    @Html.TextBoxFor(model => model.email)
-    @Html.ValidationMessageFor(model => model.email, "*")
-    <br />
-    @Html.LabelFor(model => model.phone)
-    @Html.TextBoxFor(model => model.phone)
-    @Html.ValidationMessageFor(model => model.phone, "*")
-    <br />
-    @Html.LabelFor(model => model.subject)
-    @Html.TextBoxFor(model => model.subject)
-    @Html.ValidationMessageFor(model => model.subject, "*")
-    <br />
-    @Html.LabelFor(model => model.message)
-    @Html.TextBoxFor(model => model.message)
-    @Html.ValidationMessageFor(model => model.message, "*")
-    <br />
-    <br />
-    <input type="submit" value="Submit"/>
-}
+    //pattern for phone input
+    //Source: http://forums.asp.net/t/1824550.aspx?Add+dashes+to+user+input+in+a+textbox
+    $(function () {
+        $('.phone-input').on('keyup', function () {
+            var inp = $('.phone-input').val();
+            if (inp.length == 3 || inp.length == 7) {
+                $('.phone-input').val(inp + '-');
+            }
+        });
+    });
+</script>
 
+
+<div class="wrapper">
+    <div class="contactus-wrapper">
+        <div class="contactus-form">
+            <h1>Contact us </h1>
+            @using (Html.BeginForm())
+            {
+                @*@Html.ValidationSummary()*@
+
+                @Html.LabelFor(model => model.name, new { @class = "label" })
+                @Html.TextBoxFor(model => model.name, new { @class = "form-input" })
+                @Html.ValidationMessageFor(model => model.name, "This field is required.")
+                <br />
+                @Html.LabelFor(model => model.email, new { @class = "label" })
+                @Html.TextBoxFor(model => model.email, new { @class = "form-input" })
+                @Html.ValidationMessageFor(model => model.email, "This field is required.")
+                <br />
+                @Html.LabelFor(model => model.phone, new { @class = "label" })
+                @Html.TextBoxFor(model => model.phone, new { @class = "phone-input form-input", @maxlength = "12" })
+                @Html.ValidationMessageFor(model => model.phone, "This field is required.")
+                <br />
+                @Html.LabelFor(model => model.subject, new { @class = "label" })
+                @Html.TextBoxFor(model => model.subject, new { @class = "form-input" })
+                @Html.ValidationMessageFor(model => model.subject, "This field is required.")
+                <br />
+                @Html.LabelFor(model => model.message, new { @class = "label" })
+                @Html.TextAreaFor(model => model.message, new { @class = "form-textarea" })
+                @Html.ValidationMessageFor(model => model.message, "This field is required.")
+                <br />
+                <input type="submit" value="Submit" class="form-button" />
+            }
+        </div>
+        <div class="contactus-locations">
+            @Html.Action("Locations_list", "Contacts")
+        </div>
+        <div id="map_wrapper">
+            <div id="map_canvas" class="mapping"></div>
+        </div>
+        @Html.Action("Locations", "Contacts")
+    </div>
+</div>
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
 
 }
+

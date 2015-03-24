@@ -203,6 +203,14 @@
     </Compile>
     <Compile Include="Models\contacts.cs" />
     <Compile Include="Models\contactsValidation.cs" />
+    <Compile Include="Models\contact_locations.cs">
+      <DependentUpon>contact_locations.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contact_locations.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>contact_locations.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\doctors.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -372,6 +380,14 @@
       <LastGenOutput>doctors.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Models\contact_locations.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>contact_locations.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\contact_locations.dbml.layout">
+      <DependentUpon>contact_locations.dbml</DependentUpon>
+    </None>
     <None Include="Models\FAQ.dbml.layout">
       <DependentUpon>FAQ.dbml</DependentUpon>
     </None>
@@ -474,6 +490,8 @@
     <Content Include="Views\BookApp\Update.cshtml" />
     <Content Include="Views\FAQ\Public.cshtml" />
     <Content Include="Views\Shared\responsiveMenu.cshtml" />
+    <Content Include="Views\Contacts\Locations.cshtml" />
+    <Content Include="Views\Contacts\Locations_list.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

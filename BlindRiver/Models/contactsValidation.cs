@@ -24,10 +24,13 @@ namespace BlindRiver.Models
 
         [DisplayName("Email")]
         [Required]
+        [RegularExpression(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$")]
         public string email { get; set; }
 
+        [StringLength(12)]
         [DisplayName("Phone")]
         [Required]
+        [RegularExpression(@"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}$")]
         public string phone { get; set; }
 
         [DisplayName("Subject")]

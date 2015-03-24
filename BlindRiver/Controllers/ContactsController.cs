@@ -11,7 +11,7 @@ namespace BlindRiver.Controllers
     public class ContactsController : Controller
     {
         contacts objContact = new contacts();
-
+        contact_locations objLocation = new contact_locations();
 
         public ActionResult Index()
         {
@@ -33,7 +33,8 @@ namespace BlindRiver.Controllers
                     return View();
                 }
             }
-            return RedirectToAction("Thanks");
+            //return RedirectToAction("Thanks");
+            return View();
         }
 
         public ActionResult Thanks()
@@ -61,5 +62,18 @@ namespace BlindRiver.Controllers
             }
         }
 
+        //Locations - partial view
+        public ActionResult Locations()
+        {
+            var location = objLocation.getLocations();
+            return PartialView(location);
+        }
+
+        //Locations list - partial view
+        public ActionResult Locations_list()
+        {
+            var location = objLocation.getLocations();
+            return PartialView(location);
+        }
     }
 }

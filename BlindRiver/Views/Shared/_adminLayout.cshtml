@@ -37,7 +37,7 @@
 
                 <a href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/Content/Images/Logo.png")" /></a>
 
-                <div class="contact-info">
+                <div class="login-admin">
                     @*<a id="cms-logout" href="#">Logout</a>*@
                     <section id="login">
                         @Html.Partial("_LoginPartial")
@@ -51,7 +51,6 @@
             <nav id="nav-admin">
                 <p><i class="fa fa-wrench"></i>Dashboard</p>
                 <ul>
-                    @*@Html.Action("menu", "Home")*@
                     <li><a href="#"><i class="fa fa-file-text"></i>Create New Page</a></li>
                     <li><a href="@Url.Action("Index", "HomepageModule")"><i class="fa fa-home"></i>Home Page Manager</a></li>
                     <li><a href="@Url.Action("Index","SliderAdmin")"><i class="fa fa-picture-o"></i>Home Page Slider</a></li>
@@ -68,8 +67,6 @@
 
                 </ul>
             </nav>
-
-
             <section>
 
                 <div class="wrapper-admin">
@@ -92,8 +89,6 @@
             </div>
         </footer>
     </div>
-
-    @*@Scripts.Render("~/bundles/jquery")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>
