@@ -3,20 +3,40 @@
                         <div class="hamburger-menu" id="burger"></div>
                     </div>
                     <ul id="responsive-nav">
-                     <li><a href='#'>Home</a></li>
-                     <li><a href='#'>About us</a></li>
-                     <li><a href='#'>Patients</a></li>
-                     <li><a href='#'>Healthcare services</a></li>
-                     <li><a href='#'>Careers & Volunteers</a></li>
-                     <li><a href='#'>Visitors</a></li>
-                     <li><a href='#'>Contact us</a></li>
-                     <li><a href='#'>FAQ</a></li>
+
+                        @{
+                var menuItems = (IEnumerable<BlindRiver.Models.mainmenulink>)ViewData["MenuItems"];
+
+                foreach (var x in menuItems)
+                {
+                    if(x.parent_id == null)
+                    { 
+                    <li>
+                        @Html.ActionLink(x.link_name,"Index", x.link_url)
+                        <ul id="responsive-sub-nav">
+                            @foreach(var submenuItem in menuItems)
+                            {
+                                if(submenuItem.parent_id == x.id)
+                                {
+    <li>@Html.ActionLink(submenuItem.link_name, "Index", submenuItem.link_url)</li>
+
+                                }
+                            }
+                        </ul>
+                    </li>                
+            }                    
+           }
+          }
+
                     </ul>
                      
 <script type="text/javascript">
     $(document).ready(function () {
         $("#hamburger-container").click(function () {
             $("#responsive-nav").slideToggle();
+        });
+        $("#hamburger-container").click(function () {
+            $("#responsive-sub-nav").slideToggle();
         });
     });
 </script>
