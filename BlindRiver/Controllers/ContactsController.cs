@@ -26,7 +26,8 @@ namespace BlindRiver.Controllers
                 try
                 {
                     objContact.commitInsert(cont);
-                    return RedirectToAction("Thanks");
+                    return View("Thanks", cont);
+                    //return RedirectToAction("Thanks");
                 }
                 catch
                 {
