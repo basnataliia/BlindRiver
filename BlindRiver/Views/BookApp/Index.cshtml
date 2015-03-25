@@ -1,8 +1,15 @@
-﻿@{
+﻿@model IEnumerable<BlindRiver.Models.bookApp>
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+<ul>
+    <!--displays every appointment in database-->
+    @foreach(var x in Model)
+    { 
+        <li>@Html.ActionLink(x.name, "Details", new { id = x.id})</li>
+    }
+</ul>
 
-
-@Html.ActionLink("Insert", "Insert")
+<p>@Html.ActionLink("Insert", "Insert","BookApp")</p>

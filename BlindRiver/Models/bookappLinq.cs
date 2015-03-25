@@ -15,7 +15,7 @@ namespace BlindRiver.Models
             return allrequests;
         }
 
-        public bookApp getRequeststByID(int _id)
+        public bookApp getRequestByID(int _id)
         {
 
             var allrequests = bookObj.bookApps.SingleOrDefault(x => x.id == _id);

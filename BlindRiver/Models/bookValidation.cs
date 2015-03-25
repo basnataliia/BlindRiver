@@ -10,10 +10,10 @@ using System.Web.Mvc;
 namespace BlindRiver.Models
 {
     [MetadataType(typeof(bookAppValidation))]
-    public partial class book_app
+    public partial class bookApp
     { }
 
-    [Bind(Exclude = "id")]
+    //[Bind(Exclude = "id")]
     public class bookAppValidation
     {
         [DisplayName("Name: ")]
