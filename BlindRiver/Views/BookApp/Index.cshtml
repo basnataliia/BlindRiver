@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<BlindRiver.Models.bookApp>
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
 @{
     ViewBag.Title = "Index";
 }
@@ -11,5 +16,5 @@
         <li>@Html.ActionLink(x.name, "Details", new { id = x.id})</li>
     }
 </ul>
-
+<br /><br />    
 <p>@Html.ActionLink("Insert", "Insert","BookApp")</p>
