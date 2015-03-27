@@ -7,30 +7,49 @@
 <div class="wrapper-admin">
 <h2>InsertDoctor</h2>
 
-@using (Html.BeginForm()) { 
-    
-    @Html.LabelFor(model => model.firstName);
-    @Html.TextBoxFor(model => model.firstName);
-    <br />
-    @Html.LabelFor(model => model.lastName);
-    @Html.TextBoxFor(model => model.lastName);
-    <br />
-    @Html.LabelFor(model => model.title);
-    @Html.TextBoxFor(model => model.title);
-    <br />
-    @Html.LabelFor(model => model.department);
-    @Html.TextBoxFor(model => model.department);
-    <br />
-    @Html.LabelFor(model => model.phone);
-    @Html.TextBoxFor(model => model.phone);
-    <br />
-    @Html.LabelFor(model => model.email);
-    @Html.TextBoxFor(model => model.email);
-    <br />
+@using (Html.BeginForm())
+{
+
+    <div class="admin-input">
+    @Html.LabelFor(model => model.firstName)
+    @Html.TextBoxFor(model => model.firstName)
+    @Html.ValidationMessageFor(model => model.firstName, "*Required")
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.lastName)
+    @Html.TextBoxFor(model => model.lastName)
+    @Html.ValidationMessageFor(model => model.lastName, "*Required")
+    </div>
+        <div class="admin-input">
+    @Html.LabelFor(model => model.title)
+    @Html.TextBoxFor(model => model.title)
+    @Html.ValidationMessageFor(model => model.title, "*Required")
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.department)
+    @Html.TextBoxFor(model => model.department)
+    @Html.ValidationMessageFor(model => model.department, "*Required")
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.phone)
+    @Html.TextBoxFor(model => model.phone)
+    @Html.ValidationMessageFor(model => model.phone, "*Please enter a valid phone number")
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.email)
+    @Html.TextBoxFor(model => model.email)
+    @Html.ValidationMessageFor(model => model.email, "*Please enter a valid email")
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.image)
+    @Html.TextBoxFor(model => model.image)
+    @Html.ValidationMessageFor(model => model.image, "*")
+    </div>
     <input type="submit" value="Add New Doctor" onclick="return confirm('Confirm doctor insert?')" />
 }
     </div>
 
+<h2>@Html.ActionLink("Back", "Manager")</h2>
 @section Scripts{
         @Scripts.Render("~/bundles/jqueryval")
     }

@@ -864,23 +864,29 @@ footer .f-menu{
 /*END Contact Us Styles*/
 
 
+/*Doctor Admin Styles*/
+.admin-input {
+    width:100%;
+    margin: 20px 0px;
+}
+
 
 /* Media Queries - Responsiveness*/
 @media screen and (max-width: 1170px) {
     #hamburger-container {
         display:block;
     }
+
+    #responsive-nav {
+        display:none;
+    }
+    
     nav ul {
         display: none;
     }
     #nav ul {
         height: 300px;
     }
-    
-}
-
-@media screen and (max-width: 1120px) {
-
 }
 
 @media screen and (max-width: 900px) {
@@ -945,6 +951,10 @@ footer .f-menu{
     }
     .hp-module {
         max-width:100%;
+    }
+
+    .img-slider {
+        display:none;
     }
     footer {
         height:150px;

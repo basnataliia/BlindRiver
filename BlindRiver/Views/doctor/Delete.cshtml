@@ -1,0 +1,13 @@
+﻿@model BlindRiver.Models.doctor
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Delete @Model.firstName @Model.lastName ?</h2>
+
+@using (Html.BeginForm()) { 
+    <input type="submit" value="Delete Doctor" />
+    <p>@Html.ActionLink("Back", "Manager", new { id = Model.Id })</p>
+}
