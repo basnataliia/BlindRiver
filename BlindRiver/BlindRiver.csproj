@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactsAdminController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
@@ -257,6 +258,7 @@
       <DependentUpon>NewsPosts.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\NewsValidation.cs" />
+    <Compile Include="Models\search_contactmessages.cs" />
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -265,6 +267,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
     <Content Include="Content\Images\blindriver-header.jpg" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\careers.jpg" />
@@ -492,6 +495,11 @@
     <Content Include="Views\Shared\responsiveMenu.cshtml" />
     <Content Include="Views\Contacts\Locations.cshtml" />
     <Content Include="Views\Contacts\Locations_list.cshtml" />
+    <Content Include="Views\ContactsAdmin\Index.cshtml" />
+    <Content Include="Views\ContactsAdmin\_ViewStart.cshtml" />
+    <Content Include="Views\ContactsAdmin\Delete.cshtml" />
+    <Content Include="Views\ContactsAdmin\Update.cshtml" />
+    <Content Include="Views\ContactsAdmin\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

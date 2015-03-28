@@ -864,6 +864,12 @@ footer .f-menu{
 /*END Contact Us Styles*/
 
 
+/*@media screen and (min-width: 1170px) {
+    #responsive-nav
+    {
+        display:none!important;
+    }
+}*/
 
 /* Media Queries - Responsiveness*/
 @media screen and (max-width: 1170px) {

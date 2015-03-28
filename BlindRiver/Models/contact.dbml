@@ -8,6 +8,7 @@
       <Column Name="phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="subject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="message" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="reviewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

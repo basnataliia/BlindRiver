@@ -1,0 +1,36 @@
+﻿body {
+}
+
+/*Styles for Contact messages - admin*/
+.cm-table
+{
+    border:2px solid #67909F;
+    border-collapse: collapse !important;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.cm-table thead{
+    background:#67909F;
+}
+
+.cm-table td,
+.cm-table th{
+    border: 1px solid #ddd !important;
+    text-align: center;
+    padding:5px 0;
+}
+
+
+.cm-table tbody tr:nth-child(even){
+    background:#ECF0F1;
+}
+
+.cm-table tbody tr:hover{
+    background:#BDC3C7;
+    color:#FFFFFF;
+}
+
+
+/*END Styles for Contact messages - admin*/

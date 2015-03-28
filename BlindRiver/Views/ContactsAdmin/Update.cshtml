@@ -1,0 +1,51 @@
+﻿@model BlindRiver.Models.contact
+@{
+    //ViewBag.Title = "Update: " + @Model.name;
+    ViewBag.Title = "Update: ";
+}
+
+@*<h2>Update:  @Model.name</h2>*@
+<h2>Update:  </h2>
+
+@*@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.id)
+
+    @Html.LabelFor(model => model.questions)
+    @Html.TextBoxFor(model => model.questions)
+    @Html.ValidationMessageFor(model => model.questions, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.answers)
+    @Html.TextBoxFor(model => model.answers)
+    @Html.ValidationMessageFor(model => model.answers, "*")
+    <br /><br />
+    <input type="submit" value="Update" />
+
+}*@
+
+@using (Html.BeginForm("Update", "ContactsAdmin"))
+{
+    @Html.HiddenFor(model => model.id)
+    @Html.HiddenFor(model => model.name)
+    @Html.HiddenFor(model => model.email)
+    @Html.HiddenFor(model => model.phone)
+    @Html.HiddenFor(model => model.subject)
+    @Html.HiddenFor(model => model.message)
+    @Html.CheckBoxFor(model=>model.reviewed)
+    @*@Html.EditorFor(model => model.name, new { @class = "checkbox-message" })
+    <input id="Remember" type="checkbox" value="true" name="name" />
+    <input type="hidden" value="false" name="name" />
+    <br /><br />*@
+    <input type="submit" value="Update" />
+    
+    @Html.ActionLink("Back", "Index", "ContactsAdmin")
+}
+
+<p>
+    @*@Html.ActionLink("Back", "Index", new { id = Model.id })*@
+</p>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

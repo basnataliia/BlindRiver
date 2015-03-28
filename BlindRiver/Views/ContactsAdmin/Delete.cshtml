@@ -1,0 +1,31 @@
+﻿@model BlindRiver.Models.contact
+
+@{
+    ViewBag.Title = "Subject " + @Model.subject;
+}
+
+<h2>Are you sure you want to delete the following message? </h2><br />
+<p>
+    From: @Model.name<br />
+    Subject:@Model.subject<br />
+    Message: @Model.message<br />
+
+</p>
+
+<br /><br />
+@using (Html.BeginForm())
+{
+
+    <input type="submit" value="Delete" />          
+}
+
+@using (Html.BeginForm("Index", "ContactsAdmin"))
+{
+    <button type="submit">Cancel</button>
+}
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

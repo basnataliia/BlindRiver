@@ -38,5 +38,25 @@ namespace BlindRiver.Models
                 return true;
             }
         }
+
+        //update
+        public bool commitUpdate(int _id, string _name, string _email, string _phone, string _subject, string _message, bool _reviewed )
+        {
+            using (objContact)
+            {
+                var objUpMessage = objContact.contacts.Single(x => x.id == _id);
+                //setting table column to new value being passed
+                objUpMessage.name = _name;
+                objUpMessage.email = _email;
+                objUpMessage.phone = _phone;
+                objUpMessage.subject = _subject;
+                objUpMessage.message = _message;
+                objUpMessage.reviewed = _reviewed;
+                //commit update against database
+                objContact.SubmitChanges();
+                return true;
+            }
+        }
+
     }
 }

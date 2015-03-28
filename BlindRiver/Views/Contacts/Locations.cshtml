@@ -36,18 +36,42 @@
             map: map,
             title: '@item.title',
             zIndex: 10
-            });
+        });
         </text>
         }
 
-        //var myLatLng = new google.maps.LatLng(43.724755, -79.616188);
-        //var marker = new google.maps.Marker({
-        //    position: myLatLng,
-        //    map: map,
-        //    title: 'Home',
-        //    zIndex: 10
-        //});
+        
+    
 
+        //show popup in location marker click
+
+
+        //declare addMarker function
+        function addMarker(latitude, longitude, title, description, map)
+        {
+            var latLng = new google.maps.LatLng(latitude, longitude);
+            var contentString = '<h3>' + title + '</h3>' + '<p>' + description + '</p>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: latLng,
+                title: title,
+                map: map,
+                draggable: false
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+
+        //now add markers
+        @foreach (var item in Model) {
+        @:addMarker(@item.latitude, @item.longitude, '@item.title', '@item.address', map);
+         }
     }
     google.maps.event.addDomListener(window, 'load', init);
 
