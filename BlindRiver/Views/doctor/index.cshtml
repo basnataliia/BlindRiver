@@ -9,10 +9,10 @@
     <div id="doctorsContainer2">
         <div class="doctorText">
             <h3 class="doctorTitle">@doctors.firstName @doctors.lastName</h3>
-            <p>@doctors.department</p>
-            <p><a href="mailto:@doctors.email">@doctors.email</a></p>
-            <p>@doctors.title</p>
-            <p>@doctors.phone</p>
+            <p>Department: @doctors.department</p>
+            <p>Email: <a href="mailto:@doctors.email">@doctors.email</a></p>
+            <p>Title: @doctors.title</p>
+            <p>Phone: @doctors.phone</p>
         </div> 
     <img src="@Url.Content(@"~/Content/Images/" + (doctors.image))" alt="" class="doctorThumb" />
     </div>

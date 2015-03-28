@@ -1,0 +1,46 @@
+﻿@model BlindRiver.Models.doctor
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Update Doctor @Model.firstName @Model.lastName</h2>
+
+@using (Html.BeginForm()) { 
+    @Html.HiddenFor(x => x.Id)
+
+    @Html.LabelFor(x =>x.firstName)
+    @Html.TextBoxFor(x=>x.firstName)
+     @Html.ValidationMessageFor(model => model.firstName, "*Required")
+    <br />
+    @Html.LabelFor(x =>x.lastName)
+    @Html.TextBoxFor(x=>x.lastName)
+    @Html.ValidationMessageFor(model => model.lastName, "*Required")
+    <br />
+    @Html.LabelFor(x =>x.title)
+    @Html.TextBoxFor(x=>x.title)
+    @Html.ValidationMessageFor(model => model.title, "*Required")
+    <br />
+    @Html.LabelFor(x =>x.department)
+    @Html.TextBoxFor(x=>x.department)
+    @Html.ValidationMessageFor(model => model.department, "*Required")
+    <br />
+    @Html.LabelFor(x =>x.email)
+    @Html.TextBoxFor(x=>x.email)
+    @Html.ValidationMessageFor(model => model.email, "*Please enter a valid email")
+    <br />
+    @Html.LabelFor(x =>x.phone)
+    @Html.TextBoxFor(x=>x.phone)
+    @Html.ValidationMessageFor(model => model.phone, "*Please enter a valid phone number")
+    <br />
+    @Html.LabelFor(x =>x.image)
+    @Html.TextBoxFor(x=>x.image)
+    <br />
+    <input type="submit" value="Update Doctor" />
+}
+
+<h2>@Html.ActionLink("Back", "Manager")</h2>
+
+@section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }

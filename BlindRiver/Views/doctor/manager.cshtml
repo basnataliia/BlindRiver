@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BlindRiver.Models.doctor>
+@{
+    ViewBag.Title = "manager";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Doctor Manager | @Html.ActionLink("View Current Doctors", "Index")</h2>
+<p>@Html.ActionLink("Add A New Doctor", "Insert")</p>
+
+<h3>Current Doctors</h3> 
+@foreach (var x in Model) {
+    <p>Name: @x.firstName @x.lastName <br />
+        Title: @x.title<br />
+        Department: @x.department<br />
+         @Html.ActionLink("Delete Record", "Delete", new { id = x.Id }) | @Html.ActionLink("Edit Record", "Update", new { id = x.Id})<hr /></p>
+}

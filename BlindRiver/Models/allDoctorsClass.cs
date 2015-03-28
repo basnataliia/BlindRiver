@@ -9,7 +9,7 @@ namespace BlindRiver.Models
     {
        doctorsDataContext objDoc = new doctorsDataContext();
 
-        //get all modules from database
+        //get all docs from database
         public IEnumerable<doctor> getDocs()
         {
             var allDocs = objDoc.doctors.Select(x => x);
@@ -31,5 +31,33 @@ namespace BlindRiver.Models
             }
 
         }
+
+        public bool deleteDoctor(int _id)
+        {
+            using (objDoc)
+            {
+                var delete = objDoc.doctors.Single(x => x.Id == _id);
+                objDoc.doctors.DeleteOnSubmit(delete);
+                objDoc.SubmitChanges();
+                return true;
+            }
+        }
+
+        public bool updateDoctor(int _id, string _fname, string _lname, string _email, string _phone, string _department, string _title, string _image) {
+            using (objDoc) {
+                var objUpDoc = objDoc.doctors.Single(x => x.Id == _id);
+                objUpDoc.firstName = _fname;
+                objUpDoc.lastName = _lname;
+                objUpDoc.email = _email;
+                objUpDoc.phone = _phone;
+                objUpDoc.title = _title;
+                objUpDoc.department = _department;
+                objUpDoc.image = _image;
+                objDoc.SubmitChanges();
+                return true;
+            }
+        }
+
+      
     }
 }

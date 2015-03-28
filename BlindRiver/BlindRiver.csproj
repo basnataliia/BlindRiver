@@ -197,6 +197,7 @@
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
+    <Compile Include="Models\AllDoctorsValidation.cs" />
     <Compile Include="Models\contact.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,8 +274,11 @@
     <Content Include="Content\Images\careers.jpg" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\doctor.jpg" />
+    <Content Include="Content\Images\emerson.jpg" />
     <Content Include="Content\Images\gina.jpg" />
     <Content Include="Content\Images\hospital-img.jpg" />
+    <Content Include="Content\Images\jay.jpg" />
+    <Content Include="Content\Images\lisa.jpg" />
     <Content Include="Content\Images\location1.png" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\mobile1.png" />
@@ -345,6 +349,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\rosalyn.jpg" />
     <Content Include="Models\slider.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>slider.designer.cs</LastGenOutput>
@@ -489,7 +494,6 @@
     <Content Include="Views\BookApp\Details.cshtml" />
     <Content Include="Views\doctor\index.cshtml" />
     <Content Include="Views\doctor\Insert.cshtml" />
-    <Content Include="Views\doctorAdmin\index.cshtml" />
     <Content Include="Views\BookApp\Update.cshtml" />
     <Content Include="Views\FAQ\Public.cshtml" />
     <Content Include="Views\Shared\responsiveMenu.cshtml" />
@@ -500,6 +504,10 @@
     <Content Include="Views\ContactsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactsAdmin\Update.cshtml" />
     <Content Include="Views\ContactsAdmin\Search.cshtml" />
+    <Content Include="Views\doctor\manager.cshtml" />
+    <Content Include="Views\doctor\Delete.cshtml" />
+    <Content Include="Views\doctor\NoFound.cshtml" />
+    <Content Include="Views\doctor\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
