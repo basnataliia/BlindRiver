@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VolunteerOpportunities">
+  <DataContextMoniker Name="/VolunteerOpportunitiesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="93a8e7f3-2079-4650-9c1a-1eae186c6228" absoluteBounds="2.875, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/VolunteerOpportunitiesDataContext/Volunteer_Opportunity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1530aeed-5ce0-4515-9178-f1f33e2ab784" absoluteBounds="2.8899999999999997, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
