@@ -1,27 +1,23 @@
 ﻿@model BlindRiver.Models.contact
+
 @{
-    //ViewBag.Title = "Update: " + @Model.name;
-    ViewBag.Title = "Update: ";
+    ViewBag.Title = "Message details: " + @Model.name;
 }
 
-@*<h2>Update:  @Model.name</h2>*@
-<h2>Update:  </h2>
+<h1>Contact Messages Manager</h1>
 
-@*@using (Html.BeginForm())
-{
-    @Html.HiddenFor(x => x.id)
-
-    @Html.LabelFor(model => model.questions)
-    @Html.TextBoxFor(model => model.questions)
-    @Html.ValidationMessageFor(model => model.questions, "*")
-    <br /><br />
-    @Html.LabelFor(model => model.answers)
-    @Html.TextBoxFor(model => model.answers)
-    @Html.ValidationMessageFor(model => model.answers, "*")
-    <br /><br />
-    <input type="submit" value="Update" />
-
-}*@
+<fieldset>
+    <legend>
+        Message details
+    </legend>
+    <div>
+        <div class="ct-row"><label class="label">From:</label><span class="ct-msg-text"> @Model.name</span></div>
+        <div class="ct-row"><label class="label">Tel.:</label><span class="ct-msg-text"> @Model.phone</span></div>
+    <div class="ct-row"><label class="label">Email:</label><span class="ct-msg-text"> @Model.email</span></div>
+    <div class="ct-row"><label class="label">Subject:</label><span class="ct-msg-text">@Model.subject</span></div>
+    <div class="ct-row"><label class="label">Message:</label><span class="ct-msg-text"> @Model.message</span></div>
+    <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id }, new { @class = "link-button" })</p><br />
+</div>
 
 @using (Html.BeginForm("Update", "ContactsAdmin"))
 {
@@ -31,21 +27,25 @@
     @Html.HiddenFor(model => model.phone)
     @Html.HiddenFor(model => model.subject)
     @Html.HiddenFor(model => model.message)
-    @Html.CheckBoxFor(model=>model.reviewed)
-    @*@Html.EditorFor(model => model.name, new { @class = "checkbox-message" })
-    <input id="Remember" type="checkbox" value="true" name="name" />
-    <input type="hidden" value="false" name="name" />
-    <br /><br />*@
-    <input type="submit" value="Update" />
-    
-    @Html.ActionLink("Back", "Index", "ContactsAdmin")
+    <div class="ct-row">
+        <label class="label">Mark this message as reviewed:</label>
+        @Html.CheckBoxFor(model => model.reviewed)
+    </div>
+    <div class="f-left">
+        <input type="submit" value="Save changes" class="form-button" />
+    </div>
 }
 
-<p>
-    @*@Html.ActionLink("Back", "Index", new { id = Model.id })*@
-</p>
+@using (Html.BeginForm("Index", "ContactsAdmin"))
+{       <div>
+        <button type="submit" class="btn-cancel">Cancel</button>
+    </div>
+}
+</fieldset>
+
+<div class="clearfix"></div>
 
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
-
 }
+

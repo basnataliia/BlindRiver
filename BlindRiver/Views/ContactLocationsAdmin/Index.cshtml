@@ -1,0 +1,36 @@
+﻿@model IEnumerable<BlindRiver.Models.contact_location>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Blind River locations</h2>
+@Html.ActionLink("Insert", "Insert")
+
+<table class="cm-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    @foreach (var location in Model)
+    {
+        <tr>
+            <td>@location.title</td>
+            <td>@location.address</td>
+            <td>@location.phone</td>
+            <td>@location.fax</td>
+            <td>@location.latitude</td>
+            <td>@location.longitude</td>
+            <td>@Html.ActionLink("Update", "Update", new { id = location.id })</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = location.id })</td>
+        </tr>
+    }
+</table>

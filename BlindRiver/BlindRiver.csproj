@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactLocationsAdminController.cs" />
     <Compile Include="Controllers\ContactsAdminController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
@@ -203,6 +204,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contact.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\contactLocationsValidation.cs" />
     <Compile Include="Models\contacts.cs" />
     <Compile Include="Models\contactsValidation.cs" />
     <Compile Include="Models\contact_locations.cs">
@@ -213,6 +215,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contact_locations.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\contact_map_locations.cs" />
     <Compile Include="Models\doctors.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,6 +250,7 @@
     <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\menulinks.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -508,6 +512,10 @@
     <Content Include="Views\doctor\Delete.cshtml" />
     <Content Include="Views\doctor\NoFound.cshtml" />
     <Content Include="Views\doctor\Update.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\Index.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\_ViewStart.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\Insert.cshtml" />
+    <Content Include="Views\ContactsAdmin\Email.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

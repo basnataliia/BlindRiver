@@ -58,5 +58,12 @@ namespace BlindRiver.Models
             }
         }
 
+        //search
+        public IEnumerable<contact> searchContacts(string query)
+        {
+            var allContacts = from x in objContact.contacts where x.name == query || x.email == query select x;
+            return allContacts;
+        }
+
     }
 }

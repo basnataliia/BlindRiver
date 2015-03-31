@@ -44,5 +44,6 @@ namespace BlindRiver.Models
         [DisplayName("Reviewed")]
         [Required]
         public bool reviewed { get; set; }
+
     }
 }
