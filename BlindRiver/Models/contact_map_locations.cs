@@ -40,7 +40,7 @@ namespace BlindRiver.Models
         }
 
         //update
-        public bool commitUpdate(int _id, string _title, string _address, string _phone, string _fax, float _latitude, float _longitude)
+        public bool commitUpdate(int _id, string _title, string _address, string _phone, string _fax, double? _latitude, double? _longitude)
         {
             using (objLocation)
             {

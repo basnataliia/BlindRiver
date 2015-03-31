@@ -532,6 +532,8 @@
     <None Include="Models\VolunteerOpportunities.dbml.layout">
       <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
     </None>
+    <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

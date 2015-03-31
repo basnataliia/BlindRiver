@@ -41,8 +41,16 @@
     margin-bottom:10px;
 }
 
-
-
-
-
 /*END Styles for Contact messages - admin*/
+
+/*Styles form locations manager*/
+#br-locations #br-add-btn{
+    float:right;
+    padding-bottom:20px;
+}
+
+#br-locations #br-add-btn .link-button{
+    padding:6px 30px 6px 30px;
+}
+
+/*END Styles form locations manager*/

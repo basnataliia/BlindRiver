@@ -9,13 +9,13 @@ namespace BlindRiver.Models
     {
         VolunteerOpportunitiesDataContext objVolOp = new VolunteerOpportunitiesDataContext();
 
-        public IQueryable<VolunteerOpportunities> getVolOps()
+        public IQueryable<Volunteer_Opportunity> getVolOps()
         {
             var allVolOp = objVolOp.Volunteer_Opportunities.Select(x => x);
             return allVolOp;
         }
 
-        public VolunteerOpportunities getVolOpByID(int _id)
+        public Volunteer_Opportunity getVolOpByID(int _id)
         {
             var allVolOP = objVolOp.Volunteer_Opportunities.SingleOrDefault(x => x.id == _id);
             return allVolOP;

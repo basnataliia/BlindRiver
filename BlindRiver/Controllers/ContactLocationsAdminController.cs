@@ -42,5 +42,63 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        //delete location
+        public ActionResult Delete(int id)
+        {
+            var location = objLocation.getLocationById(id);
+            if (location == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(location);
+            }
+        }
+        [HttpPost]
+        public ActionResult Delete(int id, contact_location contmessage)
+        {
+            try
+            {
+                objLocation.commitDelete(id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //update location
+        public ActionResult Update(int id)
+        {
+            var location = objLocation.getLocationById(id);
+            if (location == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(location);
+            }
+        }
+        [HttpPost]
+        public ActionResult Update(int id, contact_location contlocation)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objLocation.commitUpdate(id, contlocation.title, contlocation.address, contlocation.phone, contlocation.fax, contlocation.latitude, contlocation.longitude);
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
+
     }
 }

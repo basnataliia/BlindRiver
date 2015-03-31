@@ -38,10 +38,10 @@ namespace BlindRiver.Models
 
         [DisplayName("Latitide")]
         [Required]
-        public float latitude { get; set; }
+        public double? latitude { get; set; }
 
         [DisplayName("Longitude")]
         [Required]
-        public float longitude { get; set; }
+        public double? longitude { get; set; }
     }
 }
