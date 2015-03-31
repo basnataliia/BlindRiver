@@ -1,0 +1,12 @@
+﻿@*@model IEnumerable<BlindRiver.Models.contact>*@
+@model BlindRiver.Models.contact
+
+@using (Html.BeginForm("Search", "ContactsAdmin"))
+{
+    @*@Html.TextBox("name")*@
+
+    @Html.TextBoxFor(model => model.id)
+
+    
+    <input type="submit" value="Search" />
+}

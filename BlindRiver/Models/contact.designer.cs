@@ -92,6 +92,8 @@ namespace BlindRiver.Models
 		
 		private string _message;
 		
+		private bool _reviewed;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -108,6 +110,8 @@ namespace BlindRiver.Models
     partial void OnsubjectChanged();
     partial void OnmessageChanging(string value);
     partial void OnmessageChanged();
+    partial void OnreviewedChanging(bool value);
+    partial void OnreviewedChanged();
     #endregion
 		
 		public contact()
@@ -231,6 +235,26 @@ namespace BlindRiver.Models
 					this._message = value;
 					this.SendPropertyChanged("message");
 					this.OnmessageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reviewed", DbType="Bit NOT NULL")]
+		public bool reviewed
+		{
+			get
+			{
+				return this._reviewed;
+			}
+			set
+			{
+				if ((this._reviewed != value))
+				{
+					this.OnreviewedChanging(value);
+					this.SendPropertyChanging();
+					this._reviewed = value;
+					this.SendPropertyChanged("reviewed");
+					this.OnreviewedChanged();
 				}
 			}
 		}

@@ -1,0 +1,51 @@
+﻿@model BlindRiver.Models.contact
+
+@{
+    ViewBag.Title = "Message details: " + @Model.name;
+}
+
+<h1>Contact Messages Manager</h1>
+
+<fieldset>
+    <legend>
+        Message details
+    </legend>
+    <div>
+        <div class="ct-row"><label class="label">From:</label><span class="ct-msg-text"> @Model.name</span></div>
+        <div class="ct-row"><label class="label">Tel.:</label><span class="ct-msg-text"> @Model.phone</span></div>
+    <div class="ct-row"><label class="label">Email:</label><span class="ct-msg-text"> @Model.email</span></div>
+    <div class="ct-row"><label class="label">Subject:</label><span class="ct-msg-text">@Model.subject</span></div>
+    <div class="ct-row"><label class="label">Message:</label><span class="ct-msg-text"> @Model.message</span></div>
+    <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id }, new { @class = "link-button" })</p><br />
+</div>
+
+@using (Html.BeginForm("Update", "ContactsAdmin"))
+{
+    @Html.HiddenFor(model => model.id)
+    @Html.HiddenFor(model => model.name)
+    @Html.HiddenFor(model => model.email)
+    @Html.HiddenFor(model => model.phone)
+    @Html.HiddenFor(model => model.subject)
+    @Html.HiddenFor(model => model.message)
+    <div class="ct-row">
+        <label class="label">Mark this message as reviewed:</label>
+        @Html.CheckBoxFor(model => model.reviewed)
+    </div>
+    <div class="f-left">
+        <input type="submit" value="Save changes" class="form-button" />
+    </div>
+}
+
+@using (Html.BeginForm("Index", "ContactsAdmin"))
+{       <div>
+        <button type="submit" class="btn-cancel">Cancel</button>
+    </div>
+}
+</fieldset>
+
+<div class="clearfix"></div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

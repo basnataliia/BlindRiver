@@ -48,15 +48,6 @@ table {
 }
 
 
-
-
-/*body {
-    font-size: .85em;
-    font: normal 14px Tahoma, Geneva, sans-serif;
-    color: #232323;
-    background-color: #fff;
-}*/
-
  body {
 	background-color: #fff;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -897,21 +888,72 @@ footer .f-menu{
   font-family: Arial;
   color: #ffffff;
   font-size: 14px;
-  background: #2980b9;
+  background: #3498db;
   padding: 6px 12px;
   text-decoration: none;
-  width:40%;
+  
 }
 
 .form-button:hover{
-  background: #3498db;
+  background: #2980b9;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.fb-width{
+    width:40%;
+}
+
+.btn-cancel {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #333;
+  font-size: 14px;
+  background: #f7f9fa;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin-left:10px;
+}
+
+.btn-cancel:hover {
+  cursor: pointer;
+  background: #cbcdcf;
   text-decoration: none;
 }
 
 #map-canvas {
         height: 350px;
     }
+
+.ct-thankyou-msg{
+    margin:0 auto;
+    text-align: center;
+}
+
+.link-button{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #09A10D;
+  color: #fff;
+  padding: 6px 12px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #5C5C5C;
+  border-bottom: 1px solid #5C5C5C;
+  border-left: 1px solid #CCCCCC;
+}
+
+.link-button:hover {
+  cursor: pointer;
+  background-color: #09720D;
+  text-decoration: none;
+    }
+
 
 /*END Contact Us Styles*/
 
@@ -921,7 +963,6 @@ footer .f-menu{
     width:100%;
     margin: 20px 0px;
 }
-
 
 /* Media Queries - Responsiveness*/
 @media screen and (max-width: 1170px) {

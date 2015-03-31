@@ -187,7 +187,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\CareersController.cs" />
+=======
+    <Compile Include="Controllers\ContactLocationsAdminController.cs" />
+    <Compile Include="Controllers\ContactsAdminController.cs" />
+>>>>>>> origin/blindriver
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
@@ -196,6 +201,7 @@
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\AllDoctorsValidation.cs" />
     <Compile Include="Models\careerApp.cs" />
@@ -215,6 +221,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contact.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\contactLocationsValidation.cs" />
     <Compile Include="Models\contacts.cs" />
     <Compile Include="Models\contactsValidation.cs" />
     <Compile Include="Models\contact_locations.cs">
@@ -225,6 +232,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contact_locations.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\contact_map_locations.cs" />
     <Compile Include="Models\doctors.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -259,6 +267,7 @@
     <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\menulinks.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,14 +280,22 @@
       <DependentUpon>NewsPosts.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\NewsValidation.cs" />
+    <Compile Include="Models\search_contactmessages.cs" />
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>slider.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\VolunteerOpportunities.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
     <Content Include="Content\Images\blindriver-header.jpg" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\careers.jpg" />
@@ -520,10 +537,16 @@
     <Content Include="Views\Shared\responsiveMenu.cshtml" />
     <Content Include="Views\Contacts\Locations.cshtml" />
     <Content Include="Views\Contacts\Locations_list.cshtml" />
+    <Content Include="Views\ContactsAdmin\Index.cshtml" />
+    <Content Include="Views\ContactsAdmin\_ViewStart.cshtml" />
+    <Content Include="Views\ContactsAdmin\Delete.cshtml" />
+    <Content Include="Views\ContactsAdmin\Update.cshtml" />
+    <Content Include="Views\ContactsAdmin\Search.cshtml" />
     <Content Include="Views\doctor\manager.cshtml" />
     <Content Include="Views\doctor\Delete.cshtml" />
     <Content Include="Views\doctor\NoFound.cshtml" />
     <Content Include="Views\doctor\Update.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Careers\CareerManager.cshtml" />
     <Content Include="Views\Careers\index.cshtml" />
     <Content Include="Views\Careers\NotFound.cshtml" />
@@ -531,6 +554,23 @@
     <Content Include="Views\Careers\submitapplication.cshtml" />
     <Content Include="Views\Careers\thanks.cshtml" />
     <Content Include="Views\Careers\error.cshtml" />
+=======
+    <Content Include="Views\ContactLocationsAdmin\Index.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\_ViewStart.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\Insert.cshtml" />
+    <Content Include="Views\ContactsAdmin\Email.cshtml" />
+    <Content Include="Views\Volunteer\Index.cshtml" />
+    <Content Include="Models\VolunteerOpportunities.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>VolunteerOpportunities.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\VolunteerOpportunities.dbml.layout">
+      <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
+    </None>
+    <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
+    <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
+>>>>>>> origin/blindriver
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -594,10 +634,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target> -->
 </Project>

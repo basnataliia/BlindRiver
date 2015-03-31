@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BlindRiver.Models.contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Contact Messages Manager</h2>
+
+<div class="ct-messages-search">
+    @*@Html.Action("Search", "ContactsAdmin")*@
+
+</div>
+<br />
+    <table class="cm-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                @*<th>Message</th>*@
+                <th>Mark as reviewed</th>
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+@foreach (var message in Model)
+{ 
+    <tr>
+        <td>@message.name</td>
+        <td>@message.email</td>
+        <td>@message.phone</td>
+        <td>@message.subject</td>
+        @*<td>@message.message</td>*@     
+            @if (@message.reviewed == true)
+            {
+                <td>yes</td>;
+            }
+            else
+            {
+                <td>no</td>;
+            }
+        <td>@Html.ActionLink("View Details", "Update", new { id = message.id })</td>
+        <td>@Html.ActionLink("Delete", "Delete", new { id = message.id })</td>
+    </tr>  
+}     
+    </table>
+
+<div class="clear"></div>

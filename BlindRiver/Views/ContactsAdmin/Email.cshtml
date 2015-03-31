@@ -1,0 +1,38 @@
+﻿@model BlindRiver.Models.MailModel
+
+@{
+    ViewBag.Title = "Email";
+    
+}
+
+@*<h2>Email</h2>*@
+<fieldset>
+    <legend>
+        Send an Email    
+    </legend>
+
+    @using (Html.BeginForm())
+    {
+        <br />
+        <label class="label">From:</label>
+        @*<p>@Html.TextBoxFor(m => m.From, new { Value = "postmaster@startdev.me" })</p>*@
+        <p>@Html.TextBoxFor(m => m.From, new { Value = "blindriverhospital@gmail.com" , @class = "form-input" })</p><br />
+        <p class="label">To:</p>
+        <p>@Html.TextBoxFor(m => m.To, new { Value = @ViewBag.contact.email, @class = "form-input" })</p><br />
+        <p class="label">Subject:</p>
+        <p>@Html.TextBoxFor(m => m.Subject, new { Value = "RE: " + @ViewBag.contact.subject, @class = "form-input" })</p><br />
+        <p class="label">Body:</p>
+        <p>@Html.TextAreaFor(m => m.Body, new {@class = "form-input" })</p><br />
+        <div class="f-left">
+            <input type="submit" value="Send an Email" class="form-button" />
+        </div>
+    }
+
+    @using (Html.BeginForm("Index", "ContactsAdmin"))
+    {       
+    <div>
+        <button type="submit" class="btn-cancel">Back</button>
+    </div>
+    }
+
+</fieldset>

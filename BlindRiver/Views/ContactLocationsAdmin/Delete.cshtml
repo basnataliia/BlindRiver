@@ -1,0 +1,38 @@
+﻿@model BlindRiver.Models.contact_location
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Are you sure you want to delete this location? </h2>
+
+<fieldset>
+    <legend>
+        Location details
+    </legend>
+    <br />
+    <div>
+        <div class="ct-row"><label class="label">Name:</label><span class="ct-msg-text"> @Model.title</span></div>
+        <div class="ct-row"><label class="label">Address:</label><span class="ct-msg-text">@Model.address</span></div>
+        <div class="ct-row"><label class="label">Phone:</label><span class="ct-msg-text"> @Model.phone</span></div>
+        <div class="ct-row"><label class="label">Fax:</label><span class="ct-msg-text"> @Model.fax</span></div>
+        <div class="ct-row"><label class="label">Latitude:</label><span class="ct-msg-text"> @Model.latitude</span></div>
+        <div class="ct-row"><label class="label">Longitude:</label><span class="ct-msg-text"> @Model.longitude</span></div>
+        @*@Html.DisplayFor(x => x.title)*@
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="f-left">
+            <input type="submit" value="Delete" class="form-button" />
+        </div>
+    }
+
+    @using (Html.BeginForm("Index", "ContactLocationsAdmin"))
+    {
+        <div>
+            <button type="submit" class="btn-cancel">Cancel</button>
+        </div>
+    }
+</fieldset>
+<div class="clearfix"></div>

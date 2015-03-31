@@ -40,5 +40,10 @@ namespace BlindRiver.Models
         [DisplayName("Message")]
         [Required]
         public string message { get; set; }
+
+        [DisplayName("Reviewed")]
+        [Required]
+        public bool reviewed { get; set; }
+
     }
 }

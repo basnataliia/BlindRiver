@@ -1,0 +1,19 @@
+﻿@model IEnumerable<BlindRiver.Models.Volunteer_Opportunity>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Volunteer Opportunities</h2>
+
+<div id="volunterContainer">
+
+    @foreach (var VolunteerOpportunities in Model)
+    {
+
+        <h3>@VolunteerOpportunities.position</h3>
+        <br />
+        <p>@VolunteerOpportunities.description</p>
+
+        <hr />
+    }
+</div>

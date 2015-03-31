@@ -1,0 +1,56 @@
+﻿body {
+}
+
+/*Styles for Contact messages - admin*/
+.cm-table
+{
+    border:2px solid #67909F;
+    border-collapse: collapse !important;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.cm-table thead{
+    background:#67909F;
+}
+
+.cm-table td,
+.cm-table th{
+    border: 1px solid #ddd !important;
+    text-align: center;
+    padding:5px 10px;
+}
+
+
+.cm-table tbody tr:nth-child(even){
+    background:#ECF0F1;
+}
+
+.cm-table tbody tr:hover{
+    background:#BDC3C7;
+    color:#FFFFFF;
+}
+
+.ct-msg-text{
+    padding:0 0 0 10px;
+}
+
+
+.ct-row{
+    margin-bottom:10px;
+}
+
+/*END Styles for Contact messages - admin*/
+
+/*Styles form locations manager*/
+#br-locations #br-add-btn{
+    float:right;
+    padding-bottom:20px;
+}
+
+#br-locations #br-add-btn .link-button{
+    padding:6px 30px 6px 30px;
+}
+
+/*END Styles form locations manager*/

@@ -1,0 +1,73 @@
+﻿@model BlindRiver.Models.contact_location
+@{
+    ViewBag.Title = "Update";
+}
+
+<script type="text/javascript">
+
+    //pattern for phone input
+    //Source: http://forums.asp.net/t/1824550.aspx?Add+dashes+to+user+input+in+a+textbox
+    $(function () {
+        $('.phone-input').on('keydown', function () {
+            var inp = $('.phone-input').val();
+            if (inp.length == 3 || inp.length == 7) {
+                $('.phone-input').val(inp + '-');
+            }
+        });
+    });
+</script>
+
+<fieldset>
+    <legend>
+        Message details
+    </legend>
+    @using (Html.BeginForm("Update", "ContactLocationsAdmin"))
+    {
+        @Html.HiddenFor(location => location.id)
+
+        <br />
+        @Html.LabelFor(location => location.title, new { @class = "label" })
+        @Html.TextBoxFor(location => location.title, new { @class = "form-input" })
+        @Html.ValidationMessageFor(location => location.title, "*")
+
+        <br />
+        @Html.LabelFor(location => location.address, new { @class = "label" })
+        @Html.TextBoxFor(location => location.address, new { @class = "form-input" })
+        @Html.ValidationMessageFor(location => location.address, "*")
+
+        <br />
+        @Html.LabelFor(location => location.phone, new { @class = "label" })
+        @Html.TextBoxFor(location => location.phone, new { @class = "phone-input form-input", @maxlength = "12" })
+        @Html.ValidationMessageFor(location => location.phone, "*")
+
+        <br />
+        @Html.LabelFor(location => location.fax, new { @class = "label" })
+        @Html.TextBoxFor(location => location.fax, new { @class = "form-input" })
+        @Html.ValidationMessageFor(location => location.fax, "*")
+        <br />
+
+        @Html.LabelFor(location => location.latitude, new { @class = "label" })
+        @Html.TextBoxFor(location => location.latitude, new { @class = "form-input" })
+        @Html.ValidationMessageFor(location => location.latitude, "*")
+        <br />
+
+        @Html.LabelFor(location => location.longitude, new { @class = "label" })
+        @Html.TextBoxFor(location => location.longitude, new { @class = "form-input" })
+        @Html.ValidationMessageFor(location => location.longitude, "*")
+        <br />
+    <div class="f-left">
+        <input type="submit" value="Update" class="form-button" />
+    </div>
+    }
+
+    @using (Html.BeginForm("Index", "ContactLocationsAdmin"))
+    {       <div>
+        <button type="submit" class="btn-cancel">Cancel</button>
+    </div>
+    }
+</fieldset>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

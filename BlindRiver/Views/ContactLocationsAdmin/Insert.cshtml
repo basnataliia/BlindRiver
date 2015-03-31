@@ -1,0 +1,76 @@
+﻿@model BlindRiver.Models.contact_location
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+<script type="text/javascript">
+
+    //pattern for phone input
+    //Source: http://forums.asp.net/t/1824550.aspx?Add+dashes+to+user+input+in+a+textbox
+    $(function () {
+        $('.phone-input').on('keydown', function () {
+            var inp = $('.phone-input').val();
+            if (inp.length == 3 || inp.length == 7) {
+                $('.phone-input').val(inp + '-');
+            }
+        });
+    });
+</script>
+
+<fieldset>
+    <legend>
+        Add new location
+    </legend>
+
+
+    @using (Html.BeginForm())
+    {
+
+        @*@Html.ValidationSummary()*@
+        <br />
+        @Html.LabelFor(model => model.title, new { @class = "label" })
+        @Html.TextBoxFor(model => model.title, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.title, "*")
+        <br />
+
+        @Html.LabelFor(model => model.address, new { @class = "label" })
+        @Html.TextBoxFor(model => model.address, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.address, "*")
+        <br />
+
+        @Html.LabelFor(model => model.phone, new { @class = "label" })
+        @Html.TextBoxFor(model => model.phone, new { @class = "phone-input form-input", @maxlength = "12" })
+        @Html.ValidationMessageFor(model => model.phone, "*")
+        <br />
+
+        @Html.LabelFor(model => model.fax, new { @class = "label" })
+        @Html.TextBoxFor(model => model.fax, new { @class = " form-input", @maxlength = "12" })
+        @Html.ValidationMessageFor(model => model.fax, "*")
+        <br />
+
+        @Html.LabelFor(model => model.latitude, new { @class = "label" })
+        @Html.TextBoxFor(model => model.latitude, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.latitude, "*")
+        <br />
+
+        @Html.LabelFor(model => model.longitude, new { @class = "label" })
+        @Html.TextBoxFor(model => model.longitude, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.longitude, "*")
+        <br />
+        <div class="f-left">
+        <input type="submit" value="Add Location" class="form-button" />
+        </div>
+        }
+
+    @using (Html.BeginForm("Index", "ContactLocationsAdmin"))
+    {
+        <div>
+            <button type="submit" class="btn-cancel">Cancel</button>
+        </div>
+    }
+</fieldset>
+        @section Scripts{
+            @Scripts.Render("~/bundles/jqueryval")
+
+        }
