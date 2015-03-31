@@ -88,6 +88,11 @@ h3 {
 	margin: 10px 0 15px;
 }
 
+h4 {
+    font-size:14px;
+    margin: 10px 0px;
+    font-weight:bold;
+}
 
 header, footer, nav, section {
     display: block;
@@ -173,7 +178,9 @@ header .contact-info{
     margin-top:30px;
 }
 
-
+.contact-mobile {
+    display:none;
+}
 
 .contact-info {
      background:rgba(255,255,255,0.5);
@@ -321,7 +328,7 @@ display: block;
 }
 
 #nav ul > li:hover ul {
-    display:block;
+   display:block;
     
 }
 
@@ -756,6 +763,7 @@ footer .f-menu{
     max-width:1100px;
     margin: 0 auto;
     height:auto;
+    padding: 15px 10px;
 }
 
 #doctorsContainer2 {
@@ -783,6 +791,50 @@ footer .f-menu{
     margin: 30px;
 }
 
+/*Career Opportunities Styles*/
+
+.apply {
+    background: #0378a3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    float:right;
+    cursor:pointer;
+    margin: 5px 10px;
+}
+
+    .apply:hover {
+        background:#08b3ce;
+    }
+
+    .apply a {
+        color:#fff;
+        text-decoration:none;
+        font-weight:bold;
+    }
+
+    .careerText {
+    float:left;
+    width:100%;
+}
+
+.right {
+    float:right;
+}
+
+.doctor-icon {
+    margin:5px 10px;
+    max-width:200px;
+}
+
+.error {
+    color:red;
+}
+
+.success {
+    color:green;
+}
 
 /*Contact Us Styles*/
 .contactus-wrapper
@@ -901,8 +953,8 @@ footer .f-menu{
     }
     .contact-info {
         max-width:50%;
-        margin-top:5px;
-        background:none;
+        margin:5px 5px;
+        
     }
     .wrapper {
         max-width:768px;
@@ -924,7 +976,7 @@ footer .f-menu{
 
 @media screen and (max-width: 530px) {
         .logo {
-        max-width:100%;
+        max-width:50%;
     }
         .contact-info {
         max-width:100%;
@@ -933,6 +985,17 @@ footer .f-menu{
     }
     header .contact-info {
         margin-top:2px;
+    }
+
+    .contact-info {
+        display:none;
+    }
+
+    .contact-mobile {
+        display:block;
+        float:right;
+        max-width:45%;
+        margin: 15px 5px;
     }
 
     .f-menu li a {

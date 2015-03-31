@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CareersController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
@@ -197,6 +198,18 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\AllDoctorsValidation.cs" />
+    <Compile Include="Models\careerApp.cs" />
+    <Compile Include="Models\careerapps.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>careerapps.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\careers.cs" />
+    <Compile Include="Models\careersClass.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>careersClass.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\contact.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,6 +284,7 @@
     <Content Include="Content\Images\careers.jpg" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\doctor.jpg" />
+    <Content Include="Content\Images\doctor.png" />
     <Content Include="Content\Images\emerson.jpg" />
     <Content Include="Content\Images\gina.jpg" />
     <Content Include="Content\Images\hospital-img.jpg" />
@@ -375,6 +389,16 @@
     <Content Include="Models\contact.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>contact.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Models\careersClass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>careersClass.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Models\careerapps.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>careerapps.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Models\contact.dbml.layout">
@@ -500,6 +524,13 @@
     <Content Include="Views\doctor\Delete.cshtml" />
     <Content Include="Views\doctor\NoFound.cshtml" />
     <Content Include="Views\doctor\Update.cshtml" />
+    <Content Include="Views\Careers\CareerManager.cshtml" />
+    <Content Include="Views\Careers\index.cshtml" />
+    <Content Include="Views\Careers\NotFound.cshtml" />
+    <Content Include="Views\Careers\apply.cshtml" />
+    <Content Include="Views\Careers\submitapplication.cshtml" />
+    <Content Include="Views\Careers\thanks.cshtml" />
+    <Content Include="Views\Careers\error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -523,6 +554,16 @@
   <ItemGroup>
     <None Include="Models\doctors.dbml.layout">
       <DependentUpon>doctors.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\careersClass.dbml.layout">
+      <DependentUpon>careersClass.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\careerapps.dbml.layout">
+      <DependentUpon>careerapps.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

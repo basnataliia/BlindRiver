@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BlindRiver.Models.careeropp>
+@{
+    ViewBag.Title = "Careers";
+}
+
+<div id="doctorsContainer">
+    <h1>Career Opportunities</h1>
+    <img src="~/content/images/doctor.png" alt="doctor icon" class="doctor-icon right" />
+    <p>Blind River Hospital is committed to employment equity. All qualified candidates are encouraged to apply, however, only those candidates selected for further consideration will be contacted. Unfortunately, at this time, we are unable to consider resumes from International applicants. Candidates must be legally entitled to work in Canada in order to apply, i.e. have Landed Immigrant Status, Work Visa, or be a Canadian Citizen.</p>
+    <div class="clearfix"></div>
+    <h2>Currently Available Positions</h2>
+@foreach (var careers in Model) {
+    <div id="doctorsContainer2">
+        <div class="careerText">
+            <h3 class="doctorTitle">@careers.title <button class="apply">@Html.ActionLink("View this job", "Apply", new { id = careers.Id})</button></h3>
+            <p>Department: @careers.department</p>
+            <p>Location: @careers.location</p>
+            <p>Job Type: @careers.jobtype</p>
+           
+        </div> 
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+}
+</div>
