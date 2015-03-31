@@ -197,6 +197,7 @@
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\AllDoctorsValidation.cs" />
     <Compile Include="Models\contact.designer.cs">
@@ -269,7 +270,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>slider.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\VolunteerOpportunities.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Admin.css" />
@@ -516,6 +523,15 @@
     <Content Include="Views\ContactLocationsAdmin\_ViewStart.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Insert.cshtml" />
     <Content Include="Views\ContactsAdmin\Email.cshtml" />
+    <Content Include="Views\Volunteer\Index.cshtml" />
+    <Content Include="Models\VolunteerOpportunities.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>VolunteerOpportunities.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\VolunteerOpportunities.dbml.layout">
+      <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
