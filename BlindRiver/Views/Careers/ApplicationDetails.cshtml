@@ -1,0 +1,15 @@
+﻿@model BlindRiver.Models.careerapp
+@{
+    ViewBag.Title = "ApplicationDetails";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>ApplicationDetails</h2>
+<h3>Currently Viewing Application: @Model.fname @Model.lname</h3>
+
+<p>Applicant Name: @Model.fname @Model.lname</p>
+<p>Applicant Email: @Model.email</p>
+<p>Job Applied For: @Model.jobcode</p>
+<p><strong>Coverletter: </strong>@Model.coverletter</p>
+<p>Resume file: <a href="@Model.resume">@Model.resume</a></p>
+

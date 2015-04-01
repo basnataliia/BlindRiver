@@ -92,7 +92,7 @@ namespace BlindRiver.Models
 		
 		private string _location;
 		
-		private string _ref;
+		private string _jobcode;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -110,8 +110,8 @@ namespace BlindRiver.Models
     partial void OnjobtypeChanged();
     partial void OnlocationChanging(string value);
     partial void OnlocationChanged();
-    partial void OnrefChanging(string value);
-    partial void OnrefChanged();
+    partial void OnjobcodeChanging(string value);
+    partial void OnjobcodeChanged();
     #endregion
 		
 		public careeropp()
@@ -239,22 +239,22 @@ namespace BlindRiver.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="ref", Storage="_ref", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string @ref
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jobcode", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string jobcode
 		{
 			get
 			{
-				return this._ref;
+				return this._jobcode;
 			}
 			set
 			{
-				if ((this._ref != value))
+				if ((this._jobcode != value))
 				{
-					this.OnrefChanging(value);
+					this.OnjobcodeChanging(value);
 					this.SendPropertyChanging();
-					this._ref = value;
-					this.SendPropertyChanged("@ref");
-					this.OnrefChanged();
+					this._jobcode = value;
+					this.SendPropertyChanged("jobcode");
+					this.OnjobcodeChanged();
 				}
 			}
 		}

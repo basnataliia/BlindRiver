@@ -1,1 +1,12 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="careersClass">
+  <DataContextMoniker Name="/careersClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c9d6ed41-a1cc-4e44-8861-0e496c529645" absoluteBounds="1.75, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/careersClassDataContext/careeropp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4404b3d-5b6e-4b7e-9cd1-7a0d7739f1fa" absoluteBounds="1.7650000000000001, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

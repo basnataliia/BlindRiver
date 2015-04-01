@@ -1,8 +1,12 @@
 ﻿@{
     ViewBag.Title = "CareerManager";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
-<h2>CareerManager</h2>
 
-<h3>Career Opportunities Manager</h3>
-<h3>Application(s) Manager</h3>
+<div id="doctorsContainer">
+<h2>Careers Manager</h2>
+
+<h3>@Html.ActionLink("Job Application(s) Manager","JobApplicationsManager")</h3>
+<h3>@Html.ActionLink("Job Opportunities Manager", "JobOpportunitiesManager")</h3>
+</div>

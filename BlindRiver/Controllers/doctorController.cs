@@ -105,7 +105,7 @@ namespace BlindRiver.Controllers
             if (ModelState.IsValid) {
                 try
                 {
-                    objDoc.updateDoctor(id, doc.firstName, doc.lastName, doc.title, doc.department, doc.email, doc.phone, doc.image);
+                    objDoc.updateDoctor(id, doc.firstName, doc.lastName, doc.email, doc.phone, doc.department, doc.title, doc.image);
                     return RedirectToAction("Manager");
                 }
                 catch {
@@ -114,6 +114,28 @@ namespace BlindRiver.Controllers
             }
             return View();
         }
+
+        //public ActionResult AddImage() {
+        //    return View();
+        //}
+
+        //public ActionResult FileUpload(HttpPostedFileBase file)
+        //{
+        //    if (file != null)
+        //    {
+        //        string pic = System.IO.Path.GetFileName(file.FileName);
+        //        string path = System.IO.Path.Combine(Server.MapPath("~/Content/Images"), pic);
+        //        // file is uploaded
+        //        file.SaveAs(path);
+
+        //        // save the image path path to the database or you can send image
+        //        // after successfully uploading redirect the user
+        //        return RedirectToAction("Manager");
+        //    }
+        //    else {
+        //        return View("NoFound");
+        //    }
+        //}
 
     }
 }

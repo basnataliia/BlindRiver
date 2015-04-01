@@ -1,17 +1,17 @@
 ﻿@model BlindRiver.Models.doctor
 
 @{
-    ViewBag.Title = "InsertDoctor";
+    ViewBag.Title = "Insert Doctor";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 <div class="wrapper-admin">
-<h2>InsertDoctor</h2>
+<h2>Add A New Doctor</h2>
 
 @using (Html.BeginForm())
 {
 
     <div class="admin-input">
-    @Html.LabelFor(model => model.firstName)
+    @Html.LabelFor(model => model.firstName, "First Name: ")
     @Html.TextBoxFor(model => model.firstName)
     @Html.ValidationMessageFor(model => model.firstName, "*Required")
     </div>
@@ -41,7 +41,7 @@
     @Html.ValidationMessageFor(model => model.email, "*Please enter a valid email")
     </div>
     <div class="admin-input">
-    @Html.LabelFor(model => model.image)
+    @Html.LabelFor(model => model.image, "Image Path: ")
     @Html.TextBoxFor(model => model.image)
     @Html.ValidationMessageFor(model => model.image, "*")
     </div>

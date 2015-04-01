@@ -50,8 +50,8 @@ namespace BlindRiver.Models
                 objUpDoc.lastName = _lname;
                 objUpDoc.email = _email;
                 objUpDoc.phone = _phone;
-                objUpDoc.title = _title;
                 objUpDoc.department = _department;
+                objUpDoc.title = _title;
                 objUpDoc.image = _image;
                 objDoc.SubmitChanges();
                 return true;

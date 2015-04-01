@@ -1,0 +1,43 @@
+﻿@model BlindRiver.Models.careeropp
+@{
+    ViewBag.Title = "AddJobOpportunity";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Add New Job Opportunity</h2>
+<p>(*job will automatically be posted live on site on submit)</p>
+
+@using (Html.BeginForm())
+{
+
+    <div class="admin-input">
+    @Html.LabelFor(model => model.title, "Title: ")
+    @Html.TextBoxFor(model => model.title)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.department, "Department: ")
+    @Html.TextBoxFor(model => model.department)
+    </div>
+        <div class="admin-input">
+    @Html.LabelFor(model => model.description, "Job Description: ")
+    @Html.TextAreaFor(model => model.description)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.jobtype, "Job Type (full or part time): ")
+    @Html.TextBoxFor(model => model.jobtype)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.location, "Location: ")
+    @Html.TextBoxFor(model => model.location)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.jobcode, "Job Code: ")
+    @Html.TextBoxFor(model => model.jobcode)
+    </div>
+    <input type="submit" value="Add New Job" onclick="return confirm('Confirm new job opportunity?')" />
+}
+
+<h2>@Html.ActionLink("Back", "JobOpportunitiesManager")</h2>
+@section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }

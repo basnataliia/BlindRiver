@@ -405,14 +405,14 @@
       <LastGenOutput>contact.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Models\careersClass.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>careersClass.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Models\careerapps.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>careerapps.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Models\careersClass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>careersClass.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Models\contact.dbml.layout">
@@ -565,9 +565,16 @@
     </None>
     <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
+    <Content Include="Views\doctor\AddImage.cshtml" />
+    <Content Include="Views\Careers\JobOpportunitiesManager.cshtml" />
+    <Content Include="Views\Careers\JobApplicationsManager.cshtml" />
+    <Content Include="Views\Careers\ApplicationDetails.cshtml" />
+    <Content Include="Views\Careers\AddJobOpportunity.cshtml" />
+    <Content Include="Views\Careers\EditJobOpportunity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\doctorimages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -591,13 +598,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\careersClass.dbml.layout">
-      <DependentUpon>careersClass.dbml</DependentUpon>
+    <None Include="Models\careerapps.dbml.layout">
+      <DependentUpon>careerapps.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\careerapps.dbml.layout">
-      <DependentUpon>careerapps.dbml</DependentUpon>
+    <None Include="Models\careersClass.dbml.layout">
+      <DependentUpon>careersClass.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

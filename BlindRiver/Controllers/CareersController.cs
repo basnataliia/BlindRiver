@@ -58,7 +58,83 @@ namespace BlindRiver.Controllers
             return View();
         }
 
-        
+        public ActionResult JobOpportunitiesManager() {
+            var opps = objCareer.getOpps();
+            return View(opps);
+        }
+
+        public ActionResult JobApplicationsManager()
+        {
+            var apps = objApp.getApps();
+            return View(apps);
+        }
+
+        public ActionResult CareerManager() {
+            return View();
+        }
+
+        public ActionResult ApplicationDetails(int id) {
+            var application = objApp.getAppById(id);
+            if (application == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(application);
+            }
+        }
+
+        public ActionResult AddJobOpportunity() {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddJobOpportunity(careeropp opp) {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objCareer.AddJobOpportunity(opp);
+                    return RedirectToAction("JobOpportunitiesManager");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
+
+        public ActionResult EditJobOpportunity(int id) {
+            var opp = objCareer.getCareerById(id);
+            if (opp == null)
+            {
+                return View("NoFound");
+            }
+            else
+            {
+                return View(opp);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult EditJobOpportunity(int id, careeropp opp)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objCareer.updateOpp(id, opp.title, opp.department, opp.description, opp.jobtype, opp.location, opp.jobcode);
+                    return RedirectToAction("JobOpportunitiesManager");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
 
     }
 }

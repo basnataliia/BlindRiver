@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BlindRiver.Models.careeropp>
+@{
+    ViewBag.Title = "Job Opportunities Manager";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Career Opportunities Manager | @Html.ActionLink("View Current Opportunities", "Index")</h2>
+<p>@Html.ActionLink("Add New Job Posting/Opportunity", "AddJobOpportunity")</p>
+<h3>Current Job Opportunities</h3> 
+@foreach (var x in Model) {
+    <p>@x.jobcode | @x.title | @Html.ActionLink("Delete Job", "DeleteOpp", new { id = x.Id }) | @Html.ActionLink("Edit Job Posting", "EditJobOpportunity", new { id = x.Id})<hr /></p>
+}

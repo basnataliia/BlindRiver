@@ -1,0 +1,36 @@
+﻿@model BlindRiver.Models.careeropp
+@{
+    ViewBag.Title = "EditJobOpportunity";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Edit Job Opportunity - @Model.title</h2>
+
+@using (Html.BeginForm()) { 
+ @Html.HiddenFor(x => x.Id)
+    <div class="admin-input">
+    @Html.LabelFor(x =>x.title, "Job Title: ")
+    @Html.TextBoxFor(x=>x.title)
+    </div>
+<div class="admin-input">
+    @Html.LabelFor(x =>x.department, "Department: ")
+    @Html.TextBoxFor(x=>x.department)
+    </div>
+<div class="admin-input">
+    @Html.LabelFor(x =>x.description, "Job Description: ")
+    @Html.TextBoxFor(x=>x.description)
+    </div>
+<div class="admin-input">
+    @Html.LabelFor(x =>x.jobtype, "Job Type: ")
+    @Html.TextBoxFor(x=>x.jobtype)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(x =>x.location, "Location: ")
+    @Html.TextBoxFor(x=>x.location)
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(x =>x.jobcode, "Job Code: ")
+    @Html.TextBoxFor(x=>x.jobcode)
+    </div>
+    <input type="submit" value="Update Job Opportunity" />
+}
