@@ -17,16 +17,18 @@ namespace BlindRiver.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var indexObj = bookObj.getRequests();
+
+            return View(indexObj);
         }
 
         //details
-       public ActionResult Details(int id)
+        public ActionResult Details(int id)
         {
-            var bookDetail = bookObj.getRequeststByID(id);
+            var bookDetail = bookObj.getRequestByID(id);
             if (bookDetail == null)
             {
-                return View("Index");
+                return View("Not Found");
             }
             else
             {
@@ -55,13 +57,16 @@ namespace BlindRiver.Controllers
                     return View();
                 }
             }
-            return View();
+            else
+            {
+                return View();
+            }
         }
 
         //delete
         public ActionResult Delete(int id)
         {
-            var bookDel = bookObj.getRequeststByID(id);
+            var bookDel = bookObj.getRequestByID(id);
             if (bookDel == null)
             {
                 return View("Not Found");
@@ -89,10 +94,10 @@ namespace BlindRiver.Controllers
         //update
         public ActionResult Update(int id)
         {
-            var bookUpd = bookObj.getRequeststByID(id);
+            var bookUpd = bookObj.getRequestByID(id);
             if (bookUpd == null)
             {
-                return View();
+                return View("Not Found");
             }
             else
             {
@@ -112,10 +117,15 @@ namespace BlindRiver.Controllers
                 }
                 catch
                 {
-                    return View("Not Found");
+                    return View();
                 }
-                
+
             }
+            return View();
+        }
+
+        public ActionResult NotFound()
+        {
             return View();
         }
     }

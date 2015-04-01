@@ -567,6 +567,8 @@
     </None>
     <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
+    <Content Include="Views\BookApp\Delete.cshtml" />
+    <Content Include="Views\BookApp\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

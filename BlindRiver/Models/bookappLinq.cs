@@ -15,7 +15,7 @@ namespace BlindRiver.Models
             return allrequests;
         }
 
-        public bookApp getRequeststByID(int _id)
+        public bookApp getRequestByID(int _id)
         {
 
             var allrequests = bookObj.bookApps.SingleOrDefault(x => x.id == _id);
@@ -59,7 +59,8 @@ namespace BlindRiver.Models
                 bookUpdate.purpose = _purpose;
                 bookObj.SubmitChanges();
                 return true;
-            }          
+            }
+
         }
     }
 }
