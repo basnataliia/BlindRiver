@@ -842,17 +842,14 @@
     </None>
     <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\doctor\AddImage.cshtml" />
     <Content Include="Views\Careers\JobOpportunitiesManager.cshtml" />
     <Content Include="Views\Careers\JobApplicationsManager.cshtml" />
     <Content Include="Views\Careers\ApplicationDetails.cshtml" />
     <Content Include="Views\Careers\AddJobOpportunity.cshtml" />
     <Content Include="Views\Careers\EditJobOpportunity.cshtml" />
-=======
     <Content Include="Views\BookApp\Delete.cshtml" />
     <Content Include="Views\BookApp\NotFound.cshtml" />
->>>>>>> origin/blindriver
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
