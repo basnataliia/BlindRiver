@@ -1,7 +1,7 @@
 ﻿@*@model IEnumerable<BlindRiver.Models.contact>*@
 @model BlindRiver.Models.contact
 
-@using (Html.BeginForm("Search", "ContactsAdmin"))
+@using (Html.BeginForm("Search", "ContactsAdmin", FormMethod.Get))
 {
     @*@Html.TextBox("name")*@
 

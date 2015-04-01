@@ -442,15 +442,17 @@ display: block;
 }
 
 .carousel-caption{
-    background-color:rgba(0,0,0,0.4);
-    border-radius:10px;
-    bottom:30px;
     color:#fff;    
-    left:3%;
+    left:0;
+    top:0;
     text-align:center;
     padding:10px 10px;
     position:absolute;
-    width:500px;
+    height:100%;
+      width: 40%;
+  background-color: #e4eef1;
+  box-shadow: 70px 0 70px 0px #e4eef1;
+  border-radius: 0 10% 10% 0px;
 }
 
 .carousel-caption h1{
@@ -816,6 +818,13 @@ footer .f-menu{
 .admin-input {
     width:100%;
     margin: 20px 0px;
+}
+
+@media screen and (min-width: 1170px) {
+    #responsive-nav
+    {
+        display:none!important;
+    }
 }
 
 /* Media Queries - Responsiveness*/
