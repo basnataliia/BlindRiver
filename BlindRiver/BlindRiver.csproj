@@ -241,7 +241,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NewsPosts.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\NewsValidation.cs" />
+    <Compile Include="Models\newsValidation.cs" />
     <Compile Include="Models\slider.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -455,6 +455,9 @@
     <Content Include="Views\BookApp\Details.cshtml" />
     <Content Include="Views\BookApp\NotFound.cshtml" />
     <Content Include="Views\BookApp\Delete.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

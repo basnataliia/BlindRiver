@@ -13,7 +13,7 @@ namespace BlindRiver.Models
     public partial class bookApp
     { }
 
-    //[Bind(Exclude = "id")]
+    [Bind(Exclude = "id")]
     public class bookAppValidation
     {
         [DisplayName("Name: ")]
