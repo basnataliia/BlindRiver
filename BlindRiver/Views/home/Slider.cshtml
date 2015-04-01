@@ -23,12 +23,11 @@
         @foreach (var image in Model)
         {
             <li>
-
                 @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
-                <a href="@Url.Action("Index", "doctor")"><img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" /></a>
+                <a href="@Url.Action("Index", image.Link)"><img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" /></a>
                 <div class="carousel-caption">
-                    <h2>View our doctors</h2>
-                    <p>Find a doctor</p>
+                    <h1>@image.Title</h1>
+                    <p>@image.Description</p>
                 </div>
 
             </li>

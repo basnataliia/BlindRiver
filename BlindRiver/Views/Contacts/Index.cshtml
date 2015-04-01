@@ -47,9 +47,9 @@
                 @Html.TextAreaFor(model => model.message, new { @class = "form-textarea" })
                 @Html.ValidationMessageFor(model => model.message, "This field is required.")
                 <br />
-                @Html.LabelFor(model => model.date, new { @class = "label" })
-                @Html.TextBoxFor(model => model.date, new { Value = DateTime.Now, @class = "form-textarea" })
-                @Html.ValidationMessageFor(model => model.date, "This field is required.")
+                @*@Html.LabelFor(model => model.date, new { @class = "label" })*@
+                @Html.HiddenFor(model => model.date, new { Value = DateTime.Now, @class = "form-textarea" })
+                @*@Html.ValidationMessageFor(model => model.date, "This field is required.")*@
                 <br />
                 <input type="submit" value="Submit" class="form-button fb-width" />
             }

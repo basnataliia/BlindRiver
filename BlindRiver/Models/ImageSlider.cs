@@ -40,13 +40,16 @@ namespace BlindRiver.Models
             return oneImage;
         }
 
-        public bool commitUpdate( int _id, string _imagePath)
+        public bool commitUpdate( int _id, string _imagePath, string _title, string _desciption, string _link)
         {
             using(objImage)
             {
                 var objUpImage = objImage.sliderimages.Single(x => x.Id == _id);
                 //setting table column to new value being passed
                 objUpImage.ImagePath = _imagePath;
+                objUpImage.Title = _title;
+                objUpImage.Description = _desciption;
+                objUpImage.Link = _link;
                 //commit update against database
                 objImage.SubmitChanges();
                 return true;

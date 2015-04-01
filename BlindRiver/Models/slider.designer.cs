@@ -22,7 +22,7 @@ namespace BlindRiver.Models
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="gallery")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_9B4CDA_webdevelopment")]
 	public partial class sliderDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -84,6 +84,12 @@ namespace BlindRiver.Models
 		
 		private string _ImagePath;
 		
+		private string _Title;
+		
+		private string _Description;
+		
+		private string _Link;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -92,6 +98,12 @@ namespace BlindRiver.Models
     partial void OnIdChanged();
     partial void OnImagePathChanging(string value);
     partial void OnImagePathChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnLinkChanging(string value);
+    partial void OnLinkChanged();
     #endregion
 		
 		public sliderimage()
@@ -135,6 +147,66 @@ namespace BlindRiver.Models
 					this._ImagePath = value;
 					this.SendPropertyChanged("ImagePath");
 					this.OnImagePathChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(50)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="VarChar(250)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Link", DbType="VarChar(50)")]
+		public string Link
+		{
+			get
+			{
+				return this._Link;
+			}
+			set
+			{
+				if ((this._Link != value))
+				{
+					this.OnLinkChanging(value);
+					this.SendPropertyChanging();
+					this._Link = value;
+					this.SendPropertyChanged("Link");
+					this.OnLinkChanged();
 				}
 			}
 		}
