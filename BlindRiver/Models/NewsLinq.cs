@@ -7,5 +7,19 @@ namespace BlindRiver.Models
 {
     public class NewsLinq
     {
+        NewsLinqDataContext newsObj = new NewsLinqDataContext();
+        //IQueryable<linq-tableName>
+        public IQueryable<news_post> getNews()
+        {
+            //varible=object.table_name.select
+            var allNews = newsObj.news_posts.Select(x => x);
+            return allNews;
+        }
+
+        public news_post getNewsByID(int _id)
+        {
+            var allNews = newsObj.news_posts.SingleOrDefault(x => x.id == _id);
+            return allNews;
+        }
     }
 }
