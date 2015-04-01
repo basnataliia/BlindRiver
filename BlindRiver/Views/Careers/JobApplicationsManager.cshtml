@@ -8,5 +8,5 @@
 
 <h3>Current Job Applications</h3> 
 @foreach (var x in Model) {
-    <p>@x.jobcode| @x.fname | @x.lname | @Html.ActionLink("View Application Details", "ApplicationDetails", new { id = x.Id })<hr /></p>
+    <p> @x.jobcode| @x.fname | @x.lname | @Html.ActionLink("View Application Details", "ApplicationDetails", new { id = x.Id })<hr /></p>
 }

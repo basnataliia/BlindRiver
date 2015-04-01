@@ -264,6 +264,7 @@
     <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
+    <Compile Include="Models\linksmenuValidation.cs" />
     <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\menulinks.designer.cs">
       <AutoGen>True</AutoGen>
@@ -283,6 +284,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>slider.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\sliderValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\VolunteerOpportunities.designer.cs">
@@ -565,12 +567,17 @@
     </None>
     <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\doctor\AddImage.cshtml" />
     <Content Include="Views\Careers\JobOpportunitiesManager.cshtml" />
     <Content Include="Views\Careers\JobApplicationsManager.cshtml" />
     <Content Include="Views\Careers\ApplicationDetails.cshtml" />
     <Content Include="Views\Careers\AddJobOpportunity.cshtml" />
     <Content Include="Views\Careers\EditJobOpportunity.cshtml" />
+=======
+    <Content Include="Views\BookApp\Delete.cshtml" />
+    <Content Include="Views\BookApp\NotFound.cshtml" />
+>>>>>>> origin/blindriver
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

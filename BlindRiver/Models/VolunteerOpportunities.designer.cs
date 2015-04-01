@@ -86,6 +86,8 @@ namespace BlindRiver.Models
 		
 		private string _description;
 		
+		private string _code;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -96,6 +98,8 @@ namespace BlindRiver.Models
     partial void OnpositionChanged();
     partial void OndescriptionChanging(string value);
     partial void OndescriptionChanged();
+    partial void OncodeChanging(string value);
+    partial void OncodeChanged();
     #endregion
 		
 		public Volunteer_Opportunity()
@@ -159,6 +163,26 @@ namespace BlindRiver.Models
 					this._description = value;
 					this.SendPropertyChanged("description");
 					this.OndescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string code
+		{
+			get
+			{
+				return this._code;
+			}
+			set
+			{
+				if ((this._code != value))
+				{
+					this.OncodeChanging(value);
+					this.SendPropertyChanging();
+					this._code = value;
+					this.SendPropertyChanged("code");
+					this.OncodeChanged();
 				}
 			}
 		}

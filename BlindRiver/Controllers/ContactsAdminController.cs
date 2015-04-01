@@ -13,6 +13,7 @@ namespace BlindRiver.Controllers
     public class ContactsAdminController : Controller
     {
         contacts objContact = new contacts();
+        linksmenu objMenu = new linksmenu();
 
         public ActionResult Index()
         {
@@ -64,6 +65,7 @@ namespace BlindRiver.Controllers
             }
             else
             {
+                ViewBag.mainmenulink = objMenu.getLinks();
                 return View(message);
             }
         }

@@ -16,6 +16,21 @@
     @Html.HiddenFor(x => x.ImagePath)
 
     <input type="file" name="ImagePath" />
+    <br />
+    @Html.LabelFor(x=>x.Title)
+    @Html.TextBoxFor(x => x.Title)
+    @Html.ValidationMessageFor(x => x.Title, "This field is required.")
+    <br />
+
+    @Html.LabelFor(x => x.Description)
+    @Html.TextBoxFor(x => x.Description)
+    @Html.ValidationMessageFor(x => x.Description, "This field is required.")
+    <br />
+
+    @Html.LabelFor(x => x.Link)
+    @Html.TextBoxFor(x => x.Link)
+    @Html.ValidationMessageFor(x => x.Link, "This field is required.")
+    <br />
 
     <br />
     <input type="submit" value="Update" />

@@ -1,20 +1,23 @@
-﻿@model BlindRiver.Models.bookAppValidation
+﻿@model BlindRiver.Models.bookApp
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
 
 @{
     ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
-@Html.HiddenFor(x => x.id)
-@Html.DisplayFor(x=>x.name)
-@Html.DisplayFor(x=>x.phone)
-@Html.DisplayFor(x=>x.email)
-@Html.DisplayFor(x=>x.doa)
-@Html.DisplayFor(x=>x.purpose)
+
+
+<p>Name: @Html.DisplayFor(x=>x.name)</p><br />
+<p>Phone: @Html.DisplayFor(x=>x.phone)</p><br />
+<p>Email: @Html.DisplayFor(x=>x.email)</p><br />
+<p>Date Of Appoinment: @Html.DisplayFor(x=>x.doa)</p><br />
+<p>Purpose: @Html.DisplayFor(x=>x.purpose)</p>
 <p>
-    @Html.ActionLink("Back","Index")|
+    @Html.ActionLink("Back","Index","BookApp")|
       @Html.ActionLink("Update", "Update", new {  id=Model.id}) |
       @Html.ActionLink("Delete","Delete",new {  id=Model.id})
-      @Html.ActionLink("Update", "Update", new {  id = Model.id}) |
-      @Html.ActionLink("Delete","Delete",new {  id = Model.id})
 </p>

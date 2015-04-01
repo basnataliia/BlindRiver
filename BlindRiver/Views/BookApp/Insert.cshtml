@@ -1,4 +1,4 @@
-﻿@model BlindRiver.Models.bookAppValidation
+﻿@model BlindRiver.Models.bookApp
 
 @{
     ViewBag.Title = "Book An Appointment";
@@ -35,8 +35,9 @@
         @Html.TextAreaFor(model => model.purpose)
         @Html.ValidationMessageFor(model => model.purpose, "*")
     <br /><br />
-    <input type="submit" value="Insert" />
+    <input type="submit" value="Insert" /><br />   
 }
+@*<p>@Html.ActionLink("Insert", "Insert")</p>*@
 
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")

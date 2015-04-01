@@ -19,6 +19,21 @@
     @Html.LabelFor(x => x.link_url)
     @Html.TextBoxFor(x => x.link_url)
     
+
+    //List<SelectListItem> urlList = new List<SelectListItem>();
+    //foreach (var item in ViewBag.mainmenulink)
+    //{
+    //    urlList.Add(new SelectListItem
+    //    {
+    //        Text = item.link_url,
+    //        Value = Convert.ToString(item.link_url)
+    //    });
+    //}            
+       
+    @*@Html.DropDownListFor(x => x.link_url, urlList)*@
+
+    @*@Html.TextBoxFor(x => x.link_url, new { Value = @ViewBag.mainmenulink.link_url })*@
+    
     <br />
     @Html.LabelFor(x => x.description)
     @Html.TextAreaFor(x => x.description)

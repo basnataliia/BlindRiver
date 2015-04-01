@@ -79,7 +79,7 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
-                    dbproduct.commitUpdate(id, image.ImagePath);
+                    dbproduct.commitUpdate(id, image.ImagePath, image.Title, image.Description, image.Link);
                     return RedirectToAction("Index");
                 }
                 catch

@@ -3,17 +3,28 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Volunteer Opportunities</h2>
+<h1>Current Volunteer Opportunities</h1>
+<p>Volunteers are one of the most valued aspects of the hospital community. Many volunteers ranging from students to seniors help out
+    and sacrifice their time to improve quality and patient experience at Blind River hospital. </p>
+<p>If you would like to assist in improving the lives of our patients, residents and their families, please take a look at our 
+    volunteer positions available to see if you would be a suitable volunteer for the Blind River hospital. Apply to become 
+    a volunteer, make a difference!</p>
+<br />
 
 <div id="volunterContainer">
 
     @foreach (var VolunteerOpportunities in Model)
     {
 
-        <h3>@VolunteerOpportunities.position</h3>
-        <br />
-        <p>@VolunteerOpportunities.description</p>
+        <h3>Volunteer Position: </h3>
+        @VolunteerOpportunities.position
+            
+        <h3>Description:</h3>
+        @VolunteerOpportunities.description
 
+       <h3>Volunteer Position Code:</h3>
+       @VolunteerOpportunities.code
+        <br /><br />
         <hr />
     }
 </div>
