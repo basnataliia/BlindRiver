@@ -187,12 +187,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\CareersController.cs" />
-=======
     <Compile Include="Controllers\ContactLocationsAdminController.cs" />
     <Compile Include="Controllers\ContactsAdminController.cs" />
->>>>>>> origin/blindriver
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
@@ -546,7 +543,6 @@
     <Content Include="Views\doctor\Delete.cshtml" />
     <Content Include="Views\doctor\NoFound.cshtml" />
     <Content Include="Views\doctor\Update.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Careers\CareerManager.cshtml" />
     <Content Include="Views\Careers\index.cshtml" />
     <Content Include="Views\Careers\NotFound.cshtml" />
@@ -554,7 +550,6 @@
     <Content Include="Views\Careers\submitapplication.cshtml" />
     <Content Include="Views\Careers\thanks.cshtml" />
     <Content Include="Views\Careers\error.cshtml" />
-=======
     <Content Include="Views\ContactLocationsAdmin\Index.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\_ViewStart.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Insert.cshtml" />
@@ -570,7 +565,6 @@
     </None>
     <Content Include="Views\ContactLocationsAdmin\Delete.cshtml" />
     <Content Include="Views\ContactLocationsAdmin\Update.cshtml" />
->>>>>>> origin/blindriver
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
