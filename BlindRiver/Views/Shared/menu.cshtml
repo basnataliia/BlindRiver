@@ -9,8 +9,14 @@
                 foreach (var x in menuItems)
                 {
                     if(x.parent_id == null)
+                                              
                     { 
-                    <li>
+                        
+                        var class_x ="";
+                        if(@x.link_url == (HttpContext.Current.Request.Url.AbsolutePath).TrimStart(new Char[]{'/'}))
+
+                        { class_x = "active"; }
+                    <li class="@class_x">
                        
                         @Html.ActionLink(x.link_name,"Index", x.link_url)
                         <ul>
@@ -18,6 +24,9 @@
                             {
                                 if(submenuItem.parent_id == x.id)
                                 {
+                                    if (@x.link_url == (HttpContext.Current.Request.Url.AbsolutePath).TrimStart(new Char[] { '/' }))
+
+                                    { class_x = "active"; }
                                     
     <li>@Html.ActionLink(submenuItem.link_name, "Index", submenuItem.link_url)</li>
 

@@ -94,6 +94,8 @@ namespace BlindRiver.Models
 		
 		private bool _reviewed;
 		
+		private System.DateTime _date;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -112,6 +114,8 @@ namespace BlindRiver.Models
     partial void OnmessageChanged();
     partial void OnreviewedChanging(bool value);
     partial void OnreviewedChanged();
+    partial void OndateChanging(System.DateTime value);
+    partial void OndateChanged();
     #endregion
 		
 		public contact()
@@ -255,6 +259,26 @@ namespace BlindRiver.Models
 					this._reviewed = value;
 					this.SendPropertyChanged("reviewed");
 					this.OnreviewedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="DateTime NOT NULL")]
+		public System.DateTime date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
 				}
 			}
 		}

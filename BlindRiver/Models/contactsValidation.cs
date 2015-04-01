@@ -45,5 +45,9 @@ namespace BlindRiver.Models
         [Required]
         public bool reviewed { get; set; }
 
+        //[DisplayName("Date")]
+        //[Required]
+        //public DateTime date { get; set; }
+
     }
 }

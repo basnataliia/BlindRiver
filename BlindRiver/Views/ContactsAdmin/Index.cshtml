@@ -5,6 +5,7 @@
 }
 
 <h2>Contact Messages Manager</h2>
+<p>@DateTime.Now</p>
 
 <div class="ct-messages-search">
     @*@Html.Action("Search", "ContactsAdmin")*@
@@ -18,7 +19,7 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Subject</th>
-                @*<th>Message</th>*@
+                <th>Date</th>
                 <th>Mark as reviewed</th>
                 <th>Action</th>
                 <th>Action</th>
@@ -31,7 +32,7 @@
         <td>@message.email</td>
         <td>@message.phone</td>
         <td>@message.subject</td>
-        @*<td>@message.message</td>*@     
+        <th>@message.date</th>  
             @if (@message.reviewed == true)
             {
                 <td>yes</td>;

@@ -252,6 +252,10 @@ header .cnt-img{
 
 /*Styles for navigation*/
 
+.active{
+background:#026082;
+}
+
 #main-header {
     display: block;
     position: relative;
