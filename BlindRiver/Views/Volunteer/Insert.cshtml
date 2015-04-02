@@ -1,0 +1,38 @@
+﻿@model BlindRiver.Models.VolunteerValidation
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Insert New Volunteer Position";
+}
+
+
+
+<h2>Insert New Volunteer Position</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    @Html.LabelFor(model => model.position)
+    @Html.TextBoxFor(model => model.position)
+    @Html.ValidationMessageFor(model => model.position, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.description)
+    @Html.TextAreaFor(model => model.description)
+    @Html.ValidationMessageFor(model => model.description, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.code)
+    @Html.TextAreaFor(model => model.code)
+    @Html.ValidationMessageFor(model => model.code, "*")
+    <br /><br />
+    <input type="submit" value="Insert" />
+
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

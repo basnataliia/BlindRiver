@@ -1,10 +1,14 @@
 ﻿@model BlindRiver.Models.FAQ
 
 @{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+} 
+
+@{
     ViewBag.Title = "Delete FAQ: " + @Model.questions;
 }
 
-<h2>Are you sure you want to delete the following question? </h2><br/> 
+<h2>Are you sure you want to delete the following FAQ? </h2><br/> 
   <p>FAQ:@Model.questions<br /><br/>
     Answer: @Model.answers
   </p> 

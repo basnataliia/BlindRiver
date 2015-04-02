@@ -286,6 +286,7 @@
     </Compile>
     <Compile Include="Models\sliderValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
+    <Compile Include="Models\VolunteerValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\VolunteerOpportunities.designer.cs">
       <AutoGen>True</AutoGen>
@@ -850,6 +851,10 @@
     <Content Include="Views\Careers\EditJobOpportunity.cshtml" />
     <Content Include="Views\BookApp\Delete.cshtml" />
     <Content Include="Views\BookApp\NotFound.cshtml" />
+    <Content Include="Views\Volunteer\Update.cshtml" />
+    <Content Include="Views\Volunteer\Admin.cshtml" />
+    <Content Include="Views\Volunteer\Delete.cshtml" />
+    <Content Include="Views\Volunteer\Insert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

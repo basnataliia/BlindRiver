@@ -1,0 +1,40 @@
+﻿@model BlindRiver.Models.Volunteer_Opportunity
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.id)
+
+    @Html.LabelFor(model => model.position)
+    @Html.TextBoxFor(model => model.position)
+    @Html.ValidationMessageFor(model => model.position, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.description)
+    @Html.TextBoxFor(model => model.description)
+    @Html.ValidationMessageFor(model => model.description, "*")
+    <br /><br />
+    @Html.LabelFor(model => model.code)
+    @Html.TextBoxFor(model => model.code)
+    @Html.ValidationMessageFor(model => model.code, "*")
+    <br /><br />
+    <input type="submit" value="Update" />
+
+}
+
+<p>
+    @Html.ActionLink("Back", "Admin", new { id = Model.id })
+</p>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
