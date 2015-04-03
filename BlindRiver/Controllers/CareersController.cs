@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//namespace required for file uploads
+using System.IO;
+
 using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
@@ -44,7 +47,18 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult submitapplication(careerapp App) {
+        public ActionResult submitapplication(careerapp App, HttpPostedFileBase resumePath)
+        {
+
+            if (resumePath != null && resumePath.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(resumePath.FileName);
+
+                var path = Path.Combine(Server.MapPath("~/Content/resumes"), fileName);
+                resumePath.SaveAs(path);
+                App.resume = fileName;
+            }
+
             if (ModelState.IsValid) {
                 try
                 {

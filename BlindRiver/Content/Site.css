@@ -108,6 +108,16 @@ body {
    padding-bottom:154px;  
    background:rgba(136,170,182, 0.1);
 }
+
+.spaced {
+    margin: 10px 5px;
+}
+
+.bluefont {
+    color:#266176;
+    font-weight:bold;
+}
+
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {
@@ -633,8 +643,9 @@ footer .f-menu{
 }
 
 .doctorThumb {
-    height: 250px;
-    width: 400px;
+    height: auto;
+    width:100%;
+    max-width: 400px;
     float: right;
     margin: 30px;
 }

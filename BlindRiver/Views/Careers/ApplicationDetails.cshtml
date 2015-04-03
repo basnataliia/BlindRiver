@@ -1,15 +1,16 @@
 ﻿@model BlindRiver.Models.careerapp
 @{
-    ViewBag.Title = "ApplicationDetails";
+    ViewBag.Title = "Applicant Details";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
-<h2>ApplicationDetails</h2>
+<h2>Applicant Details</h2>
 <h3>Currently Viewing Application: @Model.fname @Model.lname</h3>
-
-<p>Applicant Name: @Model.fname @Model.lname</p>
-<p>Applicant Email: @Model.email</p>
-<p>Job Applied For: @Model.jobcode</p>
-<p><strong>Coverletter: </strong>@Model.coverletter</p>
-<p>Resume file: <a href="@Model.resume">@Model.resume</a></p>
+<p class="spaced"><span class="bluefont">Application ID: </span>@Model.Id</p>
+<p class="spaced"><span class="bluefont">Applicant Name: </span>@Model.fname @Model.lname</p>
+<p class="spaced"><span class="bluefont">Applicant Email: </span>@Model.email</p>
+<p class="spaced"><span class="bluefont">Applicant Phone Number: </span>@Model.phone</p>
+<p class="spaced"><span class="bluefont">Job Applied For: </span>@Model.jobcode</p>
+<p class="spaced"><span class="bluefont">Coverletter: </span>@Model.coverletter</p>
+<p class="spaced"><span class="bluefont">Resume file: </span><a href="~/Content/resumes/@Model.resume">@Model.resume</a></p>
 
