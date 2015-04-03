@@ -21,5 +21,16 @@ namespace BlindRiver.Models
             var allNews = newsObj.news_posts.SingleOrDefault(x => x.id == _id);
             return allNews;
         }
+
+        //insert 
+        public bool commitInsert(news_post post)
+        {
+            using (newsObj)
+            {
+                newsObj.news_posts.InsertOnSubmit(post);
+                newsObj.SubmitChanges();
+                return true;
+            }
+        }
     }
 }

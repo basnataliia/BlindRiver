@@ -15,7 +15,7 @@ namespace BlindRiver.Models
     {
         [DisplayName("Date: ")]
         [Required]
-        public DateTime name { get; set; }
+        public DateTime date { get; set; }
 
         [DisplayName("Heading: ")]
         [Required]
@@ -23,7 +23,7 @@ namespace BlindRiver.Models
 
         [DisplayName("Description: ")]
         [Required]
-        public string description { get; set; }
+        public string details { get; set; }
                 
     }
 }

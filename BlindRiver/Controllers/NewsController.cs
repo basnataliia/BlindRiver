@@ -35,6 +35,34 @@ namespace BlindRiver.Controllers
             }
         }
 
+        //insert
+        public ActionResult Insert()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Insert(news_post post)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    newsObj.commitInsert(post);
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+
         public ActionResult NotFound()
         {
             return View();
