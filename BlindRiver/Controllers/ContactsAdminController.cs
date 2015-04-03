@@ -156,6 +156,26 @@ namespace BlindRiver.Controllers
         //}
 
         //search
+        //public ActionResult Search()
+        //{
+        //    return PartialView();
+        //}
+
+        //[HttpPost]
+        //public ActionResult Search(string name)
+        //{
+        //    try
+        //    {
+        //        var result = objContact.searchContacts(name);
+        //        return RedirectToAction("Index", result);
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
+
+        
         public ActionResult Search()
         {
             return PartialView();
@@ -167,6 +187,7 @@ namespace BlindRiver.Controllers
             try
             {
                 var result = objContact.searchContacts(name);
+                //var test = Request.HttpMethod.
                 return RedirectToAction("Index", result);
             }
             catch
@@ -176,17 +197,12 @@ namespace BlindRiver.Controllers
         }
 
         //[HttpPost]
-        //public ActionResult Search()
-        //{
-        //    return View("Index");
-        //}
-
-        //public ViewResult Search(SearchModel searchQuery)
+        //public ViewResult Search(SearchModel searchQuery, string name)
         //{
         //    string result = searchQuery.Text;
-        //    var messages = objContact.getContacts()
+        //    var messages = objContact.searchContacts(name)
         //                  .Where(b => b.name == result);
-        //                  //.FilterBy(result)
+        //    //.FilterBy(result)
         //    return View(messages);
         //}
     }

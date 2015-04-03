@@ -13,6 +13,7 @@ namespace BlindRiver.Controllers
     public class HomepageModuleController : Controller
     {
         HomepageModule objModule = new HomepageModule();
+        linksmenu objLink = new linksmenu();
 
         public ActionResult Index()
         {
@@ -20,7 +21,7 @@ namespace BlindRiver.Controllers
             return View(modules);
         }
 
-        public ActionResult Update(int id)
+        public ActionResult Update(int id, string name)
         {
             var modules = objModule.getModuleById(id);
             if(modules == null)
@@ -29,7 +30,9 @@ namespace BlindRiver.Controllers
             }
             else
             {
-                return View(modules);
+                ViewBag.mainmenulink = objLink.getLinks();
+                return View("Update", modules);
+                //return View(modules);
             }
         }
 
@@ -51,6 +54,10 @@ namespace BlindRiver.Controllers
                 try
                 {
                     objModule.commitUpdate(id, module.image_path, module.link_url, module.description, module.link_name);
+
+
+                    ViewBag.mainmenulink = objLink.getLinks();
+                    //return View("Index");
                     return RedirectToAction("Index");
                 }
                 catch

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BlindRiver.Models.Volunteer_Opportunity>
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+ 
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Manage Volunteer Opportunities</h2>
+
+<p>@Html.ActionLink("Insert New Volunteer Position", "Insert", "Volunteer")</p>
+<br /><br />
+
+<div id="volunterContainer">
+
+    @foreach (var VolunteerOpportunities in Model)
+    {
+
+        <h3>Volunteer Position: </h3>
+        @VolunteerOpportunities.position
+
+        <h3>Description:</h3>
+        @VolunteerOpportunities.description
+
+        <h3>Volunteer Position Code:</h3>
+        @VolunteerOpportunities.code
+
+        <br />
+        <li>@Html.ActionLink("Update", "Update", new { id = VolunteerOpportunities.id })</li>
+        <li>@Html.ActionLink("Delete", "Delete", new { id = VolunteerOpportunities.id })</li>
+
+
+        <br /><br />
+        <hr />
+    }
+</div>

@@ -17,7 +17,7 @@ namespace BlindRiver.Models
                     return allLinks.ToList();
                 }
 
-                //retrieving  data from "menulinks" table by id (SELECT * FROM menulink WHERE id = "_id")
+                //retrieving  data from "menulinks" table by id 
                public mainmenulink getLinkByID(int _id)
                 {
                     var allLink = objMenu.mainmenulinks.SingleOrDefault(x => x.id == _id);

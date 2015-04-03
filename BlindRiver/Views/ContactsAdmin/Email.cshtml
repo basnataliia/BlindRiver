@@ -5,6 +5,8 @@
     
 }
 
+<script src="~/ckeditor/ckeditor.js"></script>
+
 @*<h2>Email</h2>*@
 <fieldset>
     <legend>
@@ -22,7 +24,7 @@
         <p class="label">Subject:</p>
         <p>@Html.TextBoxFor(m => m.Subject, new { Value = "RE: " + @ViewBag.contact.subject, @class = "form-input" })</p><br />
         <p class="label">Body:</p>
-        <p>@Html.TextAreaFor(m => m.Body, new {@class = "form-input" })</p><br />
+        <p>@Html.TextAreaFor(m => m.Body, new { @class = "form-input ckeditor", @id = "ckeditor", @name = "ckeditor" })</p><br />
         <div class="f-left">
             <input type="submit" value="Send an Email" class="form-button" />
         </div>
@@ -36,3 +38,7 @@
     }
 
 </fieldset>
+
+<script>
+    CKEDITOR.replace('ckeditor');
+</script>
