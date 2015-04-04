@@ -4,21 +4,23 @@
     ViewBag.Title = "DeleteImage";
 }
 
-<h2>DeleteImage</h2>
-<div>
-    @Html.DisplayFor(x=>x.ImagePath)
+<h2>Delete Content Slider Section</h2>
+<div id="delete-image-admin">
     <img src="@Url.Content(@"~/Content/Images/" + (@Html.DisplayFor(x => x.ImagePath)))" />
+    <h2>@Html.DisplayFor(x=>x.Title)</h2>
+    <p>@Html.DisplayFor(x => x.Description)</p>
 </div>
-
-
-
+<br />
 @using(Html.BeginForm())
+{    
+        <div class="f-left">
+            <input type="submit" value="Delete" class="button-blue" />
+        </div>
+}
+
+@using (Html.BeginForm("Index", "SliderAdmin"))
 {
     <div>
-        @*<img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" />*@
-       
-        <input type="submit" value="Delete"/>
-        <br />
-        @Html.ActionLink("Back", "Index", "SliderAdmin")
+        <button type="submit" class="button-cancel">Cancel</button>
     </div>
 }

@@ -8,10 +8,23 @@
 
 
 <div class="ct-messages-search">
-    @*@Html.Action("Search", "ContactsAdmin")*@
+    @Html.Action("Search", "ContactsAdmin")
+
+    <button type="submit" class="button-cancel">
+        @Html.ActionLink("Clear Search Result", "Index", "ContactsAdmin")
+    </button>
 
 </div>
-<br />
+
+
+    @*@using (Html.BeginForm("Index", "ContactsAdmin"))
+        {       <div>
+                <button type="submit" class="button-cancel">Cancel</button>
+            </div>
+        }*@
+
+    <div class="clearfix"></div>
+    <br />
     <table class="cm-table">
         <thead>
             <tr>
@@ -25,26 +38,26 @@
                 <th>Action</th>
             </tr>
         </thead>
-@foreach (var message in Model)
-{ 
-    <tr>
-        <td>@message.name</td>
-        <td>@message.email</td>
-        <td>@message.phone</td>
-        <td>@message.subject</td>
-        <th>@message.date</th>  
-            @if (@message.reviewed == true)
-            {
-                <td>yes</td>;
-            }
-            else
-            {
-                <td>no</td>;
-            }
-        <td>@Html.ActionLink("View Details", "Update", new { id = message.id })</td>
-        <td>@Html.ActionLink("Delete", "Delete", new { id = message.id })</td>
-    </tr>  
-}     
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.name</td>
+                <td>@message.email</td>
+                <td>@message.phone</td>
+                <td>@message.subject</td>
+                <th>@message.date</th>
+                @if (@message.reviewed == true)
+                {
+                    <td>yes</td>;
+                }
+                else
+                {
+                    <td>no</td>;
+                }
+                <td>@Html.ActionLink("View Details", "Update", new { id = message.id })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = message.id })</td>
+            </tr>
+        }
     </table>
 
-<div class="clear"></div>
+    <div class="clear"></div>

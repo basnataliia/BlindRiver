@@ -1,31 +1,28 @@
 ﻿@model BlindRiver.Models.sliderimage
 
 @{
-    ViewBag.Title = "ImageEdit";
+    ViewBag.Title = "Insert";
 }
 
-<h2>Edit Content Image</h2>
-
-@*<h3>@Html.DisplayFor(x=>x.ImagePath)</h3>*@
-<div id="edit-image-admin">
-
-    @using (Html.BeginForm("ImageEdit", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+<h2>Add New Section To Image Slider</h2>
+<div id="insert-image-admin">
+    @using (Html.BeginForm("Insert", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        @*@Html.HiddenFor(x => x.Id)*@
-        @Html.HiddenFor(x => x.ImagePath)
-    <img alt="hospital"src="@Url.Content(@"~/Content/Images/" + (@Html.DisplayFor(x => x.ImagePath)))" />
-    <br />
-    <input type="file" name="ImagePath" class="form-input" />
-    <br />
+        <input type="file" name="ImagePath" class="form-input" />
+        <br />
         @Html.LabelFor(x => x.Title, new { @class = "label" })
         @Html.TextBoxFor(x => x.Title, new { @class = "form-input" })
         @Html.ValidationMessageFor(x => x.Title, "This field is required.")
         <br />
 
         @Html.LabelFor(x => x.Description, new { @class = "label" })
-        @Html.TextAreaFor(x => x.Description, new { @class = "form-input" })
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-input" })
         @Html.ValidationMessageFor(x => x.Description, "This field is required.")
         <br />
+
+        @*@Html.LabelFor(x => x.Link, new { @class = "label" })
+            @Html.TextBoxFor(x => x.Link)
+            @Html.ValidationMessageFor(x => x.Link, "This field is required.")*@
 
         @Html.LabelFor(x => x.Link, new { @class = "label" })
         List<SelectListItem> urlList = new List<SelectListItem>();
@@ -40,16 +37,16 @@
 
         @Html.DropDownListFor(x => x.Link, urlList)
         <br />
-        <br />
-        <div class="f-left">
+
+    <div class="f-left">
         <input type="submit" value="Save changes" class="button-blue" />
-        </div>
-        }
+    </div>
+    }
 
     @using (Html.BeginForm("Index", "SliderAdmin"))
     {
-            <div>
-                <button type="submit" class="button-cancel">Cancel</button>
-            </div>
+        <div>
+            <button type="submit" class="button-cancel">Cancel</button>
+        </div>
     }
-    </div>
+</div>

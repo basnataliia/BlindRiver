@@ -108,14 +108,13 @@ body {
    background:rgba(136,170,182, 0.1);
 }
 
-<<<<<<< HEAD
-
  .button-blue{
   background: #0378a3;
   color: #fff;
   padding: 10px 20px;
   border: 1px solid rgba(0,0,0,0.2);
   cursor: pointer;
+  text-decoration:none;
 }
 
 .button-blue:hover {
@@ -138,6 +137,7 @@ body {
   padding: 10px 20px;
   border: 1px solid rgba(0,0,0,0.2);
   cursor: pointer;
+  text-decoration:none;
 }
 
 .button-cancel:hover {
@@ -206,9 +206,9 @@ body {
   text-decoration: none;
     }
 
- .btn-margin{
-  margin-top:20px
-
+.btn-margin {
+    margin-top: 20px;
+}
 .spaced {
     margin: 10px 5px;
 }
@@ -465,7 +465,6 @@ display: block;
 }
 
 
-
 #HomepageModules{
     padding:20px;
     width:100%;
@@ -486,7 +485,7 @@ display: block;
     vertical-align:top;
 }
 
-.wrapper-image{
+/*.wrapper-image{
     float:left;
     width:100%;
     cursor:pointer;
@@ -550,7 +549,58 @@ display: block;
 .hp-module .module-details a:hover{
     color:#23527c;
     text-decoration:underline;
+}*/
+
+/*TEST*/
+
+.wrapper-image{
+    float:left;
+    width:100%;
+    cursor:pointer;
+    background-color:rgba(0,0,0,0.6);
+    
 }
+
+.img-background{
+    top:0;
+    left:0;
+    position:absolute;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+}
+
+.img-background h2{
+    color:#fff;
+    margin-top:30px;
+    text-decoration:none;
+}
+
+.hp-module .module-img{
+    position:relative;
+}
+
+
+.hp-module .module-img img{
+    width:100%;
+    vertical-align:top;
+}
+
+
+.hp-module .module-img:after, .hp-module .module-img:before {
+    position:absolute;
+    opacity:0;
+    /*transition: all 0.5s;
+    -webkit-transition: all 0.5s;*/
+}
+
+
+.hp-module .module-details{
+    padding:20px 0 20px;
+    text-align:left;
+}
+
 
 .carousel-caption{
     padding:20px;
@@ -568,14 +618,16 @@ display: block;
   border-top-right-radius: 50%;
 }
 .carousel-wrapper{
+    height:80%;
+    width: 75%;
     margin:90px;
-    width:300px;
 }
 .carousel-caption .carousel-wrapper h1{
     color:#0677a2;
     font-size:30px;
     font-family: ‘Courier New’, Courier, monospace;
     font-weight:500;
+    line-height:1;
     margin:0;
     padding:0;
     text-transform:uppercase;
@@ -584,8 +636,33 @@ display: block;
 .carousel-caption .carousel-wrapper p{
     color:#333;
     font-size:18px;
+    margin-top:5px;
 }
 
+.ct-messages-search .form-input{
+    float:left;
+    margin-right:10px;
+    margin-top:0;
+}
+.ct-messages-search .button-blue{
+     float:left;
+    padding:7px 10px;
+}
+
+.ct-messages-search .button-cancel{
+    padding:7px 10px;
+}
+
+.ct-messages-search .button-cancel a{
+    color:#333;
+    text-decoration:none;
+}
+
+#contact-admin-page .ct-messages-search .form-input{
+    margin-top:0;
+    margin-right:5px;
+    float:left;
+}
 
 /* END Styles for Home page*/
 
@@ -953,8 +1030,14 @@ footer .f-menu{
 }
 
 @media screen and (max-width: 900px) {
-           footer{
+  footer{
      height:150px; 
+}
+
+ .carousel-wrapper{
+    width: 85%;
+    margin:30px;
+    margin-left:50px;
 }
 }
 

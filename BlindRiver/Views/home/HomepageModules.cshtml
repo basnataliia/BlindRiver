@@ -6,26 +6,42 @@
         @foreach (var module in Model)
         {
             <div class="hp-module">
-                <a href="@Url.Action("Index", module.link_url)">
-                    <div class="wrapper-image">
+                @*<a href="@Url.Action("Index", module.link_url)">*@
+                    <div class="wrapper-image" >
                         <div data-content="Visit this section" class="module-img">
                             @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                             <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
-
+                            <div class="img-background">
+                                <h2>Find out more</h2>
+                                <button class="button-blue">
+                                    <a href="@Url.Action("Index", module.link_url)">Visit section</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </a>
+                @*</a>*@
                 <div class="module-details">
                     <h3>
                         @Html.ActionLink(module.link_name, "Index", module.link_url)
                     </h3>
                     
                         @module.description                    
-                </div>
-                
+                </div>                
                 <div class="clear"></div>
             </div>
         }  
     </div>
 <div class="clear"></div>
 
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        $(".module-img").hover(function () {
+            $(this).find(".img-background").fadeIn();
+        },
+        function () {
+            $(this).find(".img-background").fadeOut();
+        }
+        )
+    });
+
+</script>

@@ -4,46 +4,48 @@
     ViewBag.Title = "Update module";
 }
 
-<h2>Update</h2>
-
-@using (Html.BeginForm("Update", "HomepageModule", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.HiddenFor(x => x.id)
-   @Html.HiddenFor(x => x.image_path)
-
-
-    <input type="file" name="ImagePath" />
-    <br />
-    
-    @Html.LabelFor(x => x.link_url)
-    @*@Html.TextBoxFor(x => x.link_url)*@
-    
-    @*@Html.TextBoxFor(x => x.link_url, new { Value = @ViewBag.mainmenulink.link_url })*@
-
-
-    List<SelectListItem> urlList = new List<SelectListItem>();
-    foreach (var item in ViewBag.mainmenulink)
+<h2>Update Homepage Module</h2>
+<div id="hm-update-page">
+    @using (Html.BeginForm("Update", "HomepageModule", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        urlList.Add(new SelectListItem
+        @Html.HiddenFor(x => x.id)
+        @Html.HiddenFor(x => x.image_path)
+        <img alt="module" src="@Url.Content(@"~/Content/Images/" + (@Html.DisplayFor(x => x.image_path)))" style="max-width:400px;" />
+        <br />
+        <input type="file" name="ImagePath" class="form-input" />
+        <br />
+
+        @Html.LabelFor(x => x.link_url, new { @class = "label" })
+
+        List<SelectListItem> urlList = new List<SelectListItem>();
+        foreach (var item in ViewBag.mainmenulink)
         {
-            Text = item.link_url,
-            Value = Convert.ToString(item.link_url)
-        });
+            urlList.Add(new SelectListItem
+            {
+                Text = item.link_url,
+                Value = Convert.ToString(item.link_url)
+            });
+        }
+
+        @Html.DropDownListFor(x => x.link_url, urlList)
+
+        <br />
+        @Html.LabelFor(x => x.description, new { @class = "label" })
+        @Html.TextAreaFor(x => x.description, new { @class = "form-input" })
+
+        <br />
+        @Html.LabelFor(x => x.link_name, new { @class = "label" })
+        @Html.TextBoxFor(x => x.link_name, new { @class = "form-input" })
+        <br />
+    <div class="f-left">
+        <input type="submit" value="Save changes" class="button-blue" />
+    </div>
     }
 
-    @Html.DropDownListFor(x => x.link_url, urlList)
-
-    @*@Html.TextBoxFor(x => x.link_url, new { Value = @ViewBag.mainmenulink.link_url })*@
-    
-    <br />
-    @Html.LabelFor(x => x.description)
-    @Html.TextAreaFor(x => x.description)
-              
-    <br />
-    @Html.LabelFor(x => x.link_name)
-    @Html.TextBoxFor(x => x.link_name)
-    <br />
-    <input type="submit" value="Update"/>
-    <br/>
-    @Html.ActionLink("Back", "Index", "HomepageModule")
-}
+    @using (Html.BeginForm("Index", "HomepageModule"))
+    {
+        <div>
+            <button type="submit" class="button-cancel">Cancel</button>
+        </div>
+    }
+</div>

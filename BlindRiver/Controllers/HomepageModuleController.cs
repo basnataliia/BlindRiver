@@ -32,7 +32,6 @@ namespace BlindRiver.Controllers
             {
                 ViewBag.mainmenulink = objLink.getLinks();
                 return View("Update", modules);
-                //return View(modules);
             }
         }
 
@@ -55,7 +54,7 @@ namespace BlindRiver.Controllers
                 {
                     objModule.commitUpdate(id, module.image_path, module.link_url, module.description, module.link_name);
 
-
+                    //Saving links in ViewBag from mainmenulink table 
                     ViewBag.mainmenulink = objLink.getLinks();
                     //return View("Index");
                     return RedirectToAction("Index");

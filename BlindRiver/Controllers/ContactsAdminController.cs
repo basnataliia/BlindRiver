@@ -22,10 +22,11 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string name)
+        public ActionResult Index(string query)
         {
-            var messsages = objContact.getContacts();
-            return View(messsages);
+            var search_result = objContact.searchContacts(query);
+            //var messsages = objContact.getContacts();
+            return View(search_result);
         }
 
         //delete message
@@ -176,25 +177,26 @@ namespace BlindRiver.Controllers
         //}
 
         
-        public ActionResult Search()
-        {
-            return PartialView();
-        }
-
-        [HttpPost]
         public ActionResult Search(string name)
         {
-            try
-            {
-                var result = objContact.searchContacts(name);
-                //var test = Request.HttpMethod.
-                return RedirectToAction("Index", result);
-            }
-            catch
-            {
-                return View();
-            }
+            var search_result = objContact.searchContacts(name);
+            return PartialView(search_result);
         }
+
+        //[HttpPost]
+        //public ActionResult Search(string name)
+        //{
+        //    try
+        //    {
+        //        var result = objContact.searchContacts(name);
+        //        //var test = Request.HttpMethod.
+        //        return RedirectToAction("Index", result);
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
         //[HttpPost]
         //public ViewResult Search(SearchModel searchQuery, string name)
