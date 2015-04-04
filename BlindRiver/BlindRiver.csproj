@@ -859,6 +859,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\doctorimages\" />
+    <Folder Include="Content\resumes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

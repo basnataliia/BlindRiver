@@ -7,7 +7,7 @@
 <div class="wrapper-admin">
 <h2>Add A New Doctor</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Insert", "doctor", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
     <div class="admin-input">
@@ -41,9 +41,7 @@
     @Html.ValidationMessageFor(model => model.email, "*Please enter a valid email")
     </div>
     <div class="admin-input">
-    @Html.LabelFor(model => model.image, "Image Path: ")
-    @Html.TextBoxFor(model => model.image)
-    @Html.ValidationMessageFor(model => model.image, "*")
+    <p>Image Attachment: <input type="file" name="imgPath" /></p>
     </div>
     <input type="submit" value="Add New Doctor" onclick="return confirm('Confirm doctor insert?')" />
 }

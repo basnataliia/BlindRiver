@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//namespace required for file uploads
+using System.IO;
+
 using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
@@ -25,8 +28,16 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insert(doctor doc) 
+        public ActionResult Insert(doctor doc, HttpPostedFileBase imgPath) 
         {
+            if (imgPath != null && imgPath.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(imgPath.FileName);
+
+                var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
+                imgPath.SaveAs(path);
+                doc.image = fileName;
+            }
             if (ModelState.IsValid)
             {
                 try
@@ -101,7 +112,18 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(int id, doctor doc) {
+        public ActionResult Update(int id, doctor doc, HttpPostedFileBase imgPath)
+        {
+
+            if (imgPath != null && imgPath.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(imgPath.FileName);
+
+                var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
+                imgPath.SaveAs(path);
+                doc.image = fileName;
+            }
+
             if (ModelState.IsValid) {
                 try
                 {
@@ -114,28 +136,6 @@ namespace BlindRiver.Controllers
             }
             return View();
         }
-
-        //public ActionResult AddImage() {
-        //    return View();
-        //}
-
-        //public ActionResult FileUpload(HttpPostedFileBase file)
-        //{
-        //    if (file != null)
-        //    {
-        //        string pic = System.IO.Path.GetFileName(file.FileName);
-        //        string path = System.IO.Path.Combine(Server.MapPath("~/Content/Images"), pic);
-        //        // file is uploaded
-        //        file.SaveAs(path);
-
-        //        // save the image path path to the database or you can send image
-        //        // after successfully uploading redirect the user
-        //        return RedirectToAction("Manager");
-        //    }
-        //    else {
-        //        return View("NoFound");
-        //    }
-        //}
 
     }
 }
