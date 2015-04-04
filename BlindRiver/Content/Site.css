@@ -104,10 +104,111 @@ body {
 
 .content-body{
     overflow:hidden;
-    /*padding:20px;*/
    padding-bottom:154px;  
    background:rgba(136,170,182, 0.1);
 }
+
+
+ .button-blue{
+  background: #0378a3;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.button-blue:hover {
+        background:#08b3ce;
+    }
+
+.button-blue a{
+    color:#fff;
+    padding:10px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+ .button-cancel{
+     margin-left:15px;
+  background: #cbcdcf;
+  font-family: Arial;
+  color: #333;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.button-cancel:hover {
+        background:#f7f9fa;
+    }
+
+
+.btn-cancel {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #333;
+  font-size: 14px;
+  background: #f7f9fa;
+  padding: 6px 12px;
+  text-decoration: none;
+  margin-left:10px;
+}
+
+.btn-cancel:hover {
+  cursor: pointer;
+  background: #cbcdcf;
+  text-decoration: none;
+}
+
+.button-green{
+    margin-bottom:10px;
+  background: #09720D;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.button-green:hover {
+        background:#09A10D;
+    }
+
+.button-green a {
+    color:#fff;
+    padding:10px;
+    text-decoration:none;
+}
+
+.link-button{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #09A10D;
+  color: #fff;
+  padding: 6px 12px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #5C5C5C;
+  border-bottom: 1px solid #5C5C5C;
+  border-left: 1px solid #CCCCCC;
+}
+
+.link-button:hover {
+  cursor: pointer;
+  background-color: #09720D;
+  text-decoration: none;
+    }
+
+ .btn-margin{
+  margin-top:20px
+}
+
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {
@@ -442,26 +543,39 @@ display: block;
 }
 
 .carousel-caption{
+    padding:20px;
     color:#fff;    
     left:0;
     top:0;
-    text-align:center;
+    text-align:left;
     padding:10px 10px;
     position:absolute;
     height:100%;
-      width: 40%;
+      width: 35%;
   background-color: #e4eef1;
   box-shadow: 70px 0 70px 0px #e4eef1;
-  border-radius: 0 10% 10% 0px;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.carousel-wrapper{
+    margin:90px;
+    width:300px;
+}
+.carousel-caption .carousel-wrapper h1{
+    color:#0677a2;
+    font-size:30px;
+    font-family: ‘Courier New’, Courier, monospace;
+    font-weight:500;
+    margin:0;
+    padding:0;
+    text-transform:uppercase;
 }
 
-.carousel-caption h1{
-    font-size:24px;
-}
-
-.carousel-caption p{
+.carousel-caption .carousel-wrapper p{
+    color:#333;
     font-size:18px;
 }
+
 
 /* END Styles for Home page*/
 
@@ -762,24 +876,6 @@ footer .f-menu{
     width:40%;
 }
 
-.btn-cancel {
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 5px;
-  font-family: Arial;
-  color: #333;
-  font-size: 14px;
-  background: #f7f9fa;
-  padding: 6px 12px;
-  text-decoration: none;
-  margin-left:10px;
-}
-
-.btn-cancel:hover {
-  cursor: pointer;
-  background: #cbcdcf;
-  text-decoration: none;
-}
 
 #map-canvas {
         height: 350px;

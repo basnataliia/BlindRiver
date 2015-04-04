@@ -56,14 +56,14 @@
         @Html.ValidationMessageFor(location => location.longitude, "*")
         <br />
     <div class="f-left">
-        <input type="submit" value="Update" class="form-button" />
+        <input type="submit" value="Update" class="button-blue" />
     </div>
     }
 
     @using (Html.BeginForm("Index", "ContactLocationsAdmin"))
     {       <div>
-        <button type="submit" class="btn-cancel">Cancel</button>
-    </div>
+                <button type="submit" class="button-cancel">Cancel</button>
+            </div>
     }
 </fieldset>
 

@@ -59,14 +59,14 @@
         @Html.ValidationMessageFor(model => model.longitude, "*")
         <br />
         <div class="f-left">
-        <input type="submit" value="Add Location" class="form-button" />
+        <input type="submit" value="Add Location" class="button-blue" />
         </div>
         }
 
     @using (Html.BeginForm("Index", "ContactLocationsAdmin"))
     {
         <div>
-            <button type="submit" class="btn-cancel">Cancel</button>
+            <button type="submit" class="button-cancel">Cancel</button>
         </div>
     }
 </fieldset>
