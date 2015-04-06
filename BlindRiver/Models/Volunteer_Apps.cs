@@ -18,8 +18,8 @@ namespace BlindRiver.Models
 
         public Volunteer_Apps getAppById(int _id)
         {
-            var allVolapps = objVolApps.Volunteer_Applications.SingleOrDefault(x => x.id == _id);
-            return allVolapps;
+            var allVolApps = objVolApps.Volunteer_Applications.SingleOrDefault(x => x.id == _id);
+            return allVolApps;
         }
     }
 }
