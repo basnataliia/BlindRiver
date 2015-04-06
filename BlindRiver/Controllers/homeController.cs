@@ -14,6 +14,8 @@ namespace BlindRiver.Controllers
 
         linksmenu menuObj = new linksmenu();
 
+        custompages objCustPage = new custompages();
+
         public homeController()
         {
             //creating an arraynof menu links
@@ -59,6 +61,27 @@ namespace BlindRiver.Controllers
         {
             var modules = homeModuleObj.getModules();
             return PartialView(modules);
+        }
+
+        //get custom pages - partial view
+        public ActionResult customPages()
+        {
+            var pages = objCustPage.getPages();
+            return PartialView(pages);
+        }
+
+        //get page by id for homepage links to work to custom page URLs
+        public ActionResult PageDetails(int id)
+        {
+            var pageD = objCustPage.getPageById(id);
+            if (pageD == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(pageD);
+            }
         }
 
     }

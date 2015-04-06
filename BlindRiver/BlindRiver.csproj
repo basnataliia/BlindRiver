@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ContactLocationsAdminController.cs" />
     <Compile Include="Controllers\ContactsAdminController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\customPageController.cs" />
     <Compile Include="Controllers\doctorController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomepageModuleController.cs" />
@@ -230,6 +231,12 @@
       <DependentUpon>contact_locations.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\contact_map_locations.cs" />
+    <Compile Include="Models\customPage.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>customPage.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\custompages.cs" />
     <Compile Include="Models\doctors.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -561,12 +568,14 @@
     <Content Include="ckeditor\styles.js" />
     <Content Include="Content\Admin.css" />
     <Content Include="Content\Images\blindriver-header.jpg" />
+    <Content Include="Content\Images\board.jpg" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\careers.jpg" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\doctor.jpg" />
     <Content Include="Content\Images\doctor.png" />
     <Content Include="Content\Images\emerson.jpg" />
+    <Content Include="Content\Images\flag.jpg" />
     <Content Include="Content\Images\gina.jpg" />
     <Content Include="Content\Images\hospital-img.jpg" />
     <Content Include="Content\Images\jay.jpg" />
@@ -575,6 +584,8 @@
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\mobile1.png" />
     <Content Include="Content\Images\news.jpg" />
+    <Content Include="Content\Images\parking.jpg" />
+    <Content Include="Content\Images\patient.jpg" />
     <Content Include="Content\Images\poirier.jpg" />
     <Content Include="Content\Images\ralph.jpg" />
     <Content Include="Content\Images\ramirez.jpg" />
@@ -709,6 +720,11 @@
     <None Include="Models\contact_locations.dbml.layout">
       <DependentUpon>contact_locations.dbml</DependentUpon>
     </None>
+    <Content Include="Models\customPage.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>customPage.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Models\FAQ.dbml.layout">
       <DependentUpon>FAQ.dbml</DependentUpon>
     </None>
@@ -855,6 +871,10 @@
     <Content Include="Views\Volunteer\Admin.cshtml" />
     <Content Include="Views\Volunteer\Delete.cshtml" />
     <Content Include="Views\Volunteer\Insert.cshtml" />
+    <Content Include="Views\customPage\Index.cshtml" />
+    <Content Include="Views\customPage\PageDetails.cshtml" />
+    <Content Include="Views\Home\customPages.cshtml" />
+    <Content Include="Views\Home\PageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -890,6 +910,11 @@
   <ItemGroup>
     <None Include="Models\careersClass.dbml.layout">
       <DependentUpon>careersClass.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\customPage.dbml.layout">
+      <DependentUpon>customPage.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

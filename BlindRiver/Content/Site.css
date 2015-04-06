@@ -363,6 +363,12 @@ display: block;
 	width: 290px;
 }
 
+.subtitle {
+    text-align:left;
+    color: #0378a3;
+    text-transform:uppercase;
+    
+}
 
 
 #HomepageModules{
@@ -373,7 +379,6 @@ display: block;
 .hp-main-module {
     width:100%;
     border-top: 3px solid #0378a3;
-    border-bottom: 3px solid #0378a3;
     padding:10px 0px;
     text-align:center;
 }
@@ -829,6 +834,20 @@ footer .f-menu{
 .admin-input {
     width:100%;
     margin: 20px 0px;
+}
+
+/*Custom Page Styles*/
+
+.customPageImg {
+    float:right;
+    max-width:500px;
+    height:auto;
+    margin: 10px;
+}
+
+.cropped {
+    overflow:hidden;
+    max-height:170px;
 }
 
 @media screen and (min-width: 1170px) {
