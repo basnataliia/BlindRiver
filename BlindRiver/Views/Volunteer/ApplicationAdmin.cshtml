@@ -1,4 +1,5 @@
-﻿@model IEnumerable<BlindRiver.Models.Volunteer_Apps>
+﻿@*@model IEnumerable<BlindRiver.Models.Volunteer_Apps>*@
+@model IEnumerable<BlindRiver.Models.Volunteer_Application>
 
 @{
     ViewBag.Title = "Volunteer Application";
@@ -7,8 +8,8 @@
 @foreach (var Volunteer_Applications in Model)
 {
 
-    
     @Volunteer_Applications.First_Name;
+    @*@Volunteer_Applications.First_Name;*@
 
 
     <br /><br />

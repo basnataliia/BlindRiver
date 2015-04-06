@@ -16,7 +16,7 @@ namespace BlindRiver.Models
             return allVolApps;
         }
 
-        public Volunteer_Apps getAppById(int _id)
+        public Volunteer_Application getAppById(int _id)
         {
             var allVolApps = objVolApps.Volunteer_Applications.SingleOrDefault(x => x.id == _id);
             return allVolApps;

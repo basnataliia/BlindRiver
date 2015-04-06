@@ -108,8 +108,8 @@ namespace BlindRiver.Controllers
         }
 
         //models for public job applications
-        Volunteer_Application objVolApp = new Volunteer_Application();
-
+        //Volunteer_Application objVolApp = new Volunteer_Application();
+        Volunteer_Apps objVolApp = new Volunteer_Apps();
         public ActionResult ApplicationAdmin()
         {
             var apps = objVolApp.getVolApps();
