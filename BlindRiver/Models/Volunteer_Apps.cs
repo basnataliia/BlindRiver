@@ -7,12 +7,19 @@ namespace BlindRiver.Models
 {
     public class Volunteer_Apps
     {
-        Volunteer_ApplicationDataContext objVolApp = new Volunteer_ApplicationDataContext();
+        Volunteer_ApplicationDataContext objVolApps = new Volunteer_ApplicationDataContext();
 
-        public IQueryable<Volunteer_Application> getVolApps()
+
+        public IEnumerable<Volunteer_Application> getVolApps()
         {
-            var allVolApps = objVolApp.Volunteer_Application.Select(x => x);
+            var allVolApps = objVolApps.Volunteer_Applications.Select(x => x);
             return allVolApps;
+        }
+
+        public Volunteer_Apps getAppById(int _id)
+        {
+            var allVolapps = objVolApps.Volunteer_Applications.SingleOrDefault(x => x.id == _id);
+            return allVolapps;
         }
     }
 }

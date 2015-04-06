@@ -107,5 +107,14 @@ namespace BlindRiver.Controllers
             }
         }
 
+        //models for public job applications
+        Volunteer_Application objApp = new Volunteer_Application();
+
+        public ActionResult ApplicationAdmin()
+        {
+            var apps = objApp.getVolApps();
+            return View(apps);
+        }
+
     }
 }
