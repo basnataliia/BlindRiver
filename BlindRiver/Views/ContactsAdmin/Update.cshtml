@@ -11,12 +11,15 @@
         Message details
     </legend>
     <div>
+        <br />
         <div class="ct-row"><label class="label">From:</label><span class="ct-msg-text"> @Model.name</span></div>
         <div class="ct-row"><label class="label">Tel.:</label><span class="ct-msg-text"> @Model.phone</span></div>
     <div class="ct-row"><label class="label">Email:</label><span class="ct-msg-text"> @Model.email</span></div>
     <div class="ct-row"><label class="label">Subject:</label><span class="ct-msg-text">@Model.subject</span></div>
     <div class="ct-row"><label class="label">Message:</label><span class="ct-msg-text"> @Model.message</span></div>
-    <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id }, new { @class = "link-button" })</p><br />
+        <button class="button-green">
+            <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id })</p>
+        </button><br />
 </div>
 
 @using (Html.BeginForm("Update", "ContactsAdmin"))
@@ -32,14 +35,12 @@
         @Html.CheckBoxFor(model => model.reviewed)
     </div>
     <div class="f-left">
-        <input type="submit" value="Save changes" class="form-button" />
+        <input type="submit" value="Save changes" class="button-blue" />
     </div>
-}
 
-@using (Html.BeginForm("Index", "ContactsAdmin"))
-{       <div>
-        <button type="submit" class="btn-cancel">Cancel</button>
-    </div>
+    <button class="button-cancel">
+        <p>@Html.ActionLink("Cancel","Index", "ContactsAdmin")</p>
+    </button><br />
 }
 </fieldset>
 

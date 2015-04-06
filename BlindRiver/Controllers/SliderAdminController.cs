@@ -12,23 +12,25 @@ namespace BlindRiver.Controllers
 {
     public class SliderAdminController : Controller
     {
-        Models.ImageSlider dbproduct = new Models.ImageSlider();
+        Models.ImageSlider objImage = new Models.ImageSlider();
+        linksmenu objLink = new linksmenu();
 
-        [Authorize(Users = "Natalie")]
-        public ActionResult test()
-        {
-            return View();
-        }
-
-       
+       [Authorize(Users = "admin")]
         public ActionResult Index()
         {
-            var img = dbproduct.getImages();
+            var img = objImage.getImages();
             return View(img);
         }
 
+        //insert
+        public ActionResult Insert()
+        {
+            ViewBag.mainmenulink = objLink.getLinks();
+            return View();
+        }
+
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase ImagePath)
+        public ActionResult Insert(sliderimage img, HttpPostedFileBase ImagePath)
         {
             if (ImagePath != null && ImagePath.ContentLength > 0)
             {
@@ -36,28 +38,37 @@ namespace BlindRiver.Controllers
 
                 var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
                 ImagePath.SaveAs(path);
-
-                var NewProduct = new sliderimage();
-                //NewProduct.ImagePath = path;
-                NewProduct.ImagePath = fileName;
-                dbproduct.commitInsert(NewProduct);
+                img.ImagePath = fileName;
             }
-
-            //return RedirectToAction("sliderAdmin", "SliderAdmin");
-            var img = dbproduct.getImages();
-            return View(img);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objImage.commitInsert(img);
+                    //Saving links in ViewBag from mainmenulink table 
+                    ViewBag.mainmenulink = objLink.getLinks();
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
         }
 
-
+//update
+        [Authorize(Users = "admin")]
         public ActionResult ImageEdit(int id)
         {
-            var image = dbproduct.getImageById(id);
+            var image = objImage.getImageById(id);
             if (image == null)
             {
                 return View("NotFound");
             }
             else
             {
+                ViewBag.mainmenulink = objLink.getLinks();
                 return View(image);
             }
         }
@@ -79,7 +90,10 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
-                    dbproduct.commitUpdate(id, image.ImagePath, image.Title, image.Description, image.Link);
+                    objImage.commitUpdate(id, image.ImagePath, image.Title, image.Description, image.Link);
+
+                    //Saving links in ViewBag from mainmenulink table 
+                    ViewBag.mainmenulink = objLink.getLinks();
                     return RedirectToAction("Index");
                 }
                 catch
@@ -91,10 +105,11 @@ namespace BlindRiver.Controllers
         }
 
 
-
+//delete
+        [Authorize(Users = "admin")]
         public ActionResult DeleteImage(int Id)
         {
-            var img = dbproduct.getImageById(Id);
+            var img = objImage.getImageById(Id);
             if(img == null)
             {
                 return View("NotFound");
@@ -110,7 +125,7 @@ namespace BlindRiver.Controllers
         {
             try
             {
-                dbproduct.commitDelete(Id);
+                objImage.commitDelete(Id);
                 return RedirectToAction("Index");
             }
 

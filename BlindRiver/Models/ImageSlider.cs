@@ -18,9 +18,12 @@ namespace BlindRiver.Models
 
         public bool commitInsert(sliderimage NewImage)
         {
-            objImage.sliderimages.InsertOnSubmit(NewImage);
-            objImage.SubmitChanges();
-            return true;
+            using (objImage)
+            {
+                objImage.sliderimages.InsertOnSubmit(NewImage);
+                objImage.SubmitChanges();
+                return true;
+            }
         }
 
         public bool commitDelete(int _id)

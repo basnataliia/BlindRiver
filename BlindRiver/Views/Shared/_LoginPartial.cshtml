@@ -1,5 +1,6 @@
 ﻿@if (Request.IsAuthenticated) {
-    <text><div id="hellouser">
+    <text>
+<div id="hellouser">
     Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
 </div>
     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
@@ -8,7 +9,6 @@
     <div><a class="cms-button" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></div>
         <div class="clear"></div>
     }
-
     </text>
 } else {
     <ul id="registr-form">

@@ -14,21 +14,24 @@
                 <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
         </div>
         <div class="module-admin-details">
-            <h3>
-                @*@Html.ActionLink(module.link_name, module.link_url, new { Id = module.id })*@
-                @Html.ActionLink(module.link_name, "Index", module.link_url)
-            </h3>
+            <h2>
+                @*@Html.ActionLink(module.link_name, "Index", module.link_url)*@
+                @module.link_name
+            </h2>
             <div>
                 @module.description
             </div>
         </div>
        
-
         <div class="clear"></div>
     </div>
     <div class="module-edit">
         <ul>
-            <li>@Html.ActionLink("Update", "Update", new { Id = module.id })</li>
+            <li>
+                <button class="button-blue">
+                    @Html.ActionLink("Update", "Update", new { Id = module.id })
+                </button>
+            </li>
         </ul>
     </div>
 }

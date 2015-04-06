@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<BlindRiver.Models.sliderimage>
+﻿@model IEnumerable<BlindRiver.Models.sliderimage>
 
 @{
     ViewBag.Title = "Slider";
@@ -26,10 +25,14 @@
                 @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                 <a href="@Url.Action("Index", image.Link)"><img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" /></a>
                 <div class="carousel-caption">
-                    <h1>@image.Title</h1>
-                    <p>@image.Description</p>
+                    <div class="carousel-wrapper">
+                        <h1>@image.Title</h1>
+                        <p>@image.Description</p>
+                        <button class="button-blue btn-margin">
+                            <a href="@Url.Action("Index", image.Link)">more information</a>
+                        </button>
+                    </div>
                 </div>
-
             </li>
         }
     </ul>

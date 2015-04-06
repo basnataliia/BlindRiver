@@ -39,6 +39,7 @@ namespace BlindRiver.Models
 
         [DisplayName("Message")]
         [Required]
+        [AllowHtml]
         public string message { get; set; }
 
         [DisplayName("Reviewed")]

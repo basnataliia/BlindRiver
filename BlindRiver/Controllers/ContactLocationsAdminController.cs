@@ -10,8 +10,9 @@ namespace BlindRiver.Controllers
 {
     public class ContactLocationsAdminController : Controller
     {
-        contact_map_locations objLocation = new contact_map_locations(); 
+        contact_map_locations objLocation = new contact_map_locations();
 
+        [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var locations = objLocation.getLocations();
@@ -19,6 +20,7 @@ namespace BlindRiver.Controllers
         }
 
         //add new location
+        [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
@@ -43,6 +45,7 @@ namespace BlindRiver.Controllers
         }
 
         //delete location
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var location = objLocation.getLocationById(id);
@@ -70,6 +73,7 @@ namespace BlindRiver.Controllers
         }
 
         //update location
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
             var location = objLocation.getLocationById(id);

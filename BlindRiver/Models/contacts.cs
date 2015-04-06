@@ -59,10 +59,11 @@ namespace BlindRiver.Models
         }
 
         //search
-        public IEnumerable<contact> searchContacts(string query)
+        public IQueryable<contact> searchContacts(string _query)
         {
-            var allContacts = from x in objContact.contacts where x.name == query || x.email == query select x;
+            var allContacts = (from x in objContact.contacts where x.name.Contains(_query) || x.email.Contains(_query) || x.phone.Contains(_query) || x.subject.Contains(_query) || x.message.Contains(_query) select x);
             return allContacts;
+
         }
 
     }

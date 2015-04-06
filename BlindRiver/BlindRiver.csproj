@@ -294,11 +294,17 @@
     <Compile Include="Models\sliderValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Models\VolunteerValidation.cs" />
+    <Compile Include="Models\Volunteer_Apps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\VolunteerOpportunities.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VolunteerOpportunities.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Volunteer_Application.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Volunteer_Application.dbml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -804,7 +810,6 @@
     <Content Include="Views\SliderAdmin\DeleteImage.cshtml" />
     <Content Include="Views\SliderAdmin\ImageEdit.cshtml" />
     <Content Include="Views\SliderAdmin\Index.cshtml" />
-    <Content Include="Views\SliderAdmin\test.cshtml" />
     <Content Include="Views\SliderAdmin\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />
@@ -875,6 +880,16 @@
     <Content Include="Views\customPage\PageDetails.cshtml" />
     <Content Include="Views\Home\customPages.cshtml" />
     <Content Include="Views\Home\PageDetails.cshtml" />
+    <Content Include="Views\SliderAdmin\Insert.cshtml" />
+    <Content Include="Views\Volunteer\ApplicationAdmin.cshtml" />
+    <Content Include="Models\Volunteer_Application.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Volunteer_Application.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\Volunteer_Application.dbml.layout">
+      <DependentUpon>Volunteer_Application.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

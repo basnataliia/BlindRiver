@@ -5,35 +5,41 @@
         ViewBag.Title = "Index";
     }
 
-    <h2>Image Gallery </h2>
-
-    @*@using (Html.BeginForm("sliderAdmin", "admin", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
-@using (Html.BeginForm("Index", "SliderAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
-
-{
-
-        <input id="Id" type="hidden" name="Id" />
-        <input type="file" name="ImagePath" />
-        <input type="submit" name="OK" />
-}
-
+<h1>Image Gallery </h1>
+<div id="img-gallery-wrapper">
+    <button class="button-green">
+        <p>@Html.ActionLink("Add new content image", "Insert")</p>
+    </button>
+    <div class="clearfix"></div>
+    <hr />
     <div>
         @foreach (var image in Model)
         {
             <div class="img-gallery-admin">
+                <h2>@image.Title</h2>
+                <p>@image.Description</p>
                 <div class="img-g-d">
                     @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                     <img src="@Url.Content(@"~/Content/Images/" + (image.ImagePath))" />
                 </div>
                 <div class="link-g-d">
                     <ul>
-                        <li>@Html.ActionLink("Edit", "ImageEdit", new { Id = image.Id })</li>
-                        <li>@Html.ActionLink("Delete", "DeleteImage", new { Id = image.Id })</li>
+                        <li>
+                            <button class="button-blue">
+                                @Html.ActionLink("Edit Section", "ImageEdit", new { Id = image.Id })
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button-cancel">
+                                @Html.ActionLink("Delete Section", "DeleteImage", new { Id = image.Id })
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
+            <hr />
             <div class="clear"></div>
         }
     </div>
-
+</div>
 

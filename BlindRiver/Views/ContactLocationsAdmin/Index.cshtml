@@ -7,7 +7,9 @@
 <h2>Blind River locations</h2>
 <div id="br-locations">
     <div id="br-add-btn">
-        @Html.ActionLink("Add new location", "Insert", "ContactLocationsAdmin", null, new { @class = "link-button" })
+        <button class="button-green">
+            @Html.ActionLink("Add new location", "Insert", "ContactLocationsAdmin", null)
+        </button>
     </div>
         <br />
         <table class="cm-table">
