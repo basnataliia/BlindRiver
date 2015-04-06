@@ -112,7 +112,7 @@ namespace BlindRiver.Controllers
 
         public ActionResult ApplicationAdmin()
         {
-            var apps = objApp.getVolApps();
+            var apps = objVolApp.getVolApps();
             return View(apps);
         }
 
