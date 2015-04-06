@@ -28,7 +28,6 @@ namespace BlindRiver.Controllers
         }
 
 
-
         public ActionResult Insert()
         {
             return View();
