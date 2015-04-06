@@ -9,9 +9,10 @@ namespace BlindRiver.Models
     {
         Volunteer_ApplicationDataContext objVolApp = new Volunteer_ApplicationDataContext();
 
-        public IQueryable<Volunteer_Application> getVolApps()
+        //public IQueryable<Volunteer_Application> getVolApps()
+        public IEnumerable<Volunteer_Application> getContacts()
         {
-            var allVolApps = objVolApp.Volunteer_Application.Select(x => x);
+            var allVolApps = objVolApp.Volunteer_Applications.Select(x => x);
             return allVolApps;
         }
     }

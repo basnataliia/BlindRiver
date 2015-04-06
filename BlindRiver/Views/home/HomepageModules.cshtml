@@ -4,18 +4,12 @@
 }   
 
 <div class="hp-main-module">
-<<<<<<< HEAD
-    <h3 class="subtitle">Get started...</h3>
-        @foreach (var module in Model)
-        {
-            <div class="hp-module">
-                <a href="@Url.Action("Index", module.link_url)">
-                    <div class="wrapper-image">
-                        <div data-content="Visit this section" class="module-img">
-                            @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
-                            <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
 
-=======
+    <h3 class="subtitle">Get started...</h3>
+    
+                            
+
+
     @foreach (var module in Model)
     {
         <div class="hp-module">
@@ -29,7 +23,6 @@
                             <button class="button-blue">
                                 <a href="@Url.Action("Index", module.link_url)">Visit section</a>
                             </button>
->>>>>>> origin/blindriver
                         </div>
                     </div>
                 </div>
@@ -44,6 +37,7 @@
             <div class="clear"></div>
         </div>
     }  
+                            
 </div>
 <div class="clear"></div>
 
