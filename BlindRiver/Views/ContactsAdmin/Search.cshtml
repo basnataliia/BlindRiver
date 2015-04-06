@@ -1,9 +1,7 @@
 ﻿@model IQueryable<BlindRiver.Models.contact>
-@*@model BlindRiver.Models.contact*@
 
 @using (Html.BeginForm("Index", "ContactsAdmin"))
 {
-
     @Html.TextBox("query", null, new { id = "query", placeholder = "Enter search here..." , @class="form-input"})
     
     <input type="submit" value="Search" class="button-blue" />

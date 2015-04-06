@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<BlindRiver.Models.contact_location>
 
 @{
-    ViewBag.Title = "Locations";
+    ViewBag.Title = "Locations on Google Map";
 }
 
 <script type="text/javascript" src="http://www.google.com/jsapi?autoload={'modules':[{name:'maps',version:3,other_params:''}]}"></script>
@@ -37,15 +37,10 @@
             title: '@item.title',
             zIndex: 10
         });
-        </text>
+            </text>
         }
 
-        
-    
-
         //show popup in location marker click
-
-
         //declare addMarker function
         function addMarker(latitude, longitude, title, description, map)
         {
@@ -68,14 +63,12 @@
             });
         }
 
-        //now add markers
+        //adding markers
         @foreach (var item in Model) {
         @:addMarker(@item.latitude, @item.longitude, '@item.title', '@item.address', map);
          }
     }
     google.maps.event.addDomListener(window, 'load', init);
-
-
 </script>
 
 <style>

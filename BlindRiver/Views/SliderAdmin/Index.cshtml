@@ -24,8 +24,16 @@
                 </div>
                 <div class="link-g-d">
                     <ul>
-                        <li>@Html.ActionLink("Edit Section", "ImageEdit", new { Id = image.Id }, new { @class = "button-blue" })</li>
-                        <li>@Html.ActionLink("Delete Section", "DeleteImage", new { Id = image.Id }, new { @class = "button-cancel" })</li>
+                        <li>
+                            <button class="button-blue">
+                                @Html.ActionLink("Edit Section", "ImageEdit", new { Id = image.Id })
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button-cancel">
+                                @Html.ActionLink("Delete Section", "DeleteImage", new { Id = image.Id })
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>

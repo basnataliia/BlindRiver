@@ -37,12 +37,10 @@
     <div class="f-left">
         <input type="submit" value="Save changes" class="button-blue" />
     </div>
-}
 
-@using (Html.BeginForm("Index", "ContactsAdmin"))
-{       <div>
-            <button type="submit" class="button-cancel">Cancel</button>
-        </div>
+    <button class="button-cancel">
+        <p>@Html.ActionLink("Cancel","Index", "ContactsAdmin")</p>
+    </button><br />
 }
 </fieldset>
 

@@ -22,18 +22,16 @@
         <div class="f-left">
             <input type="submit" value="Delete" class="button-blue" />
         </div>
+
+    <button class="button-cancel">
+        <p>@Html.ActionLink("Cancel", "Index", "ContactsAdmin")</p>
+    </button><br />
     }
 
-    @using (Html.BeginForm("Index", "ContactsAdmin"))
-    {
-        <div>
-            <button type="submit" class="button-cancel">Cancel</button>
-        </div>
-    }
 </fieldset>
-        <div class="clearfix"></div>
+<div class="clearfix"></div>
 
-        @section Scripts{
-            @Scripts.Render("~/bundles/jqueryval")
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
 
-        }
+}

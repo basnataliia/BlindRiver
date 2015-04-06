@@ -15,6 +15,7 @@ namespace BlindRiver.Controllers
         contacts objContact = new contacts();
         linksmenu objMenu = new linksmenu();
 
+        [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var messsages = objContact.getContacts();
@@ -30,6 +31,7 @@ namespace BlindRiver.Controllers
         }
 
         //delete message
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var messsage = objContact.getContactById(id);
@@ -57,6 +59,7 @@ namespace BlindRiver.Controllers
         }
 
         //update
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
             var message = objContact.getContactById(id);
@@ -89,6 +92,7 @@ namespace BlindRiver.Controllers
         }
 
         //email
+        [Authorize(Users = "admin")]
         public ActionResult Email(int id)
         {
             ViewBag.contact = objContact.getContactById(id);
@@ -176,7 +180,7 @@ namespace BlindRiver.Controllers
         //    }
         //}
 
-        
+        [Authorize(Users = "admin")]
         public ActionResult Search(string name)
         {
             var search_result = objContact.searchContacts(name);

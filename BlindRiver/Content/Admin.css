@@ -8,6 +8,17 @@
     width:970px;
 }
 
+/*Styles form registration*/
+.reg-form .form-input, #loginForm .form-input{
+    width:25%;
+}
+
+.reg-form .button-blue, #loginForm .button-blue{
+    padding-left:30px;
+    padding-right:30px;
+}
+
+
 /*Styles for header admin*/
 #header-admin{
     color: #ebebeb;

@@ -23,7 +23,6 @@
             padding: 4px 7px;
         }
     </style>
-
 </head>
 <body>
     
@@ -57,7 +56,6 @@
                     <li><a href="#"><i class="fa fa-calendar"></i>Appointments Manager</a></li>
                     <li><a href="#"><i class="fa fa-check-square-o"></i>Satisfaction survey</a></li>
                     <li><a href="@Url.Action("Index", "ContactLocationsAdmin")"><i class="fa fa-map-marker"></i>Locations Manager</a></li>
-
                 </ul>
             </nav>
             <section>
@@ -71,10 +69,10 @@
             <div class="wrapper">
                 <div class="f-left">
                     <ul class="f-menu">
-                        <li><a href="#">Careers & Volunteers</a></li>
+                        <li><a href="@Url.Action("Index", "Careers")">Careers & Volunteers</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="@Url.Action("Index", "Contacts")">Contact Us</a></li>
+                        <li><a href="@Url.Action("Public", "FAQ")">FAQ</a></li>
                     </ul>
                     <div class="copy">Copyright &copy; 2015, Blind River District Health Centre </div>
                 </div>

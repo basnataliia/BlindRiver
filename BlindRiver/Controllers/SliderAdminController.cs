@@ -15,13 +15,7 @@ namespace BlindRiver.Controllers
         Models.ImageSlider objImage = new Models.ImageSlider();
         linksmenu objLink = new linksmenu();
 
-        [Authorize(Users = "Natalie")]
-        public ActionResult test()
-        {
-            return View();
-        }
-
-       
+       [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var img = objImage.getImages();
@@ -64,6 +58,7 @@ namespace BlindRiver.Controllers
         }
 
 //update
+        [Authorize(Users = "admin")]
         public ActionResult ImageEdit(int id)
         {
             var image = objImage.getImageById(id);
@@ -111,6 +106,7 @@ namespace BlindRiver.Controllers
 
 
 //delete
+        [Authorize(Users = "admin")]
         public ActionResult DeleteImage(int Id)
         {
             var img = objImage.getImageById(Id);

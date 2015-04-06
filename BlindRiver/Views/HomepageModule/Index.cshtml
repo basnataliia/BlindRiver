@@ -23,12 +23,15 @@
             </div>
         </div>
        
-
         <div class="clear"></div>
     </div>
     <div class="module-edit">
         <ul>
-            <li>@Html.ActionLink("Update", "Update", new { Id = module.id }, new { @class = "button-blue" })</li>
+            <li>
+                <button class="button-blue">
+                    @Html.ActionLink("Update", "Update", new { Id = module.id })
+                </button>
+            </li>
         </ul>
     </div>
 }

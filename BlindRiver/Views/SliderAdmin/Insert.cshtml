@@ -20,10 +20,6 @@
         @Html.ValidationMessageFor(x => x.Description, "This field is required.")
         <br />
 
-        @*@Html.LabelFor(x => x.Link, new { @class = "label" })
-            @Html.TextBoxFor(x => x.Link)
-            @Html.ValidationMessageFor(x => x.Link, "This field is required.")*@
-
         @Html.LabelFor(x => x.Link, new { @class = "label" })
         List<SelectListItem> urlList = new List<SelectListItem>();
         foreach (var item in ViewBag.mainmenulink)
@@ -34,7 +30,6 @@
                 Value = Convert.ToString(item.link_url)
             });
         }
-
         @Html.DropDownListFor(x => x.Link, urlList)
         <br />
 

@@ -788,7 +788,6 @@
     <Content Include="Views\SliderAdmin\DeleteImage.cshtml" />
     <Content Include="Views\SliderAdmin\ImageEdit.cshtml" />
     <Content Include="Views\SliderAdmin\Index.cshtml" />
-    <Content Include="Views\SliderAdmin\test.cshtml" />
     <Content Include="Views\SliderAdmin\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_adminLayout.cshtml" />
     <Content Include="Views\BookApp\Insert.cshtml" />

@@ -7,7 +7,6 @@
 
 <script src="~/ckeditor/ckeditor.js"></script>
 
-@*<h2>Email</h2>*@
 <fieldset>
     <legend>
         Send an Email    
@@ -28,13 +27,10 @@
         <div class="f-left">
             <input type="submit" value="Send an Email" class="button-blue" />
         </div>
-    }
 
-    @using (Html.BeginForm("Index", "ContactsAdmin"))
-    {       
-    <div>
-        <button type="submit" class="button-cancel">Cancel</button>
-    </div>
+    <button class="button-cancel">
+        <p>@Html.ActionLink("Cancel", "Index", "ContactsAdmin")</p>
+    </button><br />
     }
 
 </fieldset>

@@ -15,6 +15,13 @@
                 $('.phone-input').val(inp + '-');
             }
         });
+
+        $('.fax-input').on('keydown', function () {
+            var inp = $('.fax-input').val();
+            if (inp.length == 3 || inp.length == 7) {
+                $('.fax-input').val(inp + '-');
+            }
+        });
     });
 </script>
 
@@ -45,7 +52,7 @@
         <br />
 
         @Html.LabelFor(model => model.fax, new { @class = "label" })
-        @Html.TextBoxFor(model => model.fax, new { @class = " form-input", @maxlength = "12" })
+        @Html.TextBoxFor(model => model.fax, new { @class = "fax-input form-input", @maxlength = "12" })
         @Html.ValidationMessageFor(model => model.fax, "*")
         <br />
 

@@ -27,19 +27,15 @@
         </style>
     </head>
     <body>
-                    @*<section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>*@
         <div class="br-container">
             <header id="main-header">
                 <div class="wrapper">
 
                     @*Source: "Action image MVC razor" http://stackoverflow.com/questions/4896439/action-image-mvc3-razor*@
-
                     <a href="@Url.Action("Index", "Home")"><img class="logo" src="@Url.Content("~/Content/Images/Logo.png")" /></a>
 
                     <div class="contact-info">
-                        <a href="#"><img class="cnt-img" src="~/Content/Images/location1.png" alt="location" /></a><div class="c-contact">525 Causley St., Blind River, ON</div>
+                        <a href="@Url.Action("Index", "Contacts")"><img class="cnt-img" src="~/Content/Images/location1.png" alt="location" /></a><div class="c-contact">525 Causley St., Blind River, ON</div>
                         <div class="clear"></div>
                         <img class="cnt-img" src="~/Content/Images/mobile1.png" alt="phone" /><div class="c-contact">Phone: 705-356-2265</div>
                     </div>
@@ -69,9 +65,9 @@
                 <div class="wrapper">
                     <div class="f-left">
                         <ul class="f-menu">
-                            <li><a href="#">Careers & Volunteers</a></li>
+                            <li><a href="@Url.Action("Index", "Careers")">Careers & Volunteers</a></li>
                             <li><a href="#">About</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="@Url.Action("Index", "Contacts")">Contact Us</a></li>
                             <li><a href="@Url.Action("Public", "FAQ")">FAQ</a></li>
                         </ul>
                         <div class="copy"><p class="copyright">Copyright &copy; 2015, Blind River District Health Centre </p></div>
@@ -94,8 +90,6 @@
                 </div>
             </footer>
         </div> 
-        
-
         @RenderSection("scripts", required: false)
     </body>
 </html>

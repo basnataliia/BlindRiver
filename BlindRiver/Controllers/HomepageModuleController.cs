@@ -15,12 +15,14 @@ namespace BlindRiver.Controllers
         HomepageModule objModule = new HomepageModule();
         linksmenu objLink = new linksmenu();
 
+        [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var modules = objModule.getModules();
             return View(modules);
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id, string name)
         {
             var modules = objModule.getModuleById(id);
