@@ -292,6 +292,7 @@
       <DependentUpon>slider.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\sliderValidation.cs" />
+    <Compile Include="Models\VolunteerAppValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Models\VolunteerValidation.cs" />
     <Compile Include="Models\Volunteer_Apps.cs" />
@@ -890,6 +891,7 @@
     <None Include="Models\Volunteer_Application.dbml.layout">
       <DependentUpon>Volunteer_Application.dbml</DependentUpon>
     </None>
+    <Content Include="Views\Volunteer\Application.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

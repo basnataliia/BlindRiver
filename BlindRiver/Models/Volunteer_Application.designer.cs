@@ -100,6 +100,8 @@ namespace BlindRiver.Models
 		
 		private string _Postal_Code;
 		
+		private string _Position_Code;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -124,6 +126,8 @@ namespace BlindRiver.Models
     partial void OnProvinceChanged();
     partial void OnPostal_CodeChanging(string value);
     partial void OnPostal_CodeChanged();
+    partial void OnPosition_CodeChanging(string value);
+    partial void OnPosition_CodeChanged();
     #endregion
 		
 		public Volunteer_Application()
@@ -327,6 +331,26 @@ namespace BlindRiver.Models
 					this._Postal_Code = value;
 					this.SendPropertyChanged("Postal_Code");
 					this.OnPostal_CodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Position_Code", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Position_Code
+		{
+			get
+			{
+				return this._Position_Code;
+			}
+			set
+			{
+				if ((this._Position_Code != value))
+				{
+					this.OnPosition_CodeChanging(value);
+					this.SendPropertyChanging();
+					this._Position_Code = value;
+					this.SendPropertyChanged("Position_Code");
+					this.OnPosition_CodeChanged();
 				}
 			}
 		}

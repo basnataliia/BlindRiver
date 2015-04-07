@@ -116,5 +116,28 @@ namespace BlindRiver.Controllers
             return View(apps);
         }
 
+        public ActionResult Application()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Application(Volunteer_Application VolApp)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objVolApp.commitInsert(VolApp);
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
+
     }
 }

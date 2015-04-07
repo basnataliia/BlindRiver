@@ -21,5 +21,15 @@ namespace BlindRiver.Models
             var allVolApps = objVolApps.Volunteer_Applications.SingleOrDefault(x => x.id == _id);
             return allVolApps;
         }
+
+        public bool commitInsert(Volunteer_Application VolApp)
+        {
+            using (objVolApps)
+            {
+                objVolApps.Volunteer_Applications.InsertOnSubmit(VolApp);
+                objVolApps.SubmitChanges();
+                return true;
+            }
+        }
     }
 }
