@@ -8,7 +8,7 @@ namespace BlindRiver.Models
 {
 
     [MetadataType(typeof(VolunteerAppValidation))]
-    public partial class Volunteer_Application
+    public partial class Volunteer_Apps
     {
     }
 

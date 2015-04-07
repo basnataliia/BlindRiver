@@ -124,6 +124,7 @@ namespace BlindRiver.Controllers
         [HttpPost]
         public ActionResult Application(Volunteer_Application VolApp)
         {
+
             if (ModelState.IsValid)
             {
                 try
@@ -141,3 +142,4 @@ namespace BlindRiver.Controllers
 
     }
 }
+
