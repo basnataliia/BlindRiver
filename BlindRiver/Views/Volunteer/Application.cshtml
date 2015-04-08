@@ -7,7 +7,7 @@
 
 <h2>Volunteer Application</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Application", "Volunteer", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.ValidationSummary()
 
@@ -54,16 +54,19 @@
     @Html.LabelFor(model => model.Postal_Code)
     @Html.TextBoxFor(model => model.Postal_Code)
     @Html.ValidationMessageFor(model => model.Postal_Code, "*")
-    <br /><br />
+    <br />
     
     @Html.LabelFor(model => model.Position_Code)
     @Html.TextBoxFor(model => model.Position_Code)
     @Html.ValidationMessageFor(model => model.Position_Code, "*")
-    
-
     <br /><br />
-    <input type="submit" value="Apply" />
-
+    
+    @Html.LabelFor(model => model.Resume)
+    @Html.HiddenFor(model => model.Resume)
+ 
+    <input type="file" name="resumePath" />
+    <br /><br />
+    <input type="submit" name="Submit" value="Submit Application" />
 }
 
 @section Scripts{

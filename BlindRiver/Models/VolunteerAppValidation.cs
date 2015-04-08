@@ -55,6 +55,9 @@ namespace BlindRiver.Models
         [Required]
         public string Position_Code { get; set; }
 
+        [DisplayName("Resume: ")]
+        public string Resume { get; set; }
+
 
     }
 }

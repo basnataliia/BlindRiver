@@ -22,6 +22,7 @@
             <th>Province</th>
             <th>Postal Code</th>
             <th>Volunteer Position Code</th>
+            <th>Resume</th>
         </tr>
     </thead>
     @foreach (var Volunteer_Applications in Model)
@@ -37,6 +38,7 @@
             <td>@Volunteer_Applications.Province</td>
             <td>@Volunteer_Applications.Postal_Code</td>
             <td>@Volunteer_Applications.Position_Code</td>
+            <td><a href="~/Content/resumes/@Volunteer_Applications.Resume">@Volunteer_Applications.Resume</a></td>
         </tr>
     }
 </table>
