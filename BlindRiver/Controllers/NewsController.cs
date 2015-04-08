@@ -62,6 +62,34 @@ namespace BlindRiver.Controllers
             }
         }
 
+        //delete
+        public ActionResult Delete(int id)
+        {
+            var newsDel = newsObj.getNewsByID(id);
+            if (newsDel == null)
+            {
+                return View("Not Found");
+            }
+            else
+            {
+                return View(newsDel);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id, news_post news)
+        {
+            try
+            {
+                newsObj.commitDelete(id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
         //update
         public ActionResult Update(int id)
         {

@@ -22,6 +22,18 @@ namespace BlindRiver.Models
             return allNews;
         }
 
+        //delete
+        public bool commitDelete(int _id)
+        {
+            using (newsObj)
+            {
+                var bookDel = newsObj.news_posts.Single(x => x.id == _id);
+                newsObj.news_posts.DeleteOnSubmit(bookDel);
+                newsObj.SubmitChanges();
+                return true;
+            }
+        }
+
         //insert 
         public bool commitInsert(news_post post)
         {
@@ -46,7 +58,6 @@ namespace BlindRiver.Models
                 newsObj.SubmitChanges();
                 return true;
             }
-
         }
     }
 }
