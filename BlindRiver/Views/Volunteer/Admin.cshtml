@@ -4,37 +4,35 @@
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
 
- 
-
 @{
     ViewBag.Title = "Admin";
 }
 
-<h2>Manage Volunteer Opportunities</h2>
+<div id="volunteerContainer">
+    <h1>Manage Volunteer Opportunities</h1>
 
-<p>@Html.ActionLink("Insert New Volunteer Position", "Insert", "Volunteer")</p>
-<br /><br />
+    <button class="vapply">@Html.ActionLink("Insert New Volunteer Position", "Insert", "Volunteer")</button>
+    <br /><br />
+    <hr />
+    <br />
 
-<div id="volunterContainer">
+        @foreach (var VolunteerOpportunities in Model)
+        {
 
-    @foreach (var VolunteerOpportunities in Model)
-    {
+            <h1>@VolunteerOpportunities.position</h1>
+            
+            <h4>Description:</h4>
+            @VolunteerOpportunities.description
 
-        <h3>Volunteer Position: </h3>
-        @VolunteerOpportunities.position
+            <h4>Volunteer Position Code:</h4>
+            @VolunteerOpportunities.code
 
-        <h3>Description:</h3>
-        @VolunteerOpportunities.description
-
-        <h3>Volunteer Position Code:</h3>
-        @VolunteerOpportunities.code
-
-        <br />
-        <li>@Html.ActionLink("Update", "Update", new { id = VolunteerOpportunities.id })</li>
-        <li>@Html.ActionLink("Delete", "Delete", new { id = VolunteerOpportunities.id })</li>
+            <br /><br />
+            <button class="vapply">@Html.ActionLink("Update", "Update", new { id = VolunteerOpportunities.id })</button>
+            <button class="vapply">@Html.ActionLink("Delete", "Delete", new { id = VolunteerOpportunities.id })</button>
 
 
-        <br /><br />
-        <hr />
-    }
+            <br /><br />
+            <hr />
+        }
 </div>

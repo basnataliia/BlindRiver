@@ -4,72 +4,76 @@
     ViewBag.Title = "Volunteer Application";
 }
 
+<div id="volunteerContainer">
+    <h2>Volunteer Application</h2>
 
-<h2>Volunteer Application</h2>
+    @using (Html.BeginForm("Application", "Volunteer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary()
 
-@using (Html.BeginForm("Application", "Volunteer", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.ValidationSummary()
+        @Html.LabelFor(model => model.First_Name, new { @class = "label" })
+        @Html.TextBoxFor(model => model.First_Name, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.First_Name, "*")
+        <br />
 
-    @Html.LabelFor(model => model.First_Name)
-    @Html.TextBoxFor(model => model.First_Name)
-    @Html.ValidationMessageFor(model => model.First_Name, "*")
-    <br />
+        @Html.LabelFor(model => model.Last_Name, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Last_Name, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Last_Name, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Last_Name)
-    @Html.TextBoxFor(model => model.Last_Name)
-    @Html.ValidationMessageFor(model => model.Last_Name, "*")
-    <br />
+        @Html.LabelFor(model => model.Email, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Email, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Email, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Email)
-    @Html.TextBoxFor(model => model.Email)
-    @Html.ValidationMessageFor(model => model.Email, "*")
-    <br />
+        @Html.LabelFor(model => model.Phone, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Phone, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Phone, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Phone)
-    @Html.TextBoxFor(model => model.Phone)
-    @Html.ValidationMessageFor(model => model.Phone, "*")
-    <br />
+        @Html.LabelFor(model => model.Address1, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Address1, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Address1, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Address1)
-    @Html.TextBoxFor(model => model.Address1)
-    @Html.ValidationMessageFor(model => model.Address1, "*")
-    <br />
+        @Html.LabelFor(model => model.Address2, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Address2, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Address2, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Address2)
-    @Html.TextBoxFor(model => model.Address2)
-    @Html.ValidationMessageFor(model => model.Address2, "*")
-    <br />
+        @Html.LabelFor(model => model.City, new { @class = "label" })
+        @Html.TextBoxFor(model => model.City, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.City, "*")
+        <br />
 
-    @Html.LabelFor(model => model.City)
-    @Html.TextBoxFor(model => model.City)
-    @Html.ValidationMessageFor(model => model.City, "*")
-    <br />
+        @Html.LabelFor(model => model.Province, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Province, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Province, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Province)
-    @Html.TextBoxFor(model => model.Province)
-    @Html.ValidationMessageFor(model => model.Province, "*")
-    <br />
+        @Html.LabelFor(model => model.Postal_Code, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Postal_Code, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Postal_Code, "*")
+        <br />
 
-    @Html.LabelFor(model => model.Postal_Code)
-    @Html.TextBoxFor(model => model.Postal_Code)
-    @Html.ValidationMessageFor(model => model.Postal_Code, "*")
-    <br />
-    
-    @Html.LabelFor(model => model.Position_Code)
-    @Html.TextBoxFor(model => model.Position_Code)
-    @Html.ValidationMessageFor(model => model.Position_Code, "*")
-    <br /><br />
-    
-    @Html.LabelFor(model => model.Resume)
-    @Html.HiddenFor(model => model.Resume)
- 
-    <input type="file" name="resumePath" />
-    <br /><br />
-    <input type="submit" name="Submit" value="Submit Application" />
-}
+        @Html.LabelFor(model => model.Position_Code, new { @class = "label" })
+        @Html.TextBoxFor(model => model.Position_Code, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.Position_Code, "*")
+        <br /><br />
 
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
+        @Html.LabelFor(model => model.Resume, new { @class = "label" })
+        @Html.HiddenFor(model => model.Resume)
 
-}
+        <input type="file" name="resumePath" />
+        <br /><br />
+        <input class="vapply" type="submit" name="Submit" value="Submit Application" />
+        <br /><br />
+        <hr />
+        <button class="vapply">@Html.ActionLink("Back to Volunteer Opportunities", "index")</button>
+    }
+
+    </div>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }

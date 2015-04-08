@@ -9,7 +9,8 @@
 <div id="faqContainer">
     <h1>Blind River FAQ</h1>
 
-    <p>@Html.ActionLink("Insert New FAQ", "Insert", "FAQ")</p>
+    <button class="vapply">@Html.ActionLink("Insert New FAQ", "Insert", "FAQ")</button>
+    <br /><br />
 
     @foreach (var FAQ in Model)
     {
@@ -17,8 +18,10 @@
        <h3>@FAQ.questions</h3>  
        <br />
        <p>@FAQ.answers</p>
-       <li>@Html.ActionLink("Update", "Update", new {id = FAQ.id })</li>
-       <li>@Html.ActionLink("Delete", "Delete", new {id= FAQ.id})</li>
+       <br />
+       <button class="vapply">@Html.ActionLink("Update", "Update", new {id = FAQ.id })</button>
+       <button class="vapply">@Html.ActionLink("Delete", "Delete", new {id= FAQ.id})</button>
+        <br /><br />
        <hr />
     }
 </div>

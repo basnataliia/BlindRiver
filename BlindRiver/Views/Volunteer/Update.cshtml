@@ -7,34 +7,35 @@
 @{
     ViewBag.Title = "Update";
 }
+<div id="volunteerContainer">
+    <h1>Update Volunteer Position</h1>
 
-<h2>Update</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.id)
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(x => x.id)
+        <h3>Position:</h3>
+        @Html.TextBoxFor(model => model.position, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.position, "*")
+        
+        <h3>Description:</h3>
+        @Html.TextAreaFor(model => model.description, new { @class = "vtform-input" })
+        @Html.ValidationMessageFor(model => model.description, "*")
+ 
+        <h3>Volunteer Position Code:</h3>
+        @Html.TextBoxFor(model => model.code, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.code, "*")
+        <br /><br />
+        <input class="vapply" type="submit" value="Update" />
 
-    @Html.LabelFor(model => model.position)
-    @Html.TextBoxFor(model => model.position)
-    @Html.ValidationMessageFor(model => model.position, "*")
+    }
     <br /><br />
-    @Html.LabelFor(model => model.description)
-    @Html.TextBoxFor(model => model.description)
-    @Html.ValidationMessageFor(model => model.description, "*")
-    <br /><br />
-    @Html.LabelFor(model => model.code)
-    @Html.TextBoxFor(model => model.code)
-    @Html.ValidationMessageFor(model => model.code, "*")
-    <br /><br />
-    <input type="submit" value="Update" />
+    <hr />
+    
+    <button class="vapply">@Html.ActionLink("Back", "Admin", new { id = Model.id })</button>
 
-}
+</div>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
 
-<p>
-    @Html.ActionLink("Back", "Admin", new { id = Model.id })
-</p>
-
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
-
-}
+    }

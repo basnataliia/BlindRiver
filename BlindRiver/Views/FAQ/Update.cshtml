@@ -7,30 +7,31 @@
 @{
     ViewBag.Title = "Update FAQ: " + @Model.questions;
 }
+<div id="faqContainer">
 
-<h2>Update:  @Model.questions</h2>
+    <h1>Update FAQ</h1>
 
-@using (Html.BeginForm())
-{
-   @Html.HiddenFor(x => x.id)
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.id)
 
-    @Html.LabelFor(model => model.questions)
-    @Html.TextBoxFor(model => model.questions)
-    @Html.ValidationMessageFor(model => model.questions, "*")
+        <h3>Frequently Asked Question:</h3>
+        @Html.TextBoxFor(model => model.questions, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.questions, "*")
+
+        <h3>Answer: </h3>
+        @Html.TextAreaFor(model => model.answers, new { @class = "vtform-input" })
+        @Html.ValidationMessageFor(model => model.answers, "*")
+        <br /><br />
+        <input class="vapply" type="submit" value="Update" />
+
+    }
     <br /><br />
-    @Html.LabelFor(model => model.answers)
-    @Html.TextBoxFor(model => model.answers)
-    @Html.ValidationMessageFor(model => model.answers, "*")
-    <br /><br />
-    <input type="submit" value="Update" />
+    <hr />
+    <button class="vapply">@Html.ActionLink("Back to Manage FAQ", "Index")</button>
+ 
+</div>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
 
-}
-
-<p>
-    @Html.ActionLink("Back", "Index", new { id = Model.id})
-</p>
-
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
-
-}
+    }

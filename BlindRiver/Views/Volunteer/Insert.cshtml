@@ -8,31 +8,34 @@
     ViewBag.Title = "Insert New Volunteer Position";
 }
 
+<div id="volunteerContainer">
 
 
-<h2>Insert New Volunteer Position</h2>
+    <h1>Insert New Volunteer Position</h1>
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary()
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
 
-    @Html.LabelFor(model => model.position)
-    @Html.TextBoxFor(model => model.position)
-    @Html.ValidationMessageFor(model => model.position, "*")
-    <br /><br />
-    @Html.LabelFor(model => model.description)
-    @Html.TextAreaFor(model => model.description)
-    @Html.ValidationMessageFor(model => model.description, "*")
-    <br /><br />
-    @Html.LabelFor(model => model.code)
-    @Html.TextAreaFor(model => model.code)
-    @Html.ValidationMessageFor(model => model.code, "*")
-    <br /><br />
-    <input type="submit" value="Insert" />
+        <h3>Position:</h3>
+        @Html.TextBoxFor(model => model.position, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.position, "*")
 
-}
+        <h3>Description:</h3>
+        @Html.TextAreaFor(model => model.description, new { @class = "vtform-input" })
+        @Html.ValidationMessageFor(model => model.description, "*")
 
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
+        <h3>Volunteer Position Code:</h3>
+        @Html.TextBoxFor(model => model.code, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.code, "*")
+        <br /><br />
+        <input class="vapply" type="submit" value="Insert" />
+        <br /><br />
+        <hr />
+        <button class="vapply">@Html.ActionLink("Back to Manage Volunteer Opportunities", "Admin")</button>
+    }
+</div>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
 
-}
+    }

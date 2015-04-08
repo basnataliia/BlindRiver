@@ -7,38 +7,39 @@
 @{
     ViewBag.Title = "Volunteer Application";
 }
-
-<h2>Volunteer Application Manager</h2>
-<table class="cm-table">
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone #</th>
-            <th>Addresss</th>
-            <th>Address2</th>
-            <th>City</th>
-            <th>Province</th>
-            <th>Postal Code</th>
-            <th>Volunteer Position Code</th>
-            <th>Resume</th>
-        </tr>
-    </thead>
-    @foreach (var Volunteer_Applications in Model)
-    {
-        <tr>
-            <td>@Volunteer_Applications.First_Name</td>
-            <td>@Volunteer_Applications.Last_Name</td>
-            <td>@Volunteer_Applications.Email</td>
-            <td>@Volunteer_Applications.Phone</td>
-            <td>@Volunteer_Applications.Address1</td>
-            <td>@Volunteer_Applications.Address2</td>
-            <td>@Volunteer_Applications.City</td>
-            <td>@Volunteer_Applications.Province</td>
-            <td>@Volunteer_Applications.Postal_Code</td>
-            <td>@Volunteer_Applications.Position_Code</td>
-            <td><a href="~/Content/resumes/@Volunteer_Applications.Resume">@Volunteer_Applications.Resume</a></td>
-        </tr>
-    }
-</table>
+<div id="volunteerContainer">
+    <h2>Volunteer Application Manager</h2>
+    <table class="cm-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone #</th>
+                <th>Addresss</th>
+                <th>Address2</th>
+                <th>City</th>
+                <th>Province</th>
+                <th>Postal Code</th>
+                <th>Volunteer Position Code</th>
+                <th>Resume</th>
+            </tr>
+        </thead>
+        @foreach (var Volunteer_Applications in Model)
+        {
+            <tr>
+                <td>@Volunteer_Applications.First_Name</td>
+                <td>@Volunteer_Applications.Last_Name</td>
+                <td>@Volunteer_Applications.Email</td>
+                <td>@Volunteer_Applications.Phone</td>
+                <td>@Volunteer_Applications.Address1</td>
+                <td>@Volunteer_Applications.Address2</td>
+                <td>@Volunteer_Applications.City</td>
+                <td>@Volunteer_Applications.Province</td>
+                <td>@Volunteer_Applications.Postal_Code</td>
+                <td>@Volunteer_Applications.Position_Code</td>
+                <td><a href="~/Content/resumes/@Volunteer_Applications.Resume">@Volunteer_Applications.Resume</a></td>
+            </tr>
+        }
+    </table>
+</div>

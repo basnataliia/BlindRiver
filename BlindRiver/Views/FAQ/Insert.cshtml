@@ -8,27 +8,32 @@
     ViewBag.Title = "Insert New FAQ";
 }
 
+<div id="faqContainer">
 
 
-<h2>Insert New FAQ</h2>
+    <h1>Insert New FAQ</h1>
 
-@using (Html.BeginForm())
-{
-    @Html.ValidationSummary()
-    
-    @Html.LabelFor(model => model.questions)
-    @Html.TextBoxFor(model => model.questions)
-    @Html.ValidationMessageFor(model => model.questions, "*")
-    <br /><br />
-    @Html.LabelFor(model => model.answers)
-    @Html.TextAreaFor(model => model.answers)
-    @Html.ValidationMessageFor(model => model.answers, "*")
-    <br /><br />
-    <input type="submit" value="Insert" />
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
 
-}
+        <h3>Frequently Asked Question:</h3>
+        @Html.TextBoxFor(model => model.questions, new { @class = "vform-input" })
+        @Html.ValidationMessageFor(model => model.questions, "*")
+        
+        <h3>Answer: </h3>
+        @Html.TextAreaFor(model => model.answers, new { @class = "vtform-input" })
+        @Html.ValidationMessageFor(model => model.answers, "*")
+        <br /><br />
+        <input class="vapply" type="submit" value="Insert" />
 
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
+    }
+    <br /><br/>
+    <hr />
+    <button class="vapply">@Html.ActionLink("Back to Manage FAQ", "Index")</button>
 
-}
+</div>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }

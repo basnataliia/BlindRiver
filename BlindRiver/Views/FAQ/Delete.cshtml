@@ -7,24 +7,26 @@
 @{
     ViewBag.Title = "Delete FAQ: " + @Model.questions;
 }
+<div id="faqContainer">
 
-<h2>Are you sure you want to delete the following FAQ? </h2><br/> 
-  <p>FAQ:@Model.questions<br /><br/>
-    Answer: @Model.answers
-  </p> 
+    <h1>Are you sure you want to delete the following FAQ? </h1>
+    
+    <h4>FAQ:</h4>  
+    @Model.questions
+    
+    <h4>Answer:</h4>
+    @Model.answers
+    
 
-<br /><br />
-@using (Html.BeginForm())
-{
-   <div>
-       <input type="submit" value="Delete"/>
-       <br /><br />
-       @Html.ActionLink("Back", "Index", new { id = Model.id})
-   </div>
+    <br /><br />
+    <input class="vapply" type="submit" value="Delete" />
+    <br /><br />
+    <hr />
+    <button class="vapply">@Html.ActionLink("Back", "Index", new { id = Model.id })</button>
 
-}
+</div>
 
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
 
-}
+}    

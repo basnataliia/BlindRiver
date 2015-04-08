@@ -104,10 +104,7 @@ namespace BlindRiver.Controllers
         return View(faq);
     }
 
-    public ActionResult NotFound()
-    {
-        return View();
-    }
+    
 
 
     }
