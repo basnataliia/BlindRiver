@@ -32,5 +32,21 @@ namespace BlindRiver.Models
                 return true;
             }
         }
+
+        //update
+        public bool commitUpdate(int _id, DateTime _date, string _heading, string _details)
+        {
+            using (newsObj)
+            {
+                var newsUpdate = newsObj.news_posts.Single(x => x.id == _id);
+
+                newsUpdate.date = _date;
+                newsUpdate.heading = _heading;
+                newsUpdate.details = _details;
+                newsObj.SubmitChanges();
+                return true;
+            }
+
+        }
     }
 }

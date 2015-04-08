@@ -124,6 +124,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        //not found
         public ActionResult NotFound()
         {
             return View();

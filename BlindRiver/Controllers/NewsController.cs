@@ -62,7 +62,40 @@ namespace BlindRiver.Controllers
             }
         }
 
+        //update
+        public ActionResult Update(int id)
+        {
+            var newsUpd = newsObj.getNewsByID(id);
+            if (newsUpd == null)
+            {
+                return View("Not Found");
+            }
+            else
+            {
+                return View(newsUpd);
+            }
+        }
 
+        [HttpPost]
+        public ActionResult Update(int id, news_post newsUpd)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    newsObj.commitUpdate(id, newsUpd.date, newsUpd.heading, newsUpd.details);
+                    return RedirectToAction("Details/" + id);
+                }
+                catch
+                {
+                    return View();
+                }
+
+            }
+            return View();
+        }
+
+        //not found
         public ActionResult NotFound()
         {
             return View();
