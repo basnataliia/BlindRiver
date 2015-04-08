@@ -8,7 +8,7 @@ namespace BlindRiver.Models
 {
 
     [MetadataType(typeof(VolunteerAppValidation))]
-    public partial class Volunteer_Apps
+    public partial class Volunteer_Application
     {
     }
 
@@ -54,6 +54,7 @@ namespace BlindRiver.Models
         [DisplayName("Volunteer Position Code: ")]
         [Required]
         public string Position_Code { get; set; }
+
 
     }
 }
