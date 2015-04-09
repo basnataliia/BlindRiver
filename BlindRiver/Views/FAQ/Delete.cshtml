@@ -11,6 +11,8 @@
 
     <h1>Are you sure you want to delete the following FAQ? </h1>
     
+@using (Html.BeginForm())
+    {
     <h4>FAQ:</h4>  
     @Model.questions
     
@@ -23,7 +25,7 @@
     <br /><br />
     <hr />
     <button class="vapply">@Html.ActionLink("Back", "Index", new { id = Model.id })</button>
-
+}
 </div>
 
 @section Scripts{

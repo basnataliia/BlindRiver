@@ -8,7 +8,8 @@
     ViewBag.Title = "Delete";
 }
 <div id="volunteerContainer">
-
+@using (Html.BeginForm())
+    {
     <h1>Are you sure you want to delete the following entry? </h1><br />
     <h1>@Model.position</h1>
 
@@ -24,7 +25,7 @@
     <br /><br />
     <hr />
     <button class="vapply">@Html.ActionLink("Back", "Admin", new { id = Model.id })</button>
-
+}
 </div>
     @section Scripts{
         @Scripts.Render("~/bundles/jqueryval")
