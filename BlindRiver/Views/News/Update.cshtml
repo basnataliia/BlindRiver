@@ -1,0 +1,44 @@
+﻿@model BlindRiver.Models.news_post
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+@using (Html.BeginForm()) { 
+    
+  @*  @Html.HiddenFor(x => x.id)*@
+
+    @Html.LabelFor(x => x.date)
+    <br />
+    @Html.TextBoxFor(x => x.date)
+    @Html.ValidationMessageFor(x => x.date)
+    <br /><br />
+    
+    @Html.LabelFor(x => x.heading)
+    <br />
+    @Html.TextBoxFor(x => x.heading)
+    @Html.ValidationMessageFor(x => x.heading)
+    <br /><br />
+	
+	 @Html.LabelFor(x => x.details)
+    <br />
+    @Html.TextBoxFor(x => x.details)
+    @Html.ValidationMessageFor(x => x.details)
+    <br /><br />  
+    
+    <input type="submit" value="Update" />
+}
+
+<p>
+   @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
+      @Html.ActionLink("Back", "Details","News")
+</p>
+
+@*@section Script{
+    @Scripts.Render("~/bundles/jqueryval")
+    }*@
