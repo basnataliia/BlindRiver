@@ -1,0 +1,44 @@
+﻿@model BlindRiver.Models.service
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+@using (Html.BeginForm()) { 
+    
+  @*  @Html.HiddenFor(x => x.id)*@
+
+    @Html.LabelFor(x => x.service_name)
+    <br />
+    @Html.TextBoxFor(x => x.service_name)
+    @Html.ValidationMessageFor(x => x.service_name)
+    <br /><br />   
+	
+	 @Html.LabelFor(x => x.details)
+    <br />
+    @Html.TextBoxFor(x => x.details)
+    @Html.ValidationMessageFor(x => x.details)
+    <br /><br />  
+    
+    
+    @Html.LabelFor(x => x.photo)
+    <br />
+    @Html.TextBoxFor(x => x.photo)
+    @Html.ValidationMessageFor(x => x.photo)
+    <br /><br />
+    <input type="submit" value="Update" />
+}
+
+<p>
+   @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
+      @Html.ActionLink("Back", "Details","News")
+</p>
+
+@*@section Script{
+    @Scripts.Render("~/bundles/jqueryval")
+    }*@
