@@ -12,21 +12,21 @@
     @Html.ValidationSummary()
         
         @Html.LabelFor(model => model.date)
-        @Html.TextBoxFor(model => model.date)
+        @Html.TextBoxFor(model => model.date,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.date, "*")
     <br /><br />
         
         @Html.LabelFor(model => model.heading)
-        @Html.TextBoxFor(model => model.heading)
+        @Html.TextBoxFor(model => model.heading, new { @class = "form-input"})
         @Html.ValidationMessageFor(model => model.heading, "*")
     <br /><br />
     
         @Html.LabelFor(model => model.details)
-        @Html.TextBoxFor(model => model.details)
+        @Html.TextBoxFor(model => model.details, new { @class = "form-textarea"})
         @Html.ValidationMessageFor(model => model.details, "*")
     <br /><br />
            
-    <input type="submit" value="Insert" /><br />   
+    <button class="apply">@Html.ActionLink("Insert New News", "Insert")</button> 
 }
 @*<p>@Html.ActionLink("Insert", "Insert")</p>*@
 

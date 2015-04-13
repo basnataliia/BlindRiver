@@ -2,9 +2,6 @@
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Delete News:" + @Model.heading;
 }
 
@@ -13,7 +10,7 @@
     <div>
         <input type="submit" value="Delete" />
         <br /><br />
-        @Html.ActionLink("Back", "Delete", new { id=Model.id})
+       <button class="apply">@Html.ActionLink("Back", "Delete", new { id=Model.id})</button> 
 
     </div>
 }

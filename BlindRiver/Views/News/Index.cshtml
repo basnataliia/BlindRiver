@@ -7,7 +7,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>Index</h2>
+<h2>All News </h2>
 <ul>
     <!--displays every news in database-->
     @foreach(var x in Model)
@@ -16,4 +16,4 @@
     }
 </ul>
 <br /><br />    
-<p>@Html.ActionLink("Insert", "Insert")</p>
+<button class="apply">@Html.ActionLink("Insert", "Insert")</button>

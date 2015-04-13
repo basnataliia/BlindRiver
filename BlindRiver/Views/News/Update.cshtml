@@ -15,28 +15,29 @@
 
     @Html.LabelFor(x => x.date)
     <br />
-    @Html.TextBoxFor(x => x.date)
+    @Html.TextBoxFor(x => x.date,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.date)
     <br /><br />
     
     @Html.LabelFor(x => x.heading)
     <br />
-    @Html.TextBoxFor(x => x.heading)
+    @Html.TextBoxFor(x => x.heading,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.heading)
     <br /><br />
 	
 	 @Html.LabelFor(x => x.details)
     <br />
-    @Html.TextBoxFor(x => x.details)
+    @Html.TextBoxFor(x => x.details, new { @class = "form-textarea" })
     @Html.ValidationMessageFor(x => x.details)
     <br /><br />  
     
-    <input type="submit" value="Update" />
+    <button class="apply">@Html.ActionLink("Update News", "index")</button>
+    <button class="apply">@Html.ActionLink("Go Back to All News", "Index")</button>
 }
 
 <p>
    @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
-      @Html.ActionLink("Back", "Details","News")
+      @*@Html.ActionLink("Back", "Details","News")*@
 </p>
 
 @*@section Script{
