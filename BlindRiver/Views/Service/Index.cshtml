@@ -7,13 +7,13 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>Index</h2>
+<h2>Services provided by Blind River hospital to its paitents</h2>
 <ul>
-    <!--displays every news in database-->
+    <!--displays every service in database-->
     @foreach(var x in Model)
     { 
         <li>@Html.ActionLink(x.service_name, "Details", new { id = x.id})</li>
     }
 </ul>
 <br /><br />    
-<p>@Html.ActionLink("Insert", "Insert")</p>
+<button class="apply">@Html.ActionLink("Insert", "Insert")</button>

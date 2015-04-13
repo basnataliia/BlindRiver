@@ -8,37 +8,35 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
+<h2>Update @Model.service_name</h2>
 @using (Html.BeginForm()) { 
     
   @*  @Html.HiddenFor(x => x.id)*@
 
     @Html.LabelFor(x => x.service_name)
     <br />
-    @Html.TextBoxFor(x => x.service_name)
+    @Html.TextBoxFor(x => x.service_name,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.service_name)
     <br /><br />   
 	
 	 @Html.LabelFor(x => x.details)
     <br />
-    @Html.TextBoxFor(x => x.details)
+    @Html.TextBoxFor(x => x.details, new { @class = "form-textarea" })
     @Html.ValidationMessageFor(x => x.details)
     <br /><br />  
     
     
     @Html.LabelFor(x => x.photo)
     <br />
-    @Html.TextBoxFor(x => x.photo)
+    @Html.TextBoxFor(x => x.photo,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.photo)
     <br /><br />
-    <input type="submit" value="Update" />
+   @* <input type="submit" value="Update" />*@
+    <button class="apply">@Html.ActionLink("Update Service", "index")</button>
+    <button class="apply">@Html.ActionLink("Go Back to All Services", "Index")</button>
 }
 
-<p>
-   @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
+@*<p>
+    @Html.ActionLink("Back", "Details", new { id = Model.id})
       @Html.ActionLink("Back", "Details","News")
-</p>
-
-@*@section Script{
-    @Scripts.Render("~/bundles/jqueryval")
-    }*@
+</p>*@

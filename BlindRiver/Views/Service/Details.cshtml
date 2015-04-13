@@ -2,20 +2,17 @@
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Our Service: @Model.service_name</h2>
 
 <p>Date: @Html.DisplayFor(x=>x.service_name)</p><br />
 <p>Heading: @Html.DisplayFor(x=>x.details)</p><br />
 <p>Description: @Html.DisplayFor(x=>x.photo)</p><br />
 
 <p>
-    @Html.ActionLink("Back","Index")|
-      @Html.ActionLink("Update", "Update", new {  id=Model.id}) |
-      @Html.ActionLink("Delete","Delete",new {  id=Model.id})
+    <button class="apply">@Html.ActionLink("Back", "Index")</button> 
+    <button class="apply">@Html.ActionLink("Update", "Update", new {  id=Model.id})</button> 
+    <button class="apply">@Html.ActionLink("Delete", "Delete",new {  id=Model.id})</button>
 </p>
