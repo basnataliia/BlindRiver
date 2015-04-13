@@ -23,6 +23,7 @@
                 <th>Postal Code</th>
                 <th>Volunteer Position Code</th>
                 <th>Resume</th>
+                <th>Update</th>
             </tr>
         </thead>
         @foreach (var Volunteer_Applications in Model)
@@ -39,7 +40,10 @@
                 <td>@Volunteer_Applications.Postal_Code</td>
                 <td>@Volunteer_Applications.Position_Code</td>
                 <td><a href="~/Content/resumes/@Volunteer_Applications.Resume">@Volunteer_Applications.Resume</a></td>
+                <td>@Html.ActionLink("Delete", "AppDelete")</td>
             </tr>
         }
     </table>
+
+
 </div>

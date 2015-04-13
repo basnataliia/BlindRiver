@@ -110,7 +110,7 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //models for public job applications
+        //models for job applications
         Volunteer_Apps objVolApp = new Volunteer_Apps();
         public ActionResult ApplicationAdmin()
         {
@@ -141,6 +141,65 @@ namespace BlindRiver.Controllers
                 {
                     objVolApp.commitInsert(VolApp);
                     return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return View();
+                }
+            }
+            return View();
+        }
+
+        //Update and Delete
+
+        public ActionResult AppDelete(int id)
+        {
+            var VolApp = objVolApp.getAppById(id);
+            if (VolApp == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(VolApp);
+            }
+        }
+        [HttpPost]
+        public ActionResult AppDelete(int id, Volunteer_Application VolApp)
+        {
+            try
+            {
+                objVolApp.commitDelete(id);
+                return RedirectToAction("ApplicationAdmin");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult AppUpdate(int id)
+        {
+            var VolApp = objVolApp.getAppById(id);
+            if (VolApp == null)
+            {
+                return View("NotFound");
+            }
+            else
+            {
+                return View(VolApp);
+            }
+        }
+        [HttpPost]
+        public ActionResult AppUpdate(int id, Volunteer_Application VolApp)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    objVolApp.commitUpdate(id, objVolApp.First_Name, objVolApp.Last_Name);
+                    // return RedirectToAction("Details/" + id);
+                    return RedirectToAction("AppAdmin");
                 }
                 catch
                 {

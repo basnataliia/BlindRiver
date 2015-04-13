@@ -891,6 +891,8 @@
       <DependentUpon>Volunteer_Application.dbml</DependentUpon>
     </None>
     <Content Include="Views\Volunteer\Application.cshtml" />
+    <Content Include="Views\Volunteer\AppDelete.cshtml" />
+    <Content Include="Views\Volunteer\AppUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

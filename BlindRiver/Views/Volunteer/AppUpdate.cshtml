@@ -1,0 +1,32 @@
+﻿@model BlindRiver.Models.Volunteer_Application
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Update";
+}
+<div id="volunteerContainer">
+    <h1>Update Application</h1>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(x => x.id)
+
+        <h3>Position:</h3>
+        @Html.TextBoxFor(model => model.First_Name, new { @class = "vform-input" })
+        <br /><br />
+        <input class="vapply" type="submit" value="Update" />
+
+    }
+    <br /><br />
+    <hr />
+
+    <button class="vapply">@Html.ActionLink("Back", "AppAdmin", new { id = Model.id })</button>
+
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
