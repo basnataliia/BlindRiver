@@ -17,7 +17,7 @@
 <p>Date Of Appoinment: @Html.DisplayFor(x=>x.doa)</p><br />
 <p>Purpose: @Html.DisplayFor(x=>x.purpose)</p>
 <p>
-    @Html.ActionLink("Back","Index","BookApp")|
-      @Html.ActionLink("Update", "Update", new {  id=Model.id}) |
-      @Html.ActionLink("Delete","Delete",new {  id=Model.id})
+    <button class="apply">@Html.ActionLink("Back", "Index")</button> 
+    <button class="apply">@Html.ActionLink("Update", "Update", new {  id=Model.id})</button> 
+    <button class="apply">@Html.ActionLink("Delete", "Delete",new {  id=Model.id})</button>
 </p>

@@ -12,27 +12,27 @@
     @Html.ValidationSummary()
         
         @Html.LabelFor(model => model.name)
-        @Html.TextBoxFor(model => model.name)
+        @Html.TextBoxFor(model => model.name,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.name, "*")
     <br /><br />
         
         @Html.LabelFor(model => model.phone)
-        @Html.TextBoxFor(model => model.phone)
+        @Html.TextBoxFor(model => model.phone,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.phone, "*")
     <br /><br />
     
         @Html.LabelFor(model => model.email)
-        @Html.TextBoxFor(model => model.email)
+        @Html.TextBoxFor(model => model.email,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.email, "*")
     <br /><br />
     
         @Html.LabelFor(model => model.doa)
-        @Html.TextBoxFor(model => model.doa)
+        @Html.TextBoxFor(model => model.doa,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.doa, "*")
     <br /><br />
     
         @Html.LabelFor(model => model.purpose)
-        @Html.TextAreaFor(model => model.purpose)
+        @Html.TextAreaFor(model => model.purpose, new { @class = "form-textarea"})
         @Html.ValidationMessageFor(model => model.purpose, "*")
     <br /><br />
     <input type="submit" value="Insert" /><br />   
