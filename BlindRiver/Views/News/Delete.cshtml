@@ -1,0 +1,17 @@
+﻿@model BlindRiver.Models.news_post
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+    ViewBag.Title = "Delete News:" + @Model.heading;
+}
+
+<h2>Are you Sure you Want to Delete <em>@Model.heading?</em></h2>
+@using (Html.BeginForm()) { 
+    <div>
+        <input type="submit" value="Delete" />
+        <br /><br />
+
+       <button class="apply">@Html.ActionLink("Back", "Delete", new { id=Model.id})</button> 
+
+    </div>
+}

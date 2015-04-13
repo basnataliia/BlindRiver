@@ -1,21 +1,16 @@
-﻿@model BlindRiver.Models.bookApp
+﻿@model BlindRiver.Models.service
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Our Service: @Model.service_name</h2>
 
+<p>Date: @Html.DisplayFor(x=>x.service_name)</p><br />
+<p>Heading: @Html.DisplayFor(x=>x.details)</p><br />
+<p>Description: @Html.DisplayFor(x=>x.photo)</p><br />
 
-<p>Name: @Html.DisplayFor(x=>x.name)</p><br />
-<p>Phone: @Html.DisplayFor(x=>x.phone)</p><br />
-<p>Email: @Html.DisplayFor(x=>x.email)</p><br />
-<p>Date Of Appoinment: @Html.DisplayFor(x=>x.doa)</p><br />
-<p>Purpose: @Html.DisplayFor(x=>x.purpose)</p>
 <p>
     <button class="apply">@Html.ActionLink("Back", "Index")</button> 
     <button class="apply">@Html.ActionLink("Update", "Update", new {  id=Model.id})</button> 

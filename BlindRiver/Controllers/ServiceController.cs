@@ -4,34 +4,36 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//namespace required for file (images are being uploaded) uploads
+using System.IO;
+
 using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
 {
-    public class NewsController : Controller
+    public class ServiceController : Controller
     {
         //
-        // GET: /News/
-        NewsLinq newsObj = new NewsLinq();
+        // GET: /Service/
+        ServiceLinq serviceObj = new ServiceLinq();
 
         public ActionResult Index()
         {
-            //variable=object.fx.
-            var indexObj = newsObj.getNews();
-
+            var indexObj = serviceObj.getService();
             return View(indexObj);
         }
 
         public ActionResult Details(int id)
         {
-            var newsobj = newsObj.getNewsByID(id);
-            if (newsobj == null)
+            var servicesobj = serviceObj.getServiceByID(id);
+
+            if (servicesobj == null)
             {
                 return View("Not Found");
             }
             else
             {
-                return View(newsobj);
+                return View(servicesobj);
             }
         }
 
@@ -42,13 +44,23 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insert(news_post post)
+        public ActionResult Insert(service services, HttpPostedFileBase picLocation)
         {
+            //for pic upload
+            if (picLocation != null && picLocation.ContentLength > 0)
+            {
+                var servicePicName = Path.GetFileName(picLocation.FileName);
+
+                var location = Path.Combine(Server.MapPath("~/Content/servicePics"), servicePicName);
+                picLocation.SaveAs(location);
+                services.photo = servicePicName;
+            }
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    newsObj.commitInsert(post);
+                    serviceObj.commitInsert(services);
                     return RedirectToAction("Index");
                 }
                 catch
@@ -65,23 +77,23 @@ namespace BlindRiver.Controllers
         //delete
         public ActionResult Delete(int id)
         {
-            var newsDel = newsObj.getNewsByID(id);
-            if (newsDel == null)
+            var serviceDel = serviceObj.getServiceByID(id);
+            if (serviceDel == null)
             {
                 return View("Not Found");
             }
             else
             {
-                return View(newsDel);
+                return View(serviceDel);
             }
         }
 
         [HttpPost]
-        public ActionResult Delete(int id, news_post news)
+        public ActionResult Delete(int id, service service)
         {
             try
             {
-                newsObj.commitDelete(id);
+                serviceObj.commitDelete(id);
                 return RedirectToAction("Index");
             }
             catch
@@ -93,25 +105,25 @@ namespace BlindRiver.Controllers
         //update
         public ActionResult Update(int id)
         {
-            var newsUpd = newsObj.getNewsByID(id);
-            if (newsUpd == null)
+            var serviceUpd = serviceObj.getServiceByID(id);
+            if (serviceUpd == null)
             {
                 return View("Not Found");
             }
             else
             {
-                return View(newsUpd);
+                return View(serviceUpd);
             }
         }
 
         [HttpPost]
-        public ActionResult Update(int id, news_post newsUpd)
+        public ActionResult Update(int id, service serviceUpd)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    newsObj.commitUpdate(id, newsUpd.date, newsUpd.heading, newsUpd.details);
+                    serviceObj.commitUpdate(id, serviceUpd.service_name, serviceUpd.details, serviceUpd.photo);
                     return RedirectToAction("Details/" + id);
                 }
                 catch
@@ -120,12 +132,6 @@ namespace BlindRiver.Controllers
                 }
 
             }
-            return View();
-        }
-
-        //not found
-        public ActionResult NotFound()
-        {
             return View();
         }
 

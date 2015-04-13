@@ -1,55 +1,54 @@
 ﻿@model BlindRiver.Models.bookApp
 
-@{
+@{    
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
+<h2>Update Appoinment</h2>
 @using (Html.BeginForm()) { 
     
   @*  @Html.HiddenFor(x => x.id)*@
 
     @Html.LabelFor(x => x.name)
     <br />
-    @Html.TextBoxFor(x => x.name)
+    @Html.TextBoxFor(x => x.name,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.name)
     <br /><br />
     
     @Html.LabelFor(x => x.phone)
     <br />
-    @Html.TextBoxFor(x => x.phone)
+    @Html.TextBoxFor(x => x.phone,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.phone)
     <br /><br />
 	
 	 @Html.LabelFor(x => x.email)
     <br />
-    @Html.TextBoxFor(x => x.email)
+    @Html.TextBoxFor(x => x.email,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.email)
     <br /><br />
     
     @Html.LabelFor(x => x.doa)
     <br />
-    @Html.TextBoxFor(x => x.doa)
+    @Html.TextBoxFor(x => x.doa,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.doa)
     <br /><br />
     
     @Html.LabelFor(x => x.purpose)
     <br />
-    @Html.TextAreaFor(x => x.purpose)
+    @Html.TextAreaFor(x => x.purpose, new { @class = "form-textarea" })
     @Html.ValidationMessageFor(x => x.purpose)
     <br /><br />
     
-    <input type="submit" value="Update" />
+    <button class="apply">@Html.ActionLink("Update Appoitment", "index")</button>
+    <button class="apply">@Html.ActionLink("Go Back to All Appointment", "Index")</button>
+
 }
 
-<p>
-   @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
-      @Html.ActionLink("Back", "Details","BookApp")
-</p>
+@*<p>
+    @Html.ActionLink("Back", "Details", new { id = Model.id})
+    @Html.ActionLink("Back", "Details","BookApp")
+</p>*@
 
 @*@section Script{
     @Scripts.Render("~/bundles/jqueryval")

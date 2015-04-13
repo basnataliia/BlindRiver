@@ -8,22 +8,22 @@ using System.ComponentModel;
 using System.Web.Mvc;
 namespace BlindRiver.Models
 {
-    [MetadataType(typeof(newsValidation))]
-    public partial class news_post { }
 
-    public class newsValidation
+    [MetadataType(typeof(serviceValidation))]
+    public partial class service { }
+
+    public class serviceValidation
     {
-        [DisplayName("Date: ")]
+        [DisplayName("Service Name: ")]
         [Required]
-        public DateTime date { get; set; }
-
-        [DisplayName("Heading: ")]
-        [Required]
-        public string heading { get; set; }
+        public string service_name { get; set; }
 
         [DisplayName("Description: ")]
         [Required]
         public string details { get; set; }
 
+        [DisplayName("Photo: ")]
+        [Required]
+        public string photo { get; set; }
     }
 }

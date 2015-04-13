@@ -1,0 +1,19 @@
+﻿@model IEnumerable<BlindRiver.Models.news_post>
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>All News </h2>
+<ul>
+    <!--displays every news in database-->
+    @foreach(var x in Model)
+    { 
+        <li>@Html.ActionLink(x.heading, "Details", new { id = x.id})</li>
+    }
+</ul>
+<br /><br />    
+<button class="apply">@Html.ActionLink("Insert", "Insert")</button>
