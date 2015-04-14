@@ -13,26 +13,32 @@
     <div class="admin-input">
     @Html.LabelFor(x =>x.title, "Job Title: ")
     @Html.TextBoxFor(x=>x.title, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.title, "*Required")
     </div>
 <div class="admin-input">
     @Html.LabelFor(x =>x.department, "Department: ")
     @Html.TextBoxFor(x=>x.department, new { @class = "form-input" })
+    @Html.ValidationMessageFor(model => model.department, "*Required")
     </div>
 <div class="admin-input">
     @Html.LabelFor(x =>x.description, "Job Description: ")
     @Html.TextAreaFor(x=>x.description, new { @class = "form-input ckeditor" })
+    @Html.ValidationMessageFor(model => model.description, "*Required")
     </div>
 <div class="admin-input">
     @Html.LabelFor(x =>x.jobtype, "Job Type: ")
     @Html.TextBoxFor(x=>x.jobtype, new { @class = "form-input" })
+    @Html.ValidationMessageFor(model => model.jobtype, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(x =>x.location, "Location: ")
     @Html.TextBoxFor(x=>x.location, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.location, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(x =>x.jobcode, "Job Code: ")
     @Html.TextBoxFor(x=>x.jobcode, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.jobcode, "*Required")
     </div>
     <input type="submit" value="Update Job Opportunity" />
 }
@@ -40,3 +46,7 @@
 <script>
     CKEDITOR.replace('ckeditor');
 </script>
+
+@section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
