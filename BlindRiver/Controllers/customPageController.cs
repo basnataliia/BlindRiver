@@ -13,6 +13,7 @@ namespace BlindRiver.Controllers
     public class customPageController : Controller
     {
         custompages objPage = new custompages();
+        //Models.custompages objPage = new custompages();
 
         [Authorize(Users = "admin")]
         public ActionResult Index()
@@ -129,12 +130,13 @@ namespace BlindRiver.Controllers
                     objPage.updatePage(id, page.title, page.body, page.img, page.published);
                     return RedirectToAction("Index");
                 }
-                catch
+                catch(Exception x)
                 {
-                    return View();
+                    var message = x.Message;
+                    return View(page);
                 }
             }
-            return View();
+            return View(page);
         }
     }
 }

@@ -11,6 +11,9 @@
 @using (Html.BeginForm("UpdatePage", "customPage", FormMethod.Post, new { enctype = "multipart/form-data" }))
 { 
     @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.img)
+    @Html.HiddenFor(x => x.published)
+    
     <div class="admin-input">
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-input" })

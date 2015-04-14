@@ -241,6 +241,7 @@
       <DependentUpon>customPage.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\custompages.cs" />
+    <Compile Include="Models\custompagesValidation.cs" />
     <Compile Include="Models\doctors.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
