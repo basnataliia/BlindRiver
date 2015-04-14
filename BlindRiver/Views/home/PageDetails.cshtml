@@ -5,5 +5,5 @@
 
 <div id="doctorsContainer">
 <h1>@Model.title</h1>
-<p><img class="customPageImg" src="~/Content/Images/@Model.img" alt="" />@Model.body</p>
+<p><img class="customPageImg" src="~/Content/Images/@Model.img" alt="" />@Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.body))</p>
     </div>

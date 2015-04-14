@@ -11,7 +11,7 @@
     @Html.ValidationSummary()
         
         @Html.LabelFor(model => model.date)
-        @Html.TextBoxFor(model => model.date,new { @class = "form-input" })
+        @Html.TextBoxFor(model => model.date,new { @id = "datepicker"})
         @Html.ValidationMessageFor(model => model.date, "*")
     <br /><br />
         
@@ -21,7 +21,7 @@
     <br /><br />
     
         @Html.LabelFor(model => model.details)
-        @Html.TextBoxFor(model => model.details, new { @class = "form-textarea"})
+        @Html.TextAreaFor(model => model.details, new { @class = "form-textarea"})
         @Html.ValidationMessageFor(model => model.details, "*")
     <br /><br />
            
@@ -32,3 +32,11 @@
     
     }
     </div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>

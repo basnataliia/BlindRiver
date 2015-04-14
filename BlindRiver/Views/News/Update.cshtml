@@ -24,11 +24,11 @@
 	
 	 @Html.LabelFor(x => x.details)
     <br />
-    @Html.TextBoxFor(x => x.details, new { @class = "form-textarea" })
+    @Html.TextAreaFor(x => x.details, new { @class = "form-textarea" })
     @Html.ValidationMessageFor(x => x.details)
     <br /><br />  
     
-    <button class="apply">@Html.ActionLink("Update News", "index")</button>
+    <button class="apply">@Html.ActionLink("Update News", "Index")</button>
     <button class="apply">@Html.ActionLink("Go Back to All News", "Index")</button>
 }
 

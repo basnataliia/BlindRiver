@@ -2,9 +2,6 @@
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Insert New Service Post";
 }
 
@@ -31,7 +28,7 @@
         @Html.ValidationMessageFor(model => model.photo, "*")
     <br /><br />
 
-       <input type="submit" class="button-blue" value="Insert" /><br />
+      <input type="submit" class="button-blue" value="Insert" /><br />
     
     @*<button class="apply">@Html.ActionLink("Back to Jobs", "index")</button>*@
     @*<input class="apply" type="submit" value="Insert" /><br />*@   

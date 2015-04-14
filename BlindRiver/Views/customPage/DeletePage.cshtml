@@ -1,0 +1,16 @@
+﻿@model BlindRiver.Models.custompage
+
+@{
+    ViewBag.Title = "DeletePage";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Delete this page?</h2>
+@*<h2>@Model.title</h2>*@
+@*<img alt="doctor" style="max-width:400px;" src="@Url.Content(@"~/Content/Images/" + (Model.img))" />*@
+
+@using (Html.BeginForm("DeletePage", "customPage"))
+{ 
+    <input type="submit" value="Delete Page" onclick="return confirm('Confirm page delete?')" />
+    <p>@Html.ActionLink("Back", "Index")</p>
+}

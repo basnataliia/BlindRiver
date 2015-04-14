@@ -997,6 +997,23 @@ footer .f-menu{
     }
 }
 
+/*serive public page styles*/
+#service_public {
+
+}
+/*end of service public page styles*/
+
+/*news public page styles*/
+#news_public {
+}
+/*end of news public page styles*/
+
+/*bookapp public page styles*/
+#book-public {
+    padding-left: 110px;
+}
+/*end of book public page styles*/
+
 /* Media Queries - Responsiveness*/
 @media screen and (max-width: 1170px) {
     #hamburger-container {
@@ -1101,6 +1118,5 @@ footer .f-menu{
     }
     footer {
         height:150px;
-    }
-    
+    }   
 }

@@ -36,7 +36,7 @@ namespace BlindRiver.Models
         }
 
         //delete page
-        public bool deletePage(int _id)
+        public bool DeletePage(int _id)
         {
             using (objCustPage)
             {
@@ -48,7 +48,7 @@ namespace BlindRiver.Models
         }
 
         //update existing custom page
-        public bool updatePage(int _id, string _title, string _body, string _img, string _published)
+        public bool updatePage(int _id, string _title, string _body, string _img, string _pub)
         {
             using (objCustPage)
             {
@@ -56,7 +56,7 @@ namespace BlindRiver.Models
                 objUpPage.title = _title;
                 objUpPage.body = _body;
                 objUpPage.img = _img;
-                objUpPage.published = _published;
+                objUpPage.published = _pub;
                 objCustPage.SubmitChanges();
                 return true;
             }

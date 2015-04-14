@@ -1,0 +1,13 @@
+﻿@model BlindRiver.Models.careeropp
+
+@{
+    ViewBag.Title = "DeleteOpp";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Confirm delete of @Model.title (@Model.jobcode)?</h2>
+
+@using (Html.BeginForm()) { 
+    <input type="submit" value="Delete Opportunity" onclick="return confirm('Confirm delete?')" />
+    <p>@Html.ActionLink("Back", "JobOpportunitiesManager")</p>
+}

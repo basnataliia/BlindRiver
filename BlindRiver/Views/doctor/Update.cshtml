@@ -11,32 +11,32 @@
     @Html.HiddenFor(x => x.Id)
     <div class="admin-input">
     @Html.LabelFor(x => x.firstName)
-    @Html.TextBoxFor(x => x.firstName)
+    @Html.TextBoxFor(x => x.firstName, new { @class = "form-input" })
      @Html.ValidationMessageFor(model => model.firstName, "*Required")
     </div>
         <div class="admin-input">
     @Html.LabelFor(x => x.lastName)
-    @Html.TextBoxFor(x => x.lastName)
+    @Html.TextBoxFor(x => x.lastName, new { @class = "form-input" })
     @Html.ValidationMessageFor(model => model.lastName, "*Required")
     </div>
         <div class="admin-input">
     @Html.LabelFor(x => x.title)
-    @Html.TextBoxFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-input" })
     @Html.ValidationMessageFor(model => model.title, "*Required")
     </div>
         <div class="admin-input">
     @Html.LabelFor(x => x.department)
-    @Html.TextBoxFor(x => x.department)
+    @Html.TextBoxFor(x => x.department, new { @class = "form-input" })
     @Html.ValidationMessageFor(model => model.department, "*Required")
     </div>
         <div class="admin-input">
     @Html.LabelFor(x => x.email)
-    @Html.TextBoxFor(x => x.email)
+    @Html.TextBoxFor(x => x.email, new { @class = "form-input" })
     @Html.ValidationMessageFor(model => model.email, "*Please enter a valid email")
     </div>
         <div class="admin-input">
     @Html.LabelFor(x => x.phone)
-    @Html.TextBoxFor(x => x.phone)
+    @Html.TextBoxFor(x => x.phone, new { @class = "form-input" })
     @Html.ValidationMessageFor(model => model.phone, "*Please enter a valid phone number")
     </div>
     <div class="admin-input">

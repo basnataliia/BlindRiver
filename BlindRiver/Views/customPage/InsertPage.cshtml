@@ -1,0 +1,35 @@
+﻿@model BlindRiver.Models.custompage
+@{
+    ViewBag.Title = "InsertPage";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<script src="~/ckeditor/ckeditor.js"></script>
+
+<h2>Insert New Web Page</h2>
+
+@using (Html.BeginForm("InsertPage", "customPage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="admin-input">
+    @Html.LabelFor(model => model.title, "Page Title: ")
+    @Html.TextBoxFor(model => model.title, new { @class = "form-input" })
+    </div>
+    <div class="admin-input">
+    @Html.LabelFor(model => model.body, "Page Body: ")
+    @Html.TextAreaFor(model => model.body, new { @class = "form-input ckeditor" })
+    </div>
+    <div class="admin-input">
+    <p>Page Main Image: <input type="file" name="img" /></p>
+    </div>
+    <input type="submit" value="Create Page" onclick="return confirm('Confirm Create New Page?')" />
+}
+
+<h2>@Html.ActionLink("Back", "Index")</h2>
+@section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+<script>
+    CKEDITOR.replace('ckeditor');
+</script>
