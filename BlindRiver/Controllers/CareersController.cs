@@ -11,6 +11,7 @@ using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
 {
+    [ValidateInput(false)] //do not validate natively so HTML can be inputted with ckeditor
     public class CareersController : Controller
     {
         //models for career opportunities
@@ -148,6 +149,33 @@ namespace BlindRiver.Controllers
                 }
             }
             return View();
+        }
+
+        public ActionResult DeleteOpp(int id)
+        {
+            var opp = objCareer.getCareerById(id);
+            if (opp == null)
+            {
+                return View("NoFound");
+            }
+            else
+            {
+                return View(opp);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult DeleteOpp(int id, careeropp opp)
+        {
+            try
+            {
+                objCareer.deleteOpp(id);
+                return RedirectToAction("JobOpportunitiesManager");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
     }
