@@ -4,7 +4,7 @@
     ViewBag.Title = "Book An Appointment";
 }
 
-<div id="book-insert">
+<div id="book-public">
 
 <h1>Book An Appointment</h1>
 <h4>Request 2 days in advance </h4>
@@ -17,6 +17,7 @@
         @Html.TextBoxFor(model => model.name,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.name, "*")
     <br /><br />
+    
         
         <label>Phone:</label>
         @Html.TextBoxFor(model => model.phone,new { @class = "form-input" })
@@ -29,7 +30,7 @@
     <br /><br />
     
         <label>Date Of Appoinment:</label>
-        @Html.TextBoxFor(model => model.doa,new { @class = "form-input" })
+        @Html.TextBoxFor(model => model.doa,new { @class = "form-input",@id="datepicker"})
         @Html.ValidationMessageFor(model => model.doa, "*")
     <br /><br />
     
@@ -46,3 +47,11 @@
     
     }
     </div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>

@@ -196,7 +196,9 @@
     <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomepageModuleController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\newsPublicController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\servicePublicController.cs" />
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -749,14 +751,14 @@
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
-    <Content Include="Models\services.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>services.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Models\NewsPosts.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>NewsPosts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Models\services.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>services.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Models\slider.dbml.layout">
@@ -916,6 +918,8 @@
     <Content Include="Views\Service\Insert.cshtml" />
     <Content Include="Views\Service\Delete.cshtml" />
     <Content Include="Views\Service\Update.cshtml" />
+    <Content Include="Views\servicePublic\Index.cshtml" />
+    <Content Include="Views\newsPublic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -955,13 +959,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\services.dbml.layout">
-      <DependentUpon>services.dbml</DependentUpon>
+    <None Include="Models\NewsPosts.dbml.layout">
+      <DependentUpon>NewsPosts.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\NewsPosts.dbml.layout">
-      <DependentUpon>NewsPosts.dbml</DependentUpon>
+    <None Include="Models\services.dbml.layout">
+      <DependentUpon>services.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

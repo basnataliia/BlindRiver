@@ -197,7 +197,7 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
-                    objVolApp.commitUpdate(id, objVolApp.First_Name, objVolApp.Last_Name);
+                    //objVolApp.commitUpdate(id, objVolApp.First_Name, objVolApp.Last_Name);
                     // return RedirectToAction("Details/" + id);
                     return RedirectToAction("AppAdmin");
                 }

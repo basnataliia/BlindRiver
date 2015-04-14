@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BlindRiver.Models.news_post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>News</h1>
+
+<div id="news_public">
+@foreach (var x in Model)
+{
+    <h3>@Html.DisplayFor(m=>x.date)</h3>
+    <h3>@Html.DisplayFor(m=>x.heading)</h3>
+    <p>@Html.DisplayFor(m=>x.details)</p>
+}
+</div>

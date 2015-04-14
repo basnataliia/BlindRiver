@@ -4,9 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-//namespace required for file (images are being uploaded) uploads
-using System.IO;
-
 using BlindRiver.Models;
 
 namespace BlindRiver.Controllers
@@ -44,19 +41,9 @@ namespace BlindRiver.Controllers
         }
 
         [HttpPost]
-        public ActionResult Insert(service services, HttpPostedFileBase picLocation)
+        public ActionResult Insert(service services)
         {
-            //for pic upload
-            if (picLocation != null && picLocation.ContentLength > 0)
-            {
-                var servicePicName = Path.GetFileName(picLocation.FileName);
-
-                var location = Path.Combine(Server.MapPath("~/Content/servicePics"), servicePicName);
-                picLocation.SaveAs(location);
-                services.photo = servicePicName;
-            }
-
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
                 try
                 {
