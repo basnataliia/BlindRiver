@@ -4,38 +4,40 @@
     ViewBag.Title = "Book An Appointment";
 }
 
-<h2>Book An Appointment</h2>
+<div id="book-insert">
+
+<h1>Book An Appointment</h1>
 <h4>Request 2 days in advance </h4>
 
 @using (Html.BeginForm()) { 
     
     @Html.ValidationSummary()
         
-        @Html.LabelFor(model => model.name)
+        <label>Name: </label>
         @Html.TextBoxFor(model => model.name,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.name, "*")
     <br /><br />
         
-        @Html.LabelFor(model => model.phone)
+        <label>Phone:</label>
         @Html.TextBoxFor(model => model.phone,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.phone, "*")
     <br /><br />
     
-        @Html.LabelFor(model => model.email)
+        <label>Email:</label>
         @Html.TextBoxFor(model => model.email,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.email, "*")
     <br /><br />
     
-        @Html.LabelFor(model => model.doa)
+        <label>Date Of Appoinment:</label>
         @Html.TextBoxFor(model => model.doa,new { @class = "form-input" })
         @Html.ValidationMessageFor(model => model.doa, "*")
     <br /><br />
     
-        @Html.LabelFor(model => model.purpose)
+        <label>Purpose:</label>
         @Html.TextAreaFor(model => model.purpose, new { @class = "form-textarea"})
         @Html.ValidationMessageFor(model => model.purpose, "*")
     <br /><br />
-    <input type="submit" value="Insert" /><br />   
+    <input type="submit" class="button-blue" value="Insert" /><br />   
 }
 @*<p>@Html.ActionLink("Insert", "Insert")</p>*@
 
@@ -43,3 +45,4 @@
     @Scripts.Render("~/bundles/jqueryval")
     
     }
+    </div>

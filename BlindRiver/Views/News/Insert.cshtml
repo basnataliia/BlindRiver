@@ -4,9 +4,8 @@
     ViewBag.Title = "Insert New News Post";
 }
 
+<div id="news-insert">
 <h2>Insert New News Post</h2>
-
-
 @using (Html.BeginForm()) { 
     
     @Html.ValidationSummary()
@@ -26,11 +25,10 @@
         @Html.ValidationMessageFor(model => model.details, "*")
     <br /><br />
            
-    <button class="apply">@Html.ActionLink("Insert New News", "Insert")</button> 
+    <input type="submit" class="button-blue" value="Insert" /><br />   
 }
-@*<p>@Html.ActionLink("Insert", "Insert")</p>*@
-
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
     
     }
+    </div>

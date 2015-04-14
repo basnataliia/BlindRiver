@@ -749,14 +749,14 @@
     <None Include="Models\menulinks.dbml.layout">
       <DependentUpon>menulinks.dbml</DependentUpon>
     </None>
-    <Content Include="Models\NewsPosts.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>NewsPosts.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Models\services.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>services.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Models\NewsPosts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>NewsPosts.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Models\slider.dbml.layout">
@@ -935,11 +935,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\NewsPosts.dbml.layout">
-      <DependentUpon>NewsPosts.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Models\doctors.dbml.layout">
       <DependentUpon>doctors.dbml</DependentUpon>
     </None>
@@ -962,6 +957,11 @@
   <ItemGroup>
     <None Include="Models\services.dbml.layout">
       <DependentUpon>services.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\NewsPosts.dbml.layout">
+      <DependentUpon>NewsPosts.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>

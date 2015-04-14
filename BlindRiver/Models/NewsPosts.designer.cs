@@ -23,7 +23,7 @@ namespace BlindRiver.Models
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_9B4CDA_webdevelopment")]
-	public partial class NewsLinqDataContext : System.Data.Linq.DataContext
+	public partial class NewsPostsDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace BlindRiver.Models
     partial void Deletenews_post(news_post instance);
     #endregion
 		
-		public NewsLinqDataContext() : 
+		public NewsPostsDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9B4CDA_webdevelopmentConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public NewsLinqDataContext(string connection) : 
+		public NewsPostsDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public NewsLinqDataContext(System.Data.IDbConnection connection) : 
+		public NewsPostsDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public NewsLinqDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public NewsPostsDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public NewsLinqDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public NewsPostsDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -107,7 +107,7 @@ namespace BlindRiver.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id
 		{
 			get

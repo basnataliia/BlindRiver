@@ -8,9 +8,10 @@
     ViewBag.Title = "Insert New Service Post";
 }
 
+<div id="serive_insert">
+
 <h2>Insert New Service</h2>
 
-<div id="serive_insert">
 @using (Html.BeginForm()) { 
     
     @Html.ValidationSummary()
@@ -30,8 +31,7 @@
         @Html.ValidationMessageFor(model => model.photo, "*")
     <br /><br />
 
-    <button class="apply">@Html.ActionLink("Insert New Service", "Insert")</button>
-
+       <input type="submit" class="button-blue" value="Insert" /><br />
     
     @*<button class="apply">@Html.ActionLink("Back to Jobs", "index")</button>*@
     @*<input class="apply" type="submit" value="Insert" /><br />*@   

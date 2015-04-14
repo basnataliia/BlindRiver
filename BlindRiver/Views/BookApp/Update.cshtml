@@ -10,31 +10,31 @@
     
   @*  @Html.HiddenFor(x => x.id)*@
 
-    @Html.LabelFor(x => x.name)
+    <label>Name:</label>
     <br />
     @Html.TextBoxFor(x => x.name,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.name)
     <br /><br />
     
-    @Html.LabelFor(x => x.phone)
+    <label>Phone:</label>
     <br />
     @Html.TextBoxFor(x => x.phone,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.phone)
     <br /><br />
 	
-	 @Html.LabelFor(x => x.email)
+	<label>Email:</label>
     <br />
     @Html.TextBoxFor(x => x.email,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.email)
     <br /><br />
     
-    @Html.LabelFor(x => x.doa)
+    <label>Date Of Appoinment:</label>
     <br />
     @Html.TextBoxFor(x => x.doa,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.doa)
     <br /><br />
     
-    @Html.LabelFor(x => x.purpose)
+    <label>Purpose:</label>
     <br />
     @Html.TextAreaFor(x => x.purpose, new { @class = "form-textarea" })
     @Html.ValidationMessageFor(x => x.purpose)

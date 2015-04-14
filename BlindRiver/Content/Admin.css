@@ -214,13 +214,7 @@ padding: 8px 11px;
     max-width:600px;
 }
 
-
 /* END Styles for image gallery - admin side*/
-
-
-
-
-
 
 /*Styles for Contact messages - admin*/
 .cm-table
@@ -274,3 +268,46 @@ padding: 8px 11px;
 }
 
 /*END Styles form locations manager*/
+
+/*servicepage style*/
+#service-upd {
+    padding-left:20px;
+}
+
+#serive_insert {
+    padding-left:20px;
+}
+
+#service-index {
+    padding-left:20px;
+}
+
+#service-detail {
+    padding-left:20px;
+}
+/*end of service page styles*/
+
+/*news pages styles*/
+#news-index {
+    padding-left:20px;
+}
+
+#news-update {
+    padding-left:20px;
+}
+
+#news-insert {
+    padding-left:20px;
+}
+
+#news-details {
+    padding-left:20px;
+}
+/*end of news page styles*/
+
+/*bookapp page styles*/
+#book-insert {
+    padding-left:110px;
+}
+
+/*end of bookapp styles*/

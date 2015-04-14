@@ -2,11 +2,9 @@
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Delete News:" + @Model.service_name;
 }
+<div id="service-delete">
 
 <h2>Are you Sure you Want to Delete <em>@Model.service_name?</em></h2>
 @using (Html.BeginForm()) { 
@@ -17,3 +15,5 @@
 
     </div>
 }
+
+</div>

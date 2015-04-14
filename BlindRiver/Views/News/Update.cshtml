@@ -2,12 +2,9 @@
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
-}
-
-@{
     ViewBag.Title = "Update";
 }
-
+<div id="news-update">
 <h2>Update</h2>
 @using (Html.BeginForm()) { 
     
@@ -39,7 +36,7 @@
    @* @Html.ActionLink("Back", "Details", new { id = Model.id})*@
       @*@Html.ActionLink("Back", "Details","News")*@
 </p>
-
+</div>
 @*@section Script{
     @Scripts.Render("~/bundles/jqueryval")
     }*@

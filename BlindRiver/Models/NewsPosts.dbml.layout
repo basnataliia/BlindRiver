@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="NewsLinq">
-  <DataContextMoniker Name="/NewsLinqDataContext" />
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="NewsPosts">
+  <DataContextMoniker Name="/NewsPostsDataContext" />
   <nestedChildShapes>
-    <classShape Id="804521a5-27c7-48c1-a322-634d3977ff25" absoluteBounds="4.625, 1.625, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/NewsLinqDataContext/news_post" />
+    <classShape Id="8aeb1cad-a27e-4295-92c1-33857b7220fc" absoluteBounds="2.375, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/NewsPostsDataContext/news_post" />
       <nestedChildShapes>
-        <elementListCompartment Id="722324af-98f0-4148-b62d-5a54b701fac3" absoluteBounds="4.64, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f0f9c820-0128-43ae-830a-212a826e7ca8" absoluteBounds="2.39, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
