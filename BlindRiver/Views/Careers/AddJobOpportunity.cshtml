@@ -3,36 +3,43 @@
     ViewBag.Title = "AddJobOpportunity";
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
+<script src="~/ckeditor/ckeditor.js"></script>
 
 <h2>Add New Job Opportunity</h2>
 <p>(*job will automatically be posted live on site on submit)</p>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("AddJobOpportunity", "Careers", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
     <div class="admin-input">
     @Html.LabelFor(model => model.title, "Title: ")
-    @Html.TextBoxFor(model => model.title)
+    @Html.TextBoxFor(model => model.title, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.title, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(model => model.department, "Department: ")
-    @Html.TextBoxFor(model => model.department)
+    @Html.TextBoxFor(model => model.department, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.department, "*Required")
     </div>
         <div class="admin-input">
     @Html.LabelFor(model => model.description, "Job Description: ")
-    @Html.TextAreaFor(model => model.description)
+    @Html.TextAreaFor(model => model.description, new { @class = "form-input ckeditor"})
+            @Html.ValidationMessageFor(model => model.description, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(model => model.jobtype, "Job Type (full or part time): ")
-    @Html.TextBoxFor(model => model.jobtype)
+    @Html.TextBoxFor(model => model.jobtype, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.jobtype, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(model => model.location, "Location: ")
-    @Html.TextBoxFor(model => model.location)
+    @Html.TextBoxFor(model => model.location, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.location, "*Required")
     </div>
     <div class="admin-input">
     @Html.LabelFor(model => model.jobcode, "Job Code: ")
-    @Html.TextBoxFor(model => model.jobcode)
+    @Html.TextBoxFor(model => model.jobcode, new { @class = "form-input" })
+        @Html.ValidationMessageFor(model => model.jobcode, "*Required")
     </div>
     <input type="submit" value="Add New Job" onclick="return confirm('Confirm new job opportunity?')" />
 }
@@ -41,3 +48,7 @@
 @section Scripts{
         @Scripts.Render("~/bundles/jqueryval")
     }
+
+<script>
+    CKEDITOR.replace('ckeditor');
+</script>
