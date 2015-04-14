@@ -1,0 +1,39 @@
+﻿@model BlindRiver.Models.custompage
+@{
+    ViewBag.Title = "UpdatePage";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<script src="~/ckeditor/ckeditor.js"></script>
+
+<h2>Update Page:</h2>
+
+@using (Html.BeginForm("UpdatePage", "customPage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    @Html.HiddenFor(x => x.Id)
+    <div class="admin-input">
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-input" })
+    </div>
+        <div class="admin-input">
+    @Html.LabelFor(x => x.body)
+    @Html.TextAreaFor(x => x.body, new { @class = "form-input ckeditor"})
+    </div>
+    <div class="admin-input">
+        <p>Current Thumbnail and Main Image (image will appear on right of pages):</p><img alt="doctor" style="max-width:400px;" src="@Url.Content(@"~/Content/Images/" + (Model.img))" />
+    </div>
+    <div class="admin-input">
+    <p>Replace Image: <input type="file" name="imgPath" /></p>
+    </div>
+    <input type="submit" value="Update Page" />
+}
+
+<h2>@Html.ActionLink("Back", "Index")</h2>
+
+@section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+<script>
+    CKEDITOR.replace('ckeditor');
+</script>

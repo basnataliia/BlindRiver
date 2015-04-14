@@ -1,9 +1,12 @@
 ﻿@model IEnumerable<BlindRiver.Models.custompage>
 @{
     ViewBag.Title = "customPages";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
 }   
 
-
+<h1>Web Page Manager</h1>
+<h2>@Html.ActionLink("Create New Page", "InsertPage")</h2>
+<h3>Current live web pages:</h3>
 <div class="hp-main-module">
         @foreach (var custpage in Model)
         {
@@ -13,16 +16,19 @@
             
             <div class="hp-module">
                     <div class="wrapper-image">
-                        <div data-content="Visit this page" class="module-img">
+                        <div data-content="Visit this page" class="module-img cropped">
                             @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                             <img src="@Url.Content(@"~/Content/Images/" + (custpage.img))" alt="module" />
 
                         </div>
                     </div>
                 <div class="module-details">
+                    <h3>@custpage.title</h3>
                     <h3>
-                        @Html.ActionLink(custpage.title, "PageDetails", new { id = custpage.Id })
+                        @Html.ActionLink("View Page", "PageDetails", new { id = custpage.Id })
                     </h3>
+                    <h3>@Html.ActionLink("Edit this page", "UpdatePage", new {id = custpage.Id })</h3>
+                    <h3>@Html.ActionLink("Delete this page", "DeletePage", new {id = custpage.Id })</h3>
                                  
                 </div>
                 

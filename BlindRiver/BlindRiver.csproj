@@ -920,6 +920,12 @@
     <Content Include="Views\Service\Update.cshtml" />
     <Content Include="Views\servicePublic\Index.cshtml" />
     <Content Include="Views\newsPublic\Index.cshtml" />
+    <Content Include="Views\customPage\DeletePage.cshtml" />
+    <Content Include="Views\customPage\Edit.cshtml" />
+    <Content Include="Views\customPage\Error.cshtml" />
+    <Content Include="Views\customPage\error2.cshtml" />
+    <Content Include="Views\customPage\InsertPage.cshtml" />
+    <Content Include="Views\customPage\UpdatePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
