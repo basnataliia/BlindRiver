@@ -6,7 +6,7 @@
 <div id="doctorsContainer">
 <h2>Career Opportunities - @Html.DisplayFor(x=>x.title)</h2>
     <h3>@Html.DisplayFor(x=>x.title)</h3>
-    <h4>Job Description:</h4><p>@Html.DisplayFor(x=>x.description)</p>
+    <h4>Job Description:</h4><p>@Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.description))</p>
     <h4>Job Type: </h4><p>@Html.DisplayFor(x=>x.jobtype)</p>
     <h4>Department: </h4><p>@Html.DisplayFor(x=>x.department)</p>
     <h4>Location: </h4><p>@Html.DisplayFor(x=>x.location)</p>
