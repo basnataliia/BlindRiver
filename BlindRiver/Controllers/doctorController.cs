@@ -22,6 +22,7 @@ namespace BlindRiver.Controllers
             return View(allDocs);
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
@@ -52,6 +53,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult Manager() {
             var doc = objDoc.getDocs();
             return View(doc);
@@ -70,6 +72,7 @@ namespace BlindRiver.Controllers
         //    }
         //}
 
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var doc = objDoc.getDocById(id);
@@ -95,11 +98,13 @@ namespace BlindRiver.Controllers
             }
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult NoFound()
         {
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id) {
             var doc = objDoc.getDocById(id);
             if (doc == null)

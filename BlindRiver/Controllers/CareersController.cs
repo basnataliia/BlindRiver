@@ -73,21 +73,25 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult JobOpportunitiesManager() {
             var opps = objCareer.getOpps();
             return View(opps);
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult JobApplicationsManager()
         {
             var apps = objApp.getApps();
             return View(apps);
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult CareerManager() {
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult ApplicationDetails(int id) {
             var application = objApp.getAppById(id);
             if (application == null)
@@ -100,6 +104,7 @@ namespace BlindRiver.Controllers
             }
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult AddJobOpportunity() {
             return View();
         }
@@ -121,6 +126,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult EditJobOpportunity(int id) {
             var opp = objCareer.getCareerById(id);
             if (opp == null)
@@ -151,6 +157,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult DeleteOpp(int id)
         {
             var opp = objCareer.getCareerById(id);

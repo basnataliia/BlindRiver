@@ -14,7 +14,7 @@ namespace BlindRiver.Controllers
     {
         custompages objPage = new custompages();
 
-
+        [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var pages = objPage.getPages();
@@ -34,6 +34,7 @@ namespace BlindRiver.Controllers
             }
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult InsertPage()
         {
             return View();
@@ -65,6 +66,7 @@ namespace BlindRiver.Controllers
             return View("InsertPage");
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult DeletePage(int id)
         {
             var doc = objPage.getPageById(id);
@@ -93,6 +95,7 @@ namespace BlindRiver.Controllers
             }
         }
 
+        [Authorize(Users = "admin")]
         public ActionResult UpdatePage(int id)
         {
             var page = objPage.getPageById(id);
