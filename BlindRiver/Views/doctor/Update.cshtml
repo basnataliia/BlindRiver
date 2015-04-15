@@ -9,6 +9,7 @@
 @using (Html.BeginForm("Update", "doctor", FormMethod.Post, new { enctype = "multipart/form-data" }))
 { 
     @Html.HiddenFor(x => x.Id)
+    @Html.HiddenFor(x => x.image)
     <div class="admin-input">
     @Html.LabelFor(x => x.firstName)
     @Html.TextBoxFor(x => x.firstName, new { @class = "form-input" })
