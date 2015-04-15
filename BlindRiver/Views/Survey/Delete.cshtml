@@ -1,0 +1,28 @@
+﻿@model BlindRiver.Models.Survey
+
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Delete";
+}
+    @using (Html.BeginForm())
+    {
+        <h1>Are you sure you want to delete the following entry? </h1><br />
+        <h1>@Model.Questions</h1>
+
+        <h4>Answers:</h4>
+        @Model.Answers
+
+        <br /><br />
+
+        <input class="vapply" type="submit" value="Delete" />
+        <br /><br />
+        <hr />
+    }
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

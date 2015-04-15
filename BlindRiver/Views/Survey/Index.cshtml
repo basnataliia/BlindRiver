@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BlindRiver.Models.Survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h1>Blind River Hospital Survey</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(model => model.Questions)
+    @Html.TextBoxFor(model => model.Answers)
+
+    @*foreach (var Surveys in Model)
+    {
+        @Html.RadioButtonFor(model => Surveys.Questions, "oh") @:Immediate Needs
+        @Html.RadioButtonFor(model => Surveys.Questions, "hi") @:Blah Needs
+
+    }
+
+    foreach (var Surveys in Model)
+    {
+        @Html.RadioButtonFor(model => Surveys.Answers, "oh") @:Immediate Needs
+        @Html.RadioButtonFor(model => Surveys.Answers, "hi") @:Blah Needs
+
+    }*@
+
+    <input class="vapply" type="submit" value="Insert" />
+
+}
+
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

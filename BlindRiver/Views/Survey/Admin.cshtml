@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BlindRiver.Models.Survey>
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+
+<h1>Blind River Hospital Survey</h1>
+
+<table class="cm-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    @foreach (var Surveys in Model)
+    {
+        <tr>
+            <td>@Surveys.Questions</td>
+            <td>@Surveys.Answers</td>
+            <td>@Html.ActionLink("Delete", "Delete")</td>
+        </tr>
+    }
+</table>

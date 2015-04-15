@@ -202,6 +202,7 @@
     <Compile Include="Controllers\SliderAdminController.cs" />
     <Compile Include="Controllers\BookAppController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\AllDoctorsValidation.cs" />
@@ -304,6 +305,12 @@
       <DependentUpon>slider.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\sliderValidation.cs" />
+    <Compile Include="Models\Surveys.cs" />
+    <Compile Include="Models\Surveys.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Surveys.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\VolunteerAppValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Models\VolunteerValidation.cs" />
@@ -769,6 +776,14 @@
     <None Include="Models\slider.dbml.layout">
       <DependentUpon>slider.dbml</DependentUpon>
     </None>
+    <Content Include="Models\Surveys.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Surveys.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\Surveys.dbml.layout">
+      <DependentUpon>Surveys.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -932,6 +947,9 @@
     <Content Include="Views\customPage\InsertPage.cshtml" />
     <Content Include="Views\customPage\UpdatePage.cshtml" />
     <Content Include="Views\Careers\DeleteOpp.cshtml" />
+    <Content Include="Views\Survey\Index.cshtml" />
+    <Content Include="Views\Survey\Admin.cshtml" />
+    <Content Include="Views\Survey\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

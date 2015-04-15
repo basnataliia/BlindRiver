@@ -12,18 +12,17 @@ namespace BlindRiver.Controllers
     public class FAQController : Controller
     {
         FAQLinq objFAQ = new FAQLinq();
-
         public ActionResult Index()
         {
             var faq = objFAQ.getFAQs();
             return View(faq);
         }
 
-     public ActionResult Insert()
+        public ActionResult Insert()
         {
             return View();
         }
-
+    
      [HttpPost]
      public ActionResult Insert (FAQ faq)
      {
@@ -103,9 +102,6 @@ namespace BlindRiver.Controllers
         var faq = objFAQ.getFAQs();
         return View(faq);
     }
-
-    
-
 
     }
 }
