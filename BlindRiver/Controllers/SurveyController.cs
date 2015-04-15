@@ -17,8 +17,7 @@ namespace BlindRiver.Controllers
 
         public ActionResult Index()
         {
-            var Surveys = objSurvey.getSurvey();
-            return View(Surveys);
+            return View();
         }
 
         [HttpPost]

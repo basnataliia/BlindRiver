@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BlindRiver.Models.Survey>
+﻿@model IEnumerable<BlindRiver.Models.Surveys>
 
 @{
     ViewBag.Title = "Index";
@@ -10,22 +10,16 @@
 
 @using (Html.BeginForm())
 {
-    @Html.TextBoxFor(model => model.Questions)
-    @Html.TextBoxFor(model => model.Answers)
+        @Html.TextBoxFor(model => model.Questions, new { @class = "vform-input" })
 
-    @*foreach (var Surveys in Model)
-    {
-        @Html.RadioButtonFor(model => Surveys.Questions, "oh") @:Immediate Needs
-        @Html.RadioButtonFor(model => Surveys.Questions, "hi") @:Blah Needs
+        @*@Html.RadioButtonFor(model => model.Questions, "oh") @:1
+        @Html.RadioButtonFor(model => model.Questions, "hi") @:2
 
-    }
+   
+        @Html.RadioButtonFor(model => model.Answers, "oh") @:1
+        @Html.RadioButtonFor(model => model.Answers, "hi") @:2*@
 
-    foreach (var Surveys in Model)
-    {
-        @Html.RadioButtonFor(model => Surveys.Answers, "oh") @:Immediate Needs
-        @Html.RadioButtonFor(model => Surveys.Answers, "hi") @:Blah Needs
 
-    }*@
 
     <input class="vapply" type="submit" value="Insert" />
 

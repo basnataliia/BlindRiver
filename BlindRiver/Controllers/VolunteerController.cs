@@ -157,7 +157,7 @@ namespace BlindRiver.Controllers
             var VolApp = objVolApp.getAppById(id);
             if (VolApp == null)
             {
-                return View("NotFound");
+                return View();
             }
             else
             {
@@ -183,7 +183,7 @@ namespace BlindRiver.Controllers
             var VolApp = objVolApp.getAppById(id);
             if (VolApp == null)
             {
-                return View("NotFound");
+                return View();
             }
             else
             {
