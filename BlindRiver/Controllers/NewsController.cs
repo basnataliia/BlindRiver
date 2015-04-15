@@ -48,6 +48,7 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
+                    post.date = DateTime.Now;
                     newsObj.commitInsert(post);
                     return RedirectToAction("Index");
                 }

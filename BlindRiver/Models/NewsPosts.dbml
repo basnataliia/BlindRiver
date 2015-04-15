@@ -3,7 +3,7 @@
   <Table Name="dbo.news_post" Member="news_posts">
     <Type Name="news_post">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="heading" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
       <Column Name="details" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
     </Type>

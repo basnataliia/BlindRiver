@@ -4,11 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h1>Services</h1>
 <div id="service_public">
-@foreach (var x in Model)
-{
-    <h2>@Html.DisplayFor(m=>x.service_name)</h2>
-    <p>@Html.DisplayFor(m=>x.details)</p>
-}
+    <h1>Services</h1>
+    @foreach (var x in Model)
+    {
+        <h2>@Html.DisplayFor(m=>x.service_name)</h2>
+        <p> @Html.DisplayFor(m=>x.details)</p>
+        <br />
+    }
 </div>

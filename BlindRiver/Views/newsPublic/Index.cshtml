@@ -4,13 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h1>News</h1>
 
 <div id="news_public">
+<h1>News</h1>
 @foreach (var x in Model)
 {
-    <h3>@Html.DisplayFor(m=>x.date)</h3>
-    <h3>@Html.DisplayFor(m=>x.heading)</h3>
-    <p>@Html.DisplayFor(m=>x.details)</p>
+    <div id="date">
+        <h3>@x.date.Day-@x.date.Month-@x.date.Year</h3>
+    </div>
+    
+    <div id="news_body">
+       <h3>@Html.DisplayFor(m=>x.heading)</h3>
+       <p>@Html.DisplayFor(m=>x.details)</p>
+    </div>
+    <br /><br />
 }
 </div>

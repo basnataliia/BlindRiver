@@ -998,20 +998,54 @@ footer .f-menu{
 }
 
 /*serive public page styles*/
+.inputs, .textarea{
+    width:150px;
+  margin-top: 5px;
+  display:block;
+  height: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
 #service_public {
-
+    margin-top:10px;
+    padding-left:120px;
+    width:900px;
 }
 /*end of service public page styles*/
 
 /*news public page styles*/
 #news_public {
+    margin-top:10px;
+    margin-left:120px;    
+}
+
+#date {
+    float:left;
+    margin-right:10px;
+    width:200px;
+}
+
+#news_body {
+    float:left;
+    width:900px;
 }
 /*end of news public page styles*/
 
 /*bookapp public page styles*/
 #book-public {
     padding-left: 110px;
+
 }
+
 /*end of book public page styles*/
 
 /* Media Queries - Responsiveness*/
