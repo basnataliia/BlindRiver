@@ -84,5 +84,9 @@ namespace BlindRiver.Controllers
             }
         }
 
+        public ActionResult NotFound() {
+            return View();
+        }
+
     }
 }

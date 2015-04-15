@@ -6,6 +6,7 @@
 
 <div class="hp-main-module">
     <h3 class="subtitle">Stay up to date...</h3>
+        @foreach (var custpage in Model.OrderByDescending(x=>x.Id).Take(4))
         {
            //conver the page titles to encoded URLs for linking
            // string url = "~/" +

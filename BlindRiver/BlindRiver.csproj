@@ -950,6 +950,8 @@
     <Content Include="Views\Survey\Index.cshtml" />
     <Content Include="Views\Survey\Admin.cshtml" />
     <Content Include="Views\Survey\Delete.cshtml" />
+    <Content Include="Views\customPage\NoFound.cshtml" />
+    <Content Include="Views\Home\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

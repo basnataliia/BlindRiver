@@ -1,0 +1,53 @@
+//********RESPONSIVE IMAGES*************//
+
+http://github.com/nwtn/pres-respimg-perf-wcto
+
+
+A proportional method of dealing with responsiveness:
+ img{
+ 	max-width:100%;
+ }
+
+ Avg Page Size - 1.9 mb
+ Images account for 1.2 mb of this
+
+ A better solution
+ - provide an approprate image to the user based on their screen context
+
+
+
+ File Formats
+ WebP - Google's compression format for images, only supported in chrome
+ SVG
+ JPEG XR
+ JPEG 2000
+
+ Using a background image in CSS is not a good idea, it will impact SEO and neglect alt tags, so the browser won't actually read the image as content of the page
+
+ Markup For Image Resolution Switching
+
+ ie. <img src="picture.jpg" alt="picture">
+
+ New way:
+
+  ie. <img src="picture.jpg" alt="picture" 
+  	srcset="picture1.jpg 0.5x, picture2.jpg 1x, picture3.jpg 2x..etc."
+  >
+
+  Viewport Resolution Switching
+  new img attribute: sizes - tells the browser how wide the image will be displayed
+
+  vw CSS - dimensions used to denote the width of the viewport width. i.e. 100vw is the full window width
+
+
+  File Type Switching
+  <picture> element is new
+  You need to place an image as the last item within the picture tag
+  ie.
+  <picture>
+  	<source type="image/webp" srcset="wolf.webp"
+  	<img src="web.jpg" alt="">
+  </picture>
+
+
+  i
