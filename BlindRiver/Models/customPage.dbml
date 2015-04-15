@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9B4CDA_webdevelopment" Class="customPageDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=SQL5007.Smarterasp.net;Initial Catalog=DB_9B4CDA_webdevelopment;User ID=DB_9B4CDA_webdevelopment_admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_9B4CDA_webdevelopmentConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.custompage" Member="custompages">
+  <Table Name="dbo.custompages" Member="custompages">
     <Type Name="custompage">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />

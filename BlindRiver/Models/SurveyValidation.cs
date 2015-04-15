@@ -11,7 +11,7 @@ namespace BlindRiver.Models
 {
 
     [MetadataType(typeof(SurveyValidation))]
-    public partial class Surveys
+    public partial class Survey
     {
     }
 

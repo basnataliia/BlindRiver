@@ -74,7 +74,7 @@ namespace BlindRiver.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.custompage")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.custompages")]
 	public partial class custompage : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
