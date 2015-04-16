@@ -7,48 +7,65 @@
 @{
     ViewBag.Title = "Delete";
 }
+<div id="surveyContainer">
+
     @using (Html.BeginForm())
     {
         <h1>Are you sure you want to delete the selected entry? </h1><br />
+        <table class="cm-table1">
+            <thead>
+                <tr>
+                    <th>Question 1</th>
+                    <th>Answer 1</th>
+                    <th>Question 2</th>
+                    <th>Answer 2</th>
+                    <th>Question 3</th>
+                    <th>Answer 3</th>
+                    <th>Question 4</th>
+                    <th>Answer 4</th>
+                    <th>Question 5</th>
+                    <th>Answer 5</th>
+                    <th>Question 6</th>
+                    <th>Answer 6</th>
+                    <th>Question 7</th>
+                    <th>Answer 7</th>
+                    <th>Question 8</th>
+                    <th>Answer 8</th>
 
-        @Model.Question1
-        @Model.Answer1
-        <br /><br />
-        
-        @Model.Question2
-        @Model.Answer2
-        <br /><br />
-        
-        @Model.Question3
-        @Model.Answer3
-        <br /><br />
-        
-        @Model.Question4
-        @Model.Answer4
-        <br /><br />
-        
-        @Model.Question5
-        @Model.Answer5
-        <br /><br />
-        
-        @Model.Question6
-        @Model.Answer6
-        <br /><br />
-        
-        @Model.Question7
-        @Model.Answer7
-        <br /><br />
-        
-        @Model.Question8
-        @Model.Answer8
-        <br /><br />
+                </tr>
+            </thead>
+            <tr>
+                <td>@Model.Question1</td>
+                <td>@Model.Answer1</td>
+                <td>@Model.Question2</td>
+                <td>@Model.Answer2</td>
+                <td>@Model.Question3</td>
+                <td>@Model.Answer3</td>
+                <td>@Model.Question4</td>
+                <td>@Model.Answer4</td>
+                <td>@Model.Question5</td>
+                <td>@Model.Answer5</td>
+                <td>@Model.Question6</td>
+                <td>@Model.Answer6</td>
+                <td>@Model.Question7</td>
+                <td>@Model.Answer7</td>
+                <td>@Model.Question8</td>
+                <td>@Model.Answer8</td>
+            </tr>
+
+
+
+
+        </table>
 
         <input class="vapply" type="submit" value="Delete" />
         <br /><br />
         <hr />
     }
 
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
+    </div
 
-}
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }

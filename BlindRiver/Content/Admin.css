@@ -311,3 +311,37 @@ padding: 8px 11px;
 }
 
 /*end of bookapp styles*/
+
+/*style for survey*/
+.cm-table1
+{
+    border:2px solid #67909F;
+    border-collapse: collapse !important;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.cm-table1 thead{
+    background:#67909F;
+}
+
+.cm-table1 td,
+.cm-table1 th{
+    border: 1px solid #ddd !important;
+    text-align: center;
+    padding:5px;
+}
+
+
+.cm-table1 tbody tr:nth-child(even){
+    background:#ECF0F1;
+}
+
+.cm-table1 tbody tr:hover{
+    background:#BDC3C7;
+    color:#FFFFFF;
+
+}
+
+/*End of survey styles*/

@@ -16,55 +16,69 @@
 
 @using (Html.BeginForm())
 {
-  
-    
+    <h3>How was the wait time to see a doctor?</h3>
+    @Html.TextBoxFor(model => model.Question1, new { @Value = "How was the wait time to see a doctor?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer1, "Poor") @:Poor
     @Html.RadioButtonFor(model => model.Answer1, "Fair") @:Fair
     @Html.RadioButtonFor(model => model.Answer1, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer1, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer1, "Excellent") @:Excellent
     <br /><br />
+    <h3>How was the doctor's assessment and treatment?</h3>
+    @Html.TextBoxFor(model => model.Question2, new { @Value = "How was the doctor's assessment and treatment?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer2, "Poor") @:Poor
-    @Html.RadioButtonFor(model => model.Answer2, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer2, "Fair") @:Fair 
     @Html.RadioButtonFor(model => model.Answer2, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer2, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer2, "Excellent") @:Excellent
     <br /><br />
+    <h3>How would you rate the hospital's cleanliness?</h3>
+    @Html.TextBoxFor(model => model.Question3, new { @Value = "How would you rate the hospital's cleanliness?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer3, "Poor") @:Poor
     @Html.RadioButtonFor(model => model.Answer3, "Fair") @:Fair
     @Html.RadioButtonFor(model => model.Answer3, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer3, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer3, "Excellent") @:Excellent
     <br /><br />
+    <h3>Was it easy to navigate around the hospital?</h3>
+    @Html.TextBoxFor(model => model.Question4, new { @Value = "Was it easy to navigate around the hospital?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer4, "Poor") @:Poor
     @Html.RadioButtonFor(model => model.Answer4, "Fair") @:Fair
     @Html.RadioButtonFor(model => model.Answer4, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer4, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer4, "Excellent") @:Excellent
     <br /><br />
-    @Html.RadioButtonFor(model => model.Answer5, "Poor") @:Poor
-    @Html.RadioButtonFor(model => model.Answer5, "Fair") @:Fair
-    @Html.RadioButtonFor(model => model.Answer5, "Good") @:Good
-    @Html.RadioButtonFor(model => model.Answer5, "Very Good") @:Very Good
-    @Html.RadioButtonFor(model => model.Answer5, "Excellent") @:Excellent
+    <h3>How often do you visit Blind River hospital per year?</h3>
+    @Html.TextBoxFor(model => model.Question5, new { @Value = "How often do you visit Blind River hospital per year?", @type = "hidden" })
+    @Html.RadioButtonFor(model => model.Answer5, "1") @:1
+    @Html.RadioButtonFor(model => model.Answer5, "2") @:2
+    @Html.RadioButtonFor(model => model.Answer5, "3") @:3
+    @Html.RadioButtonFor(model => model.Answer5, "4") @:4 
+    @Html.RadioButtonFor(model => model.Answer5, "5 or more") @:5 or more
     <br /><br />
+    <h3>How caring were the staff members to the patients?</h3>
+    @Html.TextBoxFor(model => model.Question6, new { @Value = "How caring were the staff members to the patients?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer6, "Poor") @:Poor
     @Html.RadioButtonFor(model => model.Answer6, "Fair") @:Fair
     @Html.RadioButtonFor(model => model.Answer6, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer6, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer6, "Excellent") @:Excellent
     <br /><br />
+    <h3>Overall, how was your most recent visit?</h3>
+    @Html.TextBoxFor(model => model.Question7, new { @Value = "Overall, how was your most recent visit?", @type = "hidden" })
     @Html.RadioButtonFor(model => model.Answer7, "Poor") @:Poor
     @Html.RadioButtonFor(model => model.Answer7, "Fair") @:Fair
     @Html.RadioButtonFor(model => model.Answer7, "Good") @:Good
     @Html.RadioButtonFor(model => model.Answer7, "Very Good") @:Very Good
     @Html.RadioButtonFor(model => model.Answer7, "Excellent") @:Excellent
     <br /><br />
-    @Html.RadioButtonFor(model => model.Answer8, "Poor") @:Poor
-    @Html.RadioButtonFor(model => model.Answer8, "Fair") @:Fair
-    @Html.RadioButtonFor(model => model.Answer8, "Good") @:Good
-    @Html.RadioButtonFor(model => model.Answer8, "Very Good") @:Very Good
-    @Html.RadioButtonFor(model => model.Answer8, "Excellent") @:Excellent
+    <h3>I would come back to the hospital again.</h3>
+    @Html.TextBoxFor(model => model.Question8, new { @Value = "I would come back to the hospital again.", @type = "hidden" })
+    @Html.RadioButtonFor(model => model.Answer8, "Definitely Not") @:Definitely Not
+    @Html.RadioButtonFor(model => model.Answer8, "No") @:No
+    @Html.RadioButtonFor(model => model.Answer8, "Maybe") @:Maybe
+    @Html.RadioButtonFor(model => model.Answer8, "Yes") @:Yes
+    @Html.RadioButtonFor(model => model.Answer8, "Definitely Yes") @:Definitely Yes
     <br /><br />
 
     <input class="vapply" type="submit" value="Insert" />
