@@ -1,0 +1,57 @@
+﻿@model BlindRiver.Models.bookAppPublic
+
+@{
+    ViewBag.Title = "Book An Appointment";
+}
+
+<div id="book-public">
+
+<h1>Book An Appointment</h1>
+<h4>Request 2 days in advance </h4>
+
+@using (Html.BeginForm()) { 
+    
+    @Html.ValidationSummary()
+        
+        <label>Name: </label>
+        @Html.TextBoxFor(model => model.name,new { @class = "inputs" })
+        @Html.ValidationMessageFor(model => model.name, "*")
+    <br />
+    
+        
+        <label>Phone:</label>
+        @Html.TextBoxFor(model => model.phone,new { @class = "inputs" })
+        @Html.ValidationMessageFor(model => model.phone, "*")
+    <br />
+    
+        <label>Email:</label>
+        @Html.TextBoxFor(model => model.email,new { @class = "inputs" })
+        @Html.ValidationMessageFor(model => model.email, "*")
+    <br />
+    
+        <label>Date Of Appoinment:</label>
+        @Html.TextBoxFor(model => model.doa,new { @class = "inputs",@id="datepicker"})
+        @Html.ValidationMessageFor(model => model.doa, "*")
+    <br />
+    
+        <label>Purpose:</label>
+        @Html.TextAreaFor(model => model.purpose, new { @class = "textarea"})
+        @Html.ValidationMessageFor(model => model.purpose, "*")
+    <br />
+    <input type="submit" class="button-blue" value="Insert" /><br />   
+}
+@*<p>@Html.ActionLink("Insert", "Insert")</p>*@
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    }
+    </div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>

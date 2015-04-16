@@ -38,33 +38,7 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //insert
-        public ActionResult Insert()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Insert(bookApp book)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    bookObj.commitInsert(book);
-                    return RedirectToAction("Index");
-                }
-                catch
-                {
-                    return View();
-                }
-            }
-            else
-            {
-                return View();
-            }
-        }
-
+      
         //delete
         [Authorize(Users = "admin")]
         public ActionResult Delete(int id)

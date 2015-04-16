@@ -21,7 +21,7 @@
     <br /><br />
     
         @Html.LabelFor(model => model.details)
-        @Html.TextAreaFor(model => model.details, new { @class = "form-textarea"})
+        @Html.TextAreaFor(model => model.details, new { @class = "form-textarea", @Id = "details" })
         @Html.ValidationMessageFor(model => model.details, "*")
     <br /><br />
            
@@ -29,7 +29,7 @@
 }
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
-    
+    @Scripts.Render("~/ckeditor/ckeditor.js")
     }
     </div>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -40,3 +40,4 @@
     $( "#datepicker" ).datepicker();
   });
   </script>
+<script type="text/javascript">CKEDITOR.replace("details");</script>

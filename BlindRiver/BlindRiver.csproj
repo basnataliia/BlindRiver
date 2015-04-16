@@ -187,6 +187,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\bookAppPublicController.cs" />
     <Compile Include="Controllers\CareersController.cs" />
     <Compile Include="Controllers\ContactLocationsAdminController.cs" />
     <Compile Include="Controllers\ContactsAdminController.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Controllers\VolunteerController.cs" />
     <Compile Include="Models\allDoctorsClass.cs" />
     <Compile Include="Models\AllDoctorsValidation.cs" />
+    <Compile Include="Models\bookAppPublic.cs" />
     <Compile Include="Models\careerApp.cs" />
     <Compile Include="Models\careerapps.designer.cs">
       <AutoGen>True</AutoGen>
@@ -953,6 +955,7 @@
     <Content Include="Views\Survey\Delete.cshtml" />
     <Content Include="Views\customPage\NoFound.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
+    <Content Include="Views\bookAppPublic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
