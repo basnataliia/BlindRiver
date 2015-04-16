@@ -13,11 +13,53 @@
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(x => x.id)
+        
 
-        <h3>Position:</h3>
+        <h3>First Name:</h3>
         @Html.TextBoxFor(model => model.First_Name, new { @class = "vform-input" })
         <br /><br />
+        
+        <h3>Last Name:</h3>
+        @Html.TextBoxFor(model => model.Last_Name, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Email:</h3>
+        @Html.TextBoxFor(model => model.Email, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Phone Number:</h3>
+        @Html.TextBoxFor(model => model.Phone, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Address:</h3>
+        @Html.TextBoxFor(model => model.Address1, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Address 2:</h3>
+        @Html.TextBoxFor(model => model.Address2, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>City:</h3>
+        @Html.TextBoxFor(model => model.City, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Province:</h3>
+        @Html.TextBoxFor(model => model.Province, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Postal Code:</h3>
+        @Html.TextBoxFor(model => model.Postal_Code, new { @class = "vform-input" })
+        <br /><br />
+        
+        <h3>Volunteer Position Code:</h3>
+        @Html.TextBoxFor(model => model.Position_Code, new { @class = "vform-input" })
+        <br /><br />
+        
+        @Html.HiddenFor(x => x.Resume)
+
         <input class="vapply" type="submit" value="Update" />
+        
+        <br /><br />
 
     }
     <br /><br />

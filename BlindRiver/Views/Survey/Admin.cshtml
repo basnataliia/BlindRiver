@@ -11,17 +11,47 @@
 <table class="cm-table">
     <thead>
         <tr>
-            <th>Question</th>
-            <th>Answer</th>
+            <th>Question 1</th>
+            <th>Answer 1</th>
+            <th>Question 2</th>
+            <th>Answer 2</th>
+            <th>Question 3</th>
+            <th>Answer 3</th>
+            <th>Question 4</th>
+            <th>Answer 4</th>
+            <th>Question 5</th>
+            <th>Answer 5</th>
+            <th>Question 6</th>
+            <th>Answer 6</th>
+            <th>Question 7</th>
+            <th>Answer 7</th>
+            <th>Question 8</th>
+            <th>Answer 8</th>
             <th>Action</th>
         </tr>
     </thead>
     @foreach (var Surveys in Model)
     {
         <tr>
-            <td>@Surveys.Questions</td>
-            <td>@Surveys.Answers</td>
-            <td>@Html.ActionLink("Delete", "Delete")</td>
+            <td>@Surveys.Question1</td>
+            <td>@Surveys.Answer1</td>
+            <td>@Surveys.Question2</td>
+            <td>@Surveys.Answer2</td>
+            <td>@Surveys.Question3</td>
+            <td>@Surveys.Answer3</td>
+            <td>@Surveys.Question4</td>
+            <td>@Surveys.Answer4</td>
+            <td>@Surveys.Question5</td>
+            <td>@Surveys.Answer5</td>
+            <td>@Surveys.Question6</td>
+            <td>@Surveys.Answer6</td>
+            <td>@Surveys.Question7</td>
+            <td>@Surveys.Answer7</td>
+            <td>@Surveys.Question8</td>
+            <td>@Surveys.Answer8</td>
+            <td>@Html.ActionLink("Delete", "Delete", new { id = Surveys.id })</td>
         </tr>
     }
+
+
 </table>

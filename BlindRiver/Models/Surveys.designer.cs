@@ -82,9 +82,37 @@ namespace BlindRiver.Models
 		
 		private int _id;
 		
-		private string _Questions;
+		private string _Question1;
 		
-		private string _Answers;
+		private string _Answer1;
+		
+		private string _Question2;
+		
+		private string _Answer2;
+		
+		private string _Question3;
+		
+		private string _Answer3;
+		
+		private string _Question4;
+		
+		private string _Answer4;
+		
+		private string _Question5;
+		
+		private string _Answer5;
+		
+		private string _Question6;
+		
+		private string _Answer6;
+		
+		private string _Question7;
+		
+		private string _Answer7;
+		
+		private string _Question8;
+		
+		private string _Answer8;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -92,10 +120,38 @@ namespace BlindRiver.Models
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnQuestionsChanging(string value);
-    partial void OnQuestionsChanged();
-    partial void OnAnswersChanging(string value);
-    partial void OnAnswersChanged();
+    partial void OnQuestion1Changing(string value);
+    partial void OnQuestion1Changed();
+    partial void OnAnswer1Changing(string value);
+    partial void OnAnswer1Changed();
+    partial void OnQuestion2Changing(string value);
+    partial void OnQuestion2Changed();
+    partial void OnAnswer2Changing(string value);
+    partial void OnAnswer2Changed();
+    partial void OnQuestion3Changing(string value);
+    partial void OnQuestion3Changed();
+    partial void OnAnswer3Changing(string value);
+    partial void OnAnswer3Changed();
+    partial void OnQuestion4Changing(string value);
+    partial void OnQuestion4Changed();
+    partial void OnAnswer4Changing(string value);
+    partial void OnAnswer4Changed();
+    partial void OnQuestion5Changing(string value);
+    partial void OnQuestion5Changed();
+    partial void OnAnswer5Changing(string value);
+    partial void OnAnswer5Changed();
+    partial void OnQuestion6Changing(string value);
+    partial void OnQuestion6Changed();
+    partial void OnAnswer6Changing(string value);
+    partial void OnAnswer6Changed();
+    partial void OnQuestion7Changing(string value);
+    partial void OnQuestion7Changed();
+    partial void OnAnswer7Changing(string value);
+    partial void OnAnswer7Changed();
+    partial void OnQuestion8Changing(string value);
+    partial void OnQuestion8Changed();
+    partial void OnAnswer8Changing(string value);
+    partial void OnAnswer8Changed();
     #endregion
 		
 		public Survey()
@@ -123,42 +179,322 @@ namespace BlindRiver.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Questions", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
-		public string Questions
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question1", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question1
 		{
 			get
 			{
-				return this._Questions;
+				return this._Question1;
 			}
 			set
 			{
-				if ((this._Questions != value))
+				if ((this._Question1 != value))
 				{
-					this.OnQuestionsChanging(value);
+					this.OnQuestion1Changing(value);
 					this.SendPropertyChanging();
-					this._Questions = value;
-					this.SendPropertyChanged("Questions");
-					this.OnQuestionsChanged();
+					this._Question1 = value;
+					this.SendPropertyChanged("Question1");
+					this.OnQuestion1Changed();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answers", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Answers
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer1", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer1
 		{
 			get
 			{
-				return this._Answers;
+				return this._Answer1;
 			}
 			set
 			{
-				if ((this._Answers != value))
+				if ((this._Answer1 != value))
 				{
-					this.OnAnswersChanging(value);
+					this.OnAnswer1Changing(value);
 					this.SendPropertyChanging();
-					this._Answers = value;
-					this.SendPropertyChanged("Answers");
-					this.OnAnswersChanged();
+					this._Answer1 = value;
+					this.SendPropertyChanged("Answer1");
+					this.OnAnswer1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question2", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question2
+		{
+			get
+			{
+				return this._Question2;
+			}
+			set
+			{
+				if ((this._Question2 != value))
+				{
+					this.OnQuestion2Changing(value);
+					this.SendPropertyChanging();
+					this._Question2 = value;
+					this.SendPropertyChanged("Question2");
+					this.OnQuestion2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer2", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer2
+		{
+			get
+			{
+				return this._Answer2;
+			}
+			set
+			{
+				if ((this._Answer2 != value))
+				{
+					this.OnAnswer2Changing(value);
+					this.SendPropertyChanging();
+					this._Answer2 = value;
+					this.SendPropertyChanged("Answer2");
+					this.OnAnswer2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question3", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question3
+		{
+			get
+			{
+				return this._Question3;
+			}
+			set
+			{
+				if ((this._Question3 != value))
+				{
+					this.OnQuestion3Changing(value);
+					this.SendPropertyChanging();
+					this._Question3 = value;
+					this.SendPropertyChanged("Question3");
+					this.OnQuestion3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer3", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer3
+		{
+			get
+			{
+				return this._Answer3;
+			}
+			set
+			{
+				if ((this._Answer3 != value))
+				{
+					this.OnAnswer3Changing(value);
+					this.SendPropertyChanging();
+					this._Answer3 = value;
+					this.SendPropertyChanged("Answer3");
+					this.OnAnswer3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question4", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question4
+		{
+			get
+			{
+				return this._Question4;
+			}
+			set
+			{
+				if ((this._Question4 != value))
+				{
+					this.OnQuestion4Changing(value);
+					this.SendPropertyChanging();
+					this._Question4 = value;
+					this.SendPropertyChanged("Question4");
+					this.OnQuestion4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer4", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer4
+		{
+			get
+			{
+				return this._Answer4;
+			}
+			set
+			{
+				if ((this._Answer4 != value))
+				{
+					this.OnAnswer4Changing(value);
+					this.SendPropertyChanging();
+					this._Answer4 = value;
+					this.SendPropertyChanged("Answer4");
+					this.OnAnswer4Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question5", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question5
+		{
+			get
+			{
+				return this._Question5;
+			}
+			set
+			{
+				if ((this._Question5 != value))
+				{
+					this.OnQuestion5Changing(value);
+					this.SendPropertyChanging();
+					this._Question5 = value;
+					this.SendPropertyChanged("Question5");
+					this.OnQuestion5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer5", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer5
+		{
+			get
+			{
+				return this._Answer5;
+			}
+			set
+			{
+				if ((this._Answer5 != value))
+				{
+					this.OnAnswer5Changing(value);
+					this.SendPropertyChanging();
+					this._Answer5 = value;
+					this.SendPropertyChanged("Answer5");
+					this.OnAnswer5Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question6", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question6
+		{
+			get
+			{
+				return this._Question6;
+			}
+			set
+			{
+				if ((this._Question6 != value))
+				{
+					this.OnQuestion6Changing(value);
+					this.SendPropertyChanging();
+					this._Question6 = value;
+					this.SendPropertyChanged("Question6");
+					this.OnQuestion6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer6", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer6
+		{
+			get
+			{
+				return this._Answer6;
+			}
+			set
+			{
+				if ((this._Answer6 != value))
+				{
+					this.OnAnswer6Changing(value);
+					this.SendPropertyChanging();
+					this._Answer6 = value;
+					this.SendPropertyChanged("Answer6");
+					this.OnAnswer6Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question7", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Question7
+		{
+			get
+			{
+				return this._Question7;
+			}
+			set
+			{
+				if ((this._Question7 != value))
+				{
+					this.OnQuestion7Changing(value);
+					this.SendPropertyChanging();
+					this._Question7 = value;
+					this.SendPropertyChanged("Question7");
+					this.OnQuestion7Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer7", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer7
+		{
+			get
+			{
+				return this._Answer7;
+			}
+			set
+			{
+				if ((this._Answer7 != value))
+				{
+					this.OnAnswer7Changing(value);
+					this.SendPropertyChanging();
+					this._Answer7 = value;
+					this.SendPropertyChanged("Answer7");
+					this.OnAnswer7Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question8", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Question8
+		{
+			get
+			{
+				return this._Question8;
+			}
+			set
+			{
+				if ((this._Question8 != value))
+				{
+					this.OnQuestion8Changing(value);
+					this.SendPropertyChanging();
+					this._Question8 = value;
+					this.SendPropertyChanged("Question8");
+					this.OnQuestion8Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer8", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Answer8
+		{
+			get
+			{
+				return this._Answer8;
+			}
+			set
+			{
+				if ((this._Answer8 != value))
+				{
+					this.OnAnswer8Changing(value);
+					this.SendPropertyChanging();
+					this._Answer8 = value;
+					this.SendPropertyChanged("Answer8");
+					this.OnAnswer8Changed();
 				}
 			}
 		}

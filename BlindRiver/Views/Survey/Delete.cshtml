@@ -9,12 +9,38 @@
 }
     @using (Html.BeginForm())
     {
-        <h1>Are you sure you want to delete the following entry? </h1><br />
-        <h1>@Model.Questions</h1>
+        <h1>Are you sure you want to delete the selected entry? </h1><br />
 
-        <h4>Answers:</h4>
-        @Model.Answers
-
+        @Model.Question1
+        @Model.Answer1
+        <br /><br />
+        
+        @Model.Question2
+        @Model.Answer2
+        <br /><br />
+        
+        @Model.Question3
+        @Model.Answer3
+        <br /><br />
+        
+        @Model.Question4
+        @Model.Answer4
+        <br /><br />
+        
+        @Model.Question5
+        @Model.Answer5
+        <br /><br />
+        
+        @Model.Question6
+        @Model.Answer6
+        <br /><br />
+        
+        @Model.Question7
+        @Model.Answer7
+        <br /><br />
+        
+        @Model.Question8
+        @Model.Answer8
         <br /><br />
 
         <input class="vapply" type="submit" value="Delete" />

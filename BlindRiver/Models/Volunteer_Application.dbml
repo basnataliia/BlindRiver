@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9B4CDA_webdevelopment" Class="Volunteer_ApplicationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=SQL5007.Smarterasp.net;Initial Catalog=DB_9B4CDA_webdevelopment;User ID=DB_9B4CDA_webdevelopment_admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_9B4CDA_webdevelopmentConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.[ Volunteer_Application]" Member="Volunteer_Applications">
+  <Table Name="dbo.[ Volunteer_Applications]" Member="Volunteer_Applications">
     <Type Name="Volunteer_Application">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="First_Name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
@@ -13,7 +13,7 @@
       <Column Name="Province" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Postal_Code" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
       <Column Name="Position_Code" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Resume" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Resume" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

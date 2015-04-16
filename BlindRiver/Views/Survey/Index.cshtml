@@ -1,29 +1,76 @@
-﻿@model IEnumerable<BlindRiver.Models.Surveys>
+﻿@*@model IEnumerable<BlindRiver.Models.Survey>*@
+@model BlindRiver.Models.Survey
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+<h1>Blind River Hospital Satisfaction Survey</h1>
 
-<h1>Blind River Hospital Survey</h1>
+<p>We would love to receive some feedback based on your experiences at Blind River Hospital! </p>
+<p>Your feedback is much appreciated as it help us improve our facilities and services to serve you better!</p>  
+<br />
+<p>Please answer the following questions:</p>
+<br />
 
 @using (Html.BeginForm())
 {
-        @Html.TextBoxFor(model => model.Questions, new { @class = "vform-input" })
-
-        @*@Html.RadioButtonFor(model => model.Questions, "oh") @:1
-        @Html.RadioButtonFor(model => model.Questions, "hi") @:2
-
-   
-        @Html.RadioButtonFor(model => model.Answers, "oh") @:1
-        @Html.RadioButtonFor(model => model.Answers, "hi") @:2*@
-
-
+  
+    
+    @Html.RadioButtonFor(model => model.Answer1, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer1, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer1, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer1, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer1, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer2, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer2, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer2, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer2, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer2, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer3, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer3, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer3, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer3, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer3, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer4, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer4, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer4, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer4, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer4, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer5, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer5, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer5, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer5, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer5, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer6, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer6, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer6, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer6, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer6, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer7, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer7, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer7, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer7, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer7, "Excellent") @:Excellent
+    <br /><br />
+    @Html.RadioButtonFor(model => model.Answer8, "Poor") @:Poor
+    @Html.RadioButtonFor(model => model.Answer8, "Fair") @:Fair
+    @Html.RadioButtonFor(model => model.Answer8, "Good") @:Good
+    @Html.RadioButtonFor(model => model.Answer8, "Very Good") @:Very Good
+    @Html.RadioButtonFor(model => model.Answer8, "Excellent") @:Excellent
+    <br /><br />
 
     <input class="vapply" type="submit" value="Insert" />
 
 }
+
 
 
 @section Scripts {

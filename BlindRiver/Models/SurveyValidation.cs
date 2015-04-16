@@ -18,12 +18,12 @@ namespace BlindRiver.Models
     [Bind(Exclude = "id")]
     public partial class SurveyValidation
     {
-        [DisplayName("Question: ")]
-        [Required]
-        public string Questions { get; set; }
+        //[DisplayName("Question: ")]
+        //[Required]
+        //public string Questions { get; set; }
 
-        [DisplayName("Answer: ")]
-        [Required]
-        public string Answers { get; set; }
+        //[DisplayName("Answer: ")]
+        //[Required]
+        //public string Answers { get; set; }
     }
 }

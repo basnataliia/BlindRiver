@@ -74,7 +74,7 @@ namespace BlindRiver.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[ Volunteer_Application]")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[ Volunteer_Applications]")]
 	public partial class Volunteer_Application : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -359,7 +359,7 @@ namespace BlindRiver.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Resume", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Resume", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Resume
 		{
 			get
