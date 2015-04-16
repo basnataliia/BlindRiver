@@ -36,6 +36,7 @@ namespace BlindRiver.Controllers
         }
 
         //insert
+        [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
@@ -64,6 +65,7 @@ namespace BlindRiver.Controllers
         }
 
         //delete
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var newsDel = newsObj.getNewsByID(id);
@@ -92,6 +94,7 @@ namespace BlindRiver.Controllers
         }
 
         //update
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
             var newsUpd = newsObj.getNewsByID(id);

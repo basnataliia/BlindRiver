@@ -15,6 +15,7 @@ namespace BlindRiver.Controllers
 
         bookappLinq bookObj = new bookappLinq();
 
+        [Authorize(Users="admin")]
         public ActionResult Index()
         {
             var indexObj = bookObj.getRequests();
@@ -23,6 +24,7 @@ namespace BlindRiver.Controllers
         }
 
         //details
+        [Authorize(Users = "admin")]
         public ActionResult Details(int id)
         {
             var bookDetail = bookObj.getRequestByID(id);
@@ -64,6 +66,7 @@ namespace BlindRiver.Controllers
         }
 
         //delete
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var bookDel = bookObj.getRequestByID(id);
@@ -92,6 +95,7 @@ namespace BlindRiver.Controllers
         }
 
         //update
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
             var bookUpd = bookObj.getRequestByID(id);
