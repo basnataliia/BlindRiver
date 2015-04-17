@@ -12,7 +12,8 @@
 @foreach (var careers in Model) {
     <div id="doctorsContainer2">
         <div class="careerText">
-            <h3 class="doctorTitle">@careers.title <button class="apply">@Html.ActionLink("View this job", "Apply", new { id = careers.Id})</button></h3>
+            @*<h3 class="doctorTitle">@careers.title <button class="apply">@Html.ActionLink("View this job", "Apply", new { id = careers.Id})</button></h3>*@
+            <a href="~/Careers/apply/@careers.Id" class="link-button-blue apply">View Details</a>
             <p>Department: @careers.department</p>
             <p>Location: @careers.location</p>
             <p>Job Type: @careers.jobtype</p>
