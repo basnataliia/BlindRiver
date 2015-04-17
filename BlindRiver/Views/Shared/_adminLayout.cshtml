@@ -50,11 +50,12 @@
                     <li><a href="@Url.Action("manager", "doctor")"><i class="fa fa-user-md"></i>Doctor Manager</a></li>
                     <li><a href="#"><i class="fa fa-users"></i>Services Manager</a></li>
                     <li><a href="@Url.Action("careermanager", "careers")"><i class="fa fa-user-plus"></i>Career Manager</a></li>
-                    <li><a href="#"><i class="fa fa-graduation-cap"></i>Volunteer Manager</a></li>
+                    <li><a href="@Url.Action("Admin", "Volunteer")"><i class="fa fa-graduation-cap"></i>Volunteer Opportunities Manager</a></li>
+                    <li><a href="@Url.Action("ApplicationAdmin", "Volunteer")"><i class="fa fa-graduation-cap"></i>Volunteer Applications Manager</a></li>
                     <li><a href="#"><i class="fa fa-newspaper-o"></i>News Manager</a></li>
-                    <li><a href="#"><i class="fa fa-question-circle"></i>FAQ Manager</a></li>
+                    <li><a href="@Url.Action("Index", "FAQ")"><i class="fa fa-question-circle"></i>FAQ Manager</a></li>
                     <li><a href="#"><i class="fa fa-calendar"></i>Appointments Manager</a></li>
-                    <li><a href="#"><i class="fa fa-check-square-o"></i>Satisfaction survey</a></li>
+                    <li><a href="@Url.Action("Admin", "Survey")"><i class="fa fa-check-square-o"></i>Satisfaction survey</a></li>
                     <li><a href="@Url.Action("Index", "ContactLocationsAdmin")"><i class="fa fa-map-marker"></i>Locations Manager</a></li>
                 </ul>
             </nav>

@@ -1,4 +1,5 @@
-﻿@model BlindRiver.Models.VolunteerAppValidation
+﻿@*Model to validate volunteer*@
+@model BlindRiver.Models.VolunteerAppValidation
 
 @{
     ViewBag.Title = "Volunteer Application";
@@ -6,9 +7,10 @@
 
 <div id="volunteerContainer">
     <h2>Volunteer Application</h2>
-
+    @*Form for users to apply for volunteer Opportunities.*@
     @using (Html.BeginForm("Application", "Volunteer", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
+        //Validation summary showing all validation errors
         @Html.ValidationSummary()
 
         @Html.LabelFor(model => model.First_Name, new { @class = "label" })
@@ -64,6 +66,7 @@
         @Html.LabelFor(model => model.Resume, new { @class = "label" })
         @Html.HiddenFor(model => model.Resume)
 
+        //Allows users to upload their resume.
         <input type="file" name="resumePath" />
         <br /><br />
         <input class="vapply" type="submit" name="Submit" value="Submit Application" />

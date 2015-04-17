@@ -15,13 +15,13 @@ namespace BlindRiver.Models
             var allSurvey = objSurvey.Surveys.Select(x => x);
             return allSurvey;
         }
-
+        //Get Survey By ID
         public Survey getSurveyByID(int _id)
         {
             var allSurveys = objSurvey.Surveys.SingleOrDefault(x => x.id == _id);
             return allSurveys;
         }
-
+        //Committing Insert of Survey into database
         public bool commitInsert(Survey survey)
         {
             using (objSurvey)
@@ -44,6 +44,7 @@ namespace BlindRiver.Models
         //    }
         //}
 
+        //Commit Delete, removing the survy entry from database
         public bool commitDelete(int _id)
         {
             using (objSurvey)

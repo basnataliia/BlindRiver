@@ -1,5 +1,6 @@
-﻿@model BlindRiver.Models.VolunteerValidation
-
+﻿@*Volunteer Validation model to validate entered fields when adding new volunteer opportunities*@
+@model BlindRiver.Models.VolunteerValidation
+@*Applies admin styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -15,6 +16,7 @@
 
     @using (Html.BeginForm())
     {
+        //Shows validation summary. All errors will appear here.
         @Html.ValidationSummary()
 
         <h3>Position:</h3>

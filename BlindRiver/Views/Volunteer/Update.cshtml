@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.Volunteer_Opportunity
-
+@*Applies admin styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -9,7 +9,7 @@
 }
 <div id="volunteerContainer">
     <h1>Update Volunteer Position</h1>
-
+    @*Form field to update volunteer opportunities.*@
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(x => x.id)

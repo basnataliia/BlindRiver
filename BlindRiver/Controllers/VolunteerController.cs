@@ -24,13 +24,16 @@ namespace BlindRiver.Controllers
             return View(VolOp);
         }
 
+
+        //Admin page will retrieve all volunteer opportunities by using getVolOps
+        [Authorize(Users = "admin")]
         public ActionResult Admin()
         {
             var VolOp = objVolOp.getVolOps();
             return View(VolOp);
         }
 
-
+        [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
@@ -43,6 +46,7 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
+                    //When insert volunteer opportunity is successful, user redirected to Admin page
                     objVolOp.commitInsert(VolOp);
                     return RedirectToAction("Admin");
                 }
@@ -54,12 +58,14 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        //Update volunteer Opportunities 
+        [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
             var VolOp = objVolOp.getVolOpByID(id);
             if (VolOp == null)
             {
-                return View("NotFound");
+                return View();
             }
             else
             {
@@ -74,7 +80,7 @@ namespace BlindRiver.Controllers
                 try
                 {
                     objVolOp.commitUpdate(id, VolOp.position, VolOp.description, VolOp.code);
-                    // return RedirectToAction("Details/" + id);
+                    // When update success, users are redirected to Admin page
                     return RedirectToAction("Admin");
                 }
                 catch
@@ -84,12 +90,15 @@ namespace BlindRiver.Controllers
             }
             return View();
         }
+
+        //Delete Volunteer Opportunities
+        [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var VolOp = objVolOp.getVolOpByID(id);
             if (VolOp == null)
             {
-                return View("NotFound");
+                return View();
             }
             else
             {
@@ -101,6 +110,7 @@ namespace BlindRiver.Controllers
         {
             try
             {
+                //when volunteer opportunities successfully deleted, users are redirected to admin page
                 objVolOp.commitDelete(id);
                 return RedirectToAction("Admin");
             }
@@ -110,8 +120,10 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //models for job applications
+        //MODELS FOR VOLUNTEER APPLICATIONS
+        //creating new instance
         Volunteer_Apps objVolApp = new Volunteer_Apps();
+        [Authorize(Users = "admin")]
         public ActionResult ApplicationAdmin()
         {
             var apps = objVolApp.getVolApps();
@@ -122,7 +134,8 @@ namespace BlindRiver.Controllers
         {
             return View();
         }
-
+        
+        //In application page, this allows the resumes to be uploaded and be enetered into a resume folder in the content folder
         [HttpPost]
         public ActionResult Application(Volunteer_Application VolApp, HttpPostedFileBase resumePath)
         {
@@ -151,7 +164,7 @@ namespace BlindRiver.Controllers
         }
 
         //Update and Delete
-
+        [Authorize(Users = "admin")]
         public ActionResult AppDelete(int id)
         {
             var VolApp = objVolApp.getAppById(id);
@@ -169,6 +182,7 @@ namespace BlindRiver.Controllers
         {
             try
             {
+                //If Volunteer Application successfully delted, redirected to ApplicationAdmin page
                 objVolApp.commitDelete(id);
                 return RedirectToAction("ApplicationAdmin");
             }
@@ -177,7 +191,8 @@ namespace BlindRiver.Controllers
                 return View();
             }
         }
-
+        //Application Update
+        [Authorize(Users = "admin")]
         public ActionResult AppUpdate(int id)
         {
             var VolApp = objVolApp.getAppById(id);
@@ -195,10 +210,12 @@ namespace BlindRiver.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Volunteer Application update to all fields of database
                 try
                 {
                     objVolApp.commitUpdate(id, VolApp.First_Name, VolApp.Last_Name, VolApp.Email, VolApp.Phone, VolApp.Address1,
                         VolApp.Address2, VolApp.City, VolApp.Province, VolApp.Postal_Code, VolApp.Position_Code, VolApp.Resume);
+                    //If successfully updated, user is redirected to ApplicationAdmin page
                     return RedirectToAction("ApplicationAdmin");
                 }
                 catch

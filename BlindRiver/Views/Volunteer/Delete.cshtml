@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.Volunteer_Opportunity
-
+@*Admin styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -7,6 +7,7 @@
 @{
     ViewBag.Title = "Delete";
 }
+@*Shows volunteer opportunities information that you are about to delete, to confirm delete*@
 <div id="volunteerContainer">
 @using (Html.BeginForm())
     {
@@ -20,7 +21,7 @@
     @Model.code
 
     <br /><br />
-
+    //Delete button to delete volunteer opportunity from database
     <input class="vapply" type="submit" value="Delete" />
     <br /><br />
     <hr />

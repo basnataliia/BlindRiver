@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.Volunteer_Application
-
+@*Applies admin styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -7,6 +7,7 @@
 @{
     ViewBag.Title = "AppDelete";
 }
+@*Displays all the information about volunteer application to confirm delete*@
 <div id="volunteerContainer">
     @using (Html.BeginForm())
     {

@@ -12,6 +12,7 @@ namespace BlindRiver.Models
     {
     }
 
+    //where the validation occurs for volunteer opportunities
     [Bind(Exclude = "id")]
     public partial class VolunteerValidation
     {

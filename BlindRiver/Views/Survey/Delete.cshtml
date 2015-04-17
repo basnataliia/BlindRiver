@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.Survey
-
+@*Applies admin css styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -12,6 +12,7 @@
     @using (Html.BeginForm())
     {
         <h1>Are you sure you want to delete the selected entry? </h1><br />
+        //Table to show selected entry to delete
         <table class="cm-table1">
             <thead>
                 <tr>
@@ -57,13 +58,13 @@
 
 
         </table>
-
+        //button to confirm delete
         <input class="vapply" type="submit" value="Delete" />
         <br /><br />
         <hr />
     }
 
-    </div
+    </div>
 
     @section Scripts{
         @Scripts.Render("~/bundles/jqueryval")

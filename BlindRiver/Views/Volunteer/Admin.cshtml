@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<BlindRiver.Models.Volunteer_Opportunity>
-
+@*Applies admin css styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -15,7 +15,7 @@
     <br /><br />
     <hr />
     <br />
-
+    @*Displaying all volunteer Opportunities*@
         @foreach (var VolunteerOpportunities in Model)
         {
 
@@ -28,6 +28,7 @@
             @VolunteerOpportunities.code
 
             <br /><br />
+            //Buttons to update and delete volunteer opportunities. Redirects you to update or delete page
             <button class="vapply">@Html.ActionLink("Update", "Update", new { id = VolunteerOpportunities.id })</button>
             <button class="vapply">@Html.ActionLink("Delete", "Delete", new { id = VolunteerOpportunities.id })</button>
 

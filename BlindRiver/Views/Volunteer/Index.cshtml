@@ -16,7 +16,7 @@
     <hr />
     <br />
 
-
+    @*Shows all volunteer opportunities*@
 
         @foreach (var VolunteerOpportunities in Model)
         {
@@ -29,6 +29,7 @@
             <h4>Volunteer Position Code:</h4>
             @VolunteerOpportunities.code
             <br /><br />
+            //Apply button to redirect user to application page. They will be able to apply for volunteer positions
             <button class="vapply">@Html.ActionLink("Apply", "Application")</button>
             <br /><br />
             <hr />

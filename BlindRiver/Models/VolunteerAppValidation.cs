@@ -12,6 +12,7 @@ namespace BlindRiver.Models
     {
     }
 
+    //Where all the validation occurs. In this case, most fields are required making the users have to enter those fields.
     [Bind(Exclude = "id")]
     public partial class VolunteerAppValidation
     {
