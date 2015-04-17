@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace BlindRiver.Models
 {
     [MetadataType(typeof(careersValidation))]
-    public partial class Careers
+    public partial class careersClass
     {
     }
 

@@ -5,6 +5,6 @@
 
 <div id="doctorsContainer">
 <h1>@Model.title</h1>
-<img class="customPageImg" src="~/Content/Images/@Model.img" alt="" />
+<img class="customPageImg img-responsive" src="~/Content/Images/@Model.img" alt="" />
    @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.body))
     </div>

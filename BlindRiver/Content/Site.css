@@ -745,7 +745,7 @@ footer .f-menu{
     width:100%;
     max-width: 400px;
     float: right;
-    margin: 30px;
+    margin: 30px 20px;
 }
 
 /*Career Opportunities Styles*/
@@ -1068,6 +1068,13 @@ footer .f-menu{
     padding-left: 110px;
 }
 
+/*responsive images*/
+
+.img-responsive {
+     max-width:50%;
+     margin: 10px 5px;
+}
+
 /*end of book public page styles*/
 
 /* Media Queries - Responsiveness*/
@@ -1171,6 +1178,9 @@ footer .f-menu{
 
     .img-slider {
         display:none;
+    }
+    .img-responsive {
+     max-width:100%;
     }
     footer {
         height:150px;

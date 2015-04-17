@@ -10,7 +10,7 @@
     <hr />
     @using (Html.BeginForm("submitapplication", "Careers", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        <p>Job Code: @Html.TextBoxFor(x => x.jobcode, new { @class = "form-input" })</p> 
+         <p>Job Code:  @Html.TextBoxFor(x => x.jobcode, new { @class = "form-input" })</p>
         <p>First Name: @Html.TextBoxFor(x => x.fname, new { @class = "form-input" })</p>
         <p>Last Name: @Html.TextBoxFor(x => x.lname, new { @class = "form-input" })</p>
         <p>Your email: @Html.TextBoxFor(x => x.email, new { @class = "form-input" })</p>
