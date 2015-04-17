@@ -12,14 +12,17 @@ namespace BlindRiver.Controllers
     {
         //
         // GET: /Service/
+        //created object of  serviceLinq class
         ServiceLinq serviceObj = new ServiceLinq();
 
+        //gets all the services and displays them on admin index page
         public ActionResult Index()
         {
             var indexObj = serviceObj.getService();
             return View(indexObj);
         }
 
+        //gets details of every service by their id which is selected
         public ActionResult Details(int id)
         {
             var servicesobj = serviceObj.getServiceByID(id);
@@ -34,13 +37,14 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //insert
+        //insert is authorised to admin only
         [Authorize(Users = "admin")]
+        //insert
         public ActionResult Insert()
         {
             return View();
         }
-
+        //takes values from user and insert into database
         [HttpPost]
         public ActionResult Insert(service services)
         {
@@ -62,8 +66,9 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //delete
+        //delete is authorised to admin user only
         [Authorize(Users = "admin")]
+        //deletes the serivce according to which id is selected
         public ActionResult Delete(int id)
         {
             var serviceDel = serviceObj.getServiceByID(id);
@@ -91,8 +96,9 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //update
+        //update is also authorised to admin user only 
         [Authorize(Users = "admin")]
+        //selected service(by checking its id) is updated 
         public ActionResult Update(int id)
         {
             var serviceUpd = serviceObj.getServiceByID(id);
@@ -125,7 +131,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
-        //not found
+        //not found page is diplayed when 
         public ActionResult NotFound()
         {
             return View();

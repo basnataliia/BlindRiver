@@ -1,4 +1,5 @@
-﻿using System;
+﻿//admin page for  book an appointment
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +13,12 @@ namespace BlindRiver.Controllers
     {
         //
         // GET: /BookApp/
-
+        //created object of bookappLinq class
         bookappLinq bookObj = new bookappLinq();
 
+        //admin user is authorised
         [Authorize(Users="admin")]
+        //all the appoinments are display to the admin user
         public ActionResult Index()
         {
             var indexObj = bookObj.getRequests();
@@ -25,6 +28,7 @@ namespace BlindRiver.Controllers
 
         //details
         [Authorize(Users = "admin")]
+        //admin can select any appointment to see the details of that patient
         public ActionResult Details(int id)
         {
             var bookDetail = bookObj.getRequestByID(id);
@@ -41,6 +45,7 @@ namespace BlindRiver.Controllers
       
         //delete
         [Authorize(Users = "admin")]
+        //admin has authorisation to delete the appointment if it is not valid one
         public ActionResult Delete(int id)
         {
             var bookDel = bookObj.getRequestByID(id);
@@ -70,6 +75,7 @@ namespace BlindRiver.Controllers
 
         //update
         [Authorize(Users = "admin")]
+        //admin can update the appointment in case of any changes
         public ActionResult Update(int id)
         {
             var bookUpd = bookObj.getRequestByID(id);
@@ -102,6 +108,7 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        //this page is displayed when page is not found
         public ActionResult NotFound()
         {
             return View();

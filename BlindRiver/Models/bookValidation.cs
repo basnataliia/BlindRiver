@@ -1,21 +1,30 @@
-﻿using System;
+﻿//validation for book an appoinment feature
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+//this in included for metadatatype
 using System.ComponentModel.DataAnnotations;
+//include for DisplayName
 using System.ComponentModel;
+//included for bind
 using System.Web.Mvc;
 
 namespace BlindRiver.Models
 {
+
     [MetadataType(typeof(bookAppValidation))]
     public partial class book_app
     { }
 
+    //excluded id from validation as it is auto increment
     [Bind(Exclude = "id")]
+
+    //validation class
     public class bookAppValidation
     {
+        //validation for every field in form
         [DisplayName("Name: ")]
         [Required]
         public string name { get; set; }
@@ -38,5 +47,4 @@ namespace BlindRiver.Models
         [Required]
         public string purpose { get; set; }
     }
-
 }

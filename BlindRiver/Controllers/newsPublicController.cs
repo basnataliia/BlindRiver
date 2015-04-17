@@ -12,9 +12,10 @@ namespace BlindRiver.Controllers
     {
         //
         // GET: /newsPublic/
-
+        //created object of NewsLinq class
         NewsLinq newsObj = new NewsLinq();
 
+        //gets all news and displays the news 
         public ActionResult Index()
         {
             //variable=object.fx.

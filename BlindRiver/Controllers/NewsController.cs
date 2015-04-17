@@ -1,4 +1,5 @@
-﻿using System;
+﻿//admin page 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,11 @@ namespace BlindRiver.Controllers
     {
         //
         // GET: /News/
+        //created object of NewsLinq class
         NewsLinq newsObj = new NewsLinq();
 
+        //gets all the news as list 
+        // and is sent to the view
         public ActionResult Index()
         {
             //variable=object.fx.
@@ -22,6 +26,8 @@ namespace BlindRiver.Controllers
             return View(indexObj);
         }
 
+        //shows a news that has been selecte
+        //and displays all its details
         public ActionResult Details(int id)
         {
             var newsobj = newsObj.getNewsByID(id);
@@ -35,13 +41,15 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //insert
+        //insert shows the admin a form to insert news
         [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
         }
 
+        // insert post, the form value is inserted in the database
+        // that has been sent by the admin
         [HttpPost]
         public ActionResult Insert(news_post post)
         {
@@ -65,6 +73,8 @@ namespace BlindRiver.Controllers
         }
 
         //delete
+        // shows the details of the news record that has been requested 
+        // for deletion
         [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
@@ -79,6 +89,7 @@ namespace BlindRiver.Controllers
             }
         }
 
+        // delete post, deletes the record that has been selected
         [HttpPost]
         public ActionResult Delete(int id, news_post news)
         {
@@ -94,6 +105,8 @@ namespace BlindRiver.Controllers
         }
 
         //update
+        // shows a form to the admin where details of the record are display
+        // that needs to be updated
         [Authorize(Users = "admin")]
         public ActionResult Update(int id)
         {
@@ -108,6 +121,9 @@ namespace BlindRiver.Controllers
             }
         }
 
+        // update post
+        // the changed values in the form has been sent to the db,
+        // and is updated against the particular record.
         [HttpPost]
         public ActionResult Update(int id, news_post newsUpd)
         {
@@ -128,6 +144,7 @@ namespace BlindRiver.Controllers
         }
 
         //not found
+        // this view is display when a page is not found
         public ActionResult NotFound()
         {
             return View();

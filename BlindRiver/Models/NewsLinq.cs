@@ -1,4 +1,5 @@
-﻿using System;
+﻿//
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,7 @@ namespace BlindRiver.Models
 {
     public class NewsLinq
     {
+        //
         NewsPostsDataContext newsObj = new NewsPostsDataContext();
         //IQueryable<linq-tableName>
         public IQueryable<news_post> getNews()

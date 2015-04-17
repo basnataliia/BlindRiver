@@ -7,8 +7,10 @@ namespace BlindRiver.Models
 {
     public class bookappLinq
     {
+        //created object of boolAppsDataContext class
         bookAppsDataContext bookObj = new bookAppsDataContext();
 
+        //gets all requests 
         public IQueryable<bookApp> getRequests()
         {
             var allrequests = bookObj.bookApps.Select(x => x);
@@ -22,7 +24,7 @@ namespace BlindRiver.Models
             return allrequests;
         }
 
-        //insert 
+        //takes input from user and add the information to database
         public bool commitInsert(bookApp book)
         {
             using (bookObj)
@@ -33,7 +35,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //delete
+        //delete the particular appointment  based on the selected id
         public bool commitDelete(int _id)
         {
             using (bookObj)
@@ -45,7 +47,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //update
+        //selected appoint is updated and changes are saved to database
         public bool commitUpdate(int _id, string _name, string _phone, string _email, DateTime _doa, string _purpose)
         {
             using (bookObj)

@@ -1,4 +1,5 @@
-﻿@model BlindRiver.Models.service
+﻿@* Admin page of insert a new service  *@
+@model BlindRiver.Models.service
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
@@ -9,6 +10,7 @@
 
 <h2>Insert New Service</h2>
 
+    @*form for adding a new service *@
 @using (Html.BeginForm()) { 
     
     @Html.ValidationSummary()
@@ -29,12 +31,10 @@
     <br /><br />
 
       <input type="submit" class="button-blue" value="Insert" /><br />
-    
-    @*<button class="apply">@Html.ActionLink("Back to Jobs", "index")</button>*@
-    @*<input class="apply" type="submit" value="Insert" /><br />*@   
 }
     <script type="text/javascript">CKEDITOR.replace("sdetails");</script>
 </div>
+@* end of serive_insert div*@
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/ckeditor/ckeditor.js")

@@ -1,4 +1,5 @@
-﻿using System;
+﻿//
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,11 +13,9 @@ namespace BlindRiver.Controllers
     {
         //
         // GET: /bookAppPublic/
-
-
         bookappLinq bookObj = new bookappLinq();     
 
-        //insert
+        //shows public user a book an appointment form 
         public ActionResult Index()
         {
             return View();

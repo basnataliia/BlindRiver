@@ -9,6 +9,18 @@ namespace BlindRiver.Models
     {
         bookAppsDataContext bookObj = new bookAppsDataContext();
 
+        public IQueryable<bookApp> getRequests()
+        {
+            var allrequests = bookObj.bookApps.Select(x => x);
+            return allrequests;
+        }
+
+        public bookApp getRequestByID(int _id)
+        {
+
+            var allrequests = bookObj.bookApps.SingleOrDefault(x => x.id == _id);
+            return allrequests;
+        }
         //insert 
         public bool commitInsert(bookApp book)
         {
