@@ -1,4 +1,5 @@
-﻿using System;
+﻿//model for service feature
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,7 @@ namespace BlindRiver.Models
 {
     public class ServiceLinq
     {
+        //created object for servicesDataContext class
         servicesDataContext serviceObj = new servicesDataContext();
 
         //IQueryable<linq-tableName>
@@ -23,7 +25,7 @@ namespace BlindRiver.Models
             return allService;
         }
 
-        //insert 
+        //insert new service to the database
         public bool commitInsert(service services)
         {
             using (serviceObj)
@@ -34,7 +36,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //delete
+        //delete the selected service
         public bool commitDelete(int _id)
         {
             using (serviceObj)
@@ -46,7 +48,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //update
+        //update the selected service and save chages to database
         public bool commitUpdate(int _id, string _servicename, string _details, string _photo)
         {
             using (serviceObj)

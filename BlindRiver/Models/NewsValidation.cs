@@ -15,8 +15,10 @@ namespace BlindRiver.Models
     [MetadataType(typeof(newsValidation))]
     public partial class news_post { }
 
+    //validation class
     public class newsValidation
     {
+        //validation for news form
         [DisplayName("Date: ")]
         [Required]
         public DateTime date { get; set; }

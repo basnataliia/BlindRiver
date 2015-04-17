@@ -1,4 +1,5 @@
-﻿@model BlindRiver.Models.news_post
+﻿@* admin page for insert new news *@
+@model BlindRiver.Models.news_post
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
@@ -15,3 +16,4 @@
        <button class="apply">@Html.ActionLink("Back", "Details", new { id=Model.id})</button>    
 }
     </div>
+@* end of news-delete div *@

@@ -1,4 +1,6 @@
-﻿@model BlindRiver.Models.news_post
+﻿@* admin page for insert new news *@
+
+@model BlindRiver.Models.news_post
 
 @{
     ViewBag.Title = "Insert New News Post";
@@ -27,11 +29,15 @@
            
     <input type="submit" class="button-blue" value="Insert" /><br />   
 }
+    
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/ckeditor/ckeditor.js")
     }
     </div>
+@* end of news-insert div *@
+
+@* script and link for ckeditor *@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>

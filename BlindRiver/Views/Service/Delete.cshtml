@@ -1,4 +1,5 @@
-﻿@model BlindRiver.Models.service
+﻿@* Admin page of a  service to delete a service *@
+@model BlindRiver.Models.service
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
@@ -8,11 +9,12 @@
 
 <h2>Are you Sure you Want to Delete <em>@Model.service_name?</em></h2>
 @using (Html.BeginForm()) { 
-    <div>
+    
         <input type="submit" value="Delete" />
         <br /><br />
        <button class="apply">@Html.ActionLink("Back", "Details", new { id=Model.id})</button> 
-    </div>
+   
 }
 
 </div>
+@* end of service-delete *@

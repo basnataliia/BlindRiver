@@ -7,10 +7,10 @@
 @{
     ViewBag.Title = "Details";
 }
-
+@* all appoinments by name are displayed *@
 <h2>Details Of @Model.name</h2>
 
-
+@* all the details related to selected appointmnet is displayed *@
 <p>Name: @Html.DisplayFor(x=>x.name)</p><br />
 <p>Phone: @Html.DisplayFor(x=>x.phone)</p><br />
 <p>Email: @Html.DisplayFor(x=>x.email)</p><br />

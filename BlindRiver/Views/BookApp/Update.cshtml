@@ -6,9 +6,8 @@
 }
 
 <h2>Update Appoinment</h2>
+@* form for update an appointment *@
 @using (Html.BeginForm()) { 
-    
-  @*  @Html.HiddenFor(x => x.id)*@
 
     <label>Name:</label>
     <br />
@@ -44,12 +43,3 @@
     <button class="apply">@Html.ActionLink("Go Back to All Appointment", "Index")</button>
 
 }
-
-@*<p>
-    @Html.ActionLink("Back", "Details", new { id = Model.id})
-    @Html.ActionLink("Back", "Details","BookApp")
-</p>*@
-
-@*@section Script{
-    @Scripts.Render("~/bundles/jqueryval")
-    }*@

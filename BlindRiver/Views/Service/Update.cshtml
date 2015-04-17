@@ -1,4 +1,5 @@
-﻿@model BlindRiver.Models.service
+﻿@* Admin page of update a service  *@
+@model BlindRiver.Models.service
 
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
@@ -7,10 +8,9 @@
 <div id="service_upd">
 
 <h1>Update @Model.service_name</h1>
+    @* form for update a service *@
 @using (Html.BeginForm()) { 
     
-  @*  @Html.HiddenFor(x => x.id)*@
-
     @Html.LabelFor(x => x.service_name)
     <br />
     @Html.TextBoxFor(x => x.service_name,new { @class = "form-input" })
@@ -29,12 +29,9 @@
     @Html.TextBoxFor(x => x.photo,new { @class = "form-input" })
     @Html.ValidationMessageFor(x => x.photo)
     <br /><br />
-   @* <input type="submit" value="Update" />*@
+
     <button class="apply">@Html.ActionLink("Update Service", "index")</button>
     <button class="apply">@Html.ActionLink("Go Back to All Services", "Index")</button>
 }
 </div>
-@*<p>
-    @Html.ActionLink("Back", "Details", new { id = Model.id})
-      @Html.ActionLink("Back", "Details","News")
-</p>*@
+@* end of service_upd div *@

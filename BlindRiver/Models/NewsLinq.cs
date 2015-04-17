@@ -8,9 +8,11 @@ namespace BlindRiver.Models
 {
     public class NewsLinq
     {
-        //
+        //created object of NewsPostsDataContext class
         NewsPostsDataContext newsObj = new NewsPostsDataContext();
+
         //IQueryable<linq-tableName>
+        //gets all news
         public IQueryable<news_post> getNews()
         {
             //varible=object.table_name.select
@@ -24,7 +26,7 @@ namespace BlindRiver.Models
             return allNews;
         }
 
-        //delete
+        //delete the selected news
         public bool commitDelete(int _id)
         {
             using (newsObj)
@@ -36,7 +38,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //insert 
+        //insert new news post into database
         public bool commitInsert(news_post post)
         {
             using (newsObj)
@@ -47,7 +49,7 @@ namespace BlindRiver.Models
             }
         }
 
-        //update
+        //update the selected news and save changes to the database
         public bool commitUpdate(int _id, DateTime _date, string _heading, string _details)
         {
             using (newsObj)

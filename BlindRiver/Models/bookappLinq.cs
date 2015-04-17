@@ -1,4 +1,5 @@
-﻿using System;
+﻿//book an appintment model
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +8,7 @@ namespace BlindRiver.Models
 {
     public class bookappLinq
     {
-        //created object of boolAppsDataContext class
+        //created object of bookAppsDataContext class
         bookAppsDataContext bookObj = new bookAppsDataContext();
 
         //gets all requests 
