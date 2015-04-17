@@ -879,7 +879,7 @@ footer .f-menu{
     text-align: center;
 }
 
-.link-button{
+.link-button-green{
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
@@ -888,18 +888,41 @@ footer .f-menu{
   text-decoration: none;
   background-color: #09A10D;
   color: #fff;
-  padding: 6px 12px;
+  padding: 10px 18px;
   border-top: 1px solid #CCCCCC;
   border-right: 1px solid #5C5C5C;
   border-bottom: 1px solid #5C5C5C;
   border-left: 1px solid #CCCCCC;
 }
 
-.link-button:hover {
+.link-button-green:hover {
   cursor: pointer;
   background-color: #09720D;
   text-decoration: none;
     }
+
+.link-button-blue{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #0378a3;
+  color: #fff;
+  padding: 10px 18px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #5C5C5C;
+  border-bottom: 1px solid #5C5C5C;
+  border-left: 1px solid #CCCCCC;
+}
+
+.link-button-blue:hover {
+  cursor: pointer;
+  background-color: #08b3ce;
+  text-decoration: none;
+    }
+
 /*END Contact Us Styles*/
 
 

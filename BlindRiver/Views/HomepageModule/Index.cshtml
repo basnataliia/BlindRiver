@@ -28,9 +28,13 @@
     <div class="module-edit">
         <ul>
             <li>
-                <button class="button-blue">
+                @*<button class="button-blue">
                     @Html.ActionLink("Update", "Update", new { Id = module.id })
-                </button>
+                </button>*@
+
+          
+                    @Html.ActionLink("Update", "Update", new { Id = module.id }, new { @class = "link-button-blue" })
+
             </li>
         </ul>
     </div>

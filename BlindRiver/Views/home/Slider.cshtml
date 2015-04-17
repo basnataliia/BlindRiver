@@ -28,9 +28,14 @@
                     <div class="carousel-wrapper">
                         <h1>@image.Title</h1>
                         <p>@image.Description</p>
-                        <button class="button-blue btn-margin">
+                        @*<button class="button-blue btn-margin">
                             <a href="@Url.Action("Index", image.Link)">more information</a>
-                        </button>
+                        </button>*@
+
+                        <br />
+                        <a class="link-button-blue" href="@Url.Action("Index", image.Link)">more information</a>
+                        
+
                     </div>
                 </div>
             </li>
