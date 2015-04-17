@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.FAQ
-
+@*Applies Admin layout css*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 } 
@@ -10,7 +10,7 @@
 <div id="faqContainer">
 
     <h1>Are you sure you want to delete the following FAQ? </h1>
-    
+@*Displays the question and answer that you are going to delete*@
 @using (Html.BeginForm())
     {
     <h4>FAQ:</h4>  
@@ -21,9 +21,11 @@
     
 
     <br /><br />
+    //Submit to delete entry
     <input class="vapply" type="submit" value="Delete" />
     <br /><br />
     <hr />
+    //Button to direct you back to index page
     <button class="vapply">@Html.ActionLink("Back", "Index", new { id = Model.id })</button>
 }
 </div>

@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.FAQ
-
+@*Applies admin css styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 } 
@@ -10,7 +10,7 @@
 <div id="faqContainer">
 
     <h1>Update FAQ</h1>
-
+    @*Form to edit FAQ and answer.*@
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(x => x.id)
@@ -28,6 +28,7 @@
     }
     <br /><br />
     <hr />
+    @*button to direct back to Index page*@
     <button class="vapply">@Html.ActionLink("Back to Manage FAQ", "Index")</button>
  
 </div>

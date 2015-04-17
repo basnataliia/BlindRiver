@@ -313,7 +313,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Surveys.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\SurveyValidation.cs" />
     <Compile Include="Models\VolunteerAppValidation.cs" />
     <Compile Include="Models\VolunteerOpportunities.cs" />
     <Compile Include="Models\VolunteerValidation.cs" />

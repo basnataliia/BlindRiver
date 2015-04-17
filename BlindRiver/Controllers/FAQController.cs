@@ -10,18 +10,22 @@ namespace BlindRiver.Controllers
 {
     
     public class FAQController : Controller
-    {
+    {   //creating an instance of LINQ object
         FAQLinq objFAQ = new FAQLinq();
+         [Authorize(Users = "admin")]
         public ActionResult Index()
         {
             var faq = objFAQ.getFAQs();
             return View(faq);
         }
 
+    //Insert FAQ
+        [Authorize(Users = "admin")]
         public ActionResult Insert()
         {
             return View();
         }
+    
     
      [HttpPost]
      public ActionResult Insert (FAQ faq)
@@ -32,6 +36,7 @@ namespace BlindRiver.Controllers
              {
                  objFAQ.commitInsert(faq);
                  return RedirectToAction("Index");
+                 //after successfully inserting, it directs to Index page
              }
              catch
              {
@@ -41,12 +46,14 @@ namespace BlindRiver.Controllers
          return View();
      }
     
+     //Update FAQ
+    [Authorize(Users = "admin")]
     public ActionResult Update (int id)
      {
          var faq = objFAQ.getFAQByID(id);
          if(faq == null)
          {
-             return View("NotFound");
+             return View();
          }
          else
          {
@@ -61,7 +68,7 @@ namespace BlindRiver.Controllers
             try
             {
                 objFAQ.commitUpdate(id, faq.questions, faq.answers);
-               // return RedirectToAction("Details/" + id);
+               //After successfully updating, redirects to Index page
                 return RedirectToAction("Index");
             }
             catch
@@ -71,24 +78,30 @@ namespace BlindRiver.Controllers
         }
         return View();
     }
+
+    //Delete FAQ
+    [Authorize(Users = "admin")]
     public ActionResult Delete (int id)
     {
         var faq = objFAQ.getFAQByID(id);
         if (faq == null)
         {
-            return View("NotFound");
+            return View();
         }
         else
         {
             return View(faq);
         }
     }
+
+ 
     [HttpPost]
     public ActionResult Delete (int id, FAQ faq)
     {
         try
         {
             objFAQ.commitDelete(id);
+            //after succesfully deleting, redirect to Index page
             return RedirectToAction("Index");
         }
         catch
@@ -96,7 +109,7 @@ namespace BlindRiver.Controllers
             return View();
         }
     }
-
+    //Public page
     public ActionResult Public()
     {
         var faq = objFAQ.getFAQs();

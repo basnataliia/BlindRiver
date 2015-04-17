@@ -1,5 +1,5 @@
 ﻿@model BlindRiver.Models.FAQvalidation
-
+@*Applies admin css styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 } 
@@ -12,7 +12,7 @@
 
 
     <h1>Insert New FAQ</h1>
-
+    @*Form to insert FAQ and answer*@
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary()
@@ -30,6 +30,7 @@
     }
     <br /><br/>
     <hr />
+    @*Button to direct you back to Index page*@
     <button class="vapply">@Html.ActionLink("Back to Manage FAQ", "Index")</button>
 
 </div>

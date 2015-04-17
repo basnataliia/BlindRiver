@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<BlindRiver.Models.Survey>
-
+@*APplies admin css styling to page*@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
@@ -10,7 +10,7 @@
 <div id="surveyContainer">
 
     <h1>Blind River Hospital Survey Manager</h1>
-
+    @*Table to display all the entries of survey*@
     <table class="cm-table1">
         <thead>
             <tr>
@@ -52,6 +52,7 @@
                 <td>@Surveys.Answer7</td>
                 <td>@Surveys.Question8</td>
                 <td>@Surveys.Answer8</td>
+                @*Delete link that directs user to delete page*@
                 <td>@Html.ActionLink("Delete", "Delete", new { id = Surveys.id })</td>
             </tr>
         }

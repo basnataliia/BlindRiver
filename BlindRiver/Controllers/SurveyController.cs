@@ -19,7 +19,7 @@ namespace BlindRiver.Controllers
         {
             return View();
         }
-
+        //Index page includes the survey users will fill out
         [HttpPost]
         public ActionResult Index(Survey Surveys)
         {
@@ -27,6 +27,7 @@ namespace BlindRiver.Controllers
             {
                 try
                 {
+                    //If users successfully Insert survey, they will be directed back to the Index page
                     objSurvey.commitInsert(Surveys);
                     return RedirectToAction("Index");
                 }
@@ -38,18 +39,22 @@ namespace BlindRiver.Controllers
             return View();
         }
 
+        //Admin page will display all survey entries 
+         [Authorize(Users = "admin")]
         public ActionResult Admin()
         {
             var Surveys = objSurvey.getSurvey();
             return View(Surveys);
         }
 
+        //Delete page will display selected survey entry that you want to delete by retrieving the id.
+         [Authorize(Users = "admin")]
         public ActionResult Delete(int id)
         {
             var Surveys = objSurvey.getSurveyByID(id);
             if (Surveys == null)
             {
-                return View("");
+                return View();
             }
             else
             {
@@ -61,6 +66,7 @@ namespace BlindRiver.Controllers
         {
             try
             {
+                //Once successfully deleted, user will be redirected to admin page
                 objSurvey.commitDelete(id);
                 return RedirectToAction("Admin");
             }

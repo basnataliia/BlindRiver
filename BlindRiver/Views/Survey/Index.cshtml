@@ -13,7 +13,7 @@
 <br />
 <p>Please answer the following questions:</p>
 <br />
-
+@*Survey questions with radio buttons for answers. Survey questions are hidden and have default values.*@
 @using (Html.BeginForm())
 {
     <h3>How was the wait time to see a doctor?</h3>
@@ -80,7 +80,7 @@
     @Html.RadioButtonFor(model => model.Answer8, "Yes") @:Yes
     @Html.RadioButtonFor(model => model.Answer8, "Definitely Yes") @:Definitely Yes
     <br /><br />
-
+    //Submit will enter survey into database
     <input class="vapply" type="submit" value="Insert" />
 
 }
