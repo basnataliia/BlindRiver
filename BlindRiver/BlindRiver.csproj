@@ -276,7 +276,6 @@
     </Compile>
     <Compile Include="Models\HomepageModule.cs" />
     <Compile Include="Models\HomepageModuleValidation.cs" />
-    <Compile Include="Models\HtmlHelper.cs" />
     <Compile Include="Models\ImageSlider.cs" />
     <Compile Include="Models\linksmenu.cs" />
     <Compile Include="Models\linksmenuValidation.cs" />

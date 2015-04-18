@@ -14,6 +14,7 @@ namespace BlindRiver.Models
     {
     }
 
+    //validation class fror hompage modules
     [Bind(Exclude="id")]
     public class HomepageModuleValidation
     {

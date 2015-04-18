@@ -6,27 +6,20 @@
 <div class="hp-main-module">
 
     <h3 class="subtitle">Get started...</h3>
-    
-                            
-
-
+    @*retrieving homepage modules details from database*@                    
     @foreach (var module in Model)
     {
         <div class="hp-module">
-            @*<a href="@Url.Action("Index", module.link_url)">*@
                 <div class="wrapper-image" >
                     <div data-content="Visit this section" class="module-img">
                         @*source:"Working with images asp.net"http://www.asp.net/web-pages/overview/ui,-layouts,-and-themes/9-working-with-images*@
                         <img src="@Url.Content(@"~/Content/Images/" + (module.image_path))" alt="module" />
                         <div class="img-background">
                             <h2>@Html.ActionLink(module.link_name, "Index", module.link_url)</h2>
-                            <button class="button-blue">
-                                <a href="@Url.Action("Index", module.link_url)">Visit section</a>
-                            </button>
+                                <a class ="link-button-blue"href="@Url.Action("Index", module.link_url)">Visit section</a>
                         </div>
                     </div>
                 </div>
-            @*</a>*@
             <div class="module-details">
                 <br />
                 <h3>
@@ -41,6 +34,7 @@
 </div>
 <div class="clear"></div>
 
+@*JQuery is used to change background of image in the module section*@
 <script type="text/javascript">
     jQuery(document).ready(function($){
         $(".module-img").hover(function () {

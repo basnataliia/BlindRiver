@@ -16,12 +16,14 @@ namespace BlindRiver.Models
             return allModules;
         }
 
+        //get homepage module by id
         public homemodule getModuleById(int _id)
         {
             var oneModule = objModule.homemodules.SingleOrDefault(x => x.id == _id);
             return oneModule;
         }
 
+        //update
         public bool commitUpdate(int _id, string _imagePath, string _linkUrl, string _description, string _linkName)
         {
             using(objModule)

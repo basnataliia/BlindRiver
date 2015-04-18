@@ -12,7 +12,9 @@ namespace BlindRiver.Controllers
 {
     public class ContactsAdminController : Controller
     {
+        //creatig object for contacts
         contacts objContact = new contacts();
+        //creating object for menu links
         linksmenu objMenu = new linksmenu();
 
         [Authorize(Users = "admin")]
@@ -130,7 +132,8 @@ namespace BlindRiver.Controllers
             }
         }
 
-        //Smarterasp.net HOST
+        //Smarterasp.net HOST//
+
         //[HttpPost]
         //public ViewResult Email(BlindRiver.Models.MailModel _objModelMail, int id)
         //{
@@ -160,56 +163,12 @@ namespace BlindRiver.Controllers
         //    }
         //}
 
-        //search
-        //public ActionResult Search()
-        //{
-        //    return PartialView();
-        //}
-
-        //[HttpPost]
-        //public ActionResult Search(string name)
-        //{
-        //    try
-        //    {
-        //        var result = objContact.searchContacts(name);
-        //        return RedirectToAction("Index", result);
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
+    
         [Authorize(Users = "admin")]
         public ActionResult Search(string name)
         {
             var search_result = objContact.searchContacts(name);
             return PartialView(search_result);
         }
-
-        //[HttpPost]
-        //public ActionResult Search(string name)
-        //{
-        //    try
-        //    {
-        //        var result = objContact.searchContacts(name);
-        //        //var test = Request.HttpMethod.
-        //        return RedirectToAction("Index", result);
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
-        //[HttpPost]
-        //public ViewResult Search(SearchModel searchQuery, string name)
-        //{
-        //    string result = searchQuery.Text;
-        //    var messages = objContact.searchContacts(name)
-        //                  .Where(b => b.name == result);
-        //    //.FilterBy(result)
-        //    return View(messages);
-        //}
     }
 }

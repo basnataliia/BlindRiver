@@ -8,7 +8,7 @@ namespace BlindRiver.Models
     public class ImageSlider
     {
         sliderDataContext objImage = new sliderDataContext();
-
+        //get all images and deatils from database
         public IEnumerable<sliderimage> getImages()
 
         {
@@ -16,6 +16,7 @@ namespace BlindRiver.Models
             return allImages;
         }
 
+        //insert
         public bool commitInsert(sliderimage NewImage)
         {
             using (objImage)
@@ -26,6 +27,7 @@ namespace BlindRiver.Models
             }
         }
 
+        //delete
         public bool commitDelete(int _id)
         {
             using(objImage)
@@ -37,12 +39,14 @@ namespace BlindRiver.Models
             }
         }
 
+        //get Image slider details by ID
         public sliderimage getImageById(int _id)
         {
             var oneImage = objImage.sliderimages.SingleOrDefault(x => x.Id == _id);
             return oneImage;
         }
 
+        //update
         public bool commitUpdate( int _id, string _imagePath, string _title, string _desciption, string _link)
         {
             using(objImage)

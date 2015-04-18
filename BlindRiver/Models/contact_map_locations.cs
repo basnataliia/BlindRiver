@@ -9,18 +9,21 @@ namespace BlindRiver.Models
     {
         contact_locationsDataContext objLocation = new contact_locationsDataContext();
 
+        //getting all locations from database
         public IEnumerable<contact_location> getLocations()
         {
             var allLocations = objLocation.contact_locations.Select(x => x);
             return allLocations;
         }
 
+        //getting location by Id
         public contact_location getLocationById(int _id)
         {
             var location = objLocation.contact_locations.SingleOrDefault(x => x.id == _id);
             return location;
         }
 
+        //inserting a new location in the database
         public bool commitInsert(contact_location NewLocation)
         {
             objLocation.contact_locations.InsertOnSubmit(NewLocation);
@@ -28,6 +31,7 @@ namespace BlindRiver.Models
             return true;
         }
 
+        //delete a location
         public bool commitDelete(int _id)
         {
             using (objLocation)

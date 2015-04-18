@@ -532,8 +532,7 @@ display: block;
 }
 
 
-.carousel-wrapper .button-blue a{
-    padding:10px;
+.carousel-wrapper .link-button-blue{
     text-transform:uppercase;
 }
 
@@ -542,6 +541,10 @@ display: block;
     color:#333;
     font-size:18px;
     margin-top:5px;
+}
+
+.ct-messages-search{
+    overflow:hidden;
 }
 
 .ct-messages-search .form-input{
@@ -804,14 +807,14 @@ footer .f-menu{
     width:50%;
     display:inline-block;
     vertical-align:top;
-    margin:20px 10px 20px 60px;
+    margin:20px 10px 20px 10px;
 }
 
 .contactus-locations{
     max-width:50%;
     display:inline-block;
     vertical-align:top;
-    margin:20px 0;
+    margin:20px 0 20px 10px;
 }
 
 .label {
@@ -922,6 +925,56 @@ footer .f-menu{
   background-color: #08b3ce;
   text-decoration: none;
     }
+
+.link-button-grey{
+    margin-left:7px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #cbcdcf;
+  color: #333;
+  padding: 6px 15px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #5C5C5C;
+  border-bottom: 1px solid #5C5C5C;
+  border-left: 1px solid #CCCCCC;
+}
+
+.link-button-grey:hover {
+  cursor: pointer;
+  background-color: #f7f9fa;
+  text-decoration: none;
+    }
+
+.link-button-grey-cancel{
+    margin-left:10px;
+     -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #cbcdcf;
+  color: #333;
+  padding: 10px 18px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #5C5C5C;
+  border-bottom: 1px solid #5C5C5C;
+  border-left: 1px solid #CCCCCC;
+}
+
+.link-button-grey-cancel:hover {
+  cursor: pointer;
+  background-color: #f7f9fa;
+  text-decoration: none;
+    }
+
+.link-g-d .link-button-grey-cancel{
+    margin-left:0;
+}
 
 /*END Contact Us Styles*/
 

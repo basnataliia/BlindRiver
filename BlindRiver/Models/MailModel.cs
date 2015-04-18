@@ -10,7 +10,7 @@ using System.Web.Mvc;
 namespace BlindRiver.Models
 {
    
-
+    //class that stores variables to send an email
     public class MailModel
     {
         public string From { get; set; }

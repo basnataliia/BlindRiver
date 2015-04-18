@@ -5,7 +5,6 @@
 }
 
 <script type="text/javascript">
-
     //pattern for phone input
     //Source: http://forums.asp.net/t/1824550.aspx?Add+dashes+to+user+input+in+a+textbox
     $(function () {
@@ -47,19 +46,19 @@
                 @Html.TextAreaFor(model => model.message, new { @class = "form-textarea" })
                 @Html.ValidationMessageFor(model => model.message, "This field is required.")
                 <br />
-                @*@Html.LabelFor(model => model.date, new { @class = "label" })*@
                 @Html.HiddenFor(model => model.date, new { Value = DateTime.Now, @class = "form-textarea" })
-                @*@Html.ValidationMessageFor(model => model.date, "This field is required.")*@
                 <br />
                 <input type="submit" value="Submit" class="button-blue fb-width" />
             }
         </div>
         <div class="contactus-locations">
+            @*include list of locations - partial view*@
             @Html.Action("Locations_list", "Contacts")
         </div>
         <div id="map_wrapper">
             <div id="map_canvas" class="mapping"></div>
         </div>
+        @*include google map - partial view*@
         @Html.Action("Locations", "Contacts")
     </div>
 </div>

@@ -10,15 +10,16 @@ namespace BlindRiver.Controllers
 {
     public class homeController : Controller
     {
+        //creating object for Homepage modules
         HomepageModule homeModuleObj = new HomepageModule();
-
+        //creating object for menu links
         linksmenu menuObj = new linksmenu();
-
+        //creating object for custom pages
         custompages objCustPage = new custompages();
 
         public homeController()
         {
-            //creating an arraynof menu links
+            //creating an array of menu links
             ViewData["MenuItems"] = menuObj.getLinks();
         }
 
@@ -37,10 +38,7 @@ namespace BlindRiver.Controllers
         //Main menu - partial view
         public ActionResult menu()
         {
-            //var menuItems = objMenu.getLinks();
-            //return PartialView(menuItems);
             return PartialView();
-
         }
 
         //responsive menu - partial view

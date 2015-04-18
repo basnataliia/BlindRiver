@@ -10,7 +10,9 @@ namespace BlindRiver.Controllers
 {
     public class ContactsController : Controller
     {
+        //creating object for contacts
         contacts objContact = new contacts();
+        //creating object for contact locations
         contact_locations objLocation = new contact_locations();
 
         public ActionResult Index()

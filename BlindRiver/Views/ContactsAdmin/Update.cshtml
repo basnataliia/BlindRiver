@@ -17,9 +17,10 @@
     <div class="ct-row"><label class="label">Email:</label><span class="ct-msg-text"> @Model.email</span></div>
     <div class="ct-row"><label class="label">Subject:</label><span class="ct-msg-text">@Model.subject</span></div>
     <div class="ct-row"><label class="label">Message:</label><span class="ct-msg-text"> @Model.message</span></div>
-        <button class="button-green">
-            <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id })</p>
-        </button><br />
+        @*<button class="button-green">*@
+            <p>@Html.ActionLink("Reply with an email", "Email", new { id = Model.id }, new { @class = "link-button-green" })</p>
+        @*</button>*@
+        <br />
 </div>
 
 @using (Html.BeginForm("Update", "ContactsAdmin"))
@@ -38,9 +39,10 @@
         <input type="submit" value="Save changes" class="button-blue" />
     </div>
 
-    <button class="button-cancel">
-        <p>@Html.ActionLink("Cancel","Index", "ContactsAdmin")</p>
-    </button><br />
+    <div style="margin-top:20px;">
+        <p>@Html.ActionLink("Cancel","Index", "ContactsAdmin", new {@class="link-button-grey-cancel"})</p>
+    </div>
+    <br />
 }
 </fieldset>
 

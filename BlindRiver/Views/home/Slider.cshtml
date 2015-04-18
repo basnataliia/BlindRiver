@@ -19,6 +19,7 @@
 
 <div class="ct-slider">
     <ul id="ulSlider">
+        @*retrieving images and details from database to display in image slider*@
         @foreach (var image in Model)
         {
             <li>
@@ -28,14 +29,8 @@
                     <div class="carousel-wrapper">
                         <h1>@image.Title</h1>
                         <p>@image.Description</p>
-                        @*<button class="button-blue btn-margin">
-                            <a href="@Url.Action("Index", image.Link)">more information</a>
-                        </button>*@
-
                         <br />
-                        <a class="link-button-blue" href="@Url.Action("Index", image.Link)">more information</a>
-                        
-
+                        <a class="link-button-blue" href="@Url.Action("Index", image.Link)">more information</a>                       
                     </div>
                 </div>
             </li>

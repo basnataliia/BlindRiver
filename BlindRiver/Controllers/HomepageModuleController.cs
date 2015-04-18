@@ -12,9 +12,12 @@ namespace BlindRiver.Controllers
 {
     public class HomepageModuleController : Controller
     {
+        //creating object for homepage module
         HomepageModule objModule = new HomepageModule();
+        //creating object for main menu links
         linksmenu objLink = new linksmenu();
 
+        //getting all modules and showing them on Home page as partial view
         [Authorize(Users = "admin")]
         public ActionResult Index()
         {
@@ -22,6 +25,7 @@ namespace BlindRiver.Controllers
             return View(modules);
         }
 
+        //update homepage module section
         [Authorize(Users = "admin")]
         public ActionResult Update(int id, string name)
         {
@@ -44,7 +48,7 @@ namespace BlindRiver.Controllers
             if (ImagePath != null && ImagePath.ContentLength > 0)
             {
                 var fileName = Path.GetFileName(ImagePath.FileName);
-
+                //saving path pf the image
                 var path = Path.Combine(Server.MapPath("~/Content/Images"), fileName);
                 ImagePath.SaveAs(path);
                 module.image_path = fileName;

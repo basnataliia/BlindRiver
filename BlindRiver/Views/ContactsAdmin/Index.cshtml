@@ -8,11 +8,14 @@
 
 
 <div class="ct-messages-search">
+    @*include Search -  partial view*@
     @Html.Action("Search", "ContactsAdmin")
 
-    <button type="submit" class="button-cancel">
-        @Html.ActionLink("Clear Search Result", "Index", "ContactsAdmin")
-    </button>
+    @*<button type="submit" class="button-cancel">*@
+    <div style="margin-top:5px;">
+        @Html.ActionLink("Clear Search Result", "Index", "ContactsAdmin", new { @class = "link-button-grey" })
+    </div>
+    @*</button>*@
 
 </div>
 <div class="clearfix"></div>

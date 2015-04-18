@@ -15,6 +15,7 @@ namespace BlindRiver.Models
     {
     }
 
+    //validatin class for contact us from
     [Bind(Exclude = "id")]
     public class contactsValidation
     {

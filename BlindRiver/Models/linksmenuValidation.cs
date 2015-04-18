@@ -14,6 +14,7 @@ namespace BlindRiver.Models
     {
     }
 
+    //validatin class for menu links
     public class linksmenuValidation
     {
         [Bind(Exclude = "id")]

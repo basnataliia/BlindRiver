@@ -7,12 +7,12 @@
 
 <h1>Image Gallery </h1>
 <div id="img-gallery-wrapper">
-    <button class="button-green">
-        <p>@Html.ActionLink("Add new content image", "Insert")</p>
-    </button>
+
+        <p style="float:right; margin-bottom:10px;">@Html.ActionLink("Add new content image", "Insert", null, new { @class = "link-button-green" })</p>
     <div class="clearfix"></div>
     <hr />
     <div>
+        @*display all images from database*@
         @foreach (var image in Model)
         {
             <div class="img-gallery-admin">
@@ -25,14 +25,12 @@
                 <div class="link-g-d">
                     <ul>
                         <li>
-                            <button class="button-blue">
-                                @Html.ActionLink("Edit Section", "ImageEdit", new { Id = image.Id })
-                            </button>
+                            @*<button class="button-blue">*@
+                                @Html.ActionLink("Edit Section", "ImageEdit", new { Id = image.Id }, new { @class = "link-button-blue" })
+                            @*</button>*@
                         </li>
                         <li>
-                            <button class="button-cancel">
-                                @Html.ActionLink("Delete Section", "DeleteImage", new { Id = image.Id })
-                            </button>
+                                @Html.ActionLink("Delete Section", "DeleteImage", new { Id = image.Id }, new {@class="link-button-grey-cancel" })
                         </li>
                     </ul>
                 </div>

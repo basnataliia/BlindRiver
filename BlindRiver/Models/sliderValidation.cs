@@ -14,7 +14,7 @@ namespace BlindRiver.Models
     public partial class sliderimage
     {
     }
-
+    //validation class for Image Slider
     [Bind(Exclude = "Id")]
     public class sliderValidation
     {

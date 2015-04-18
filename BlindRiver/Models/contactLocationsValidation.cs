@@ -9,12 +9,13 @@ using System.Web.Mvc;
 
 namespace BlindRiver.Models
 {
-
+    //creating a partial contact_location class
     [MetadataType(typeof(contactLocationsValidation))]
     public partial class contact_location
     {
     }
 
+    //creating this class to perform server side validation
      [Bind(Exclude = "id")]
     public class contactLocationsValidation
     {

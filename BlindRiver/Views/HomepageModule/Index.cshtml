@@ -15,7 +15,6 @@
         </div>
         <div class="module-admin-details">
             <h2>
-                @*@Html.ActionLink(module.link_name, "Index", module.link_url)*@
                 @module.link_name
             </h2>
             <div>
@@ -27,12 +26,7 @@
     </div>
     <div class="module-edit">
         <ul>
-            <li>
-                @*<button class="button-blue">
-                    @Html.ActionLink("Update", "Update", new { Id = module.id })
-                </button>*@
-
-          
+            <li>         
                     @Html.ActionLink("Update", "Update", new { Id = module.id }, new { @class = "link-button-blue" })
 
             </li>

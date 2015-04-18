@@ -9,18 +9,21 @@ namespace BlindRiver.Models
     {
         contactDataContext objContact = new contactDataContext();
 
+        //get all contacts from database
         public IEnumerable<contact> getContacts()
         {
             var allContacts = objContact.contacts.Select(x => x);
             return allContacts;
         }
 
+        //get contact by ID
         public contact getContactById(int _id)
         {
             var contactMessage = objContact.contacts.SingleOrDefault(x => x.id == _id);
             return contactMessage;
         }
 
+        //insert
         public bool commitInsert(contact NewContactMessage)
         {
             objContact.contacts.InsertOnSubmit(NewContactMessage);
@@ -28,6 +31,7 @@ namespace BlindRiver.Models
             return true;
         }
 
+        //delete
         public bool commitDelete(int _id)
         {
             using (objContact)

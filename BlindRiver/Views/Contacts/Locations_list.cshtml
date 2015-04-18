@@ -5,12 +5,14 @@
 <h1>Locations</h1>
 <div>
     <ul id="locations-list">
+        @*showing the list of locations from database*@
         @foreach (var location in Model)
         {
             <li><h2>@location.title</h2></li>
             <li><p>@location.address</p></li>
             <li><p>Tel.: @location.phone</p></li>
             <li><p>Fax: @location.fax</p></li>
+            <hr />
         }
     </ul>
 </div>
